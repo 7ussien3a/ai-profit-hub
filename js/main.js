@@ -96,4 +96,77 @@ document.addEventListener('DOMContentLoaded', () => {
     const minutes = Math.ceil(words / 200);
     readTimeEl.textContent = `${minutes} min read`;
   }
+  // === Dynamic Table of Contents ===
+  if (articleContent) {
+    const headings = articleContent.querySelectorAll('h2');
+    if (headings.length > 0) {
+      const toc = document.createElement('div');
+      toc.className = 'article-toc animate-in';
+      toc.innerHTML = '<h3>Table of Contents</h3><ul></ul>';
+      const ul = toc.querySelector('ul');
+      
+      headings.forEach((heading, index) => {
+        heading.id = `heading-${index}`;
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = `#heading-${index}`;
+        a.textContent = heading.textContent;
+        li.appendChild(a);
+        ul.appendChild(li);
+      });
+      
+      articleContent.insertBefore(toc, articleContent.firstChild);
+    }
+  }
+
+  // === Dynamic Social Share Buttons ===
+  const articleMeta = document.querySelector('.article-meta');
+  if (articleMeta && document.querySelector('.article-header h1')) {
+    const shareUrl = encodeURIComponent(window.location.href);
+    const shareTitle = encodeURIComponent(document.title);
+    
+    const shareContainer = document.createElement('div');
+    shareContainer.className = 'social-shares animate-in';
+    shareContainer.innerHTML = `
+      <a href="https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareTitle}" target="_blank" class="share-btn twitter">𝕏 Post</a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=${shareUrl}" target="_blank" class="share-btn facebook">f Share</a>
+      <a href="https://www.linkedin.com/shareArticle?mini=true&url=${shareUrl}&title=${shareTitle}" target="_blank" class="share-btn linkedin">in Share</a>
+    `;
+    
+    articleMeta.parentElement.appendChild(shareContainer);
+  }
+
+  // === Dynamic Related Articles ===
+  if (articleContent) {
+    const allArticles = [
+      { title: "10 Best Free AI Tools for Students in 2026", link: "best-free-ai-tools-students.html" },
+      { title: "15 ChatGPT Prompts That Will Double Your Productivity", link: "chatgpt-prompts-productivity.html" },
+      { title: "7 Must-Have AI Chrome Extensions to Save Hours", link: "ai-chrome-extensions.html" },
+      { title: "How to Make Money with AI Art", link: "make-money-ai-art.html" },
+      { title: "Is AI Going to Steal Your Job? The Truth in 2026", link: "ai-stealing-jobs-truth.html" },
+      { title: "How to Build a Custom GPT for Your Business", link: "custom-gpt-business.html" }
+    ];
+    
+    const currentFileName = window.location.pathname.split('/').pop();
+    const availableArticles = allArticles.filter(a => a.link !== currentFileName);
+    
+    // Pick 3 random articles
+    const shuffled = availableArticles.sort(() => 0.5 - Math.random());
+    const selected = shuffled.slice(0, 3);
+    
+    const relatedDiv = document.createElement('div');
+    relatedDiv.className = 'related-articles animate-in';
+    relatedDiv.innerHTML = '<h3>Read Next</h3><div class="related-grid"></div>';
+    
+    const grid = relatedDiv.querySelector('.related-grid');
+    selected.forEach(article => {
+      const card = document.createElement('a');
+      card.href = article.link;
+      card.className = 'related-card';
+      card.innerHTML = `<h4>${article.title}</h4><span class="read-more">Read Article →</span>`;
+      grid.appendChild(card);
+    });
+    
+    articleContent.appendChild(relatedDiv);
+  }
 });
