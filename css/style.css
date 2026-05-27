@@ -2,8 +2,6 @@
    TechMind AI - Premium Blog Design System
    ======================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
-
 /* === CSS Variables === */
 :root {
   --primary: #6C63FF;
@@ -49,7 +47,7 @@ html {
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background: var(--bg-primary);
   color: var(--text-primary);
   line-height: 1.7;
@@ -58,6 +56,29 @@ body {
 
 a { color: var(--primary-light); text-decoration: none; transition: var(--transition); }
 a:hover { color: var(--accent); }
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 2000;
+  padding: 10px 14px;
+  background: var(--accent);
+  color: #04120f;
+  border-radius: var(--radius-sm);
+  font-weight: 800;
+  transform: translateY(-150%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
 
 img { max-width: 100%; height: auto; display: block; }
 
@@ -164,6 +185,7 @@ h1, h2, h3, h4, h5, h6 {
   border: none;
   cursor: pointer;
   padding: 4px;
+  border-radius: var(--radius-sm);
 }
 
 .mobile-toggle span {
@@ -313,6 +335,7 @@ h1, h2, h3, h4, h5, h6 {
 .article-card-image {
   width: 100%;
   height: 200px;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   border-bottom: 1px solid var(--border);
 }
@@ -447,6 +470,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .article-cover img {
   width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
   border-radius: var(--radius-lg);
   border: 1px solid var(--border);
 }
@@ -770,6 +795,7 @@ h1, h2, h3, h4, h5, h6 {
 
   .hero { padding: 120px 20px 60px; }
   .hero h1 { font-size: 2rem; }
+  .hero p { font-size: 1rem; }
 
   .articles-grid { grid-template-columns: 1fr; }
   
@@ -783,11 +809,40 @@ h1, h2, h3, h4, h5, h6 {
   
   .newsletter { padding: 40px 20px; }
   .newsletter-form { flex-direction: column; }
+  .nav { padding: 0 18px; }
+  .logo { font-size: 1.05rem; }
+  .main { padding: 44px 18px; }
+  .article-content,
+  .article-header,
+  .article-cover,
+  .page-content { padding-left: 18px; padding-right: 18px; }
 }
 
 @media (max-width: 480px) {
   .footer-grid { grid-template-columns: 1fr; }
   .article-header h1 { font-size: 1.6rem; }
+  .article-meta,
+  .article-card-meta {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .hero-cta,
+  .newsletter-form button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 /* === Dynamic TOC === */
