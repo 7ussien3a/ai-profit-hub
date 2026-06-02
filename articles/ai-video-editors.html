@@ -93,8 +93,45 @@
   ]
 }
   </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do I need to show my face to make YouTube videos with AI?","acceptedAnswer":{"@type":"Answer","text":"No — faceless YouTube channels are one of the fastest-growing categories. AI tools for voiceovers, video generation, and editing make it possible to run a successful channel without appearing on camera."}},{"@type":"Question","name":"How long does it take to create an AI-generated video?","acceptedAnswer":{"@type":"Answer","text":"With the right workflow, a complete 5-10 minute video can be produced in 1-2 hours including scripting, voiceover generation, video editing, and captioning."}},{"@type":"Question","name":"Is AI-generated video content allowed on YouTube?","acceptedAnswer":{"@type":"Answer","text":"Yes, YouTube allows AI-generated content as long as it follows their community guidelines. Disclosing AI-generated content is becoming a recommended best practice."}}]}
+  </script>
+
+  <style>
+    #read-progress { position: fixed; top: 0; left: 0; width: 0%; height: 3px; background: linear-gradient(90deg, #6C63FF, #00D4AA); z-index: 9999; transition: width 0.1s linear; }
+    .share-bar { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 32px 0; padding: 20px 24px; background: var(--bg-elevated,#1a1f2e); border: 1px solid var(--border); border-radius: 12px; }
+    .share-bar span { font-size: 0.875rem; font-weight: 700; color: var(--text-secondary); margin-right: 4px; }
+    .share-btn { display: inline-flex; align-items: center; gap: 6px; padding: 7px 16px; border-radius: 50px; font-size: 0.8rem; font-weight: 600; border: none; cursor: pointer; transition: all 0.2s; text-decoration: none; }
+    .share-btn-copy { background: var(--bg-card, #1A1F35); color: var(--text-primary); border: 1px solid var(--border); }
+    .share-btn-copy:hover { border-color: var(--primary); color: var(--primary-light); }
+    .share-btn-x { background: #000; color: #fff; }
+    .share-btn-x:hover { background: #222; color: #fff; }
+    .share-btn-wa { background: #25D366; color: #fff; }
+    .share-btn-wa:hover { background: #1ebe5a; color: #fff; }
+  </style>
 </head>
 <body>
+  <div id="read-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+  <script>
+    (function(){
+      var bar = document.getElementById('read-progress');
+      window.addEventListener('scroll', function(){
+        var d = document.documentElement;
+        var scrolled = d.scrollTop || document.body.scrollTop;
+        var total = d.scrollHeight - d.clientHeight;
+        bar.style.width = (total > 0 ? (scrolled/total*100) : 0) + '%';
+        bar.setAttribute('aria-valuenow', Math.round(scrolled/total*100));
+      }, {passive: true});
+    })();
+    function copyLink() {
+      navigator.clipboard.writeText(window.location.href).then(function(){
+        var btn = document.getElementById('copyBtn');
+        btn.textContent = '✅ Copied!';
+        setTimeout(function(){ btn.textContent = '🔗 Copy Link'; }, 2000);
+      });
+    }
+  </script>
   <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="header"><nav class="nav"><a href="/" class="logo"><div class="logo-icon">⚡</div><span>AI Profit Hub</span></a></nav></header>
 
@@ -165,6 +202,10 @@
       <p>In 2026, the best video editors are not "AI" or "Human"—they are <strong>Hybrid</strong>. Use AI to handle the captions, the silence removal, and the vertical cropping. Use your human brain to handle the storytelling, the emotional pacing, and the creative direction. Premiere Pro isn't "dying," but it is being augmented by a new generation of tools that make the technical side of video creation invisible, allowing the story to take center stage.</p>
 
   
+
+  <div class="faq-section" style="margin:40px 0 0;" itemscope itemtype="https://schema.org/FAQPage">
+    <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:20px;padding-bottom:10px;border-bottom:1px solid var(--border);">❓ Frequently Asked Questions</h3>
+    <div class="faq-item" style="margin-bottom:16px;background:var(--bg-elevated,#1a1f2e);border:1px solid var(--border);border-radius:10px;overflow:hidden;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><button class="faq-q" onclick="var a=this.nextElementSibling;a.style.display=a.style.display==='none'?'block':'none';this.querySelector('.fi').textContent=a.style.display==='block'?'−':'+';" style="width:100%;text-align:left;padding:16px 20px;background:none;border:none;color:var(--text-primary);font-weight:700;font-size:0.9rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;" itemprop="name">Do I need to show my face to make YouTube videos with AI?<span class="fi" aria-hidden="true" style="font-size:1.2rem;font-weight:400;flex-shrink:0;margin-left:12px;">+</span></button><div style="display:none;padding:0 20px 16px;" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p style="margin:0;font-size:0.875rem;color:var(--text-secondary);line-height:1.7;" itemprop="text">No — faceless YouTube channels are one of the fastest-growing categories. AI tools for voiceovers, video generation, and editing make it possible to run a successful channel without appearing on camera.</p></div></div>    <div class="faq-item" style="margin-bottom:16px;background:var(--bg-elevated,#1a1f2e);border:1px solid var(--border);border-radius:10px;overflow:hidden;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><button class="faq-q" onclick="var a=this.nextElementSibling;a.style.display=a.style.display==='none'?'block':'none';this.querySelector('.fi').textContent=a.style.display==='block'?'−':'+';" style="width:100%;text-align:left;padding:16px 20px;background:none;border:none;color:var(--text-primary);font-weight:700;font-size:0.9rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;" itemprop="name">How long does it take to create an AI-generated video?<span class="fi" aria-hidden="true" style="font-size:1.2rem;font-weight:400;flex-shrink:0;margin-left:12px;">+</span></button><div style="display:none;padding:0 20px 16px;" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p style="margin:0;font-size:0.875rem;color:var(--text-secondary);line-height:1.7;" itemprop="text">With the right workflow, a complete 5-10 minute video can be produced in 1-2 hours including scripting, voiceover generation, video editing, and captioning.</p></div></div>    <div class="faq-item" style="margin-bottom:16px;background:var(--bg-elevated,#1a1f2e);border:1px solid var(--border);border-radius:10px;overflow:hidden;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><button class="faq-q" onclick="var a=this.nextElementSibling;a.style.display=a.style.display==='none'?'block':'none';this.querySelector('.fi').textContent=a.style.display==='block'?'−':'+';" style="width:100%;text-align:left;padding:16px 20px;background:none;border:none;color:var(--text-primary);font-weight:700;font-size:0.9rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;" itemprop="name">Is AI-generated video content allowed on YouTube?<span class="fi" aria-hidden="true" style="font-size:1.2rem;font-weight:400;flex-shrink:0;margin-left:12px;">+</span></button><div style="display:none;padding:0 20px 16px;" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p style="margin:0;font-size:0.875rem;color:var(--text-secondary);line-height:1.7;" itemprop="text">Yes, YouTube allows AI-generated content as long as it follows their community guidelines. Disclosing AI-generated content is becoming a recommended best practice.</p></div></div>  </div>
   <div class="related-articles" style="margin:40px 0 0;">
     <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:20px;padding-bottom:10px;border-bottom:1px solid var(--border);">📚 Related Articles</h3>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;">
