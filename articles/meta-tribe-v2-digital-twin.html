@@ -147,11 +147,30 @@
 
     <div class="article-content">
       <p>While most of the AI world focuses on chatbots, image generators, and autonomous agents, Meta's research division has been quietly working on something far more ambitious: <strong>a foundation model that can predict how your brain will react to stimuli</strong>. It's called <strong>TRIBE v2</strong> (Transformer for Representation and Interpretation of Brain Events), and it represents one of the most fascinating — and potentially controversial — applications of AI in 2026.</p>
+  <style>
+    .toc-box{background:var(--bg-elevated,#1a1f2e);border:1px solid var(--border);border-left:3px solid var(--primary);border-radius:10px;padding:20px 24px;margin:28px 0 32px;max-width:520px}
+    .toc-box h4{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--primary-light);margin:0 0 12px}
+    .toc-list{margin:0;padding:0;list-style:none;counter-reset:toc}
+    .toc-list li{counter-increment:toc;margin-bottom:7px}
+    .toc-list li a{font-size:.85rem;color:var(--text-secondary);text-decoration:none;display:flex;align-items:baseline;gap:8px;transition:color .15s}
+    .toc-list li a::before{content:counter(toc);font-size:.7rem;font-weight:700;color:var(--primary-light);background:rgba(108,99,255,.15);border-radius:50%;width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+    .toc-list li a:hover{color:var(--primary-light)}
+  </style>
+  <div class="toc-box" role="navigation" aria-label="Table of contents">
+    <h4>📋 In This Article</h4>
+    <ol class="toc-list">
+      <li><a href="#section-1">What is a "Digital Twin" of the Brain?</a></li>
+      <li><a href="#section-2">Why Meta is Investing in Brain Science</a></li>
+      <li><a href="#section-3">The Ethical Minefield</a></li>
+      <li><a href="#section-4">The Future: What's Next for Brain AI?</a></li>
+    </ol>
+  </div>
+
       <p>In this deep dive, we'll explain what TRIBE v2 actually does, how it works, why Meta is investing in brain science, and what the ethical implications are for all of us.</p>
 
       <hr>
 
-      <h2>What is a "Digital Twin" of the Brain?</h2>
+      <h2 id="section-1">What is a "Digital Twin" of the Brain?</h2>
       <p>A digital twin is a virtual replica of a physical system. Engineers have used digital twins for decades to simulate jet engines, power plants, and manufacturing processes. The idea is simple: if you can create an accurate virtual model, you can run simulations, predict failures, and optimize performance without touching the real thing.</p>
       <p><strong>TRIBE v2 applies this concept to the human brain.</strong> Using data from thousands of fMRI brain scans, the model learns to predict how specific regions of the brain will activate in response to images, sounds, text, and video. Essentially, given a stimulus (like showing someone a photograph), TRIBE v2 can predict — with surprising accuracy — which neurons will fire and in what pattern.</p>
 
@@ -169,7 +188,7 @@
 
       <div class="ad-space"><!-- Ad: Mid --></div>
 
-      <h2>Why Meta is Investing in Brain Science</h2>
+      <h2 id="section-2">Why Meta is Investing in Brain Science</h2>
       <p>The obvious question: why is a social media company investing in neuroscience? The answer involves both altruistic research and strategic business interests:</p>
 
       <h3>The Research Angle</h3>
@@ -190,7 +209,7 @@
 
       <div class="ad-space"><!-- Ad: Mid 2 --></div>
 
-      <h2>The Ethical Minefield</h2>
+      <h2 id="section-3">The Ethical Minefield</h2>
       <p>TRIBE v2 raises profound ethical questions that the AI industry and society at large must grapple with:</p>
 
       <h3>Privacy of Thought</h3>
@@ -212,7 +231,7 @@
         </tbody>
       </table>
 
-      <h2>The Future: What's Next for Brain AI?</h2>
+      <h2 id="section-4">The Future: What's Next for Brain AI?</h2>
       <p>TRIBE v2 is just the beginning. The roadmap for brain-AI integration includes:</p>
       <ul>
         <li><strong>Personalized Digital Twins:</strong> Individual brain models that predict your specific responses, enabling personalized medicine and mental health treatment.</li>

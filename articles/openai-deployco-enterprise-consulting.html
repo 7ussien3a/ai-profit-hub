@@ -58,16 +58,36 @@
     <div class="article-cover"><img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=900&q=80" alt="Tech Office"></div>
     <div class="article-content">
       <p>On May 11, 2026, OpenAI quietly made the most important business decision of its existence — and surprisingly, it had nothing to do with releasing a new model. The company launched <strong>DeployCo</strong>, a fully standalone subsidiary backed by $4 billion, whose sole purpose is to send elite AI engineers directly into the offices of Fortune 500 companies to redesign their entire operational workflows from scratch.</p>
+  <style>
+    .toc-box{background:var(--bg-elevated,#1a1f2e);border:1px solid var(--border);border-left:3px solid var(--primary);border-radius:10px;padding:20px 24px;margin:28px 0 32px;max-width:520px}
+    .toc-box h4{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--primary-light);margin:0 0 12px}
+    .toc-list{margin:0;padding:0;list-style:none;counter-reset:toc}
+    .toc-list li{counter-increment:toc;margin-bottom:7px}
+    .toc-list li a{font-size:.85rem;color:var(--text-secondary);text-decoration:none;display:flex;align-items:baseline;gap:8px;transition:color .15s}
+    .toc-list li a::before{content:counter(toc);font-size:.7rem;font-weight:700;color:var(--primary-light);background:rgba(108,99,255,.15);border-radius:50%;width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+    .toc-list li a:hover{color:var(--primary-light)}
+  </style>
+  <div class="toc-box" role="navigation" aria-label="Table of contents">
+    <h4>📋 In This Article</h4>
+    <ol class="toc-list">
+      <li><a href="#section-1">Why OpenAI Built DeployCo</a></li>
+      <li><a href="#section-2">How DeployCo Actually Works</a></li>
+      <li><a href="#section-3">The Strategic Genius (and the Risk)</a></li>
+      <li><a href="#section-4">The Bigger Picture: The "Deployment Race"</a></li>
+      <li><a href="#section-5">What This Means for the Job Market</a></li>
+    </ol>
+  </div>
+
 
       <p>This isn't an API upgrade. This isn't a new chatbot feature. This is OpenAI transforming itself from a technology company into a technology <em>and</em> consulting company. And it changes everything about who controls the future of enterprise AI.</p>
 
-      <h2>Why OpenAI Built DeployCo</h2>
+      <h2 id="section-1">Why OpenAI Built DeployCo</h2>
       <p>For years, the enterprise AI market has suffered from what insiders call the "Last Mile Problem." Companies purchase expensive AI licenses, their executives give enthusiastic keynotes about "digital transformation," and then... nothing happens. The AI sits unused because nobody in the organization knows how to actually integrate it into real workflows.</p>
       <p>OpenAI saw this problem in their own customer data. Companies were signing up for GPT-5 enterprise licenses but only using a fraction of the capabilities. The models were powerful, but the implementation was amateur. DeployCo is OpenAI's answer: don't just sell the tool — send the builders.</p>
 
       <div class="ad-space"></div>
 
-      <h2>How DeployCo Actually Works</h2>
+      <h2 id="section-2">How DeployCo Actually Works</h2>
       <p>DeployCo operates more like McKinsey than a traditional tech company. Here's the typical engagement:</p>
       <ul>
         <li><strong>Phase 1 — Assessment (2-4 weeks):</strong> A team of DeployCo engineers embeds inside the client company, mapping every workflow, identifying bottleneck processes, and calculating the "AI automation potential" of each task.</li>
@@ -76,7 +96,7 @@
         <li><strong>Phase 4 — Optimization (ongoing):</strong> DeployCo provides continuous monitoring, fine-tuning, and updates as OpenAI releases new model versions.</li>
       </ul>
 
-      <h2>The Strategic Genius (and the Risk)</h2>
+      <h2 id="section-3">The Strategic Genius (and the Risk)</h2>
       <p>From a business strategy perspective, DeployCo is brilliant for several reasons:</p>
       <ul>
         <li><strong>Lock-in:</strong> Once DeployCo engineers have built an entire company's AI infrastructure on OpenAI's stack, switching to Google or Anthropic becomes astronomically expensive. This is the ultimate competitive moat.</li>
@@ -87,12 +107,12 @@
 
       <div class="ad-space"></div>
 
-      <h2>The Bigger Picture: The "Deployment Race"</h2>
+      <h2 id="section-4">The Bigger Picture: The "Deployment Race"</h2>
       <p>DeployCo doesn't exist in a vacuum. It's a direct response to Anthropic's aggressive enterprise strategy. With KPMG deploying Claude to 276,000 employees and Deloitte to 470,000, Anthropic has been winning the enterprise war not through better models, but through better partnerships.</p>
       <p>OpenAI's response is to cut out the middleman entirely. Instead of relying on consulting firms to deploy their technology (and potentially choosing a competitor), they're building their own deployment army.</p>
       <p>Meanwhile, Google is taking a third approach with its "Agent Platform" and tight integration with Google Workspace and Google Cloud. Their bet is that enterprises already using Gmail, Docs, and BigQuery will naturally adopt Gemini because it's already embedded in their daily tools.</p>
 
-      <h2>What This Means for the Job Market</h2>
+      <h2 id="section-5">What This Means for the Job Market</h2>
       <p>DeployCo is hiring aggressively, and the job descriptions reveal the new skill set that enterprises value most:</p>
       <ul>
         <li><strong>"AI Workflow Architects"</strong> — People who understand both AI capabilities and business processes deeply enough to redesign entire departments</li>

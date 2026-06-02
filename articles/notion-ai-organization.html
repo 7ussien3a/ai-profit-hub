@@ -151,29 +151,50 @@
 
     <div class="article-content">
       <p>Notion has long been hailed as the ultimate "second brain" for productivity enthusiasts. It allowed us to build custom databases, link notes, and manage projects in a way that no other app could. However, with the introduction and refinement of <strong>Notion AI</strong> in 2025 and 2026, the platform has evolved from a passive digital filing cabinet into an active, intelligent assistant. It no longer just stores your information—it understands it, organizes it, and helps you execute it.</p>
+  <style>
+    .toc-box{background:var(--bg-elevated,#1a1f2e);border:1px solid var(--border);border-left:3px solid var(--primary);border-radius:10px;padding:20px 24px;margin:28px 0 32px;max-width:520px}
+    .toc-box h4{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--primary-light);margin:0 0 12px}
+    .toc-list{margin:0;padding:0;list-style:none;counter-reset:toc}
+    .toc-list li{counter-increment:toc;margin-bottom:7px}
+    .toc-list li a{font-size:.85rem;color:var(--text-secondary);text-decoration:none;display:flex;align-items:baseline;gap:8px;transition:color .15s}
+    .toc-list li a::before{content:counter(toc);font-size:.7rem;font-weight:700;color:var(--primary-light);background:rgba(108,99,255,.15);border-radius:50%;width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+    .toc-list li a:hover{color:var(--primary-light)}
+  </style>
+  <div class="toc-box" role="navigation" aria-label="Table of contents">
+    <h4>📋 In This Article</h4>
+    <ol class="toc-list">
+      <li><a href="#section-1">1. The Power of the "Automated Brain Dump"</a></li>
+      <li><a href="#section-2">2. Summarizing and Synthesizing Large Contexts</a></li>
+      <li><a href="#section-3">3. The "AI-First" Database Property</a></li>
+      <li><a href="#section-4">4. Professional Tone and Communication Refinement</a></li>
+      <li><a href="#section-5">5. Pros and Cons of Notion's AI Integration</a></li>
+      <li><a href="#section-6">6. Final Verdict: Your Digital Executive Assistant</a></li>
+    </ol>
+  </div>
+
       <p>If you find yourself overwhelmed by a cluttered workspace and an endless list of unorganized notes, this guide will show you how to leverage Notion AI to regain control of your digital life.</p>
 
-      <h2>1. The Power of the "Automated Brain Dump"</h2>
+      <h2 id="section-1">1. The Power of the "Automated Brain Dump"</h2>
       <p>The biggest hurdle to organization is the friction of formatting. Most of us have brilliant ideas throughout the day, but we lose them because we don't have time to categorize them properly. Notion AI solves this through the "Automated Brain Dump" method.</p>
       <p>At the end of your day, create a blank page and simply type everything on your mind in raw, messy bullet points. Don't worry about grammar, structure, or where it belongs. Once you're done, highlight the entire mess, click "Ask AI," and select <strong>"Extract Action Items."</strong> In seconds, the AI will sift through your rambling and present a clean, actionable checklist of tasks for tomorrow. You can then take it a step further by asking the AI to <em>"Group these tasks by priority and estimate the time required for each."</em></p>
 
-      <h2>2. Summarizing and Synthesizing Large Contexts</h2>
+      <h2 id="section-2">2. Summarizing and Synthesizing Large Contexts</h2>
       <p>In the age of information overload, we often save long articles, PDF research papers, and project briefs into our Notion workspace "for later," only for them to sit unread. Notion AI's summarization feature is a game-changer for speed-readers and researchers.</p>
       <p>By using the <code>/summarize</code> command at the top of a long document, you get an immediate high-level overview. But the real power lies in <strong>Custom Synthesis</strong>. You can ask the AI: <em>"Based on this 50-page project proposal, what are the three most critical deadlines I need to know, and who is responsible for each?"</em> This allows you to digest massive amounts of information without getting lost in the details.</p>
 
       <div class="ad-space"></div>
 
-      <h2>3. The "AI-First" Database Property</h2>
+      <h2 id="section-3">3. The "AI-First" Database Property</h2>
       <p>One of the most advanced (and overlooked) features in Notion is the <strong>AI Custom Auto-Fill</strong> property in databases. You can set up a database of meeting notes where one column automatically generates a summary, another column automatically pulls out follow-up tasks, and a third column translates the title into another language.</p>
       <p>This transforms your database from a static list into a self-updating dashboard. Imagine uploading a raw transcript of a 60-minute Zoom call and having Notion AI automatically populate a table with the key takeaways, a sentiment score of the meeting, and a list of mentions for every team member. That is the future of organized work.</p>
 
-      <h2>4. Professional Tone and Communication Refinement</h2>
+      <h2 id="section-4">4. Professional Tone and Communication Refinement</h2>
       <p>Organization isn't just about tasks; it's about the clarity of your communication. If you're drafting a difficult email to a client or a delicate proposal for a manager, use Notion as your drafting ground. The <strong>"Change Tone"</strong> feature allows you to flip a draft from "Casual" to "Professional" or "Friendly" instantly.</p>
       <p>More importantly, the <strong>"Make Shorter"</strong> or <strong>"Improve Writing"</strong> features help you eliminate fluff and get straight to the point. Organized thinking leads to organized writing, and Notion AI acts as a 24/7 editor to ensure your messages are always clear and impactful.</p>
 
       <div class="ad-space"></div>
 
-      <h2>5. Pros and Cons of Notion's AI Integration</h2>
+      <h2 id="section-5">5. Pros and Cons of Notion's AI Integration</h2>
       <h3>Pros:</h3>
       <ul>
         <li><strong>Seamless Integration:</strong> You don't have to switch between ChatGPT and your notes; the AI lives exactly where your work lives.</li>
@@ -188,7 +209,7 @@
         <li><strong>Limited Creativity:</strong> While great for organization, the AI output can sometimes feel "generic." Use it for structure, but add your own personality to the final result.</li>
       </ul>
 
-      <h2>6. Final Verdict: Your Digital Executive Assistant</h2>
+      <h2 id="section-6">6. Final Verdict: Your Digital Executive Assistant</h2>
       <p>In 2026, Notion AI is no longer a luxury; it is a necessity for anyone managing a high volume of digital information. By automating the boring parts of organization—the formatting, the summarizing, and the task extraction—you free up your brain to do what it does best: <strong>Creative Problem Solving</strong>. Start by using the AI for one small task today, and you'll soon find it's the most valuable member of your team.</p>
 
   

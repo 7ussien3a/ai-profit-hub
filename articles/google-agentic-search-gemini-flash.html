@@ -147,11 +147,31 @@
 
     <div class="article-content">
       <p>At Google I/O 2026, Sundar Pichai unveiled what may be the <strong>most significant change to Google Search in its 28-year history</strong>. Powered by the new <strong>Gemini 3.5 Flash</strong> model, Google is transforming from a search engine into an <strong>agentic AI platform</strong> — one that doesn't just find information, but actively works on your behalf to complete tasks, monitor topics, and generate custom interfaces on the fly.</p>
+  <style>
+    .toc-box{background:var(--bg-elevated,#1a1f2e);border:1px solid var(--border);border-left:3px solid var(--primary);border-radius:10px;padding:20px 24px;margin:28px 0 32px;max-width:520px}
+    .toc-box h4{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--primary-light);margin:0 0 12px}
+    .toc-list{margin:0;padding:0;list-style:none;counter-reset:toc}
+    .toc-list li{counter-increment:toc;margin-bottom:7px}
+    .toc-list li a{font-size:.85rem;color:var(--text-secondary);text-decoration:none;display:flex;align-items:baseline;gap:8px;transition:color .15s}
+    .toc-list li a::before{content:counter(toc);font-size:.7rem;font-weight:700;color:var(--primary-light);background:rgba(108,99,255,.15);border-radius:50%;width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+    .toc-list li a:hover{color:var(--primary-light)}
+  </style>
+  <div class="toc-box" role="navigation" aria-label="Table of contents">
+    <h4>📋 In This Article</h4>
+    <ol class="toc-list">
+      <li><a href="#section-1">What is "Agentic Search"?</a></li>
+      <li><a href="#section-2">Gemini 3.5 Flash: The Engine Under the Hood</a></li>
+      <li><a href="#section-3">The Four Pillars of Google's New Search</a></li>
+      <li><a href="#section-4">The Controversy: Who Benefits?</a></li>
+      <li><a href="#section-5">What This Means for You</a></li>
+    </ol>
+  </div>
+
       <p>This isn't an incremental update. It's a fundamental reimagining of what "searching the internet" means. And it has massive implications for users, businesses, and the entire web ecosystem.</p>
 
       <hr>
 
-      <h2>What is "Agentic Search"?</h2>
+      <h2 id="section-1">What is "Agentic Search"?</h2>
       <p>Traditional search works like a library: you ask a question, and the engine points you to relevant books (websites). Agentic search works like a <strong>personal research assistant</strong>: you describe what you need, and the AI goes out, gathers information from multiple sources, synthesizes it, and presents a custom answer — sometimes even taking actions on your behalf.</p>
       <p>The key differences:</p>
       <table>
@@ -171,7 +191,7 @@
 
       <div class="ad-space"><!-- Ad: Mid --></div>
 
-      <h2>Gemini 3.5 Flash: The Engine Under the Hood</h2>
+      <h2 id="section-2">Gemini 3.5 Flash: The Engine Under the Hood</h2>
       <p>Powering this transformation is <strong>Gemini 3.5 Flash</strong>, released May 19, 2026. It's the first model in Google's new 3.5 generation, and it's specifically designed for speed and agency:</p>
       <ul>
         <li><strong>4x faster</strong> than comparable frontier models in output tokens per second — critical for real-time search interactions.</li>
@@ -180,7 +200,7 @@
         <li><strong>Available everywhere:</strong> Gemini app, AI Mode in Search, Google AI Studio, Gemini API, and the new Gemini Enterprise Agent Platform.</li>
       </ul>
 
-      <h2>The Four Pillars of Google's New Search</h2>
+      <h2 id="section-3">The Four Pillars of Google's New Search</h2>
 
       <h3>1. The Intelligent Search Box</h3>
       <p>Google's search box has been reimagined as a dynamic, multimodal interface. Instead of just typing text, you can drag and drop images, paste files, share video clips, and combine multiple inputs in a single query. The AI then understands the combined intent and produces a comprehensive response.</p>
@@ -209,7 +229,7 @@
 
       <div class="ad-space"><!-- Ad: Mid 2 --></div>
 
-      <h2>The Controversy: Who Benefits?</h2>
+      <h2 id="section-4">The Controversy: Who Benefits?</h2>
       <p>Not everyone is celebrating. The shift to agentic search raises serious concerns:</p>
       <ul>
         <li><strong>Publishers and content creators</strong> fear that AI-generated answers will further reduce traffic to their websites — the same concern driving the DuckDuckGo surge.</li>
@@ -217,7 +237,7 @@
         <li><strong>Small businesses</strong> are uncertain whether their websites will be discoverable in an AI-first search environment, or whether Google's AI will simply answer customer questions without directing traffic to business sites.</li>
       </ul>
 
-      <h2>What This Means for You</h2>
+      <h2 id="section-5">What This Means for You</h2>
       <p>If you're a Google user, the agentic search features will roll out gradually throughout 2026. The basic experience will be free, but advanced features like Information Agents require a Google AI subscription. Whether you embrace or resist these changes, one thing is clear: <strong>the way we find information online is fundamentally changing</strong>, and there's no going back.</p>
 
       <hr>

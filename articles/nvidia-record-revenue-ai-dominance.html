@@ -147,11 +147,31 @@
 
     <div class="article-content">
       <p>NVIDIA just did it again. The company that started as a gaming graphics card maker has posted <strong>$81.6 billion in quarterly revenue</strong> — with a staggering <strong>$75.2 billion</strong> coming from its data center division alone. To put that in perspective: NVIDIA's data center revenue in a single quarter now exceeds the <em>annual</em> revenue of companies like Nike, Starbucks, or Goldman Sachs.</p>
+  <style>
+    .toc-box{background:var(--bg-elevated,#1a1f2e);border:1px solid var(--border);border-left:3px solid var(--primary);border-radius:10px;padding:20px 24px;margin:28px 0 32px;max-width:520px}
+    .toc-box h4{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--primary-light);margin:0 0 12px}
+    .toc-list{margin:0;padding:0;list-style:none;counter-reset:toc}
+    .toc-list li{counter-increment:toc;margin-bottom:7px}
+    .toc-list li a{font-size:.85rem;color:var(--text-secondary);text-decoration:none;display:flex;align-items:baseline;gap:8px;transition:color .15s}
+    .toc-list li a::before{content:counter(toc);font-size:.7rem;font-weight:700;color:var(--primary-light);background:rgba(108,99,255,.15);border-radius:50%;width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+    .toc-list li a:hover{color:var(--primary-light)}
+  </style>
+  <div class="toc-box" role="navigation" aria-label="Table of contents">
+    <h4>📋 In This Article</h4>
+    <ol class="toc-list">
+      <li><a href="#section-1">The Numbers That Shocked Wall Street</a></li>
+      <li><a href="#section-2">Who's Buying All These Chips?</a></li>
+      <li><a href="#section-3">The Vera Rubin Generation</a></li>
+      <li><a href="#section-4">The Risks No One Wants to Talk About</a></li>
+      <li><a href="#section-5">What This Means for You</a></li>
+    </ol>
+  </div>
+
       <p>These aren't just impressive numbers. They tell the story of <strong>an entire industry's dependency on a single company</strong> — and raise serious questions about what happens when the world's AI infrastructure relies on one chipmaker.</p>
 
       <hr>
 
-      <h2>The Numbers That Shocked Wall Street</h2>
+      <h2 id="section-1">The Numbers That Shocked Wall Street</h2>
       <table>
         <thead><tr><th>Metric</th><th>Q1 FY2027</th><th>Q1 FY2026</th><th>Growth</th></tr></thead>
         <tbody>
@@ -170,7 +190,7 @@
 
       <div class="ad-space"><!-- Ad: Mid --></div>
 
-      <h2>Who's Buying All These Chips?</h2>
+      <h2 id="section-2">Who's Buying All These Chips?</h2>
       <p>The insatiable demand for NVIDIA's AI accelerators comes from three main categories:</p>
 
       <h3>1. Hyperscalers (The Big Spenders)</h3>
@@ -188,7 +208,7 @@
       <h3>3. Government and Intelligence Agencies</h3>
       <p>Perhaps most surprisingly, the US intelligence community has entered the GPU race. Reports indicate the White House approved a <strong>$9 billion budget</strong> for the CIA and NSA to purchase cutting-edge NVIDIA chips, after intelligence agencies realized they lack the computing power to run the latest AI models for national security applications.</p>
 
-      <h2>The Vera Rubin Generation</h2>
+      <h2 id="section-3">The Vera Rubin Generation</h2>
       <p>NVIDIA confirmed that its next-generation <strong>Vera Rubin AI platform</strong> is on track for the second half of 2026. Named after the astronomer who proved the existence of dark matter, the Vera Rubin chip promises:</p>
       <ul>
         <li><strong>2-3x performance improvement</strong> over current Blackwell architecture for AI training.</li>
@@ -202,7 +222,7 @@
 
       <div class="ad-space"><!-- Ad: Mid 2 --></div>
 
-      <h2>The Risks No One Wants to Talk About</h2>
+      <h2 id="section-4">The Risks No One Wants to Talk About</h2>
       <p>NVIDIA's dominance, while impressive, creates systemic risks for the entire AI industry:</p>
 
       <h3>Single Point of Failure</h3>
@@ -218,7 +238,7 @@
         <li><strong>Huawei's Ascend:</strong> China's answer, limited by US sanctions on manufacturing equipment.</li>
       </ul>
 
-      <h2>What This Means for You</h2>
+      <h2 id="section-5">What This Means for You</h2>
       <p>NVIDIA's dominance has a direct impact on your life, whether you realize it or not. Every time you use ChatGPT, Google Gemini, or any AI service, you're using NVIDIA hardware. The cost of those chips is baked into the subscription prices you pay. And as NVIDIA's margins suggest, you're paying a premium for a near-monopoly.</p>
       <p>The good news: competition is coming, and efficiency improvements mean AI costs are falling. The bad news: the AI infrastructure build-out is consuming enormous amounts of energy, driving up electricity prices in some regions, and diverting memory chips from consumer products.</p>
 

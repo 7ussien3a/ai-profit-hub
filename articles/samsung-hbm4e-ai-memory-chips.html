@@ -103,13 +103,34 @@
     <div class="article-cover"><img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=900&q=80" alt="Samsung HBM4E Memory Chips" loading="eager" fetchpriority="high"></div>
     <div class="article-content">
       <p>Everyone talks about ChatGPT, Gemini, and Claude. The headlines celebrate the software, the prompts, and the benchmark scores. But none of these AI models would exist — or respond as fast as they do — without a tiny piece of hardware that almost nobody talks about: <strong>High Bandwidth Memory (HBM)</strong>. This week, Samsung shipped the most advanced version ever manufactured: the <strong>12-layer HBM4E</strong>. Here is everything you need to understand about why this matters, and what it means for the AI tools you use every day.</p>
+  <style>
+    .toc-box{background:var(--bg-elevated,#1a1f2e);border:1px solid var(--border);border-left:3px solid var(--primary);border-radius:10px;padding:20px 24px;margin:28px 0 32px;max-width:520px}
+    .toc-box h4{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--primary-light);margin:0 0 12px}
+    .toc-list{margin:0;padding:0;list-style:none;counter-reset:toc}
+    .toc-list li{counter-increment:toc;margin-bottom:7px}
+    .toc-list li a{font-size:.85rem;color:var(--text-secondary);text-decoration:none;display:flex;align-items:baseline;gap:8px;transition:color .15s}
+    .toc-list li a::before{content:counter(toc);font-size:.7rem;font-weight:700;color:var(--primary-light);background:rgba(108,99,255,.15);border-radius:50%;width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+    .toc-list li a:hover{color:var(--primary-light)}
+  </style>
+  <div class="toc-box" role="navigation" aria-label="Table of contents">
+    <h4>📋 In This Article</h4>
+    <ol class="toc-list">
+      <li><a href="#section-1">What Exactly Is HBM and Why Does AI Need It?</a></li>
+      <li><a href="#section-2">The HBM4E Numbers That Actually Matter</a></li>
+      <li><a href="#section-3">Why Samsung Shipped Early — The Competitive War Behind the Headlines</a></li>
+      <li><a href="#section-4">The Hidden Bottleneck Nobody in AI Talks About</a></li>
+      <li><a href="#section-5">How HBM4E Compares to Previous Generations</a></li>
+      <li><a href="#section-6">What This Means for You in the Next 12–18 Months</a></li>
+    </ol>
+  </div>
 
-      <h2>What Exactly Is HBM and Why Does AI Need It?</h2>
+
+      <h2 id="section-1">What Exactly Is HBM and Why Does AI Need It?</h2>
       <p>To understand why HBM4E is a big deal, you need to understand the fundamental bottleneck in AI computing. When a large language model like GPT-5 or Claude generates a response, it is performing billions of mathematical operations per second. Each of these operations requires pulling data from memory and sending results back — constantly, at enormous scale.</p>
       <p>Traditional DRAM memory (the kind in your laptop) uses a narrow pathway to transfer data — imagine a single-lane road. It works fine for everyday computing. But for AI, it is like trying to funnel a river through a garden hose. The processor is left waiting, starved of the data it needs. This is the "memory-bandwidth bottleneck," and it is the single biggest hardware constraint in AI today.</p>
       <p>High Bandwidth Memory solves this by physically stacking multiple layers of memory chips on top of each other, connected by thousands of microscopic vertical pathways called <strong>Through-Silicon Vias (TSVs)</strong>. Instead of one lane, you get thousands of parallel lanes moving data simultaneously. The "12-layer" in Samsung's HBM4E literally means 12 memory dies stacked vertically — each one connected to the next by those microscopic through-holes.</p>
 
-      <h2>The HBM4E Numbers That Actually Matter</h2>
+      <h2 id="section-2">The HBM4E Numbers That Actually Matter</h2>
       <p>Here are the key specifications for Samsung's new HBM4E, and what each one means in practical terms:</p>
       <ul>
         <li><strong>Bandwidth: 3.6 TB/s per stack</strong> — A 20%+ improvement over the previous HBM4 standard. This means 3.6 <em>terabytes</em> of data can flow through a single memory stack every second. For context, that is roughly equivalent to transferring the entire text of Wikipedia in under one millisecond.</li>
@@ -121,12 +142,12 @@
 
       <div class="ad-space"></div>
 
-      <h2>Why Samsung Shipped Early — The Competitive War Behind the Headlines</h2>
+      <h2 id="section-3">Why Samsung Shipped Early — The Competitive War Behind the Headlines</h2>
       <p>Samsung originally scheduled HBM4E for a mid-2026 release but accelerated the timeline by months. This was not an accident. The AI memory market has become the most brutally competitive segment in the entire semiconductor industry, and Samsung was losing.</p>
       <p>For two consecutive years, their South Korean rival <strong>SK Hynix</strong> dominated the HBM market, capturing the majority of orders from Nvidia — the primary customer for HBM chips. Nvidia's H100 and H200 GPUs, which power most of the world's AI data centers, ran almost exclusively on SK Hynix memory. This was both a massive revenue loss and a significant reputational blow for Samsung.</p>
       <p>Samsung's early shipment of HBM4E is a clear, aggressive signal: they are done playing catch-up. They are competing to be the first choice for Nvidia's next-generation Blackwell Ultra and Rubin GPU architectures. For consumers and AI companies, this fierce competition is excellent news. When Samsung and SK Hynix race to out-innovate each other, the industry benefits from faster performance at lower prices.</p>
 
-      <h2>The Hidden Bottleneck Nobody in AI Talks About</h2>
+      <h2 id="section-4">The Hidden Bottleneck Nobody in AI Talks About</h2>
       <p>Here is a reality that most AI coverage misses entirely: the biggest bottleneck in AI inference (when a model generates a response) is not the processor, not the algorithm, and not the training data. It is <strong>memory bandwidth</strong>.</p>
       <p>Large language models are "memory-bound" workloads, meaning the GPU spends more time waiting for data from memory than it does actually computing. Every significant improvement in HBM bandwidth directly and immediately translates into three things you actually care about:</p>
       <ol>
@@ -135,7 +156,7 @@
         <li><strong>Lower API costs</strong> — When the same hardware processes more requests per second, the per-query cost drops, which eventually filters down to consumer pricing.</li>
       </ol>
 
-      <h2>How HBM4E Compares to Previous Generations</h2>
+      <h2 id="section-5">How HBM4E Compares to Previous Generations</h2>
       <table border="1" cellpadding="10" cellspacing="0" style="width:100%;text-align:left;margin-bottom:20px;border-collapse:collapse;">
         <tr style="background-color:#f4f4f4;">
           <th>Specification</th>
@@ -149,7 +170,7 @@
         <tr><td><strong>Pin Speed</strong></td><td>9.6 Gbps</td><td>12 Gbps</td><td>14–16 Gbps</td></tr>
       </table>
 
-      <h2>What This Means for You in the Next 12–18 Months</h2>
+      <h2 id="section-6">What This Means for You in the Next 12–18 Months</h2>
       <p>You will never purchase an HBM4E chip personally — they cost tens of thousands of dollars and are sold exclusively to companies like Nvidia, AMD, and Google. But the effects will reach you directly:</p>
       <p>Within the next year to eighteen months, the AI tools you use daily — writing assistants, image generators, code helpers — will become measurably faster and more capable. Tasks that currently require breaking up a long document into chunks will work seamlessly with full documents. AI assistants will maintain longer, more coherent conversations. And if history is any guide, fierce HBM competition between Samsung and SK Hynix will help keep cloud AI pricing competitive.</p>
       <p>The AI revolution is not just built by software engineers writing code. It is built in semiconductor fabrication plants in South Korea, by engineers who spend their careers stacking silicon wafers layer by microscopic layer, each one bringing the technology one step closer to what comes next.</p>

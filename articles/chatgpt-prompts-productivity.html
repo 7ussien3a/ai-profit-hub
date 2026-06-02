@@ -155,6 +155,27 @@
 
     <div class="article-content">
       <p>Let’s be honest. Most of us are using ChatGPT the wrong way. </p>
+  <style>
+    .toc-box{background:var(--bg-elevated,#1a1f2e);border:1px solid var(--border);border-left:3px solid var(--primary);border-radius:10px;padding:20px 24px;margin:28px 0 32px;max-width:520px}
+    .toc-box h4{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--primary-light);margin:0 0 12px}
+    .toc-list{margin:0;padding:0;list-style:none;counter-reset:toc}
+    .toc-list li{counter-increment:toc;margin-bottom:7px}
+    .toc-list li a{font-size:.85rem;color:var(--text-secondary);text-decoration:none;display:flex;align-items:baseline;gap:8px;transition:color .15s}
+    .toc-list li a::before{content:counter(toc);font-size:.7rem;font-weight:700;color:var(--primary-light);background:rgba(108,99,255,.15);border-radius:50%;width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+    .toc-list li a:hover{color:var(--primary-light)}
+  </style>
+  <div class="toc-box" role="navigation" aria-label="Table of contents">
+    <h4>📋 In This Article</h4>
+    <ol class="toc-list">
+      <li><a href="#section-1">The "Meeting Survivor" Prompts</a></li>
+      <li><a href="#section-2">The Deep Work & Focus Prompts</a></li>
+      <li><a href="#section-3">Data & Excel Nightmares (Solved)</a></li>
+      <li><a href="#section-4">Everyday Problem Solving</a></li>
+      <li><a href="#section-5">Quick Fire: 5 More Time-Savers</a></li>
+      <li><a href="#section-6">How to Actually Use These (Without Getting Fired)</a></li>
+    </ol>
+  </div>
+
       <p>When I first started using it at my office job, I was treating it like a glorified Google search. I’d ask basic questions, get generic answers, and wonder what all the hype was about. It wasn't until I spent a full weekend digging into "prompt engineering" that it finally clicked.</p>
       <p>The secret isn't the AI tool itself; it's <strong>how you talk to it</strong>.</p>
       <p>Over the past year, I’ve tested hundreds of prompts to try and automate the boring parts of my job. Out of all that trial and error, I’ve narrowed it down to the exact 15 prompts that actually work. These are the ones I use every single week to cut my workload in half.</p>
@@ -162,7 +183,7 @@
 
       <hr>
 
-      <h2>The "Meeting Survivor" Prompts</h2>
+      <h2 id="section-1">The "Meeting Survivor" Prompts</h2>
       <p>We all hate meetings that could have been an email. Since we can't escape them, let's let AI handle the fallout.</p>
 
       <h3>1. The Instant Summarizer</h3>
@@ -181,7 +202,7 @@
 
       <hr>
 
-      <h2>The Deep Work & Focus Prompts</h2>
+      <h2 id="section-2">The Deep Work & Focus Prompts</h2>
       <p>When you need to actually sit down and produce something, getting started is the hardest part. These prompts destroy writer's block.</p>
 
       <h3>3. The Outline Generator</h3>
@@ -203,7 +224,7 @@
 
       <hr>
 
-      <h2>Data & Excel Nightmares (Solved)</h2>
+      <h2 id="section-3">Data & Excel Nightmares (Solved)</h2>
       <p>You don't need to be an Excel wizard anymore. You just need to know how to ask for the right formula.</p>
 
       <h3>6. The Formula Whisperer</h3>
@@ -221,7 +242,7 @@
 
       <hr>
 
-      <h2>Everyday Problem Solving</h2>
+      <h2 id="section-4">Everyday Problem Solving</h2>
 
       <h3>8. The Angry Customer Diffuser</h3>
       <div class="prompt-box" style="background: rgba(0,212,170,0.05); padding: 20px; border-left: 4px solid #00D4AA; border-radius: 8px; margin: 20px 0;">
@@ -240,7 +261,7 @@
 
       <hr>
 
-      <h2>Quick Fire: 5 More Time-Savers</h2>
+      <h2 id="section-5">Quick Fire: 5 More Time-Savers</h2>
       <p>Here are five shorter prompts I keep on a sticky note on my desktop:</p>
       <ul>
         <li><strong>11. The Subject Line Tester:</strong> <em>"Give me 5 catchy, professional email subject lines for an email about [Topic] that will guarantee a high open rate."</em></li>
@@ -252,7 +273,7 @@
 
       <hr>
 
-      <h2>How to Actually Use These (Without Getting Fired)</h2>
+      <h2 id="section-6">How to Actually Use These (Without Getting Fired)</h2>
       <p>A quick word of warning from personal experience: <strong>Never put sensitive company data, passwords, or client PII (Personally Identifiable Information) into ChatGPT.</strong> </p>
       <p>Always anonymize your data. Instead of "John Doe from Apple," use "Client X from a tech company." </p>
       <p>Save these prompts in a Notion doc or Word file. When a task pops up, grab the prompt, fill in the brackets, and watch your output double. </p>

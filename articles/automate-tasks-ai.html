@@ -155,13 +155,34 @@
 
     <div class="article-content">
       <p>Here is a hard truth: If you are doing the exact same sequence of clicks on your computer more than three times a week, you are acting like a robot. And robots shouldn't be doing human work.</p>
+  <style>
+    .toc-box{background:var(--bg-elevated,#1a1f2e);border:1px solid var(--border);border-left:3px solid var(--primary);border-radius:10px;padding:20px 24px;margin:28px 0 32px;max-width:520px}
+    .toc-box h4{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--primary-light);margin:0 0 12px}
+    .toc-list{margin:0;padding:0;list-style:none;counter-reset:toc}
+    .toc-list li{counter-increment:toc;margin-bottom:7px}
+    .toc-list li a{font-size:.85rem;color:var(--text-secondary);text-decoration:none;display:flex;align-items:baseline;gap:8px;transition:color .15s}
+    .toc-list li a::before{content:counter(toc);font-size:.7rem;font-weight:700;color:var(--primary-light);background:rgba(108,99,255,.15);border-radius:50%;width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+    .toc-list li a:hover{color:var(--primary-light)}
+  </style>
+  <div class="toc-box" role="navigation" aria-label="Table of contents">
+    <h4>📋 In This Article</h4>
+    <ol class="toc-list">
+      <li><a href="#section-1">Step 1: Identify Your "Robot Tasks"</a></li>
+      <li><a href="#section-2">Step 2: Meet Zapier (Your New Best Friend)</a></li>
+      <li><a href="#section-3">Step 3: AI Email Triage</a></li>
+      <li><a href="#section-4">Step 4: Automating Content & Social Media</a></li>
+      <li><a href="#section-5">Step 5: AI Note-Taking and Meeting Automation</a></li>
+      <li><a href="#section-6">The Golden Rule of Automation</a></li>
+    </ol>
+  </div>
+
       <p>I remember hitting a breaking point last year. Every morning, I spent my first hour downloading invoices from my email, renaming the files, and uploading them to a Google Drive folder. It was mind-numbing.</p>
       <p>When I finally sat down to figure out how to automate it, I realized something shocking: <strong>You don't need to know how to code anymore.</strong> AI has made automation accessible to absolutely everyone.</p>
       <p>If you're tired of feeling like a glorified data-entry clerk, this guide is for you. Here is exactly how a total beginner can start automating their daily tasks using AI.</p>
 
       <hr>
 
-      <h2>Step 1: Identify Your "Robot Tasks"</h2>
+      <h2 id="section-1">Step 1: Identify Your "Robot Tasks"</h2>
       <p>Before touching any tools, we need to figure out what to automate. Grab a piece of paper and write down tasks that fit these criteria:</p>
       <ul>
         <li><strong>Repetitive:</strong> You do it the exact same way every time.</li>
@@ -172,7 +193,7 @@
 
       <hr>
 
-      <h2>Step 2: Meet Zapier (Your New Best Friend)</h2>
+      <h2 id="section-2">Step 2: Meet Zapier (Your New Best Friend)</h2>
       <p>Zapier is the glue of the internet. It connects apps that usually don't talk to each other (like Gmail and Slack). With their recent AI updates, you don't even have to build the connections yourself; you just tell the AI what you want.</p>
       
       <h3>How to build your first automation (a "Zap"):</h3>
@@ -190,7 +211,7 @@
 
       <hr>
 
-      <h2>Step 3: AI Email Triage</h2>
+      <h2 id="section-3">Step 3: AI Email Triage</h2>
       <p>Email is the biggest time sink for most professionals. Let's fix it using AI.</p>
 
       <h3>For Gmail Users:</h3>
@@ -203,7 +224,7 @@
 
       <hr>
 
-      <h2>Step 4: Automating Content & Social Media</h2>
+      <h2 id="section-4">Step 4: Automating Content & Social Media</h2>
       <p>If you run a business or a personal brand, posting to social media can feel like a full-time job. AI automation turns it into a 10-minute task.</p>
 
       <p><strong>The Tool: Buffer + ChatGPT</strong></p>
@@ -221,7 +242,7 @@
 
       <hr>
 
-      <h2>Step 5: AI Note-Taking and Meeting Automation</h2>
+      <h2 id="section-5">Step 5: AI Note-Taking and Meeting Automation</h2>
       <p>We touched on this in our Chrome extensions guide, but it bears repeating: <strong>never take manual meeting notes again.</strong></p>
 
       <p>Tools like <strong>Otter.ai</strong> or <strong>Fireflies.ai</strong> act as an AI assistant that joins your Zoom or Google Meet calls.</p>
@@ -233,7 +254,7 @@
 
       <hr>
 
-      <h2>The Golden Rule of Automation</h2>
+      <h2 id="section-6">The Golden Rule of Automation</h2>
       <div class="pro-tip" style="background: rgba(0,212,170,0.05); padding: 20px; border-left: 4px solid #00D4AA; border-radius: 8px; margin: 20px 0;">
         <p><strong>Start Small.</strong> Don't try to automate your entire life in one weekend. You will get frustrated and quit.</p>
       </div>

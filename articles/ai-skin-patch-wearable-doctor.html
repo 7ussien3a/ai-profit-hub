@@ -147,11 +147,31 @@
 
     <div class="article-content">
       <p>Imagine a bandage-sized patch on your chest that doesn't just monitor your heart — it <strong>runs a neural network directly on your skin</strong>, detecting a heart attack in milliseconds without ever connecting to Wi-Fi, Bluetooth, or a cloud server. No phone needed. No internet required. Just a soft, stretchable piece of electronics that acts as your <strong>personal, instantaneous doctor</strong>.</p>
+  <style>
+    .toc-box{background:var(--bg-elevated,#1a1f2e);border:1px solid var(--border);border-left:3px solid var(--primary);border-radius:10px;padding:20px 24px;margin:28px 0 32px;max-width:520px}
+    .toc-box h4{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--primary-light);margin:0 0 12px}
+    .toc-list{margin:0;padding:0;list-style:none;counter-reset:toc}
+    .toc-list li{counter-increment:toc;margin-bottom:7px}
+    .toc-list li a{font-size:.85rem;color:var(--text-secondary);text-decoration:none;display:flex;align-items:baseline;gap:8px;transition:color .15s}
+    .toc-list li a::before{content:counter(toc);font-size:.7rem;font-weight:700;color:var(--primary-light);background:rgba(108,99,255,.15);border-radius:50%;width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+    .toc-list li a:hover{color:var(--primary-light)}
+  </style>
+  <div class="toc-box" role="navigation" aria-label="Table of contents">
+    <h4>📋 In This Article</h4>
+    <ol class="toc-list">
+      <li><a href="#section-1">Why Current Wearables Fall Short</a></li>
+      <li><a href="#section-2">How the AI Skin Patch Works</a></li>
+      <li><a href="#section-3">Beyond Heart Monitoring: The Future of On-Body AI</a></li>
+      <li><a href="#section-4">The Privacy Advantage</a></li>
+      <li><a href="#section-5">When Can You Get One?</a></li>
+    </ol>
+  </div>
+
       <p>This isn't science fiction. Researchers at the <strong>University of Chicago</strong> and <strong>Argonne National Laboratory</strong> have just published a breakthrough that could fundamentally change how we think about wearable health technology — and it arrives at a time when the line between human and machine is getting thinner than the patch itself.</p>
 
       <hr>
 
-      <h2>Why Current Wearables Fall Short</h2>
+      <h2 id="section-1">Why Current Wearables Fall Short</h2>
       <p>Your Apple Watch or Fitbit can track your heart rate, count your steps, and even take an ECG. But here's the dirty secret of wearable health technology: <strong>the "intelligence" isn't actually in the device on your wrist</strong>.</p>
       <p>When your smartwatch detects an irregular heartbeat, here's what actually happens:</p>
       <ol>
@@ -170,7 +190,7 @@
 
       <div class="ad-space"><!-- Ad: Mid --></div>
 
-      <h2>How the AI Skin Patch Works</h2>
+      <h2 id="section-2">How the AI Skin Patch Works</h2>
       <p>The breakthrough hinges on a new manufacturing process for <strong>organic electrochemical transistors</strong> — electronic components made from flexible, biocompatible materials that can be printed onto skin-like surfaces.</p>
 
       <h3>The Technical Innovation</h3>
@@ -196,7 +216,7 @@
         <li><strong>Heart Attack Risk Assessment:</strong> Using a separate neural network running simultaneously on the same patch, it assessed heart attack risk factors with 83.5% accuracy — analyzing multiple biomarkers in real time.</li>
       </ul>
 
-      <h2>Beyond Heart Monitoring: The Future of On-Body AI</h2>
+      <h2 id="section-3">Beyond Heart Monitoring: The Future of On-Body AI</h2>
       <p>The skin patch is just the beginning. The same fundamental technology — flexible, stretchable AI computing — opens doors to applications that sound like science fiction:</p>
       <ul>
         <li><strong>Continuous Cancer Screening:</strong> Battery-free patches are already being developed for wireless melanoma detection, measuring the bioimpedance of skin lesions to flag potential issues.</li>
@@ -211,11 +231,11 @@
 
       <div class="ad-space"><!-- Ad: Mid 2 --></div>
 
-      <h2>The Privacy Advantage</h2>
+      <h2 id="section-4">The Privacy Advantage</h2>
       <p>One of the most overlooked benefits of on-body AI is <strong>privacy</strong>. Because the patch processes everything locally, your most sensitive health data — your heartbeat patterns, risk factors, biomarkers — never leaves your body. It's never transmitted over Wi-Fi, never stored on a cloud server, and never accessible to hackers, insurance companies, or tech corporations.</p>
       <p>In an era where health data breaches are increasingly common and insurance companies are exploring ways to use wearable data for pricing decisions, a device that keeps your medical information entirely on your person isn't just a technical choice — it's a <strong>philosophical one</strong>.</p>
 
-      <h2>When Can You Get One?</h2>
+      <h2 id="section-5">When Can You Get One?</h2>
       <p>The honest answer: not soon enough. The technology is currently in the research phase, and clinical trials, FDA approval, and manufacturing scale-up could take 3-5 years. But the trajectory is clear, and major healthcare companies are watching closely.</p>
       <p>In the meantime, the research validates a powerful idea: <strong>the future of AI isn't just in data centers and smartphones — it's on your skin</strong>.</p>
 

@@ -155,13 +155,36 @@
 
     <div class="article-content">
       <p>I have a confession to make: I used to have a dedicated "ChatGPT tab" pinned on my browser all day long. Whenever I needed an email written or a long article summarized, I’d copy the text, switch tabs, paste it into ChatGPT, copy the result, and paste it back.</p>
+  <style>
+    .toc-box{background:var(--bg-elevated,#1a1f2e);border:1px solid var(--border);border-left:3px solid var(--primary);border-radius:10px;padding:20px 24px;margin:28px 0 32px;max-width:520px}
+    .toc-box h4{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--primary-light);margin:0 0 12px}
+    .toc-list{margin:0;padding:0;list-style:none;counter-reset:toc}
+    .toc-list li{counter-increment:toc;margin-bottom:7px}
+    .toc-list li a{font-size:.85rem;color:var(--text-secondary);text-decoration:none;display:flex;align-items:baseline;gap:8px;transition:color .15s}
+    .toc-list li a::before{content:counter(toc);font-size:.7rem;font-weight:700;color:var(--primary-light);background:rgba(108,99,255,.15);border-radius:50%;width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+    .toc-list li a:hover{color:var(--primary-light)}
+  </style>
+  <div class="toc-box" role="navigation" aria-label="Table of contents">
+    <h4>📋 In This Article</h4>
+    <ol class="toc-list">
+      <li><a href="#section-1">1. Monica — Your "Do Everything" Copilot</a></li>
+      <li><a href="#section-2">2. Harpa AI — The Automation Beast</a></li>
+      <li><a href="#section-3">3. Merlin — The Ultimate Writer's Block Cure</a></li>
+      <li><a href="#section-4">4. Scribe — The Documentation Savior</a></li>
+      <li><a href="#section-5">5. GrammarlyGO — The Professional Polish</a></li>
+      <li><a href="#section-6">6. Fireflies.ai — The Meeting Assassin</a></li>
+      <li><a href="#section-7">7. Perplexity Companion — The Better Google Search</a></li>
+      <li><a href="#section-8">My Setup Recommendation</a></li>
+    </ol>
+  </div>
+
       <p>It sounds exhausting just typing it out.</p>
       <p>Then, I discovered the magic of AI Chrome extensions. Why go to the AI when the AI can live inside your browser and follow you wherever you go?</p>
       <p>After testing dozens of buggy, useless extensions, I've curated this list of the <strong>7 absolute best AI Chrome extensions</strong> that I personally use every single day. The best part? They all have generous free tiers.</p>
 
       <hr>
 
-      <h2>1. Monica — Your "Do Everything" Copilot</h2>
+      <h2 id="section-1">1. Monica — Your "Do Everything" Copilot</h2>
       <p>If you only install one extension from this list, make it Monica. It sits as a tiny, unobtrusive sidebar on your screen.</p>
       <ul>
         <li><strong>What it does:</strong> You highlight any text on any website, and a small Monica icon pops up. Click it, and you can instantly translate, explain, summarize, or rewrite that text.</li>
@@ -169,7 +192,7 @@
         <li><strong>Best for:</strong> General daily tasks and heavy readers.</li>
       </ul>
 
-      <h2>2. Harpa AI — The Automation Beast</h2>
+      <h2 id="section-2">2. Harpa AI — The Automation Beast</h2>
       <p>Harpa is a bit more advanced, but once you learn how to use it, it feels like having a digital intern.</p>
       <ul>
         <li><strong>What it does:</strong> It connects ChatGPT directly to whatever webpage you are viewing. But its real power is "web monitoring."</li>
@@ -182,7 +205,7 @@
 
       <hr>
 
-      <h2>3. Merlin — The Ultimate Writer's Block Cure</h2>
+      <h2 id="section-3">3. Merlin — The Ultimate Writer's Block Cure</h2>
       <p>Merlin integrates seamlessly into your most-used platforms: Gmail, LinkedIn, Twitter (X), and YouTube.</p>
       <ul>
         <li><strong>What it does:</strong> Press `Cmd+M` (or `Ctrl+M`) anywhere, and Merlin pops up ready to write.</li>
@@ -190,7 +213,7 @@
         <li><strong>Best for:</strong> Social media managers and networking.</li>
       </ul>
 
-      <h2>4. Scribe — The Documentation Savior</h2>
+      <h2 id="section-4">4. Scribe — The Documentation Savior</h2>
       <p>Have you ever had to teach a coworker how to do a specific task on the computer? Writing down step-by-step instructions takes forever. Scribe does it automatically.</p>
       <ul>
         <li><strong>What it does:</strong> You click "Record," do the task (like uploading a file to a CRM), and click "Stop." Scribe uses AI to instantly generate a step-by-step tutorial with screenshots, highlights, and text instructions.</li>
@@ -200,7 +223,7 @@
 
       <hr>
 
-      <h2>5. GrammarlyGO — The Professional Polish</h2>
+      <h2 id="section-5">5. GrammarlyGO — The Professional Polish</h2>
       <p>You probably already know Grammarly for checking spelling, but their new AI features (GrammarlyGO) are game-changing.</p>
       <ul>
         <li><strong>What it does:</strong> It doesn't just fix errors anymore; it helps you rewrite entire paragraphs for tone. </li>
@@ -211,7 +234,7 @@
       <!-- Ad Space -->
       <div class="ad-space"><!-- Ad: Mid-Article Rectangle 2 --></div>
 
-      <h2>6. Fireflies.ai — The Meeting Assassin</h2>
+      <h2 id="section-6">6. Fireflies.ai — The Meeting Assassin</h2>
       <p>If you have a lot of Google Meet or Zoom calls straight from your browser, this extension is mandatory.</p>
       <ul>
         <li><strong>What it does:</strong> It automatically joins your browser-based meetings, records them, transcribes them, and emails you an AI summary the moment the meeting ends.</li>
@@ -219,7 +242,7 @@
         <li><strong>Best for:</strong> Managers, freelancers, and remote workers.</li>
       </ul>
 
-      <h2>7. Perplexity Companion — The Better Google Search</h2>
+      <h2 id="section-7">7. Perplexity Companion — The Better Google Search</h2>
       <p>Sometimes a standard Google search gives you too many ads and SEO-stuffed articles. The Perplexity extension fixes that.</p>
       <ul>
         <li><strong>What it does:</strong> When you search for a question, Perplexity reads the top results, summarizes the actual answer, and provides footnotes linking to the exact sources.</li>
@@ -229,7 +252,7 @@
 
       <hr>
 
-      <h2>My Setup Recommendation</h2>
+      <h2 id="section-8">My Setup Recommendation</h2>
       <p>Don't install all 7 at once—your browser will become a cluttered mess. </p>
       <p>My advice? Start with <strong>Monica</strong> for general AI assistance and <strong>GrammarlyGO</strong> for your writing. Once you get used to having AI integrated into your browser, add <strong>Scribe</strong> or <strong>Harpa</strong> based on your specific job needs.</p>
       

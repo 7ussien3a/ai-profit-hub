@@ -155,13 +155,33 @@
 
     <div class="article-content">
       <p>We all know the story. You see an incredibly realistic, mind-blowing AI image on X (formerly Twitter) or Instagram. You ask what tool they used. The answer is always: <em>Midjourney</em>.</p>
+  <style>
+    .toc-box{background:var(--bg-elevated,#1a1f2e);border:1px solid var(--border);border-left:3px solid var(--primary);border-radius:10px;padding:20px 24px;margin:28px 0 32px;max-width:520px}
+    .toc-box h4{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--primary-light);margin:0 0 12px}
+    .toc-list{margin:0;padding:0;list-style:none;counter-reset:toc}
+    .toc-list li{counter-increment:toc;margin-bottom:7px}
+    .toc-list li a{font-size:.85rem;color:var(--text-secondary);text-decoration:none;display:flex;align-items:baseline;gap:8px;transition:color .15s}
+    .toc-list li a::before{content:counter(toc);font-size:.7rem;font-weight:700;color:var(--primary-light);background:rgba(108,99,255,.15);border-radius:50%;width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+    .toc-list li a:hover{color:var(--primary-light)}
+  </style>
+  <div class="toc-box" role="navigation" aria-label="Table of contents">
+    <h4>📋 In This Article</h4>
+    <ol class="toc-list">
+      <li><a href="#section-1">1. Bing Image Creator (Powered by DALL-E 3)</a></li>
+      <li><a href="#section-2">2. Leonardo.Ai</a></li>
+      <li><a href="#section-3">3. Stable Diffusion Web (via Clipdrop or Mage.space)</a></li>
+      <li><a href="#section-4">4. Adobe Firefly (Free Tier)</a></li>
+      <li><a href="#section-5">The Bottom Line: Which One Should You Pick?</a></li>
+    </ol>
+  </div>
+
       <p>So, you run to Discord, ready to create your own masterpieces, only to hit a massive paywall. Since Midjourney ended its free trials, a lot of us have been left looking for alternatives.</p>
       <p>Over the last three months, my team and I have tested <strong>over 20 different free AI image generators</strong>. Most of them were terrible—producing images with 7 fingers, distorted faces, or heavy watermarks. But a few actually surprised us. </p>
       <p>If you want Midjourney-level quality without the $10-$30 monthly subscription, here are the 4 best free alternatives you should be using right now in 2026.</p>
 
       <hr>
 
-      <h2>1. Bing Image Creator (Powered by DALL-E 3)</h2>
+      <h2 id="section-1">1. Bing Image Creator (Powered by DALL-E 3)</h2>
       <p><strong>The Verdict:</strong> The absolute best all-rounder, especially if you want text in your images.</p>
       
       <p>If there's one tool that truly rivals Midjourney for the average user, it’s Microsoft’s Bing Image Creator. Because it runs on OpenAI’s latest DALL-E 3 model, it understands complex prompts significantly better than Midjourney.</p>
@@ -177,7 +197,7 @@
 
       <hr>
 
-      <h2>2. Leonardo.Ai</h2>
+      <h2 id="section-2">2. Leonardo.Ai</h2>
       <p><strong>The Verdict:</strong> The best for power users who want maximum control over their art.</p>
 
       <p>Leonardo.Ai is probably the closest thing to the "Midjourney Experience" available for free. It has a beautiful web interface (no Discord required!), and it is incredibly powerful.</p>
@@ -195,7 +215,7 @@
 
       <hr>
 
-      <h2>3. Stable Diffusion Web (via Clipdrop or Mage.space)</h2>
+      <h2 id="section-3">3. Stable Diffusion Web (via Clipdrop or Mage.space)</h2>
       <p><strong>The Verdict:</strong> Best for uncensored, open-source creativity.</p>
 
       <p>Stable Diffusion is an open-source model. If you have a powerful gaming PC, you can run it locally for free forever. But if you're like me and working from a standard laptop, you need a web host.</p>
@@ -210,7 +230,7 @@
 
       <hr>
 
-      <h2>4. Adobe Firefly (Free Tier)</h2>
+      <h2 id="section-4">4. Adobe Firefly (Free Tier)</h2>
       <p><strong>The Verdict:</strong> Best for commercial use and graphic designers.</p>
 
       <p>When Adobe entered the AI race, they did something different: they trained their model exclusively on Adobe Stock and public domain images. This means Adobe Firefly is "commercially safe"—you won't get sued for using these images in your business.</p>
@@ -227,7 +247,7 @@
 
       <hr>
 
-      <h2>The Bottom Line: Which One Should You Pick?</h2>
+      <h2 id="section-5">The Bottom Line: Which One Should You Pick?</h2>
       <p>Here is my honest recommendation after using all of them:</p>
       <ul>
         <li>If you want <strong>beautiful, stylized art</strong> with lots of control, use <strong>Leonardo.Ai</strong>.</li>

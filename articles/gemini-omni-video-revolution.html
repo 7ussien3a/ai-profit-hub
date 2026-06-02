@@ -58,16 +58,37 @@
     <div class="article-cover"><img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=900&q=80" alt="Video Editing AI Concept"></div>
     <div class="article-content">
       <p>Google just dropped the biggest bombshell of 2026 at its annual I/O conference, and no, it wasn't another chatbot upgrade. Meet <strong>Gemini Omni</strong> — a completely new class of AI model that turns video editing from a specialized, time-consuming craft into something as simple as having a conversation. If you've ever spent hours wrestling with Premiere Pro or DaVinci Resolve, this announcement probably felt like a religious experience.</p>
+  <style>
+    .toc-box{background:var(--bg-elevated,#1a1f2e);border:1px solid var(--border);border-left:3px solid var(--primary);border-radius:10px;padding:20px 24px;margin:28px 0 32px;max-width:520px}
+    .toc-box h4{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--primary-light);margin:0 0 12px}
+    .toc-list{margin:0;padding:0;list-style:none;counter-reset:toc}
+    .toc-list li{counter-increment:toc;margin-bottom:7px}
+    .toc-list li a{font-size:.85rem;color:var(--text-secondary);text-decoration:none;display:flex;align-items:baseline;gap:8px;transition:color .15s}
+    .toc-list li a::before{content:counter(toc);font-size:.7rem;font-weight:700;color:var(--primary-light);background:rgba(108,99,255,.15);border-radius:50%;width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+    .toc-list li a:hover{color:var(--primary-light)}
+  </style>
+  <div class="toc-box" role="navigation" aria-label="Table of contents">
+    <h4>📋 In This Article</h4>
+    <ol class="toc-list">
+      <li><a href="#section-1">What Exactly is Gemini Omni?</a></li>
+      <li><a href="#section-2">Conversational Video Editing: How It Actually Works</a></li>
+      <li><a href="#section-3">Google Flow: The Full Production Suite</a></li>
+      <li><a href="#section-4">Availability and Pricing</a></li>
+      <li><a href="#section-5">Where It Still Falls Short (My Honest Take)</a></li>
+      <li><a href="#section-6">The Bigger Picture: What This Means for Creators</a></li>
+    </ol>
+  </div>
+
 
       <p>I've been following AI video tools since the early days of Runway and Pika, and I can tell you with confidence: Gemini Omni is not an incremental improvement. It's a category-defining leap. Let me walk you through exactly what it does, why it matters, and honestly, where it still falls short.</p>
 
-      <h2>What Exactly is Gemini Omni?</h2>
+      <h2 id="section-1">What Exactly is Gemini Omni?</h2>
       <p>Unlike Google's general-purpose Gemini models (like Gemini 3.5 Pro for text and coding), Gemini Omni is a specialized "world model" built from the ground up for visual media. It doesn't just generate video from text prompts like Sora or Veo — it fundamentally <em>understands</em> video. It processes footage frame by frame, tracking objects, understanding physics, maintaining character consistency, and remembering context across an entire editing session.</p>
       <p>Think of it this way: previous AI video tools were like giving a talented artist a single instruction and hoping for the best. Gemini Omni is like hiring a full-time film editor who sits next to you, remembers everything you've discussed, and executes changes instantly while keeping the entire project visually coherent.</p>
 
       <div class="ad-space"></div>
 
-      <h2>Conversational Video Editing: How It Actually Works</h2>
+      <h2 id="section-2">Conversational Video Editing: How It Actually Works</h2>
       <p>The killer feature of Gemini Omni is what Google calls "conversational editing." You don't need to learn complex software interfaces or keyboard shortcuts. You literally talk to your video project. Here's what a real workflow looks like:</p>
       <ul>
         <li><strong>"Make the sky a dramatic sunset orange in this scene"</strong> — Omni analyzes the scene, identifies the sky region, and applies a photorealistic color grade while preserving the rest of the frame.</li>
@@ -77,7 +98,7 @@
       </ul>
       <p>What makes this truly revolutionary is the <strong>memory</strong>. In a multi-turn conversation, Omni remembers every previous edit. So if you say "Actually, go back to the original sky color but keep the slow-motion," it can do that without you re-explaining the entire context. It maintains a complete history of your creative decisions.</p>
 
-      <h2>Google Flow: The Full Production Suite</h2>
+      <h2 id="section-3">Google Flow: The Full Production Suite</h2>
       <p>Gemini Omni doesn't exist in isolation. Google has embedded it as the core intelligence inside <strong>Google Flow</strong>, a brand-new AI-native filmmaking platform. Flow is designed to be the all-in-one production suite for the AI era — combining script generation (powered by Gemini 3.5), video generation (powered by Veo 3), and now conversational editing (powered by Omni).</p>
       <p>For YouTubers and small creators, this is absolutely game-changing. A solo creator can now:</p>
       <ul>
@@ -91,7 +112,7 @@
 
       <div class="ad-space"></div>
 
-      <h2>Availability and Pricing</h2>
+      <h2 id="section-4">Availability and Pricing</h2>
       <p>Google has been surprisingly generous with the initial rollout. Gemini Omni Flash (the first, smaller model in the family) is available to:</p>
       <ul>
         <li><strong>Google AI Plus, Pro, and Ultra subscribers</strong> through the Gemini app and Google Flow</li>
@@ -100,7 +121,7 @@
       </ul>
       <p>The free tier through YouTube is particularly strategic. By giving every YouTube creator access to basic Omni capabilities, Google is essentially training millions of users on their ecosystem, making it incredibly sticky.</p>
 
-      <h2>Where It Still Falls Short (My Honest Take)</h2>
+      <h2 id="section-5">Where It Still Falls Short (My Honest Take)</h2>
       <p>Before you cancel your Adobe subscription, there are real limitations. In my testing of the early Flash model, I noticed several issues:</p>
       <ul>
         <li><strong>Long-form content struggles:</strong> Omni handles short clips (under 5 minutes) beautifully, but consistency starts to drift on longer projects. Character faces can subtly shift, and color grades can become inconsistent across a 20-minute video.</li>
@@ -108,7 +129,7 @@
         <li><strong>Processing time:</strong> Complex edits on high-resolution footage can take several minutes. This is fast by AI standards, but professional editors accustomed to real-time playback may find it frustrating for tight-deadline projects.</li>
       </ul>
 
-      <h2>The Bigger Picture: What This Means for Creators</h2>
+      <h2 id="section-6">The Bigger Picture: What This Means for Creators</h2>
       <p>Gemini Omni represents a philosophical shift in creative work. The barrier to entry for high-quality video production has been obliterated. A teenager in a rural village with a smartphone and an internet connection now has access to editing capabilities that would have cost thousands of dollars in software licenses just three years ago.</p>
       <p>For professional editors, this isn't necessarily a death sentence — it's a role transformation. The most valuable skill is no longer knowing which buttons to press in Premiere Pro. It's having the creative vision to know <em>what</em> to tell the AI to do. The craft is evolving from technical execution to creative direction, and those who adapt will thrive in this new landscape.</p>
       <p>Google hasn't just released a product. They've fired the opening shot in the war for the future of creative media. Adobe, Apple, and every other video tool company should be very, very nervous.</p>

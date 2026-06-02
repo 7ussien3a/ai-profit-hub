@@ -154,11 +154,31 @@
 
     <div class="article-content">
       <p>The "AI Gold Rush" of 2023 and 2024 was defined by irrational exuberance. Companies threw billions at AI startups, bought infinite API credits, and integrated chatbots into every conceivable software product without asking one crucial question: <strong>Does this actually make us money?</strong></p>
+  <style>
+    .toc-box{background:var(--bg-elevated,#1a1f2e);border:1px solid var(--border);border-left:3px solid var(--primary);border-radius:10px;padding:20px 24px;margin:28px 0 32px;max-width:520px}
+    .toc-box h4{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--primary-light);margin:0 0 12px}
+    .toc-list{margin:0;padding:0;list-style:none;counter-reset:toc}
+    .toc-list li{counter-increment:toc;margin-bottom:7px}
+    .toc-list li a{font-size:.85rem;color:var(--text-secondary);text-decoration:none;display:flex;align-items:baseline;gap:8px;transition:color .15s}
+    .toc-list li a::before{content:counter(toc);font-size:.7rem;font-weight:700;color:var(--primary-light);background:rgba(108,99,255,.15);border-radius:50%;width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+    .toc-list li a:hover{color:var(--primary-light)}
+  </style>
+  <div class="toc-box" role="navigation" aria-label="Table of contents">
+    <h4>📋 In This Article</h4>
+    <ol class="toc-list">
+      <li><a href="#section-1">The Rising Cost of AI Compute: The Numbers Don't Lie</a></li>
+      <li><a href="#section-2">What Exactly is "Cost-Per-Task"?</a></li>
+      <li><a href="#section-3">Three Massive Shifts Reshaping the Industry</a></li>
+      <li><a href="#section-4">The AI SaaS Implosion</a></li>
+      <li><a href="#section-5">Looking Forward: The Efficiency Revolution</a></li>
+    </ol>
+  </div>
+
       <p>By May 2026, the hangover has set in. CFOs are poring over cloud bills, VCs are demanding profitability metrics, and the honeymoon phase with AI is definitively over. Welcome to the <strong>"Cost-Per-Task" economy</strong> — where every AI operation is measured not by how "smart" it is, but by how much it costs versus the value it produces.</p>
 
       <hr>
 
-      <h2>The Rising Cost of AI Compute: The Numbers Don't Lie</h2>
+      <h2 id="section-1">The Rising Cost of AI Compute: The Numbers Don't Lie</h2>
       <p>As AI models shifted from basic text generation to complex, agentic reasoning, the compute required to process a single query skyrocketed. Here's the brutal math:</p>
 
       <table>
@@ -179,7 +199,7 @@
 
       <div class="ad-space"><!-- Ad: Mid --></div>
 
-      <h2>What Exactly is "Cost-Per-Task"?</h2>
+      <h2 id="section-2">What Exactly is "Cost-Per-Task"?</h2>
       <p>Cost-Per-Task is a deceptively simple metric with profound implications:</p>
       <p><strong>Cost-Per-Task = (API fees + compute costs + latency costs + error correction costs) ÷ Number of tasks completed correctly</strong></p>
       <p>That last part — "completed <em>correctly</em>" — is the killer. If a company uses an AI agent to review legal contracts and the API calls cost $15 per contract, but the AI misses critical clauses 10% of the time (requiring an expensive lawyer at $400/hour to fix the mistakes), the <strong>true Cost-Per-Task</strong> might be higher than simply hiring junior paralegals in the first place.</p>
@@ -197,7 +217,7 @@
 
       <hr>
 
-      <h2>Three Massive Shifts Reshaping the Industry</h2>
+      <h2 id="section-3">Three Massive Shifts Reshaping the Industry</h2>
 
       <h3>1. The Death of the "Do It All" Model</h3>
       <p>Businesses are abandoning massive, expensive frontier models for simple tasks. The analogy is perfect: <strong>why use a Ferrari to go to the grocery store?</strong></p>
@@ -222,7 +242,7 @@
 
       <div class="ad-space"><!-- Ad: Mid 2 --></div>
 
-      <h2>The AI SaaS Implosion</h2>
+      <h2 id="section-4">The AI SaaS Implosion</h2>
       <p>This economic shift has decimated the AI SaaS market. In 2024, thousands of startups existed purely as <strong>"API wrappers"</strong> — taking a user's input, sending it to OpenAI, adding a nice UI on top, and charging a markup. It was a great business model when users didn't know how to use APIs directly.</p>
       <p>In the Cost-Per-Task economy, enterprises have realized they can just route the API calls themselves. Why pay $50/month for a "AI email writer" SaaS when a direct API call costs $0.05 per email? The math doesn't add up anymore.</p>
 
@@ -235,7 +255,7 @@
       </ul>
       <p>The pure "GPT wrapper with a pretty UI" startups? Most are gone. Their obituaries read the same: "Built a thin layer on top of someone else's technology and charged a premium for convenience that eventually became commoditized."</p>
 
-      <h2>Looking Forward: The Efficiency Revolution</h2>
+      <h2 id="section-5">Looking Forward: The Efficiency Revolution</h2>
       <p>The transition to the Cost-Per-Task economy is actually <strong>healthy</strong> for the AI industry. It forces developers to stop relying purely on increasing parameter counts and start focusing on algorithmic efficiency. The next trillion-dollar AI company won't be the one that builds the smartest model — it will be the one that builds the <strong>cheapest, most efficient intelligence engine</strong> on the planet.</p>
       <p>For business owners, the message is clear: stop asking "which AI model is the best?" and start asking "which AI model gives me the best results per dollar spent on my specific use case?" That subtle shift in thinking is worth millions.</p>
 

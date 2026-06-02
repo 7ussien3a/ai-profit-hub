@@ -147,11 +147,30 @@
 
     <div class="article-content">
       <p>In a tech landscape dominated by closed-source giants like OpenAI and Google, <strong>Meta</strong> has positioned itself as the champion of open-source AI. With the release of <strong>Llama 4</strong> in early 2026 and the surprise launch of <strong>Muse Spark</strong> — a consumer-facing AI assistant built on Llama — Mark Zuckerberg is making his boldest bet yet: that the future of AI is open, not proprietary.</p>
+  <style>
+    .toc-box{background:var(--bg-elevated,#1a1f2e);border:1px solid var(--border);border-left:3px solid var(--primary);border-radius:10px;padding:20px 24px;margin:28px 0 32px;max-width:520px}
+    .toc-box h4{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--primary-light);margin:0 0 12px}
+    .toc-list{margin:0;padding:0;list-style:none;counter-reset:toc}
+    .toc-list li{counter-increment:toc;margin-bottom:7px}
+    .toc-list li a{font-size:.85rem;color:var(--text-secondary);text-decoration:none;display:flex;align-items:baseline;gap:8px;transition:color .15s}
+    .toc-list li a::before{content:counter(toc);font-size:.7rem;font-weight:700;color:var(--primary-light);background:rgba(108,99,255,.15);border-radius:50%;width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+    .toc-list li a:hover{color:var(--primary-light)}
+  </style>
+  <div class="toc-box" role="navigation" aria-label="Table of contents">
+    <h4>📋 In This Article</h4>
+    <ol class="toc-list">
+      <li><a href="#section-1">Llama 4: What's New and Why It Matters</a></li>
+      <li><a href="#section-2">Muse Spark: Meta's Consumer AI Play</a></li>
+      <li><a href="#section-3">The Strategic Genius Behind "Free AI"</a></li>
+      <li><a href="#section-4">Should You Use Llama 4 or Muse Spark?</a></li>
+    </ol>
+  </div>
+
       <p>But is this genuinely altruistic, or is Meta playing a sophisticated strategic game? Let's break down the technology, the strategy, and what it means for developers, businesses, and everyday users.</p>
 
       <hr>
 
-      <h2>Llama 4: What's New and Why It Matters</h2>
+      <h2 id="section-1">Llama 4: What's New and Why It Matters</h2>
       <p>Llama 4 represents a generational leap over Llama 3. While Llama 3 proved that open-source models could compete with GPT-4 on many benchmarks, Llama 4 aims to close the gap with <strong>GPT-5-class performance</strong> — while remaining completely free to download, modify, and deploy.</p>
 
       <h3>Key Technical Improvements</h3>
@@ -175,7 +194,7 @@
 
       <div class="ad-space"><!-- Ad: Mid --></div>
 
-      <h2>Muse Spark: Meta's Consumer AI Play</h2>
+      <h2 id="section-2">Muse Spark: Meta's Consumer AI Play</h2>
       <p>While Llama models have always been popular with developers and enterprises, regular consumers never interacted with them directly. <strong>Muse Spark</strong> changes that. It's Meta's answer to ChatGPT and Google Gemini — a polished, user-friendly AI assistant available on WhatsApp, Instagram, Facebook Messenger, and as a standalone app.</p>
 
       <h3>What Makes Muse Spark Different</h3>
@@ -195,7 +214,7 @@
 
       <div class="ad-space"><!-- Ad: Mid 2 --></div>
 
-      <h2>The Strategic Genius Behind "Free AI"</h2>
+      <h2 id="section-3">The Strategic Genius Behind "Free AI"</h2>
       <p>Meta's decision to give away frontier AI models for free seems counterintuitive for a for-profit company. But the strategy is brilliant when you understand the bigger picture:</p>
 
       <h3>1. Commoditize the Complement</h3>
@@ -207,7 +226,7 @@
       <h3>3. Developer Ecosystem</h3>
       <p>Every developer who builds on Llama is a developer who's NOT building on GPT-5. The more tools, libraries, and applications that are built on Llama, the stronger Meta's ecosystem becomes. This network effect makes Llama increasingly difficult to displace, even as OpenAI and Google improve their models.</p>
 
-      <h2>Should You Use Llama 4 or Muse Spark?</h2>
+      <h2 id="section-4">Should You Use Llama 4 or Muse Spark?</h2>
       <p>The answer depends on who you are:</p>
       <ul>
         <li><strong>Developers & Startups:</strong> Llama 4 is a no-brainer. Free, powerful, and fully customizable. Build your product on it and eliminate API dependency.</li>

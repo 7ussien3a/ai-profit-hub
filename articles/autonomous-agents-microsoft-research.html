@@ -154,11 +154,31 @@
 
     <div class="article-content">
       <p>The AI industry in 2026 is obsessed with one word: <strong>agents</strong>. Every major tech company — from OpenAI to Google to Microsoft — is racing to build autonomous AI systems that can execute complex, multi-step workflows without human intervention. Book a flight, research a competitor, write a report, send the emails — all from a single prompt.</p>
+  <style>
+    .toc-box{background:var(--bg-elevated,#1a1f2e);border:1px solid var(--border);border-left:3px solid var(--primary);border-radius:10px;padding:20px 24px;margin:28px 0 32px;max-width:520px}
+    .toc-box h4{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--primary-light);margin:0 0 12px}
+    .toc-list{margin:0;padding:0;list-style:none;counter-reset:toc}
+    .toc-list li{counter-increment:toc;margin-bottom:7px}
+    .toc-list li a{font-size:.85rem;color:var(--text-secondary);text-decoration:none;display:flex;align-items:baseline;gap:8px;transition:color .15s}
+    .toc-list li a::before{content:counter(toc);font-size:.7rem;font-weight:700;color:var(--primary-light);background:rgba(108,99,255,.15);border-radius:50%;width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+    .toc-list li a:hover{color:var(--primary-light)}
+  </style>
+  <div class="toc-box" role="navigation" aria-label="Table of contents">
+    <h4>📋 In This Article</h4>
+    <ol class="toc-list">
+      <li><a href="#section-1">The Microsoft Research Study: What They Tested</a></li>
+      <li><a href="#section-2">Why AI Agents Fail: The Three Core Problems</a></li>
+      <li><a href="#section-3">Real-World Horror Stories</a></li>
+      <li><a href="#section-4">So Are AI Agents Useless? Not Quite.</a></li>
+      <li><a href="#section-5">The Path Forward: What Needs to Change</a></li>
+    </ol>
+  </div>
+
       <p>But a sobering new research paper from <strong>Microsoft Research</strong>, published in May 2026, pours cold water on the hype. Their findings? <strong>Current AI agents fail at an alarming rate when tasks become even moderately complex</strong>, and worse, they often <em>corrupt data silently</em> without the user even knowing. Let's dive into what they found, why it matters, and what it means for anyone planning to deploy AI agents in their business.</p>
 
       <hr>
 
-      <h2>The Microsoft Research Study: What They Tested</h2>
+      <h2 id="section-1">The Microsoft Research Study: What They Tested</h2>
       <p>The research team at Microsoft set up a controlled experiment. They tasked several leading AI agent frameworks — including systems built on GPT-5, Claude, and Gemini — with a series of increasingly complex business workflows:</p>
       <ol>
         <li><strong>Simple Task (Level 1):</strong> "Search for flights from New York to London on June 15th and create a comparison spreadsheet."</li>
@@ -184,7 +204,7 @@
 
       <div class="ad-space"><!-- Ad: Mid --></div>
 
-      <h2>Why AI Agents Fail: The Three Core Problems</h2>
+      <h2 id="section-2">Why AI Agents Fail: The Three Core Problems</h2>
       <p>The Microsoft researchers identified three fundamental problems that cause AI agents to break down as complexity increases:</p>
 
       <h3>1. The "Compounding Error" Problem</h3>
@@ -203,7 +223,7 @@
 
       <div class="ad-space"><!-- Ad: Mid 2 --></div>
 
-      <h2>Real-World Horror Stories</h2>
+      <h2 id="section-3">Real-World Horror Stories</h2>
       <p>The research paper also collected anonymized case studies from early enterprise adopters of AI agents. Here are some that stood out:</p>
       <ul>
         <li><strong>The Insurance Claim Disaster:</strong> An AI agent tasked with processing insurance claims approved 23 fraudulent claims totaling $1.2 million because it interpreted scanned documents too literally without cross-referencing policy details.</li>
@@ -211,7 +231,7 @@
         <li><strong>The Financial Reporting Bug:</strong> An agent generating monthly financial reports silently rounded numbers inconsistently, creating a $400,000 discrepancy that wasn't caught until the quarterly audit.</li>
       </ul>
 
-      <h2>So Are AI Agents Useless? Not Quite.</h2>
+      <h2 id="section-4">So Are AI Agents Useless? Not Quite.</h2>
       <p>Despite the alarming numbers, the Microsoft researchers were careful to note that AI agents are <strong>not useless</strong> — they just need to be deployed differently than the hype suggests. Their recommendations:</p>
 
       <h3>The "Human-in-the-Loop" Architecture</h3>
@@ -224,7 +244,7 @@
 
       <div class="pro-tip"><strong>💡 Pro Tip for Business Owners:</strong> Don't deploy AI agents for your most critical workflows first. Start with low-stakes, easily reversible tasks (like summarizing reports or drafting internal memos). Build trust and understanding of failure modes before scaling to customer-facing or financial processes.</div>
 
-      <h2>The Path Forward: What Needs to Change</h2>
+      <h2 id="section-5">The Path Forward: What Needs to Change</h2>
       <p>The researchers conclude that autonomous AI agents will eventually become reliable enough for complex tasks — but we're <strong>at least 2-3 years away</strong> from that reality. In the meantime, the industry needs:</p>
       <ul>
         <li><strong>Better evaluation benchmarks</strong> that test multi-step reasoning, not just single-turn accuracy</li>

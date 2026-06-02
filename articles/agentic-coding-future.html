@@ -137,24 +137,47 @@
     <div class="article-cover"><img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=900&amp;q=80&amp;auto=format&amp;fit=crop" alt="Code on Screen" decoding="async" loading="eager" fetchpriority="high"></div>
     <div class="article-content">
       <p>The software engineering world has officially entered its most disruptive phase since the invention of the compiler. We have rapidly moved past the era of AI simply auto-completing our lines of code or suggesting a better function name. Welcome to the era of <strong>Agentic Coding</strong></p>
+  <style>
+    .toc-box{background:var(--bg-elevated,#1a1f2e);border:1px solid var(--border);border-left:3px solid var(--primary);border-radius:10px;padding:20px 24px;margin:28px 0 32px;max-width:520px}
+    .toc-box h4{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--primary-light);margin:0 0 12px}
+    .toc-list{margin:0;padding:0;list-style:none;counter-reset:toc}
+    .toc-list li{counter-increment:toc;margin-bottom:7px}
+    .toc-list li a{font-size:.85rem;color:var(--text-secondary);text-decoration:none;display:flex;align-items:baseline;gap:8px;transition:color .15s}
+    .toc-list li a::before{content:counter(toc);font-size:.7rem;font-weight:700;color:var(--primary-light);background:rgba(108,99,255,.15);border-radius:50%;width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+    .toc-list li a:hover{color:var(--primary-light)}
+  </style>
+  <div class="toc-box" role="navigation" aria-label="Table of contents">
+    <h4>📋 In This Article</h4>
+    <ol class="toc-list">
+      <li><a href="#section-1">1. The Evolution: From Copilot to Autopilot</a></li>
+      <li><a href="#section-2">2. The Architecture of an AI Agent</a></li>
+      <li><a href="#section-3">3. Key Components of an Agentic Workflow</a></li>
+      <li><a href="#section-4">3. The Professional Shift: From Coder to Architect</a></li>
+      <li><a href="#section-5">4. The Rise of "Vibe Coding"</a></li>
+      <li><a href="#section-6">5. Comparison Table: Traditional vs. Agentic Coding</a></li>
+      <li><a href="#section-7">6. Pros and Cons of the Agentic Future</a></li>
+      <li><a href="#section-8">7. Frequently Asked Questions (FAQ)</a></li>
+    </ol>
+  </div>
+
       <div style="background:var(--bg-elevated,#1a1f2e);border-left:4px solid var(--primary,#6366f1);padding:16px 20px;border-radius:0 8px 8px 0;margin:20px 0;">
         <p style="margin:0;font-style:italic;opacity:0.9;"><strong>Hussein's take:</strong> I've been following this shift closely for the past year, and what surprises me most isn't the speed — it's how quickly the bar moved. Tasks I thought would take a decade to automate are already being handled by agents today. If you're a developer, this isn't a threat, it's the biggest productivity upgrade of your career.</p>
       </div>
       <p>—also frequently referred to as <strong>"Vibe Coding"</strong>—where autonomous AI agents now manage entire repositories, handle complex debugging cycles, and deploy full-stack applications with minimal human intervention.</p>
       <p>In 2026, the question is no longer whether AI can code, but how much of the traditional development lifecycle is still being performed by humans. This shift is not just about speed; it's about a fundamental change in the relationship between the programmer and the machine. Here is everything you need to know about the rise of the autonomous AI developer.</p>
 
-      <h2>1. The Evolution: From Copilot to Autopilot</h2>
+      <h2 id="section-1">1. The Evolution: From Copilot to Autopilot</h2>
       <p>In the early 2020s, we had "Copilots" that lived in our IDEs (Integrated Development Environments), waiting for us to type before offering a suggestion. They were reactive tools. Agentic Coding represents the evolution into <strong>Autopilots</strong>. These tools are proactive.</p>
       <p>Instead of highlighting a specific error and asking an AI to fix it, modern developers now provide high-level, strategic instructions to an AI Agent. For example, a founder might simply say: <em>"Build a secure SaaS subscription dashboard using Next.js and Stripe, implement multi-tenant authentication, write comprehensive unit tests, and deploy the staging version to Vercel."</em></p>
       <p>The AI Agent then takes control. It initializes the repository, creates the file structure, writes the business logic, executes terminal commands to install dependencies, and even browses the web to find the latest Stripe API documentation. This isn't just "writing code"; it's <strong>executing work</strong>.</p>
 
-      <h2>2. The Architecture of an AI Agent</h2>
+      <h2 id="section-2">2. The Architecture of an AI Agent</h2>
       <p>What differentiates an "Agent" from a simple "Chatbot" is the presence of three distinct layers: <strong>Perception</strong>, <strong>Reasoning</strong>, and <strong>Action</strong>. In an agentic coding environment, the perception layer reads your existing files and terminal outputs. The reasoning layer (powered by models like GPT-4o or Claude 3.5) decides what needs to change. The action layer then executes those changes by writing to the disk or pushing to GitHub.</p>
       <p>This allows for <strong>Long-Horizon Tasks</strong>. A chatbot can write a function. An agent can migrate an entire database from SQL to NoSQL, verifying every step and fixing data types automatically as it goes. This is the difference between a tool and a teammate.</p>
 
       <div class="ad-space"></div>
 
-      <h2>3. Key Components of an Agentic Workflow</h2>
+      <h2 id="section-3">3. Key Components of an Agentic Workflow</h2>
       <p>What makes Agentic Coding so much more powerful than simple code generation like we saw with GPT-3? It's the ability of the AI to perform a <strong>Reasoning Loop</strong>. Here are the four pillars of this workflow:</p>
       <ul>
         <li><strong>Strategic Planning:</strong> The agent breaks down a complex request into a sequence of smaller, logical steps before writing a single line of code.</li>
@@ -163,17 +186,17 @@
         <li><strong>Tool Proficiency:</strong> Modern agents can use Git for version control, Docker for containerization, and various CI/CD pipelines as easily as a human developer.</li>
       </ul>
 
-      <h2>3. The Professional Shift: From Coder to Architect</h2>
+      <h2 id="section-4">3. The Professional Shift: From Coder to Architect</h2>
       <p>This is the most debated question of 2026: Will programmers lose their jobs? The honest answer is that the role of the "Junior Developer" who primarily writes repetitive boilerplate code is rapidly disappearing. However, the role of the <strong>Software Architect</strong> is becoming more critical than ever.</p>
       <p>The professional programmer's focus is shifting from <strong>Syntax Writer</strong> to <strong>System Director</strong>. Understanding high-level system logic, security implications, and user experience (UX) is now more important than memorizing the specific syntax of a library. The "human in the loop" is now the manager of an army of digital coders. You are no longer the person digging the hole; you are the person operating the excavator.</p>
 
       <div class="ad-space"></div>
 
-      <h2>4. The Rise of "Vibe Coding"</h2>
+      <h2 id="section-5">4. The Rise of "Vibe Coding"</h2>
       <p>A new term has emerged in the developer community: <strong>Vibe Coding</strong>. This describes a style of development where a non-technical individual can build functional, complex software simply by describing the "vibe" and functionality they want. By leveraging powerful agents like Cursor, Windsurf, or Replit Agent, the barrier to entry for creating software has fallen to near zero.</p>
       <p>This is leading to a massive surge in "Micro-SaaS" businesses—specialized applications built by one person to solve one specific problem, often in a single weekend. The democratization of software creation is the greatest economic shift of this decade.</p>
 
-      <h2>5. Comparison Table: Traditional vs. Agentic Coding</h2>
+      <h2 id="section-6">5. Comparison Table: Traditional vs. Agentic Coding</h2>
       <table border="1" cellpadding="10" cellspacing="0" style="width:100%; text-align:left; margin-bottom: 20px; border-collapse: collapse;">
         <tr style="background-color: #f4f4f4;">
           <th>Feature</th>
@@ -209,7 +232,7 @@
 
       <div class="ad-space"></div>
 
-      <h2>6. Pros and Cons of the Agentic Future</h2>
+      <h2 id="section-7">6. Pros and Cons of the Agentic Future</h2>
       <h3>Pros:</h3>
       <ul>
         <li><strong>Exponential Productivity:</strong> A single engineer can now manage projects that previously required a team of ten.</li>
@@ -224,7 +247,7 @@
         <li><strong>Security Risks:</strong> Autonomous agents could accidentally expose API keys or introduce backdoors if not properly supervised by a security-conscious human.</li>
       </ul>
 
-      <h2>7. Frequently Asked Questions (FAQ)</h2>
+      <h2 id="section-8">7. Frequently Asked Questions (FAQ)</h2>
       <p><strong>Do I still need to learn how to code?</strong><br>Yes. While you don't need to be a syntax expert, you still need to understand <em>logic</em> and <em>system architecture</em> to guide the AI effectively. Think of it as learning how to manage a team.</p>
       <p><strong>What are the best tools for Agentic Coding?</strong><br>As of 2026, <strong>Cursor</strong>, <strong>Windsurf</strong>, and <strong>GitHub Copilot Workspace</strong> are the industry leaders for professional developers.</p>
       <p><strong>Is AI-generated code secure?</strong><br>It can be, but it requires human oversight. You should always use AI security scanners to double-check the agent's work before deploying to production.</p>
