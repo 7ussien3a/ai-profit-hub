@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weekly AI Newsletter — Stay Ahead of AI | AI Profit Hub</title>
+  <meta name="description" content="Get Hussein's weekly AI digest — the 5 most important AI updates, 3 tool recommendations, and 1 actionable tip. Free, every Sunday.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ai-profit-hub.com/newsletter.html">
+  <meta property="og:title" content="Weekly AI Newsletter — AI Profit Hub">
+  <meta property="og:description" content="The 5 most important AI updates every week, curated by Hussein. Free, every Sunday.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="css/style.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4602905173099480" crossorigin="anonymous"></script>
+  <style>
+    .nl-hero{background:var(--gradient-hero);padding:110px 20px 60px;text-align:center;border-bottom:1px solid var(--border)}
+    .nl-hero h1{font-size:clamp(1.8rem,4vw,2.8rem);margin-bottom:14px}
+    .nl-hero p{color:var(--text-secondary);max-width:560px;margin:0 auto 32px;line-height:1.7;font-size:1.05rem}
+    .nl-form-wrap{max-width:480px;margin:0 auto}
+    .nl-form{display:flex;gap:10px;flex-wrap:wrap}
+    .nl-form input[type="email"]{flex:1;min-width:220px;padding:14px 20px;background:var(--bg-card);border:1.5px solid var(--border);border-radius:50px;color:var(--text-primary);font-size:.95rem;outline:none;box-sizing:border-box}
+    .nl-form input[type="email"]:focus{border-color:var(--primary)}
+    .nl-form button{padding:14px 28px;background:var(--primary);color:#fff;border:none;border-radius:50px;font-size:.95rem;font-weight:700;cursor:pointer;transition:all .2s;white-space:nowrap}
+    .nl-form button:hover{background:#5550e0;transform:translateY(-1px)}
+    .nl-note{font-size:.75rem;color:var(--text-secondary);margin-top:10px;text-align:center}
+    .nl-main{max-width:860px;margin:0 auto;padding:56px 20px 80px}
+    .what-inside{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px;margin:32px 0 48px}
+    .wi-card{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:24px 22px}
+    .wi-card-icon{font-size:2rem;margin-bottom:12px}
+    .wi-card h3{font-size:.95rem;font-weight:700;margin-bottom:6px}
+    .wi-card p{font-size:.83rem;color:var(--text-secondary);margin:0;line-height:1.6}
+    .preview-box{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:32px 36px;margin:0 0 48px}
+    .preview-box .issue-label{font-size:.7rem;font-weight:700;color:var(--primary-light);letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px}
+    .preview-item{padding:16px 0;border-bottom:1px solid var(--border)}
+    .preview-item:last-child{border-bottom:none;padding-bottom:0}
+    .preview-item h4{font-size:.9rem;font-weight:700;margin:0 0 4px}
+    .preview-item p{font-size:.82rem;color:var(--text-secondary);margin:0;line-height:1.6}
+    .success-msg{display:none;text-align:center;padding:24px;background:rgba(0,212,170,.08);border:1px solid rgba(0,212,170,.3);border-radius:12px;color:#00D4AA;font-weight:600}
+  </style>
+</head>
+<body>
+<header class="header" id="header">
+  <nav class="nav">
+    <a href="/" class="logo"><div class="logo-icon">⚡</div><span>AI Profit Hub</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/">Home</a></li>
+      <li><a href="start-here.html">Start Here</a></li>
+      <li><a href="ai-tools-directory.html">AI Tools</a></li>
+      <li><a href="newsletter.html" class="active">Newsletter</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <button class="mobile-toggle" type="button" id="mobileToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<section class="nl-hero">
+  <div class="hero-badge">📬 Free Weekly Digest</div>
+  <h1>Stay Ahead of AI.<br>Every Sunday.</h1>
+  <p>The 5 most important AI updates of the week, 3 tool recommendations, and 1 actionable tip — curated by Hussein. No noise, no spam. Just signal.</p>
+  <div class="nl-form-wrap">
+    <form class="nl-form" id="nlForm" action="https://formspree.io/f/xdkoqkzp" method="POST" onsubmit="submitForm(event)">
+      <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address">
+      <button type="submit">Subscribe Free →</button>
+    </form>
+    <div class="nl-note">📩 Every Sunday · No spam · Unsubscribe anytime</div>
+    <div class="success-msg" id="successMsg">🎉 You're subscribed! Check your inbox this Sunday.</div>
+  </div>
+</section>
+
+<main class="nl-main" id="main-content">
+
+  <h2 style="text-align:center;font-size:1.3rem;margin-bottom:8px;">What's Inside Every Issue</h2>
+  <p style="text-align:center;color:var(--text-secondary);margin-bottom:0;">Curated to be read in 5 minutes. No fluff.</p>
+
+  <div class="what-inside">
+    <div class="wi-card">
+      <div class="wi-card-icon">📰</div>
+      <h3>5 AI News That Matter</h3>
+      <p>The week's biggest AI developments — explained in plain English with Hussein's context on why it matters to you.</p>
+    </div>
+    <div class="wi-card">
+      <div class="wi-card-icon">🛠️</div>
+      <h3>3 Tool Picks</h3>
+      <p>Three AI tools worth your attention this week — new launches, updated features, or hidden gems Hussein is testing.</p>
+    </div>
+    <div class="wi-card">
+      <div class="wi-card-icon">💡</div>
+      <h3>1 Actionable Tip</h3>
+      <p>One concrete thing you can do this week to work smarter with AI. Practical, specific, and takes under 15 minutes to try.</p>
+    </div>
+    <div class="wi-card">
+      <div class="wi-card-icon">📖</div>
+      <h3>Best Articles This Week</h3>
+      <p>The top AI articles from around the web — not just AI Profit Hub. Everything worth reading, in one place.</p>
+    </div>
+  </div>
+
+  <div class="preview-box">
+    <div class="issue-label">📬 Sample Issue Preview</div>
+    <h3 style="margin:0 0 20px;font-size:1.1rem;">AI Weekly Digest — Issue #12</h3>
+    <div class="preview-item">
+      <h4>🔥 This Week's Big News</h4>
+      <p>OpenAI announced GPT-5 with a 1M token context window and real-time video understanding. Google responded with Gemini 2.0 Flash running at 150 tokens/second. The AI arms race is accelerating.</p>
+    </div>
+    <div class="preview-item">
+      <h4>🛠️ Tool Picks This Week</h4>
+      <p><strong>Dia Browser</strong> — AI-native browser that remembers every page you've visited. <strong>NotebookLM Plus</strong> — now supports audio overviews from PDFs. <strong>Suno v4</strong> — AI music generation that now sounds indistinguishable from human-made.</p>
+    </div>
+    <div class="preview-item">
+      <h4>💡 This Week's Tip</h4>
+      <p>Try giving Claude a "persona prompt" at the start of your session: "You are a senior [your field] expert. Be direct, skip disclaimers, and challenge my assumptions." Watch the quality of responses transform immediately.</p>
+    </div>
+  </div>
+
+  <div style="text-align:center;background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:40px 32px;">
+    <div style="font-size:2.5rem;margin-bottom:12px">📬</div>
+    <h3 style="margin-bottom:8px">Join Readers Who Stay Ahead</h3>
+    <p style="color:var(--text-secondary);margin-bottom:28px;max-width:420px;margin-left:auto;margin-right:auto;">The AI landscape changes every week. Don't spend hours catching up — let Hussein do it for you.</p>
+    <form class="nl-form" style="justify-content:center;" action="https://formspree.io/f/xdkoqkzp" method="POST" onsubmit="submitForm(event)">
+      <input type="email" name="email" placeholder="your@email.com" required style="max-width:280px;" aria-label="Email address">
+      <button type="submit">Subscribe Free →</button>
+    </form>
+    <p style="font-size:.75rem;color:var(--text-secondary);margin-top:10px;">Every Sunday · No spam · Unsubscribe anytime</p>
+  </div>
+
+  <div style="display:flex;gap:18px;align-items:center;margin:40px 0 0;padding:24px;background:var(--bg-elevated,#1a1f2e);border:1px solid var(--border);border-radius:12px;">
+    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=72&h=72&fit=crop&crop=face" alt="Hussein" style="width:64px;height:64px;border-radius:50%;flex-shrink:0;">
+    <div>
+      <p style="margin:0 0 4px;font-weight:700;">Hussein — Founder, AI Profit Hub</p>
+      <p style="margin:0;font-size:.875rem;opacity:.8;line-height:1.6;">I write this newsletter the way I'd want to receive it — dense, honest, and useful. No padding, no affiliate-driven tool recommendations. Just what's actually worth your attention.</p>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand"><a href="/" class="logo"><div class="logo-icon">⚡</div><span>AI Profit Hub</span></a><p>Your ultimate guide for AI tutorials, ChatGPT prompts, productivity hacks, and the latest tech news.</p></div>
+    <div><h4>Explore</h4><ul class="footer-links"><li><a href="/">Home</a></li><li><a href="start-here.html">Start Here</a></li><li><a href="ai-tools-directory.html">AI Tools</a></li><li><a href="newsletter.html">Newsletter</a></li></ul></div>
+    <div><h4>Categories</h4><ul class="footer-links"><li><a href="categories/ai-tools.html">AI Tools</a></li><li><a href="categories/productivity.html">Productivity</a></li><li><a href="categories/chatgpt.html">ChatGPT</a></li><li><a href="categories/tech-news.html">Tech News</a></li></ul></div>
+    <div><h4>Legal</h4><ul class="footer-links"><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-of-service.html">Terms of Service</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>&copy; 2026 AI Profit Hub. All rights reserved.</span></div>
+</footer>
+<script>
+function submitForm(e){
+  e.preventDefault();
+  var form=e.target;
+  var data=new FormData(form);
+  fetch(form.action,{method:'POST',body:data,headers:{'Accept':'application/json'}})
+    .then(function(r){
+      if(r.ok){
+        form.style.display='none';
+        var msg=document.getElementById('successMsg');
+        if(msg)msg.style.display='block';
+        document.querySelectorAll('.success-msg').forEach(function(m){m.style.display='block';});
+        document.querySelectorAll('.nl-form').forEach(function(f){f.style.display='none';});
+      }
+    }).catch(function(){});
+}
+</script>
+<script src="js/main.js" defer></script>
+</body>
+</html>
