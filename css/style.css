@@ -338,6 +338,9 @@ h1, h2, h3, h4, h5, h6 {
   aspect-ratio: 16 / 9;
   object-fit: cover;
   border-bottom: 1px solid var(--border);
+  /* CLS prevention: explicit dimensions stop layout shift */
+  display: block;
+  background-color: var(--bg-elevated);
 }
 
 .article-card-body {
@@ -939,4 +942,42 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.85rem;
   color: var(--primary-light);
   font-weight: 600;
+}
+
+/* ========================================
+   CORE WEB VITALS — PERFORMANCE
+   ======================================== */
+
+/* CLS: reserve space for all images before load */
+img { max-width: 100%; height: auto; display: block; color: transparent; }
+
+/* CLS: off-screen cards use content-visibility */
+.articles-grid .article-card:nth-child(n+7) {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 380px;
+}
+
+/* CLS: isolate card layout calculations */
+.article-card { contain: layout style; }
+
+/* LCP: smooth fade-in once image loads */
+img[loading="lazy"] { opacity: 0; transition: opacity .3s ease; }
+img[loading="lazy"].img-loaded { opacity: 1; }
+
+/* Reduced motion: accessibility + perf */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Print: strip decorative elements */
+@media print {
+  .header, .footer, .share-row, .share-bar,
+  #read-progress, .back-top, .filter-pills { display: none !important; }
+  body { background: #fff; color: #000; font-size: 12pt; }
+  a { color: #000; text-decoration: underline; }
+  .article-container { max-width: 100%; padding: 0; }
 }

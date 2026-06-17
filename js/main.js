@@ -215,3 +215,38 @@ document.addEventListener('DOMContentLoaded', () => {
     articleContent.appendChild(relatedDiv);
   }
 });
+
+// ========================================
+// CORE WEB VITALS — IMAGE PERFORMANCE
+// ========================================
+
+(function() {
+  // 1. Fade-in lazy images once they load (prevents CLS flash)
+  function onImgLoad(img) {
+    img.classList.add('img-loaded');
+  }
+
+  document.querySelectorAll('img[loading="lazy"]').forEach(function(img) {
+    if (img.complete) {
+      onImgLoad(img);
+    } else {
+      img.addEventListener('load', function() { onImgLoad(img); }, { once: true });
+      img.addEventListener('error', function() { img.style.opacity = '1'; }, { once: true });
+    }
+  });
+
+  // 2. First article card image: make it eager for LCP boost
+  var firstCardImg = document.querySelector('.articles-grid .article-card:first-child .article-card-image');
+  if (firstCardImg) {
+    firstCardImg.loading = 'eager';
+    firstCardImg.setAttribute('fetchpriority', 'high');
+    firstCardImg.classList.add('img-loaded');
+  }
+
+  // 3. Hero section image (if present): always eager
+  var heroImg = document.querySelector('.hero img, .cmp-hero img, .nl-hero img');
+  if (heroImg) {
+    heroImg.loading = 'eager';
+    heroImg.setAttribute('fetchpriority', 'high');
+  }
+})();
