@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Articles — AI Profit Hub</title>
+  <meta name="description" content="Search through all AI Profit Hub articles on AI tools, tech news, productivity, comparisons, and more.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ai-profit-hub.com/search.html">
+  <meta property="og:title" content="Search Articles — AI Profit Hub">
+  <meta property="og:description" content="Find any AI tool review, tech news story, or tutorial on AI Profit Hub.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ai-profit-hub.com/search.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="css/style.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4602905173099480" crossorigin="anonymous"></script>
+  <style>
+    .search-hero{background:var(--gradient-hero,linear-gradient(135deg,#0a0e1a 0%,#0f1629 100%));padding:100px 20px 60px;text-align:center;border-bottom:1px solid var(--border)}
+    .search-hero h1{font-size:clamp(1.8rem,4vw,2.8rem);margin-bottom:12px;background:linear-gradient(135deg,#fff 0%,var(--primary-light,#a78bfa) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .search-hero p{color:var(--text-secondary);max-width:520px;margin:0 auto 32px;line-height:1.7}
+    .search-wrap{max-width:640px;margin:0 auto;position:relative}
+    .search-input-box{display:flex;align-items:center;background:var(--bg-card);border:2px solid var(--border);border-radius:16px;overflow:hidden;transition:border-color .2s,box-shadow .2s}
+    .search-input-box:focus-within{border-color:var(--primary,#6C63FF);box-shadow:0 0 0 4px rgba(108,99,255,.15)}
+    .search-icon{padding:0 16px;font-size:1.2rem;color:var(--text-secondary)}
+    #searchInput{flex:1;padding:16px 8px;background:none;border:none;outline:none;color:var(--text-primary);font-size:1rem;font-family:inherit}
+    #searchInput::placeholder{color:var(--text-secondary)}
+    .search-kbd{display:flex;gap:4px;align-items:center;padding:0 16px;font-size:.72rem;color:var(--text-secondary)}
+    .search-kbd kbd{background:var(--bg-elevated,#1a1f2e);border:1px solid var(--border);border-radius:4px;padding:2px 6px;font-family:monospace}
+    .search-stats{font-size:.82rem;color:var(--text-secondary);text-align:center;margin-top:12px;min-height:20px}
+    .filter-pills{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:20px}
+    .pill{padding:6px 16px;border-radius:50px;border:1px solid var(--border);background:var(--bg-card);color:var(--text-secondary);font-size:.78rem;font-weight:600;cursor:pointer;transition:all .2s}
+    .pill:hover,.pill.active{background:var(--primary,#6C63FF);border-color:var(--primary,#6C63FF);color:#fff}
+    .search-main{max-width:1100px;margin:0 auto;padding:40px 20px 80px}
+    .results-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px;margin-top:32px}
+    .result-card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column}
+    .result-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(108,99,255,.15)}
+    .result-card img{width:100%;height:180px;object-fit:cover;display:block}
+    .result-card-body{padding:18px 20px;flex:1;display:flex;flex-direction:column}
+    .result-tag{display:inline-block;font-size:.72rem;font-weight:700;color:var(--primary-light,#a78bfa);background:rgba(108,99,255,.12);border:1px solid rgba(108,99,255,.2);border-radius:50px;padding:3px 12px;margin-bottom:10px}
+    .result-card h3{font-size:.95rem;font-weight:700;margin:0 0 8px;line-height:1.4;flex:1}
+    .result-card h3 a{color:var(--text-primary);text-decoration:none}
+    .result-card h3 a:hover{color:var(--primary-light,#a78bfa)}
+    .result-desc{font-size:.82rem;color:var(--text-secondary);line-height:1.6;margin:0 0 12px}
+    .result-meta{font-size:.75rem;color:var(--text-secondary);margin-top:auto}
+    .no-results{text-align:center;padding:80px 20px;color:var(--text-secondary)}
+    .no-results .icon{font-size:4rem;margin-bottom:16px}
+    .no-results h3{font-size:1.2rem;font-weight:700;color:var(--text-primary);margin-bottom:8px}
+    mark{background:rgba(108,99,255,.25);color:var(--primary-light,#a78bfa);border-radius:3px;padding:0 2px}
+  </style>
+</head>
+<body>
+<header class="header" id="header">
+  <nav class="nav">
+    <a href="/" class="logo"><div class="logo-icon">&#9889;</div><span>AI Profit Hub</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/">Home</a></li>
+      <li><a href="start-here.html">Start Here</a></li>
+      <li><a href="ai-tools-directory.html">AI Tools</a></li>
+      <li><a href="ai-glossary.html">Glossary</a></li>
+      <li><a href="newsletter.html">Newsletter</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="search.html" class="active">Search</a></li>
+    </ul>
+    <button class="mobile-toggle" type="button" id="mobileToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<section class="search-hero">
+  <div class="hero-badge">Search</div>
+  <h1>Search AI Profit Hub</h1>
+  <p>Find any article instantly — AI tools, tech news, comparisons, tutorials, and more.</p>
+  <div class="search-wrap">
+    <div class="search-input-box">
+      <span class="search-icon">&#128269;</span>
+      <input type="search" id="searchInput" placeholder="Search articles… (Ctrl+K)" autocomplete="off" aria-label="Search articles" autofocus>
+      <div class="search-kbd"><kbd>Ctrl</kbd><kbd>K</kbd></div>
+    </div>
+    <div class="search-stats" id="searchStats">Searching through <strong>60+</strong> articles</div>
+  </div>
+  <div class="filter-pills" id="filterPills">
+    <button class="pill active" data-cat="all">All</button>
+    <button class="pill" data-cat="AI Tools">AI Tools</button>
+    <button class="pill" data-cat="Tech News">Tech News</button>
+    <button class="pill" data-cat="Business">Business</button>
+    <button class="pill" data-cat="Local AI">Local AI</button>
+    <button class="pill" data-cat="Apple">Apple</button>
+    <button class="pill" data-cat="Hardware">Hardware</button>
+    <button class="pill" data-cat="Productivity">Productivity</button>
+    <button class="pill" data-cat="Education">Education</button>
+    <button class="pill" data-cat="Compare">Compare</button>
+  </div>
+</section>
+
+<main class="search-main" id="main-content">
+  <div id="resultsGrid" class="results-grid"></div>
+  <div id="noResults" class="no-results" style="display:none">
+    <div class="icon">&#129335;</div>
+    <h3>No results found</h3>
+    <p>Try different keywords or browse by category using the pills above.</p>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="/" class="logo"><div class="logo-icon">&#9889;</div><span>AI Profit Hub</span></a>
+      <p>Your daily guide to AI news, tools, and making the most of artificial intelligence.</p>
+    </div>
+    <div>
+      <h4>Categories</h4>
+      <ul class="footer-links">
+        <li><a href="/categories/ai-tools.html">AI Tools</a></li>
+        <li><a href="/categories/chatgpt.html">ChatGPT</a></li>
+        <li><a href="/categories/tech-news.html">Tech News</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Compare</h4>
+      <ul class="footer-links">
+        <li><a href="/compare/chatgpt-vs-claude.html">ChatGPT vs Claude</a></li>
+        <li><a href="/compare/claude-vs-gemini.html">Claude vs Gemini</a></li>
+        <li><a href="/compare/perplexity-vs-chatgpt.html">Perplexity vs ChatGPT</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Legal</h4>
+      <ul class="footer-links">
+        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="/terms-of-service.html">Terms of Service</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom"><span>&copy; 2026 AI Profit Hub. All rights reserved.</span></div>
+</footer>
+
+<script>
+var ARTICLES=[
+  {title:"Apple Reinvents Siri: The Complete Guide to Apple Intelligence at WWDC 2026",url:"articles/apple-intelligence-siri-wwdc-2026.html",desc:"Apple's most significant Siri overhaul — onscreen awareness, visual intelligence, a standalone Siri app, and deep personal context.",date:"June 17, 2026",cat:"Apple",img:"https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&q=80"},
+  {title:"Anthropic Raises $65 Billion: Inside the Most Valuable AI Company in History",url:"articles/anthropic-65-billion-fable-5-model-2026.html",desc:"Anthropic's historic $965 billion valuation and the launch of Claude Fable 5 with a 1-million-token context window.",date:"June 17, 2026",cat:"Business",img:"https://images.unsplash.com/photo-1559526324-593bc073d938?w=600&q=80"},
+  {title:"Google Gemma 4: The Local AI Revolution That Ends Cloud Dependency",url:"articles/google-gemma-4-local-ai-laptop-2026.html",desc:"Google's Gemma 4 12B model runs powerful AI on any laptop with 16GB RAM — offline, free, and private.",date:"June 17, 2026",cat:"Local AI",img:"https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&q=80"},
+  {title:"Google Gemini 3.5 Live Translate: The Real-Time Voice Translator",url:"articles/google-gemini-3-5-live-translate-20260615.html",desc:"Continuous speech-to-speech translation across 70+ languages with pitch, pacing, and tone preservation.",date:"June 15, 2026",cat:"AI Tools",img:"https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80"},
+  {title:"OpenAI Faces Investigation From State Attorneys General",url:"articles/openai-faces-investigation-from-state-attorneys-general-20260613.html",desc:"State attorneys general investigating OpenAI's ad policies, hiring practices, and data handling.",date:"June 13, 2026",cat:"Tech News",img:"https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80"},
+  {title:"Anthropic Safety Warnings May Have Just Backfired",url:"articles/anthropic8217s-safety-warnings-may-have-just-backfired-20260613.html",desc:"Anthropic's proactive safety research was used as grounds for recalling its most powerful AI model.",date:"June 13, 2026",cat:"Tech News",img:"https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&q=80"},
+  {title:"SpaceX IPO: Live Updates on Everything You Need to Know",url:"articles/spacex-ipo-live-updates-on-everything-you-need-to-know-20260613.html",desc:"SpaceX's record-breaking IPO and Elon Musk's plan to merge xAI with SpaceX's satellite constellation.",date:"June 13, 2026",cat:"Business",img:"https://images.unsplash.com/photo-1517976487492-5750f3195933?w=600&q=80"},
+  {title:"Google Gemini Omni: Edit Any Video With Just Your Words",url:"articles/gemini-omni-video-revolution.html",desc:"Google unveils Gemini Omni — a revolutionary AI model that lets you edit and generate videos using natural language.",date:"May 29, 2026",cat:"AI Tools",img:"https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80"},
+  {title:"KPMG Gives Claude AI to All 276,000 Employees",url:"articles/kpmg-claude-276000-employees.html",desc:"The biggest enterprise AI deployment in consulting history and what it means for professional services.",date:"May 29, 2026",cat:"Business",img:"https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80"},
+  {title:"Samsung HBM4E: The Tiny Chip Powering the AI Revolution",url:"articles/samsung-hbm4e-ai-memory-chips.html",desc:"Samsung ships the world's first 12-layer HBM4E memory with 3.6 TB/s bandwidth.",date:"May 29, 2026",cat:"Hardware",img:"https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=600&q=80"},
+  {title:"6G is Coming: Samsung and LG Build the AI-Native Internet",url:"articles/6g-samsung-lg-ai-native-networks.html",desc:"Samsung and LG partner to develop 6G networks with integrated sensing and AI-native communication.",date:"May 29, 2026",cat:"Tech News",img:"https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80"},
+  {title:"OpenAI DeployCo: A $4 Billion AI Consulting Army",url:"articles/openai-deployco-enterprise-consulting.html",desc:"OpenAI launches a subsidiary to embed AI engineers inside Fortune 500 companies.",date:"May 29, 2026",cat:"Business",img:"https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&q=80"},
+  {title:"DuckDuckGo Installs Surge 30% as Users Reject Google AI Search",url:"articles/duckduckgo-vs-google-ai-search.html",desc:"Users are fleeing Google's AI Overviews — why the backlash is real and what it means for search.",date:"May 27, 2026",cat:"Tech News",img:"https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&q=80"},
+  {title:"The AI Skin Patch: A Wearable Doctor That Computes on Your Body",url:"articles/ai-skin-patch-wearable-doctor.html",desc:"A stretchable AI patch detects heart attacks in milliseconds with no phone or internet needed.",date:"May 27, 2026",cat:"Tech News",img:"https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&q=80"},
+  {title:"NVIDIA Hits $81.6 Billion Revenue: The Chip Giant That Powers AI",url:"articles/nvidia-record-revenue-ai-dominance.html",desc:"$75.2 billion from data centers in a single quarter. How NVIDIA became the backbone of AI.",date:"May 27, 2026",cat:"Business",img:"https://images.unsplash.com/photo-1639322537228-f710d846310a?w=600&q=80"},
+  {title:"GPT-5 vs Claude 4: The Ultimate AI Showdown of 2026",url:"articles/gpt-5-vs-claude-4.html",desc:"Head-to-head comparison of OpenAI GPT-5 and Anthropic Claude 4 across writing, coding, and reasoning.",date:"May 2026",cat:"Compare",img:"https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&q=80"},
+  {title:"Best Free AI Tools for Students in 2026",url:"articles/best-free-ai-tools-students.html",desc:"The definitive guide to free AI tools that help students write better and study smarter.",date:"May 2026",cat:"Education",img:"https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80"},
+  {title:"ChatGPT Prompts for Productivity: The Ultimate Collection",url:"articles/chatgpt-prompts-productivity.html",desc:"200+ battle-tested ChatGPT prompts for professionals, writers, and developers.",date:"May 2026",cat:"Productivity",img:"https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=600&q=80"},
+  {title:"Anthropic Claude Surpasses OpenAI: A New Era in AI",url:"articles/anthropic-claude-surpasses-openai.html",desc:"How Anthropic's Claude became the preferred AI for enterprise and why safety-first AI is winning.",date:"May 2026",cat:"AI Tools",img:"https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=600&q=80"},
+  {title:"The Agentic Coding Future: AI That Writes and Deploys Code",url:"articles/agentic-coding-future.html",desc:"How AI coding agents are transforming software development from autocomplete to autonomous engineers.",date:"May 2026",cat:"AI Tools",img:"https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&q=80"},
+  {title:"How to Make Money with AI Art in 2026",url:"articles/make-money-ai-art.html",desc:"A complete guide to monetizing AI-generated art through print-on-demand, stock sites, and commissions.",date:"May 2026",cat:"Productivity",img:"https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=600&q=80"},
+  {title:"AI Tools for Faceless YouTube Channels",url:"articles/ai-tools-faceless-youtube.html",desc:"The complete AI toolkit for building a profitable faceless YouTube channel.",date:"May 2026",cat:"Productivity",img:"https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=600&q=80"}
+];
+
+var currentCat='all', query='';
+
+function hl(text,q){
+  if(!q)return text;
+  var re=new RegExp('('+q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','gi');
+  return text.replace(re,'<mark>$1</mark>');
+}
+
+function render(){
+  var grid=document.getElementById('resultsGrid');
+  var noRes=document.getElementById('noResults');
+  var stats=document.getElementById('searchStats');
+  var q=query.toLowerCase().trim();
+  var filtered=ARTICLES.filter(function(a){
+    var matchCat=currentCat==='all'||a.cat===currentCat;
+    var matchQ=!q||a.title.toLowerCase().indexOf(q)>-1||a.desc.toLowerCase().indexOf(q)>-1;
+    return matchCat&&matchQ;
+  });
+  if(filtered.length===0){
+    grid.innerHTML='';
+    noRes.style.display='block';
+    stats.innerHTML='No results found';
+    return;
+  }
+  noRes.style.display='none';
+  stats.innerHTML='Found <strong>'+filtered.length+'</strong> article'+(filtered.length!==1?'s':'');
+  grid.innerHTML=filtered.map(function(a){
+    return '<article class="result-card"><a href="'+a.url+'"><img src="'+a.img+'" alt="'+a.title.replace(/"/g,'&quot;')+'" loading="lazy" width="600" height="180"></a><div class="result-card-body"><span class="result-tag">'+a.cat+'</span><h3><a href="'+a.url+'">'+hl(a.title,q)+'</a></h3><p class="result-desc">'+hl(a.desc,q)+'</p><div class="result-meta">'+a.date+'</div></div></article>';
+  }).join('');
+}
+
+document.getElementById('searchInput').addEventListener('input',function(){
+  query=this.value;
+  render();
+});
+
+document.querySelectorAll('.pill').forEach(function(pill){
+  pill.addEventListener('click',function(){
+    document.querySelectorAll('.pill').forEach(function(p){p.classList.remove('active');});
+    this.classList.add('active');
+    currentCat=this.dataset.cat;
+    render();
+  });
+});
+
+document.addEventListener('keydown',function(e){
+  if((e.ctrlKey||e.metaKey)&&e.key==='k'){
+    e.preventDefault();
+    var inp=document.getElementById('searchInput');
+    inp.focus();inp.select();
+  }
+});
+
+render();
+</script>
+<script src="js/main.js" defer></script>
+</body>
+</html>
