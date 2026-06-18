@@ -55,7 +55,17 @@
     .stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin:24px 0}
     .stat-box{background:var(--bg-elevated,#1a1f2e);border:1px solid var(--border);border-radius:12px;padding:18px;text-align:center}
     .stat-box .num{font-size:1.7rem;font-weight:800;color:var(--primary-light)}
-    .stat-box .label{font-size:.75rem;color:var(--text-secondary);margin-top:4px;line-height:1.4}
+    .stat-box    .model-card p{font-size:.82rem;color:var(--text-secondary);margin:0;line-height:1.6}
+    .model-card .badge{display:inline-block;font-size:.68rem;font-weight:700;background:rgba(0,212,170,.12);color:#00D4AA;border:1px solid rgba(0,212,170,.2);border-radius:50px;padding:2px 10px;margin-top:8px}
+    /* Responsive two-column layout */
+    @media(max-width:1024px){
+      .article-two-col{grid-template-columns:1fr !important}
+      .article-sidebar{position:static !important;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    }
+    @media(max-width:640px){
+      .article-sidebar{grid-template-columns:1fr !important}
+      .article-two-col{gap:24px !important}
+    }
     .highlight-box{background:rgba(255,80,80,.06);border:1px solid rgba(255,80,80,.2);border-radius:12px;padding:18px 22px;margin:24px 0}
     .highlight-box-title{font-size:.72rem;font-weight:800;color:#ff6b6b;letter-spacing:.1em;margin-bottom:8px}
   </style>
@@ -108,17 +118,25 @@
     </div>
   </div>
 
-  <div style="width:100%;margin:0 0 32px;border-radius:14px;overflow:hidden;max-height:440px;background:#1a1f2e">
+  <div style="width:100%;margin:0 0 32px;border-radius:14px;overflow:hidden;background:#1a1f2e">
     <img
-      src="https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=900&q=80&auto=format&fit=crop"
+      src="https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=1600&q=85&auto=format&fit=crop"
+      srcset="https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=800&q=80&auto=format&fit=crop 800w,
+              https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=1200&q=85&auto=format&fit=crop 1200w,
+              https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=1600&q=85&auto=format&fit=crop 1600w"
+      sizes="(max-width:768px) 100vw, (max-width:1200px) 90vw, 1100px"
       alt="China AI models Qwen DeepSeek competing with OpenAI"
-      width="900" height="440"
-      style="width:100%;height:100%;object-fit:cover;max-height:440px;display:block"
+      width="1600" height="900"
+      style="width:100%;height:auto;max-height:520px;object-fit:cover;display:block"
       loading="eager" fetchpriority="high"
     >
   </div>
 
   <span class="source-badge">&#128240; Via Alibaba Cloud, DeepSeek.com, Qwen.ai</span>
+
+  <!-- TWO-COLUMN LAYOUT -->
+  <div style="display:grid;grid-template-columns:1fr 280px;gap:40px;align-items:start;margin-top:24px" class="article-two-col">
+  <div class="article-body">
 
   <div class="stat-grid">
     <div class="stat-box"><div class="num">9x</div><div class="label">Cheaper than OpenAI API</div></div>
@@ -202,14 +220,63 @@
       onclick="window.open('https://wa.me/?text='+encodeURIComponent(document.title+' '+location.href),'_blank')">WhatsApp</a>
   </div>
 
-  <div style="display:flex;gap:20px;align-items:center;padding:24px;background:var(--bg-elevated,#1a1f2e);border:1px solid var(--border);border-radius:12px;margin-top:40px">
-    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face"
-      alt="Hussein" width="72" height="72" style="width:72px;height:72px;border-radius:50%;object-fit:cover;flex-shrink:0">
-    <div>
-      <p style="margin:0 0 4px;font-weight:700;font-size:.95rem">Hussein — AI Profit Hub</p>
-      <p style="margin:0;font-size:.85rem;line-height:1.6;color:var(--text-secondary)">Daily AI news, tool reviews, and practical guides. Follow AI Profit Hub for everything happening in artificial intelligence.</p>
+  </div><!-- /.author-box -->
+
+  </div><!-- /.article-body -->
+
+  <!-- SIDEBAR -->
+  <aside class="article-sidebar" style="position:sticky;top:88px;display:flex;flex-direction:column;gap:20px">
+
+    <!-- Table of Contents -->
+    <div class="sidebar-card">
+      <h4>&#128221; In This Article</h4>
+      <ul class="sidebar-toc-list">
+        <li><a href="#qwen">Alibaba Qwen3.7</a></li>
+        <li><a href="#deepseek">DeepSeek V4-Pro</a></li>
+        <li><a href="#pricewar">The Price War</a></li>
+        <li><a href="#deployment">China's Deployment Strategy</a></li>
+        <li><a href="#whatitmeans">What This Means for You</a></li>
+      </ul>
     </div>
-  </div>
+
+    <!-- Quick Stats -->
+    <div class="sidebar-card">
+      <h4>&#9889; Key Numbers</h4>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="background:var(--bg-elevated);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:1.5rem;font-weight:800;color:var(--primary-light)">9x</div>
+          <div style="font-size:.72rem;color:var(--text-secondary);margin-top:2px">Cheaper than OpenAI</div>
+        </div>
+        <div style="background:var(--bg-elevated);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:1.5rem;font-weight:800;color:#00D4AA">1.6T</div>
+          <div style="font-size:.72rem;color:var(--text-secondary);margin-top:2px">DeepSeek V4 Parameters</div>
+        </div>
+        <div style="background:var(--bg-elevated);border-radius:8px;padding:12px;text-align:center">
+          <div style="font-size:1.4rem;font-weight:800;color:#ff9f43">MIT</div>
+          <div style="font-size:.72rem;color:var(--text-secondary);margin-top:2px">Open Source License</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Related Articles -->
+    <div class="sidebar-card">
+      <h4>&#128214; Related Reading</h4>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <a href="/articles/google-gemma-4-local-ai-laptop-2026.html" style="font-size:.82rem;color:var(--primary-light);text-decoration:none;line-height:1.4;padding:8px;background:var(--bg-elevated);border-radius:6px;display:block">Google Gemma 4: Run AI Locally, Free &#8594;</a>
+        <a href="/articles/anthropic-65-billion-fable-5-model-2026.html" style="font-size:.82rem;color:var(--primary-light);text-decoration:none;line-height:1.4;padding:8px;background:var(--bg-elevated);border-radius:6px;display:block">Anthropic Raises $65 Billion &#8594;</a>
+        <a href="/articles/microsoft-mai-7-models-copilot-2026.html" style="font-size:.82rem;color:var(--primary-light);text-decoration:none;line-height:1.4;padding:8px;background:var(--bg-elevated);border-radius:6px;display:block">Microsoft Launches 7 AI Models &#8594;</a>
+      </div>
+    </div>
+
+    <!-- Ad placeholder -->
+    <div style="background:var(--bg-card);border:1px dashed var(--border);border-radius:10px;padding:16px;text-align:center;font-size:.72rem;color:var(--text-secondary);min-height:250px;display:flex;align-items:center;justify-content:center">
+      Advertisement
+    </div>
+
+  </aside><!-- /.article-sidebar -->
+
+  </div><!-- /.article-two-col -->
+
 </main>
 
 <footer class="footer">
