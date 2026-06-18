@@ -150,6 +150,79 @@
     '  .aph-header-zone { padding: 0 16px; }',
     '  .aph-sidebar { grid-template-columns: 1fr; }',
     '}',
+    '',
+    '    /* Dynamic Lead Magnet Newsletter Box */',
+    '    .aph-newsletter-box {',
+    '      background: linear-gradient(135deg, #161b2c 0%, #0d111e 100%);',
+    '      border: 2px solid var(--primary, #6C63FF);',
+    '      border-radius: 14px;',
+    '      padding: 28px;',
+    '      margin: 36px 0;',
+    '      box-shadow: 0 8px 30px rgba(108,99,255,0.15);',
+    '      position: relative;',
+    '      overflow: hidden;',
+    '    }',
+    '    .aph-newsletter-box::before {',
+    '      content: "";',
+    '      position: absolute;',
+    '      top: -50px;',
+    '      right: -50px;',
+    '      width: 150px;',
+    '      height: 150px;',
+    '      background: radial-gradient(circle, rgba(108,99,255,0.2) 0%, transparent 70%);',
+    '      pointer-events: none;',
+    '    }',
+    '    .aph-newsletter-title {',
+    '      font-size: 1.15rem;',
+    '      font-weight: 800;',
+    '      color: var(--text-primary, #ffffff);',
+    '      margin: 0 0 8px;',
+    '      display: flex;',
+    '      align-items: center;',
+    '      gap: 8px;',
+    '    }',
+    '    .aph-newsletter-desc {',
+    '      font-size: 0.88rem;',
+    '      color: var(--text-secondary, #94A3B8);',
+    '      line-height: 1.5;',
+    '      margin-bottom: 18px;',
+    '    }',
+    '    .aph-newsletter-form {',
+    '      display: flex;',
+    '      gap: 10px;',
+    '    }',
+    '    .aph-newsletter-input {',
+    '      flex: 1;',
+    '      padding: 12px 16px;',
+    '      border-radius: 8px;',
+    '      border: 1px solid var(--border, rgba(148,163,184,.1));',
+    '      background: var(--bg-card, #1A1F35);',
+    '      color: var(--text-primary, #ffffff);',
+    '      font-size: 0.875rem;',
+    '      outline: none;',
+    '    }',
+    '    .aph-newsletter-input:focus {',
+    '      border-color: var(--primary, #6C63FF);',
+    '    }',
+    '    .aph-newsletter-btn {',
+    '      padding: 12px 24px;',
+    '      background: var(--primary, #6C63FF);',
+    '      color: #fff;',
+    '      border: none;',
+    '      border-radius: 8px;',
+    '      font-size: 0.875rem;',
+    '      font-weight: 600;',
+    '      cursor: pointer;',
+    '      transition: background 0.2s;',
+    '    }',
+    '    .aph-newsletter-btn:hover {',
+    '      background: var(--primary-light, #a78bfa);',
+    '    }',
+    '    @media(max-width: 580px) {',
+    '      .aph-newsletter-form {',
+    '        flex-direction: column;',
+    '      }',
+    '    }',
 
   ].join('\n');
   document.head.appendChild(css);
@@ -236,6 +309,61 @@
   });
   realH2s.forEach(function (h, i) { if (!h.id) h.id = 'aph-sec-' + i; });
   tocItems.forEach(function (item, i) { if (realH2s[i]) item.id = realH2s[i].id; });
+
+  // ─── 4.5. DYNAMIC TRUST & CONVERSION ENHANCEMENTS ─────────────────────────
+  // A. Check and inject Author Bio Box if missing
+  var hasAuthorBio = false;
+  bodyEls.forEach(function (el) {
+    var cls = el.className || '';
+    if (cls.indexOf('author-bio') > -1) hasAuthorBio = true;
+  });
+
+  if (!hasAuthorBio) {
+    var bioBox = document.createElement('div');
+    bioBox.className = 'author-bio';
+    bioBox.style.cssText = 'display:flex;gap:20px;align-items:center;margin:40px 0 0;padding:24px;background:var(--bg-elevated,#1a1f2e);border:1px solid var(--border,#2a2f3e);border-radius:12px;';
+    bioBox.innerHTML = '<img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face" alt="Hussein" style="width:72px;height:72px;border-radius:50%;object-fit:cover;flex-shrink:0;">' +
+                       '<div>' +
+                       '<p style="margin:0 0 4px;font-weight:700;font-size:.95rem">Hussein — AI Profit Hub</p>' +
+                       '<p style="margin:0;font-size:.85rem;line-height:1.6;color:var(--text-secondary)">Daily AI news, tool reviews, and practical guides. Follow AI Profit Hub for everything happening in artificial intelligence.</p>' +
+                       '</div>';
+    bodyEls.push(bioBox);
+  }
+
+  // B. Check and inject Lead Magnet Newsletter Subscription Box if missing
+  var hasNewsletter = false;
+  bodyEls.forEach(function (el) {
+    var cls = el.className || '';
+    if (cls.indexOf('lead-magnet-box') > -1 || cls.indexOf('aph-newsletter-box') > -1) {
+      hasNewsletter = true;
+    }
+  });
+
+  if (!hasNewsletter) {
+    var nlBox = document.createElement('div');
+    nlBox.className = 'aph-newsletter-box';
+    nlBox.innerHTML = '<div class="aph-newsletter-title">📥 Join Our Free AI Newsletter</div>' +
+                      '<div class="aph-newsletter-desc">Get the latest AI tool reviews, ChatGPT prompts, and productivity hacks sent straight to your inbox weekly. Join 10,000+ professionals working smarter.</div>' +
+                      '<form class="aph-newsletter-form" onsubmit="event.preventDefault(); alert(\'Thank you for subscribing!\');">' +
+                      '<input type="email" class="aph-newsletter-input" placeholder="Enter your email address..." required>' +
+                      '<button type="submit" class="aph-newsletter-btn">Subscribe</button>' +
+                      '</form>';
+
+    // Find the right place to insert it: before share-row or personal-take
+    var insertIdx = -1;
+    for (var j = 0; j < bodyEls.length; j++) {
+      var cName = bodyEls[j].className || '';
+      if (cName.indexOf('share-row') > -1 || cName.indexOf('personal-take') > -1 || cName.indexOf('author-bio') > -1) {
+        insertIdx = j;
+        break;
+      }
+    }
+    if (insertIdx > -1) {
+      bodyEls.splice(insertIdx, 0, nlBox);
+    } else {
+      bodyEls.push(nlBox);
+    }
+  }
 
   // ─── 5. RELATED ARTICLES ─────────────────────────────────────────────────
   var ARTICLES = [
