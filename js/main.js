@@ -238,6 +238,23 @@ document.addEventListener('DOMContentLoaded', () => {
     
     articleContent.appendChild(relatedDiv);
   }
+
+  // === Dynamic Last Updated Date ===
+  const lastUpdatedEl = document.querySelector('.last-updated');
+  if (lastUpdatedEl) {
+    const modDate = new Date(document.lastModified);
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    lastUpdatedEl.textContent = 'Last Updated: ' + modDate.toLocaleDateString('en-US', options);
+  }
+
+  // === FAQ Accordion Toggle ===
+  document.addEventListener('click', (e) => {
+    const question = e.target.closest('.aph-faq-question');
+    if (question) {
+      const item = question.parentElement;
+      item.classList.toggle('active');
+    }
+  });
 });
 
 // ========================================

@@ -1102,3 +1102,277 @@ img[loading="lazy"].img-loaded { opacity: 1; }
   a { color: #000; text-decoration: underline; }
   .article-container { max-width: 100%; padding: 0; }
 }
+
+/* ========================================
+   ARTICLE TEMPLATE ENHANCEMENTS (UX/SEO)
+   ======================================== */
+
+.key-takeaways {
+  background: rgba(108, 99, 255, 0.03);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--primary);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  margin: 32px 0;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+}
+.key-takeaways-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.key-takeaways-title::before {
+  content: "💡";
+}
+.key-takeaways ul {
+  margin: 0;
+  padding-left: 20px;
+  list-style-type: square;
+}
+.key-takeaways li {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+.key-takeaways li:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive Tables */
+.aph-table-wrapper {
+  overflow-x: auto;
+  margin: 28px 0;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+}
+.aph-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+.aph-table th, .aph-table td {
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border);
+}
+.aph-table th {
+  background-color: var(--bg-elevated);
+  color: var(--text-primary);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+}
+.aph-table tr:last-child td {
+  border-bottom: none;
+}
+.aph-table tr:hover td {
+  background-color: rgba(108, 99, 255, 0.04);
+  color: var(--text-primary);
+}
+
+/* Timeline */
+.aph-timeline {
+  position: relative;
+  margin: 36px 0;
+  padding-left: 32px;
+  border-left: 2px solid var(--border);
+}
+.aph-timeline-item {
+  position: relative;
+  margin-bottom: 28px;
+}
+.aph-timeline-item:last-child {
+  margin-bottom: 0;
+}
+.aph-timeline-badge {
+  position: absolute;
+  left: -41px;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 3px solid var(--bg-primary);
+  box-shadow: 0 0 0 2px var(--border);
+}
+.aph-timeline-time {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+.aph-timeline-title {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+.aph-timeline-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Pros and Cons */
+.aph-pros-cons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin: 32px 0;
+}
+@media (max-width: 640px) {
+  .aph-pros-cons {
+    grid-template-columns: 1fr;
+  }
+}
+.aph-pros-box, .aph-cons-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+}
+.aph-pros-box {
+  border-top: 4px solid var(--accent);
+  background: rgba(0, 212, 170, 0.01);
+}
+.aph-cons-box {
+  border-top: 4px solid #EF4444;
+  background: rgba(239, 68, 68, 0.01);
+}
+.aph-pros-title, .aph-cons-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.aph-pros-title { color: var(--accent); }
+.aph-cons-title { color: #EF4444; }
+.aph-pros-cons ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.aph-pros-cons li {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+}
+.aph-pros-cons li:last-child {
+  margin-bottom: 0;
+}
+.aph-pros-box li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: bold;
+}
+.aph-cons-box li::before {
+  content: "✗";
+  position: absolute;
+  left: 0;
+  color: #EF4444;
+  font-weight: bold;
+}
+
+/* Info & Callout Boxes */
+.info-box {
+  padding: 18px 24px;
+  border-radius: var(--radius-md);
+  margin: 28px 0;
+  display: flex;
+  gap: 14px;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+}
+.info-box-icon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+.info-box.info {
+  border-left: 4px solid var(--primary);
+  background: rgba(108, 99, 255, 0.02);
+}
+.info-box.warning {
+  border-left: 4px solid #F59E0B;
+  background: rgba(245, 158, 11, 0.02);
+}
+
+/* FAQ Accordion */
+.aph-faq-section {
+  margin: 48px 0;
+}
+.aph-faq-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 24px;
+}
+.aph-faq-item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  margin-bottom: 12px;
+  overflow: hidden;
+  background: var(--bg-card);
+  transition: var(--transition);
+}
+.aph-faq-item:hover {
+  border-color: var(--border-hover);
+}
+.aph-faq-question {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  padding: 16px 24px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+  background: rgba(148, 163, 184, 0.01);
+  transition: var(--transition);
+}
+.aph-faq-question:hover {
+  background: rgba(148, 163, 184, 0.03);
+}
+.aph-faq-question::after {
+  content: "+";
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  transition: transform 0.25s ease;
+}
+.aph-faq-item.active .aph-faq-question::after {
+  transform: rotate(45deg);
+  color: var(--accent);
+}
+.aph-faq-answer {
+  padding: 0 24px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0, 1, 0, 1), padding 0.3s ease;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+.aph-faq-item.active .aph-faq-answer {
+  padding: 16px 24px 20px;
+  max-height: 1000px;
+  border-top: 1px solid var(--border);
+  transition: max-height 0.3s cubic-bezier(1, 0, 1, 0), padding 0.3s ease;
+}
