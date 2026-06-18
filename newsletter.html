@@ -59,8 +59,11 @@
   <h1>Stay Ahead of AI.<br>Every Sunday.</h1>
   <p>The 5 most important AI updates of the week, 3 tool recommendations, and 1 actionable tip — curated by Hussein. No noise, no spam. Just signal.</p>
   <div class="nl-form-wrap">
-    <form class="nl-form" id="nlForm" action="https://formspree.io/f/xdkoqkzp" method="POST" onsubmit="submitForm(event)">
-      <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address">
+    <iframe name="ml_nl_iframe" style="display:none;"></iframe>
+    <form class="nl-form" id="nlForm" action="https://dashboard.mailerlite.com/jsonp/2455913/forms/190642525337290158/subscribe" method="POST" target="ml_nl_iframe" onsubmit="submitForm(event)">
+      <input type="email" name="fields[email]" placeholder="your@email.com" required aria-label="Email address">
+      <input type="hidden" name="ml-submit" value="1">
+      <input type="hidden" name="anticsrf" value="true">
       <button type="submit">Subscribe Free →</button>
     </form>
     <div class="nl-note">📩 Every Sunday · No spam · Unsubscribe anytime</div>
@@ -144,19 +147,12 @@
 </footer>
 <script>
 function submitForm(e){
-  e.preventDefault();
   var form=e.target;
-  var data=new FormData(form);
-  fetch(form.action,{method:'POST',body:data,headers:{'Accept':'application/json'}})
-    .then(function(r){
-      if(r.ok){
-        form.style.display='none';
-        var msg=document.getElementById('successMsg');
-        if(msg)msg.style.display='block';
-        document.querySelectorAll('.success-msg').forEach(function(m){m.style.display='block';});
-        document.querySelectorAll('.nl-form').forEach(function(f){f.style.display='none';});
-      }
-    }).catch(function(){});
+  form.style.display='none';
+  var msg=document.getElementById('successMsg');
+  if(msg) msg.style.display='block';
+  document.querySelectorAll('.success-msg').forEach(function(m){m.style.display='block';});
+  document.querySelectorAll('.nl-form').forEach(function(f){f.style.display='none';});
 }
 </script>
 <script src="js/main.js" defer></script>

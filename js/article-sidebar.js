@@ -492,6 +492,55 @@
     });
   });
 
+  // ─── 8.5. FIX HARDCODED LEAD-MAGNET-FORMS ─────────────────────────────────
+  var hardcodedForms = document.querySelectorAll('form.lead-magnet-form');
+  hardcodedForms.forEach(function (form) {
+    if (form.getAttribute('data-ml-intercepted')) return;
+    form.setAttribute('data-ml-intercepted', 'true');
+    
+    var iframeId = 'ml_iframe_' + Math.round(Math.random() * 100000);
+    var iframe = document.createElement('iframe');
+    iframe.name = iframeId;
+    iframe.style.display = 'none';
+    document.body.appendChild(iframe);
+    
+    form.action = 'https://dashboard.mailerlite.com/jsonp/2455913/forms/190642525337290158/subscribe';
+    form.method = 'POST';
+    form.target = iframeId;
+    form.removeAttribute('onsubmit');
+    
+    var emailInput = form.querySelector('input[type="email"]');
+    if (emailInput) {
+      emailInput.name = 'fields[email]';
+    }
+    
+    if (!form.querySelector('input[name="ml-submit"]')) {
+      var hiddenSubmit = document.createElement('input');
+      hiddenSubmit.type = 'hidden';
+      hiddenSubmit.name = 'ml-submit';
+      hiddenSubmit.value = '1';
+      form.appendChild(hiddenSubmit);
+    }
+    if (!form.querySelector('input[name="anticsrf"]')) {
+      var hiddenCsrf = document.createElement('input');
+      hiddenCsrf.type = 'hidden';
+      hiddenCsrf.name = 'anticsrf';
+      hiddenCsrf.value = 'true';
+      form.appendChild(hiddenCsrf);
+    }
+    
+    var successDiv = document.createElement('div');
+    successDiv.className = 'lead-magnet-success';
+    successDiv.style.cssText = 'display:none; color:#00D4AA; font-weight:600; font-size:0.9rem; text-align:center; padding:10px 0; margin-top: 10px;';
+    successDiv.innerHTML = '🎉 Thank you for subscribing! Your cheat sheet is on its way.';
+    form.parentNode.appendChild(successDiv);
+    
+    form.addEventListener('submit', function() {
+      form.style.display = 'none';
+      successDiv.style.display = 'block';
+    });
+  });
+
   // ─── 9. MARK AS INJECTED ─────────────────────────────────────────────────
   main.classList.add('aph-injected');
 

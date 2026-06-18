@@ -64,19 +64,43 @@ document.addEventListener('DOMContentLoaded', () => {
   // === Newsletter Form ===
   const newsletterForm = document.querySelector('.newsletter-form');
   if (newsletterForm) {
+    const iframeId = 'ml_main_iframe_' + Math.round(Math.random() * 100000);
+    const iframe = document.createElement('iframe');
+    iframe.name = iframeId;
+    iframe.style.display = 'none';
+    document.body.appendChild(iframe);
+
+    newsletterForm.action = 'https://dashboard.mailerlite.com/jsonp/2455913/forms/190642525337290158/subscribe';
+    newsletterForm.method = 'POST';
+    newsletterForm.target = iframeId;
+
+    const emailInput = newsletterForm.querySelector('input[type="email"]') || newsletterForm.querySelector('input');
+    if (emailInput) {
+      emailInput.name = 'fields[email]';
+    }
+
+    const hiddenSubmit = document.createElement('input');
+    hiddenSubmit.type = 'hidden';
+    hiddenSubmit.name = 'ml-submit';
+    hiddenSubmit.value = '1';
+    newsletterForm.appendChild(hiddenSubmit);
+
+    const hiddenCsrf = document.createElement('input');
+    hiddenCsrf.type = 'hidden';
+    hiddenCsrf.name = 'anticsrf';
+    hiddenCsrf.value = 'true';
+    newsletterForm.appendChild(hiddenCsrf);
+
     newsletterForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const input = newsletterForm.querySelector('input');
       const btn = newsletterForm.querySelector('button');
-      if (input.value.trim()) {
-        btn.textContent = '✓ Subscribed!';
-        btn.style.background = 'linear-gradient(135deg, #00D4AA, #00B892)';
-        input.value = '';
-        setTimeout(() => {
-          btn.textContent = 'Subscribe';
-          btn.style.background = '';
-        }, 3000);
-      }
+      btn.disabled = true;
+      btn.textContent = '✓ Subscribed!';
+      btn.style.background = 'linear-gradient(135deg, #00D4AA, #00B892)';
+      
+      setTimeout(() => {
+        if (emailInput) emailInput.value = '';
+        btn.disabled = false;
+      }, 1000);
     });
   }
 
