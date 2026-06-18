@@ -354,10 +354,14 @@
       <p style="font-size:0.85rem;color:var(--text-secondary);max-width:560px;margin:8px auto 16px;line-height:1.6;">
         Want to master prompting? Join our developer newsletter. Get weekly curated prompt directories, custom templates, and reviews of new LLMs.
       </p>
-      <form style="display:flex;gap:8px;max-width:480px;margin:0 auto;" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
-        <input type="email" placeholder="Your developer email..." style="flex:1;padding:10px 14px;border-radius:6px;border:1px solid var(--border);background:var(--bg-elevated);color:#fff;outline:none;" required>
+      <iframe name="opt_newsletter_iframe" style="display:none;"></iframe>
+      <form id="opt-newsletter-form" action="https://dashboard.mailerlite.com/jsonp/2455913/forms/190642525337290158/subscribe" method="POST" target="opt_newsletter_iframe" style="display:flex;gap:8px;max-width:480px;margin:0 auto;">
+        <input type="email" name="fields[email]" placeholder="Your developer email..." style="flex:1;padding:10px 14px;border-radius:6px;border:1px solid var(--border);background:var(--bg-elevated);color:#fff;outline:none;" required>
+        <input type="hidden" name="ml-submit" value="1">
+        <input type="hidden" name="anticsrf" value="true">
         <button type="submit" style="padding:10px 20px;background:var(--primary);color:#fff;border:none;border-radius:6px;font-weight:600;cursor:pointer;">Join Free</button>
       </form>
+      <div id="opt-newsletter-success" style="display:none; color:#00D4AA; font-weight:600; font-size:0.9rem; text-align:center; padding:10px 0;">🎉 Thank you for subscribing! Please check your inbox.</div>
     </div>
 
   </main>
@@ -460,6 +464,16 @@ Deliver your output formatted clearly using the requested constraints. Begin you
         }, 2000);
       });
     });
+
+    // Handle newsletter submission view state
+    var optForm = document.getElementById('opt-newsletter-form');
+    var optSuccess = document.getElementById('opt-newsletter-success');
+    if (optForm && optSuccess) {
+      optForm.addEventListener('submit', function() {
+        optForm.style.display = 'none';
+        optSuccess.style.display = 'block';
+      });
+    }
   });
   </script>
 </body>

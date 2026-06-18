@@ -342,12 +342,24 @@
   if (!hasNewsletter) {
     var nlBox = document.createElement('div');
     nlBox.className = 'aph-newsletter-box';
+    var iframeId = 'ml_iframe_' + Math.round(Math.random() * 100000);
     nlBox.innerHTML = '<div class="aph-newsletter-title">📥 Join Our Free AI Newsletter</div>' +
                       '<div class="aph-newsletter-desc">Get the latest AI tool reviews, ChatGPT prompts, and productivity hacks sent straight to your inbox weekly. Join 10,000+ professionals working smarter.</div>' +
-                      '<form class="aph-newsletter-form" onsubmit="event.preventDefault(); alert(\'Thank you for subscribing!\');">' +
-                      '<input type="email" class="aph-newsletter-input" placeholder="Enter your email address..." required>' +
+                      '<iframe name="' + iframeId + '" style="display:none;"></iframe>' +
+                      '<form class="aph-newsletter-form" action="https://dashboard.mailerlite.com/jsonp/2455913/forms/190642525337290158/subscribe" method="POST" target="' + iframeId + '">' +
+                      '<input type="email" name="fields[email]" class="aph-newsletter-input" placeholder="Enter your email address..." required>' +
+                      '<input type="hidden" name="ml-submit" value="1">' +
+                      '<input type="hidden" name="anticsrf" value="true">' +
                       '<button type="submit" class="aph-newsletter-btn">Subscribe</button>' +
-                      '</form>';
+                      '</form>' +
+                      '<div class="aph-newsletter-success" style="display:none; color:#00D4AA; font-weight:600; font-size:0.9rem; text-align:center; padding:10px 0;">🎉 Thank you for subscribing! Please check your inbox.</div>';
+
+    var form = nlBox.querySelector('form');
+    var successDiv = nlBox.querySelector('.aph-newsletter-success');
+    form.addEventListener('submit', function() {
+      form.style.display = 'none';
+      successDiv.style.display = 'block';
+    });
 
     // Find the right place to insert it: before share-row or personal-take
     var insertIdx = -1;
