@@ -9,6 +9,13 @@
   /* ── Article catalogue ─────────────────────────────────────────────── */
   var articles = [
     {
+      title: 'Xcode 27 Dual-Engine AI Coding Agents',
+      url: '/articles/xcode-27-dual-engine-ai-coding-agents-2026.html',
+      image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&q=80',
+      tag: '🍎 Apple',
+      date: 'June 18 2026'
+    },
+    {
       title: 'Apple Reinvents Siri: WWDC 2026',
       url: '/articles/apple-intelligence-siri-wwdc-2026.html',
       image: 'https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=400&q=80',
