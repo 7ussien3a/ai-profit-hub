@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
     iframe.style.display = 'none';
     document.body.appendChild(iframe);
 
-    newsletterForm.action = 'https://dashboard.mailerlite.com/jsonp/2455913/forms/190642525337290158/subscribe';
+    newsletterForm.action = 'https://assets.mailerlite.com/jsonp/2455913/forms/190642525337290158/subscribe';
     newsletterForm.method = 'POST';
     newsletterForm.target = iframeId;
 

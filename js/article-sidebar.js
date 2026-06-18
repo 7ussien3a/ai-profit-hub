@@ -352,7 +352,7 @@
     nlBox.innerHTML = '<div class="aph-newsletter-title">📥 Join Our Free AI Newsletter</div>' +
                       '<div class="aph-newsletter-desc">Get the latest AI tool reviews, ChatGPT prompts, and productivity hacks sent straight to your inbox weekly. Join 10,000+ professionals working smarter.</div>' +
                       '<iframe name="' + iframeId + '" style="display:none;"></iframe>' +
-                      '<form class="aph-newsletter-form" action="https://dashboard.mailerlite.com/jsonp/2455913/forms/190642525337290158/subscribe" method="POST" target="' + iframeId + '">' +
+                      '<form class="aph-newsletter-form" action="https://assets.mailerlite.com/jsonp/2455913/forms/190642525337290158/subscribe" method="POST" target="' + iframeId + '">' +
                       '<input type="email" name="fields[email]" class="aph-newsletter-input" placeholder="Enter your email address..." required>' +
                       '<input type="hidden" name="ml-submit" value="1">' +
                       '<input type="hidden" name="anticsrf" value="true">' +
@@ -504,7 +504,7 @@
     iframe.style.display = 'none';
     document.body.appendChild(iframe);
     
-    form.action = 'https://dashboard.mailerlite.com/jsonp/2455913/forms/190642525337290158/subscribe';
+    form.action = 'https://assets.mailerlite.com/jsonp/2455913/forms/190642525337290158/subscribe';
     form.method = 'POST';
     form.target = iframeId;
     form.removeAttribute('onsubmit');
