@@ -500,15 +500,11 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 24px 80px;
 }
 
-/* Fallback: single column .article-container (new articles) */
+/* .article-container — simple wrapper, JS (article-sidebar.js) handles the two-column grid */
 .article-container {
-  max-width: 1200px;
+  max-width: 1240px;
   margin: 0 auto;
   padding: 0 24px 80px;
-  display: grid;
-  grid-template-columns: 1fr 300px;
-  gap: 48px;
-  align-items: start;
 }
 
 .article-container .article-header,

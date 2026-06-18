@@ -1,51 +1,61 @@
 /**
- * article-sidebar.js — AI Profit Hub
- * Auto-injects a sticky two-column layout with sidebar into every article page.
- * Works on ALL articles without modifying their HTML.
- * Features:
- *  - Auto-generated TOC from h2 headings
- *  - Active section highlighting on scroll
- *  - Key stats card (if data-stats attribute present)
- *  - Related articles
- *  - Ad placeholder
- *  - Fully responsive (collapses on tablet/mobile)
+ * article-sidebar.js — AI Profit Hub  v2.0
+ * ─────────────────────────────────────────
+ * Automatically injects a sticky two-column layout on every article page:
+ *
+ *   ┌──────────────────────────────────────────────┐
+ *   │  Article Header (FULL WIDTH — above grid)    │
+ *   │  Hero Image     (FULL WIDTH — above grid)    │
+ *   ├────────────────────────────┬─────────────────┤
+ *   │  Article Body  (left col)  │  Sidebar (right)│
+ *   │  • paragraphs              │  • TOC + scroll │
+ *   │  • tables, tips            │  • related links│
+ *   │  • share bar               │  • ad slot      │
+ *   └────────────────────────────┴─────────────────┘
+ *
+ * Also upgrades all Unsplash images to high-res srcset automatically.
  */
 (function () {
   'use strict';
 
-  // Only run on article pages
   var main = document.querySelector('main');
   if (!main) return;
+  if (document.querySelector('.aph-injected')) return; // no double-inject
 
-  // Don't double-inject
-  if (document.querySelector('.aph-sidebar-injected')) return;
+  // ─── 1. STYLES ────────────────────────────────────────────────────────────
+  var css = document.createElement('style');
+  css.id = 'aph-sidebar-styles';
+  css.textContent = [
 
-  // ── 1. INJECT STYLES ─────────────────────────────────────────────────────
-  var style = document.createElement('style');
-  style.textContent = [
-    /* Upgrade hero images to high-res on large screens */
-    'img[loading="eager"]{ image-rendering: -webkit-optimize-contrast; }',
+    /* Full-width header zone (above the two-column grid) */
+    '.aph-header-zone {',
+    '  max-width: 1240px;',
+    '  margin: 0 auto;',
+    '  padding: 0 24px;',
+    '}',
 
-    /* Wrap the main element in a two-column grid */
-    '.aph-article-wrap {',
-    '  display: grid;',
-    '  grid-template-columns: 1fr 290px;',
-    '  gap: 48px;',
+    /* Two-column wrapper */
+    '.aph-grid {',
     '  max-width: 1240px;',
     '  margin: 0 auto;',
     '  padding: 0 24px 80px;',
+    '  display: grid;',
+    '  grid-template-columns: minmax(0, 1fr) 300px;',
+    '  gap: 48px;',
     '  align-items: start;',
     '}',
-    '.aph-article-body { min-width: 0; }',
 
-    /* Sticky sidebar */
+    /* Body column */
+    '.aph-body { min-width: 0; }',
+
+    /* Sidebar column */
     '.aph-sidebar {',
     '  position: sticky;',
     '  top: 88px;',
     '  display: flex;',
     '  flex-direction: column;',
-    '  gap: 18px;',
-    '  max-height: calc(100vh - 110px);',
+    '  gap: 16px;',
+    '  max-height: calc(100vh - 108px);',
     '  overflow-y: auto;',
     '  scrollbar-width: none;',
     '}',
@@ -54,261 +64,289 @@
     /* Sidebar cards */
     '.aph-card {',
     '  background: var(--bg-card, #1A1F35);',
-    '  border: 1px solid var(--border, rgba(148,163,184,0.1));',
+    '  border: 1px solid var(--border, rgba(148,163,184,.1));',
     '  border-radius: 12px;',
     '  padding: 18px;',
     '}',
-    '.aph-card h4 {',
-    '  font-size: 0.72rem;',
+    '.aph-card-title {',
+    '  font-size: .7rem;',
     '  font-weight: 700;',
     '  text-transform: uppercase;',
-    '  letter-spacing: 0.09em;',
+    '  letter-spacing: .09em;',
     '  color: var(--text-secondary, #94A3B8);',
     '  margin: 0 0 12px;',
     '}',
 
-    /* TOC list */
-    '.aph-toc { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }',
-    '.aph-toc a {',
-    '  display: block;',
-    '  font-size: 0.8rem;',
-    '  color: var(--text-secondary, #94A3B8);',
-    '  text-decoration: none;',
-    '  padding: 5px 0 5px 10px;',
-    '  border-left: 2px solid var(--border, rgba(148,163,184,0.1));',
-    '  line-height: 1.4;',
-    '  transition: color 0.2s, border-color 0.2s;',
+    /* Read progress bar inside TOC card */
+    '.aph-prog-track {',
+    '  height: 3px;',
+    '  background: var(--border, rgba(148,163,184,.1));',
+    '  border-radius: 3px;',
+    '  margin-bottom: 14px;',
+    '  overflow: hidden;',
     '}',
-    '.aph-toc a:hover, .aph-toc a.aph-active {',
-    '  color: var(--primary-light, #8B83FF);',
-    '  border-color: var(--primary, #6C63FF);',
+    '.aph-prog-fill {',
+    '  height: 100%;',
+    '  width: 0%;',
+    '  background: linear-gradient(90deg,#6C63FF,#00D4AA);',
+    '  border-radius: 3px;',
+    '  transition: width .12s linear;',
     '}',
 
-    /* Related links */
-    '.aph-related-link {',
+    /* TOC list */
+    '.aph-toc { list-style: none; margin: 0; padding: 0; }',
+    '.aph-toc li { margin-bottom: 3px; }',
+    '.aph-toc a {',
     '  display: block;',
-    '  font-size: 0.8rem;',
+    '  font-size: .78rem;',
+    '  color: var(--text-secondary, #94A3B8);',
+    '  text-decoration: none;',
+    '  padding: 5px 8px 5px 10px;',
+    '  border-left: 2px solid var(--border, rgba(148,163,184,.1));',
+    '  border-radius: 0 4px 4px 0;',
+    '  line-height: 1.4;',
+    '  transition: color .18s, border-color .18s, background .18s;',
+    '}',
+    '.aph-toc a:hover { color: var(--primary-light,#8B83FF); border-color: var(--primary,#6C63FF); background: rgba(108,99,255,.06); }',
+    '.aph-toc a.aph-active { color: var(--primary-light,#8B83FF); border-color: var(--primary,#6C63FF); background: rgba(108,99,255,.08); font-weight:600; }',
+
+    /* Related links */
+    '.aph-link {',
+    '  display: block;',
+    '  font-size: .78rem;',
     '  color: var(--primary-light, #8B83FF);',
     '  text-decoration: none;',
     '  padding: 8px 10px;',
     '  background: var(--bg-elevated, #252B45);',
     '  border-radius: 7px;',
     '  line-height: 1.4;',
-    '  margin-bottom: 8px;',
-    '  transition: background 0.2s;',
+    '  margin-bottom: 7px;',
+    '  transition: background .18s;',
     '}',
-    '.aph-related-link:hover { background: rgba(108,99,255,0.15); }',
-    '.aph-related-link:last-child { margin-bottom: 0; }',
+    '.aph-link:last-child { margin-bottom: 0; }',
+    '.aph-link:hover { background: rgba(108,99,255,.18); }',
 
-    /* Ad box */
+    /* Ad slot */
     '.aph-ad {',
     '  background: var(--bg-card, #1A1F35);',
-    '  border: 1px dashed var(--border, rgba(148,163,184,0.15));',
+    '  border: 1px dashed var(--border, rgba(148,163,184,.15));',
     '  border-radius: 12px;',
     '  min-height: 250px;',
     '  display: flex;',
     '  align-items: center;',
     '  justify-content: center;',
-    '  font-size: 0.7rem;',
+    '  font-size: .68rem;',
     '  color: var(--text-secondary, #94A3B8);',
     '}',
 
-    /* Progress bar inside TOC */
-    '.aph-read-bar {',
-    '  height: 3px;',
-    '  background: var(--border, rgba(148,163,184,0.1));',
-    '  border-radius: 3px;',
-    '  margin-bottom: 12px;',
-    '  overflow: hidden;',
-    '}',
-    '.aph-read-fill {',
-    '  height: 100%;',
-    '  width: 0%;',
-    '  background: linear-gradient(90deg, #6C63FF, #00D4AA);',
-    '  border-radius: 3px;',
-    '  transition: width 0.15s linear;',
-    '}',
-
-    /* Responsive: collapse on tablet */
+    /* ── RESPONSIVE ── */
     '@media (max-width: 1060px) {',
-    '  .aph-article-wrap {',
-    '    grid-template-columns: 1fr;',
-    '    max-width: 800px;',
-    '    gap: 32px;',
-    '    padding-bottom: 60px;',
-    '  }',
-    '  .aph-sidebar {',
-    '    position: static;',
-    '    max-height: none;',
-    '    display: grid;',
-    '    grid-template-columns: 1fr 1fr;',
-    '    gap: 14px;',
-    '  }',
+    '  .aph-grid { grid-template-columns: 1fr; max-width: 800px; gap: 32px; padding-bottom: 60px; }',
+    '  .aph-sidebar { position: static; max-height: none; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }',
+    '  .aph-header-zone { max-width: 800px; }',
     '}',
-    '@media (max-width: 600px) {',
-    '  .aph-article-wrap { padding: 0 16px 48px; gap: 20px; }',
+    '@media (max-width: 640px) {',
+    '  .aph-grid { padding: 0 16px 48px; gap: 20px; }',
+    '  .aph-header-zone { padding: 0 16px; }',
     '  .aph-sidebar { grid-template-columns: 1fr; }',
     '}',
 
-    /* Fix image quality: upgrade srcset on all article hero images */
-    '.aph-hero-img { width: 100%; height: auto; max-height: 520px; object-fit: cover; display: block; border-radius: 14px; }',
   ].join('\n');
-  document.head.appendChild(style);
+  document.head.appendChild(css);
 
-  // ── 2. UPGRADE HERO IMAGES ────────────────────────────────────────────────
-  // Find the first large image in the article (hero / cover)
-  var heroImgs = main.querySelectorAll('img');
-  heroImgs.forEach(function (img, i) {
+  // ─── 2. UPGRADE IMAGES → high-res srcset ─────────────────────────────────
+  main.querySelectorAll('img').forEach(function (img, i) {
     var src = img.getAttribute('src') || '';
-    // Only upgrade Unsplash images that don't already have srcset
     if (src.indexOf('unsplash.com') > -1 && !img.getAttribute('srcset')) {
-      // Extract base URL (without width/quality params)
       var base = src.split('?')[0];
       img.setAttribute('srcset',
-        base + '?w=800&q=80&auto=format&fit=crop 800w, ' +
-        base + '?w=1200&q=85&auto=format&fit=crop 1200w, ' +
+        base + '?w=800&q=80&auto=format&fit=crop 800w,' +
+        base + '?w=1200&q=85&auto=format&fit=crop 1200w,' +
         base + '?w=1600&q=90&auto=format&fit=crop 1600w'
       );
       img.setAttribute('sizes', '(max-width:768px) 100vw, (max-width:1200px) 90vw, 1100px');
-      // Upgrade src itself to high-res
       img.setAttribute('src', base + '?w=1600&q=85&auto=format&fit=crop');
-      if (i === 0) {
-        img.setAttribute('loading', 'eager');
-        img.setAttribute('fetchpriority', 'high');
-      }
+      if (i === 0) { img.setAttribute('loading', 'eager'); img.setAttribute('fetchpriority', 'high'); }
     }
   });
 
-  // ── 3. BUILD TOC FROM H2 HEADINGS ────────────────────────────────────────
-  var headings = main.querySelectorAll('h2');
+  // ─── 3. SEPARATE: full-width header zone vs article body ─────────────────
+  var allChildren = Array.from(main.children);
+  var headerZoneEls = [];
+  var bodyEls       = [];
+  var inHeader      = true;
+
+  allChildren.forEach(function (el) {
+    if (!inHeader) { bodyEls.push(el); return; }
+
+    var tag = el.tagName.toUpperCase();
+    var cls = el.className || '';
+
+    // Stop treating as header when we hit actual article content
+    var isContent = (
+      tag === 'P' ||
+      tag === 'H2' ||
+      tag === 'UL' ||
+      tag === 'OL' ||
+      tag === 'BLOCKQUOTE' ||
+      cls.indexOf('stat-grid')    > -1 ||
+      cls.indexOf('source-badge') > -1 ||
+      cls.indexOf('highlight-box')> -1 ||
+      cls.indexOf('personal-take')> -1 ||
+      cls.indexOf('share-row')    > -1 ||
+      cls.indexOf('article-body') > -1 ||
+      cls.indexOf('article-two-col') > -1  // already has manual layout
+    );
+
+    // These always stay full-width
+    var isHeaderZone = (
+      cls.indexOf('article-header') > -1 ||
+      cls.indexOf('article-cover')  > -1 ||
+      cls.indexOf('bc')             > -1 ||
+      (tag === 'DIV' && el.querySelector('img') && !isContent)
+    );
+
+    if (isHeaderZone) {
+      headerZoneEls.push(el);
+    } else if (isContent) {
+      inHeader = false;
+      bodyEls.push(el);
+    } else {
+      headerZoneEls.push(el);
+    }
+  });
+
+  // If everything ended up in header (unusual layout), put it all in body
+  if (bodyEls.length === 0) {
+    bodyEls = headerZoneEls.splice(0);
+  }
+
+  // ─── 4. BUILD TOC from h2 headings in body elements ──────────────────────
+  var tempDiv = document.createElement('div');
+  bodyEls.forEach(function (el) { tempDiv.appendChild(el.cloneNode(true)); });
+  var h2s = tempDiv.querySelectorAll('h2');
   var tocItems = [];
-  headings.forEach(function (h, i) {
-    if (!h.id) {
-      h.id = 'section-' + i;
-    }
-    tocItems.push({ id: h.id, text: h.textContent.trim().slice(0, 55) });
-  });
+  h2s.forEach(function (h, i) { tocItems.push({ text: h.textContent.trim().slice(0, 52), idx: i }); });
 
-  // ── 4. RELATED ARTICLES DATA ──────────────────────────────────────────────
-  var ALL_ARTICLES = [
-    { title: 'China AI Price War: Qwen3.7 vs OpenAI', url: '/articles/china-ai-qwen3-deepseek-v4-price-war-2026.html' },
-    { title: 'Microsoft Launches 7 In-House AI Models', url: '/articles/microsoft-mai-7-models-copilot-2026.html' },
-    { title: 'Apple Reinvents Siri at WWDC 2026', url: '/articles/apple-intelligence-siri-wwdc-2026.html' },
-    { title: 'Anthropic Raises $65 Billion', url: '/articles/anthropic-65-billion-fable-5-model-2026.html' },
-    { title: 'Google Gemma 4: Local AI for Everyone', url: '/articles/google-gemma-4-local-ai-laptop-2026.html' },
-    { title: 'Google Gemini 3.5 Live Translate', url: '/articles/google-gemini-3-5-live-translate-20260615.html' },
-    { title: 'Gemini Omni: Edit Video With Words', url: '/articles/gemini-omni-video-revolution.html' },
-    { title: 'KPMG Deploys Claude for 276,000 Staff', url: '/articles/kpmg-claude-276000-employees.html' },
-    { title: 'NVIDIA Hits $81.6B Record Revenue', url: '/articles/nvidia-record-revenue-ai-dominance.html' },
-    { title: 'GPT-5 vs Claude 4: Full Comparison', url: '/articles/gpt-5-vs-claude-4.html' },
-    { title: 'Best Free AI Tools for Students 2026', url: '/articles/best-free-ai-tools-students.html' },
-    { title: 'ChatGPT Prompts for Productivity', url: '/articles/chatgpt-prompts-productivity.html' },
-    { title: 'Samsung HBM4E AI Memory Chips', url: '/articles/samsung-hbm4e-ai-memory-chips.html' },
-    { title: 'DuckDuckGo vs Google AI Search', url: '/articles/duckduckgo-vs-google-ai-search.html' },
-    { title: 'DeepSeek vs Qwen vs Claude', url: '/articles/deepseek-qwen-claude-comparison.html' },
-    { title: 'Microsoft Build 2026: Everything New', url: '/articles/microsoft-build-2026.html' },
-    { title: 'Cloudflare AI & Layoffs 2026', url: '/articles/cloudflare-ai-layoffs-2026.html' },
-    { title: 'Meta Llama 4 Muse & Spark', url: '/articles/meta-llama-4-muse-spark.html' },
-    { title: 'AI for Faceless YouTube Channels', url: '/articles/ai-tools-faceless-youtube.html' },
-    { title: 'How to Make Money with AI Art', url: '/articles/make-money-ai-art.html' },
+  // Add IDs to real h2s in bodyEls
+  var realH2s = [];
+  bodyEls.forEach(function (el) {
+    if (el.tagName === 'H2') realH2s.push(el);
+    else if (el.querySelectorAll) el.querySelectorAll('h2').forEach(function (h) { realH2s.push(h); });
+  });
+  realH2s.forEach(function (h, i) { if (!h.id) h.id = 'aph-sec-' + i; });
+  tocItems.forEach(function (item, i) { if (realH2s[i]) item.id = realH2s[i].id; });
+
+  // ─── 5. RELATED ARTICLES ─────────────────────────────────────────────────
+  var ARTICLES = [
+    { t: 'China AI Price War: Qwen3.7 vs OpenAI',      u: '/articles/china-ai-qwen3-deepseek-v4-price-war-2026.html' },
+    { t: 'Microsoft Launches 7 In-House AI Models',     u: '/articles/microsoft-mai-7-models-copilot-2026.html' },
+    { t: 'Apple Reinvents Siri at WWDC 2026',           u: '/articles/apple-intelligence-siri-wwdc-2026.html' },
+    { t: 'Anthropic Raises $65 Billion',                u: '/articles/anthropic-65-billion-fable-5-model-2026.html' },
+    { t: 'Google Gemma 4: Run AI Locally Free',         u: '/articles/google-gemma-4-local-ai-laptop-2026.html' },
+    { t: 'Google Gemini 3.5 Live Translation',          u: '/articles/google-gemini-3-5-live-translate-20260615.html' },
+    { t: 'Gemini Omni: Edit Video With Words',          u: '/articles/gemini-omni-video-revolution.html' },
+    { t: 'KPMG Deploys Claude for 276,000 Staff',       u: '/articles/kpmg-claude-276000-employees.html' },
+    { t: 'NVIDIA Hits $81.6B Record Revenue',           u: '/articles/nvidia-record-revenue-ai-dominance.html' },
+    { t: 'GPT-5 vs Claude 4: Full Comparison',          u: '/articles/gpt-5-vs-claude-4.html' },
+    { t: 'Best Free AI Tools for Students 2026',        u: '/articles/best-free-ai-tools-students.html' },
+    { t: 'ChatGPT Prompts for Productivity',            u: '/articles/chatgpt-prompts-productivity.html' },
+    { t: 'Samsung HBM4E AI Memory Revolution',          u: '/articles/samsung-hbm4e-ai-memory-chips.html' },
+    { t: 'DuckDuckGo vs Google AI Search',              u: '/articles/duckduckgo-vs-google-ai-search.html' },
+    { t: 'DeepSeek vs Qwen vs Claude: Compared',        u: '/articles/deepseek-qwen-claude-comparison.html' },
+    { t: 'Microsoft Build 2026: Everything New',        u: '/articles/microsoft-build-2026.html' },
+    { t: 'Meta Llama 4 Muse & Spark Released',          u: '/articles/meta-llama-4-muse-spark.html' },
+    { t: 'AI for Faceless YouTube Channels',            u: '/articles/ai-tools-faceless-youtube.html' },
+    { t: 'How to Make Money with AI Art',               u: '/articles/make-money-ai-art.html' },
+    { t: 'Agentic Coding: The Future of Programming',   u: '/articles/agentic-coding-future.html' },
   ];
 
-  // Pick 3 articles that are NOT the current page
-  var currentPath = window.location.pathname;
-  var related = ALL_ARTICLES.filter(function (a) {
-    return currentPath.indexOf(a.url.replace('/articles/', '')) === -1;
+  var path = window.location.pathname;
+  var related = ARTICLES.filter(function (a) {
+    return path.indexOf(a.u.replace('/articles/', '').replace('.html', '')) === -1;
   }).slice(0, 3);
 
-  // ── 5. BUILD SIDEBAR HTML ─────────────────────────────────────────────────
+  // ─── 6. BUILD SIDEBAR ─────────────────────────────────────────────────────
   var sidebar = document.createElement('aside');
-  sidebar.className = 'aph-sidebar aph-sidebar-injected';
-  sidebar.setAttribute('aria-label', 'Article sidebar');
+  sidebar.className = 'aph-sidebar aph-injected';
 
-  var sidebarHTML = '';
+  var sHTML = '';
 
-  // TOC card (only if we found headings)
+  // TOC card
   if (tocItems.length > 0) {
-    sidebarHTML += '<div class="aph-card">';
-    sidebarHTML += '<div class="aph-read-bar"><div class="aph-read-fill" id="aphReadFill"></div></div>';
-    sidebarHTML += '<h4>&#128221; In This Article</h4>';
-    sidebarHTML += '<ul class="aph-toc" id="aphToc">';
+    sHTML += '<div class="aph-card">';
+    sHTML += '<div class="aph-prog-track"><div class="aph-prog-fill" id="aphFill"></div></div>';
+    sHTML += '<p class="aph-card-title">&#128221; In This Article</p>';
+    sHTML += '<ul class="aph-toc" id="aphToc">';
     tocItems.forEach(function (item) {
-      sidebarHTML += '<li><a href="#' + item.id + '" class="aph-toc-link">' + item.text + '</a></li>';
+      sHTML += '<li><a href="#' + (item.id || '') + '" class="aph-tl">' + item.text + '</a></li>';
     });
-    sidebarHTML += '</ul></div>';
+    sHTML += '</ul></div>';
   }
 
-  // Related articles card
+  // Related
   if (related.length > 0) {
-    sidebarHTML += '<div class="aph-card">';
-    sidebarHTML += '<h4>&#128214; Related Reading</h4>';
+    sHTML += '<div class="aph-card">';
+    sHTML += '<p class="aph-card-title">&#128214; Related Reading</p>';
     related.forEach(function (a) {
-      sidebarHTML += '<a href="' + a.url + '" class="aph-related-link">' + a.title + ' &#8594;</a>';
+      sHTML += '<a href="' + a.u + '" class="aph-link">' + a.t + ' &#8594;</a>';
     });
-    sidebarHTML += '</div>';
+    sHTML += '</div>';
   }
 
-  // Ad placeholder
-  sidebarHTML += '<div class="aph-ad">Advertisement</div>';
+  // Ad slot
+  sHTML += '<div class="aph-ad">Advertisement</div>';
 
-  sidebar.innerHTML = sidebarHTML;
+  sidebar.innerHTML = sHTML;
 
-  // ── 6. WRAP MAIN CONTENT IN TWO-COLUMN GRID ───────────────────────────────
-  // Move all of main's children into article-body div, then add sidebar
-  var wrap = document.createElement('div');
-  wrap.className = 'aph-article-wrap';
+  // ─── 7. INJECT INTO PAGE ─────────────────────────────────────────────────
+  // Clear main
+  while (main.firstChild) main.removeChild(main.firstChild);
+
+  // Full-width header zone
+  var headerZone = document.createElement('div');
+  headerZone.className = 'aph-header-zone';
+  headerZoneEls.forEach(function (el) { headerZone.appendChild(el); });
+  main.appendChild(headerZone);
+
+  // Two-column grid
+  var grid = document.createElement('div');
+  grid.className = 'aph-grid';
 
   var body = document.createElement('div');
-  body.className = 'aph-article-body';
+  body.className = 'aph-body';
+  bodyEls.forEach(function (el) { body.appendChild(el); });
 
-  // Move children
-  while (main.firstChild) {
-    body.appendChild(main.firstChild);
-  }
+  grid.appendChild(body);
+  grid.appendChild(sidebar);
+  main.appendChild(grid);
 
-  wrap.appendChild(body);
-  wrap.appendChild(sidebar);
-  main.appendChild(wrap);
+  // ─── 8. SCROLL BEHAVIOUR ─────────────────────────────────────────────────
+  var fill  = document.getElementById('aphFill');
+  var links = document.querySelectorAll('.aph-tl');
 
-  // ── 7. SCROLL: TOC ACTIVE + READ PROGRESS ────────────────────────────────
-  var tocLinks = document.querySelectorAll('.aph-toc-link');
-  var readFill = document.getElementById('aphReadFill');
+  window.addEventListener('scroll', function () {
+    var st = window.scrollY || document.documentElement.scrollTop;
+    var dh = document.documentElement.scrollHeight - window.innerHeight;
 
-  if (tocLinks.length > 0 || readFill) {
-    window.addEventListener('scroll', function () {
-      var scrollTop = window.scrollY || document.documentElement.scrollTop;
-      var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    if (fill && dh > 0) fill.style.width = Math.min(100, (st / dh) * 100).toFixed(1) + '%';
 
-      // Read progress
-      if (readFill && docHeight > 0) {
-        readFill.style.width = Math.min(100, (scrollTop / docHeight) * 100).toFixed(1) + '%';
-      }
+    if (links.length) {
+      var active = '';
+      realH2s.forEach(function (h) { if (h.getBoundingClientRect().top < 130) active = h.id; });
+      links.forEach(function (a) { a.classList.toggle('aph-active', a.getAttribute('href') === '#' + active); });
+    }
+  }, { passive: true });
 
-      // Active TOC item
-      if (tocLinks.length > 0) {
-        var current = '';
-        headings.forEach(function (h) {
-          if (h.getBoundingClientRect().top < 140) {
-            current = h.id;
-          }
-        });
-        tocLinks.forEach(function (link) {
-          link.classList.toggle('aph-active', link.getAttribute('href') === '#' + current);
-        });
-      }
-    }, { passive: true });
-  }
-
-  // ── 8. SMOOTH SCROLL for TOC links ───────────────────────────────────────
-  tocLinks.forEach(function (link) {
-    link.addEventListener('click', function (e) {
-      var targetId = this.getAttribute('href').slice(1);
-      var target = document.getElementById(targetId);
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+  // Smooth scroll
+  links.forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      var t = document.getElementById(this.getAttribute('href').slice(1));
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
     });
   });
+
+  // ─── 9. MARK AS INJECTED ─────────────────────────────────────────────────
+  main.classList.add('aph-injected');
 
 })();
