@@ -316,6 +316,12 @@
   bodyEls.forEach(function (el) {
     var cls = el.className || '';
     if (cls.indexOf('author-bio') > -1) hasAuthorBio = true;
+    if (el.textContent && el.textContent.indexOf('Hussein — AI Profit Hub') > -1) {
+      hasAuthorBio = true;
+      if (el.classList && !el.classList.contains('author-bio')) {
+        el.classList.add('author-bio');
+      }
+    }
   });
 
   if (!hasAuthorBio) {
