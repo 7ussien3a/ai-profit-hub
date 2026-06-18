@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <title>Free AI Prompt Optimizer & Generator | AI Profit Hub</title>
+  <meta name="description" content="Optimize and generate high-converting prompts for ChatGPT, Claude, and Gemini instantly. Turn simple ideas into structured, professional AI prompts.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ai-profit-hub.com/prompt-optimizer.html">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Free AI Prompt Optimizer & Generator | AI Profit Hub">
+  <meta property="og:description" content="Optimize and generate high-converting prompts for ChatGPT, Claude, and Gemini instantly. Turn simple ideas into structured, professional AI prompts.">
+  <meta property="og:url" content="https://ai-profit-hub.com/prompt-optimizer.html">
+  <meta property="og:type" content="website">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4602905173099480" crossorigin="anonymous"></script>
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "AI Prompt Optimizer & Generator",
+    "url": "https://ai-profit-hub.com/prompt-optimizer.html",
+    "description": "A free tool to optimize and generate structured, high-performing prompts for LLMs like ChatGPT, Claude, and Gemini.",
+    "applicationCategory": "ProductivityApplication",
+    "operatingSystem": "All",
+    "browserRequirements": "Requires JavaScript",
+    "author": {
+      "@type": "Person",
+      "name": "Hussein",
+      "url": "https://ai-profit-hub.com/about.html"
+    }
+  }
+  </script>
+
+  <style>
+    .tool-container {
+      max-width: 960px;
+      margin: 40px auto 80px;
+      padding: 0 20px;
+    }
+    .tool-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 32px;
+    }
+    @media(max-width: 860px) {
+      .tool-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    /* Interactive Card Style */
+    .tool-card {
+      background: var(--bg-card, #1A1F35);
+      border: 1px solid var(--border, rgba(148,163,184,.1));
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+    .tool-card h2 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 10px;
+    }
+    
+    /* Input styling */
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .tool-input {
+      width: 100%;
+      background: var(--bg-elevated, #111827);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 14px;
+      color: var(--text-primary);
+      font-family: inherit;
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .tool-input:focus {
+      border-color: var(--primary, #6C63FF);
+    }
+    textarea.tool-input {
+      resize: vertical;
+      min-height: 100px;
+    }
+    
+    /* Select styling */
+    select.tool-input {
+      appearance: none;
+      background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      padding-right: 36px;
+    }
+    
+    /* Checkbox Group */
+    .checkbox-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    @media(max-width: 480px) {
+      .checkbox-group {
+        grid-template-columns: 1fr;
+      }
+    }
+    .checkbox-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      cursor: pointer;
+    }
+    .checkbox-item input {
+      accent-color: var(--primary);
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+    }
+    
+    /* Optimize Button */
+    .tool-btn {
+      width: 100%;
+      background: linear-gradient(135deg, var(--primary, #6C63FF) 0%, var(--primary-light, #a78bfa) 100%);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 14px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: opacity 0.2s, transform 0.1s;
+      margin-top: 10px;
+    }
+    .tool-btn:hover {
+      opacity: 0.9;
+    }
+    .tool-btn:active {
+      transform: scale(0.98);
+    }
+    
+    /* Output styling */
+    .output-area {
+      position: relative;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .output-box {
+      flex: 1;
+      width: 100%;
+      min-height: 250px;
+      background: #0f141c;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      color: #e2e8f0;
+      font-family: Consolas, Monaco, monospace;
+      font-size: 0.85rem;
+      line-height: 1.5;
+      outline: none;
+      resize: none;
+      margin-bottom: 16px;
+    }
+    .copy-btn {
+      position: absolute;
+      top: 48px;
+      right: 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--text-primary);
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .copy-btn:hover {
+      background: var(--bg-elevated);
+      border-color: var(--primary);
+    }
+    
+    /* Ad placeholder */
+    .tool-ad {
+      margin-top: 32px;
+      background: var(--bg-card);
+      border: 1px dashed var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+    }
+    
+    /* Newsletter Conversion box */
+    .tool-newsletter {
+      margin-top: 32px;
+      background: linear-gradient(135deg, rgba(108,99,255,0.08) 0%, rgba(0,212,170,0.05) 100%);
+      border: 1px solid rgba(108,99,255,0.2);
+      border-radius: 16px;
+      padding: 24px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <nav class="nav">
+      <a href="/" class="logo"><div class="logo-icon">&#9889;</div><span>AI Profit Hub</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/">Home</a></li>
+        <li><a href="/prompt-optimizer.html" class="active">Prompt Optimizer</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+      <button class="mobile-toggle" type="button" id="mobileToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="page-header">
+    <div class="hero-badge">🔧 Free Web Tool</div>
+    <h1>AI Prompt Optimizer</h1>
+    <p>Convert simple ideas into structured, high-performing prompts for ChatGPT, Claude, and Gemini.</p>
+  </section>
+
+  <!-- MAIN TOOL VIEW -->
+  <main class="tool-container" id="main-content">
+    
+    <div class="tool-grid">
+      
+      <!-- INPUT CARD -->
+      <div class="tool-card">
+        <h2><span>⚡</span> Formulate Your Request</h2>
+        
+        <div class="form-group">
+          <label for="basePrompt">1. What is your basic task or idea?</label>
+          <textarea id="basePrompt" class="tool-input" placeholder="e.g. Write a marketing email for my software product that sells a monthly subscription..." required></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label for="aiRole">2. Select the AI Persona / Role</label>
+          <select id="aiRole" class="tool-input">
+            <option value="General Assistant">General Helpful Assistant</option>
+            <option value="Marketing Expert">Senior Copywriter & Marketing Expert</option>
+            <option value="Senior Software Engineer">Senior Software Architect & Full-Stack Developer</option>
+            <option value="SEO & Content Writer">SEO strategist & Professional Blog Writer</option>
+            <option value="Business & Financial Analyst">Wall Street Financial & Business Strategist</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="aiTone">3. Select Tone of Voice</label>
+          <select id="aiTone" class="tool-input">
+            <option value="professional and authoritative">Professional & Authoritative</option>
+            <option value="creative, conversational and engaging">Creative & Conversational</option>
+            <option value="highly detailed, analytical and precise">Detailed & Analytical</option>
+            <option value="persuasive, action-oriented and urgent">Persuasive & Sales-Oriented</option>
+            <option value="clear, simple and beginner-friendly">Simple & Plain English</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label>4. Add Extra Constraints</label>
+          <div class="checkbox-group">
+            <label class="checkbox-item">
+              <input type="checkbox" id="cMarkdown" checked> Format as Markdown
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" id="cBullets" checked> Use Bullet Points
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" id="cJargon"> Avoid Jargon/Corporate Fluff
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" id="cExamples" checked> Include Real-World Examples
+            </label>
+          </div>
+        </div>
+        
+        <button id="optimizeBtn" class="tool-btn" type="button">
+          Optimize Prompt 🚀
+        </button>
+      </div>
+      
+      <!-- OUTPUT CARD -->
+      <div class="tool-card output-area">
+        <h2><span>📋</span> Optimized Prompt Output</h2>
+        <button id="copyBtn" class="copy-btn" type="button">Copy Prompt</button>
+        <textarea id="outputPrompt" class="output-box" readonly placeholder="Your optimized prompt template will appear here..."></textarea>
+        
+        <p style="font-size:0.75rem;color:var(--text-secondary);line-height:1.4;margin:0;">
+          💡 <strong>How to use:</strong> Copy this structured prompt and paste it into ChatGPT, Claude, or Gemini. Replace any bracketed values (like [Product Name]) with your specific details.
+        </p>
+      </div>
+      
+    </div>
+
+    <!-- Ad placeholder -->
+    <div class="tool-ad">
+      <!-- AdSense placeholder -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-4602905173099480"
+           data-ad-slot="1234567890"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+
+    <!-- Newsletter subscription CTA -->
+    <div class="tool-newsletter">
+      <h3 style="margin-top:0;font-size:1.1rem;font-weight:700;">Get Weekly Prompt Engineering Tips</h3>
+      <p style="font-size:0.85rem;color:var(--text-secondary);max-width:560px;margin:8px auto 16px;line-height:1.6;">
+        Want to master prompting? Join our developer newsletter. Get weekly curated prompt directories, custom templates, and reviews of new LLMs.
+      </p>
+      <form style="display:flex;gap:8px;max-width:480px;margin:0 auto;" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+        <input type="email" placeholder="Your developer email..." style="flex:1;padding:10px 14px;border-radius:6px;border:1px solid var(--border);background:var(--bg-elevated);color:#fff;outline:none;" required>
+        <button type="submit" style="padding:10px 20px;background:var(--primary);color:#fff;border:none;border-radius:6px;font-weight:600;cursor:pointer;">Join Free</button>
+      </form>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo"><div class="logo-icon">&#9889;</div><span>AI Profit Hub</span></a>
+        <p>Your daily guide to AI news, tools, and making the most of artificial intelligence.</p>
+      </div>
+      <div><h4>Explore</h4><ul class="footer-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/prompt-optimizer.html">Prompt Optimizer</a></li>
+        <li><a href="/about.html">About Us</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul></div>
+      <div><h4>Legal</h4><ul class="footer-links">
+        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="/terms-of-service.html">Terms of Service</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom"><span>&copy; 2026 AI Profit Hub. All rights reserved.</span></div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+  
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var basePrompt = document.getElementById('basePrompt');
+    var aiRole = document.getElementById('aiRole');
+    var aiTone = document.getElementById('aiTone');
+    var optimizeBtn = document.getElementById('optimizeBtn');
+    var outputPrompt = document.getElementById('outputPrompt');
+    var copyBtn = document.getElementById('copyBtn');
+    
+    optimizeBtn.addEventListener('click', function() {
+      var base = basePrompt.value.trim();
+      if (!base) {
+        alert('Please write down your basic prompt idea first.');
+        basePrompt.focus();
+        return;
+      }
+      
+      // Build constraints list
+      var constraints = [];
+      if (document.getElementById('cMarkdown').checked) {
+        constraints.push("- Format all outputs in clean, semantic Markdown layout (using headers, code blocks, bold text, etc.).");
+      }
+      if (document.getElementById('cBullets').checked) {
+        constraints.push("- Use structured bullet points instead of long block paragraphs to present lists and processes.");
+      }
+      if (document.getElementById('cJargon').checked) {
+        constraints.push("- Eliminate vague corporate jargon, marketing buzzwords, and promotional fluff. Be concise and straight to the point.");
+      }
+      if (document.getElementById('cExamples').checked) {
+        constraints.push("- Include concrete, practical examples or code snippets where applicable to clarify concepts.");
+      }
+      
+      var constraintsStr = constraints.length > 0 ? '\n' + constraints.join('\n') : '- No specific constraints.';
+      
+      // Build structured optimized prompt template
+      var optimized = `# SYSTEM PERSONA & ROLE
+You are acting as a ${aiRole.value}. 
+Your target communication tone is ${aiTone.value}. You must write with extreme expertise and accuracy.
+
+# CONTEXT & OBJECTIVE
+The user's objective is to achieve the following task:
+"${base}"
+
+# INPUT VARIABLES & PARAMETERS
+To tailor your output, please ask the user for details on these parameters if they are not clear, or generate logical default assumptions:
+1. [Product/Topic Name]
+2. [Target Audience Profile]
+3. [Format Constraints]
+
+# CONSTRAINTS & RULES${constraintsStr}
+
+# EXECUTION WORKFLOW
+Please process this request step-by-step:
+1. **Understand Goals:** Analyze the objective and target audience.
+2. **Drafting:** Produce a high-quality initial draft complying with all constraints.
+3. **Refining:** Review the output to ensure readability, structure, and direct value.
+4. **Final Delivery:** Present the final output to the user clearly.
+
+# OUTPUT FORMAT
+Deliver your output formatted clearly using the requested constraints. Begin your response with: "Here is your customized solution:" followed by the structured result.`;
+
+      outputPrompt.value = optimized;
+    });
+    
+    copyBtn.addEventListener('click', function() {
+      var text = outputPrompt.value.trim();
+      if (!text) return;
+      
+      navigator.clipboard.writeText(text).then(function() {
+        copyBtn.textContent = 'Copied!';
+        setTimeout(function() {
+          copyBtn.textContent = 'Copy Prompt';
+        }, 2000);
+      });
+    });
+  });
+  </script>
+</body>
+</html>
