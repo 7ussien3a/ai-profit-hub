@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Related Articles – "You May Also Like"
  * Automatically injects 3 random article cards before the <footer>.
  * Fully self-contained: styles are injected via JS, no external CSS needed.
@@ -11,21 +11,21 @@
     {
       title: 'Intel Lunar Lake: How Intel Beat ARM',
       url: '/articles/intel-lunar-lake-core-ultra-200v-efficiency-2026.html',
-      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=80',
+      image: '/images/intel-lunar-lake.png',
       tag: '💻 Hardware',
       date: 'June 19 2026'
     },
     {
       title: 'Huawei Ascend 950DT: Replacing NVIDIA',
       url: '/articles/huawei-ascend-950dt-china-ai-chip-nvidia-alternative-2026.html',
-      image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&q=80',
+      image: '/images/huawei-ascend-chip.png',
       tag: '🇨🇳 China AI',
       date: 'June 19 2026'
     },
     {
       title: 'The Ultimate 2026 CPU Comparison',
       url: '/articles/ultimate-2026-cpu-comparison-apple-m5-lunar-lake-snapdragon-ryzen.html',
-      image: 'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=400&q=80',
+      image: '/images/cpu-comparison-2026.png',
       tag: '⚖️ Compare',
       date: 'June 19 2026'
     },
@@ -53,14 +53,14 @@
     {
       title: 'Google Gemma 4 Local AI',
       url: '/articles/google-gemma-4-local-ai-laptop-2026.html',
-      image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&q=80',
+      image: '/images/google-gemma-local-ai.png',
       tag: '🖥️ Local AI',
       date: 'June 17 2026'
     },
     {
       title: 'Gemini 3.5 Live Translate',
       url: '/articles/google-gemini-3-5-live-translate-20260615.html',
-      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=80',
+      image: '/images/gemini-live-translate.png',
       tag: '🤖 AI Tools',
       date: 'June 15 2026'
     },
@@ -95,7 +95,7 @@
     {
       title: 'Samsung HBM4E',
       url: '/articles/samsung-hbm4e-ai-memory-chips.html',
-      image: 'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=400&q=80',
+      image: '/images/cpu-comparison-2026.png',
       tag: '🔧 Hardware',
       date: 'May 29 2026'
     },
