@@ -9,6 +9,27 @@
   /* ── Article catalogue ─────────────────────────────────────────────── */
   var articles = [
     {
+      title: 'Intel Lunar Lake: How Intel Beat ARM',
+      url: '/articles/intel-lunar-lake-core-ultra-200v-efficiency-2026.html',
+      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=80',
+      tag: '💻 Hardware',
+      date: 'June 19 2026'
+    },
+    {
+      title: 'Huawei Ascend 950DT: Replacing NVIDIA',
+      url: '/articles/huawei-ascend-950dt-china-ai-chip-nvidia-alternative-2026.html',
+      image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&q=80',
+      tag: '🇨🇳 China AI',
+      date: 'June 19 2026'
+    },
+    {
+      title: 'The Ultimate 2026 CPU Comparison',
+      url: '/articles/ultimate-2026-cpu-comparison-apple-m5-lunar-lake-snapdragon-ryzen.html',
+      image: 'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=400&q=80',
+      tag: '⚖️ Compare',
+      date: 'June 19 2026'
+    },
+    {
       title: 'Xcode 27 Dual-Engine AI Coding Agents',
       url: '/articles/xcode-27-dual-engine-ai-coding-agents-2026.html',
       image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&q=80',
