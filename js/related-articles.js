@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Related Articles – "You May Also Like"
  * Automatically injects 3 random article cards before the <footer>.
  * Fully self-contained: styles are injected via JS, no external CSS needed.
@@ -123,7 +123,7 @@
     {
       title: 'Best Free AI Tools Students',
       url: '/articles/best-free-ai-tools-students.html',
-      image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&q=80',
+      image: '/images/ai-tools-students.png',
       tag: '🎓 Education',
       date: 'May 2026'
     },
