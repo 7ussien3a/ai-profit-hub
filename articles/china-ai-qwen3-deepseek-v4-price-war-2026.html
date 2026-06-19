@@ -193,7 +193,28 @@
 
   <p>The catalyst is not a single dramatic moment. It is the steady accumulation of genuinely world-class model releases from Chinese labs — most notably Alibaba's Qwen3.7 family and DeepSeek's V4 series — combined with a pricing strategy so aggressive that it has forced OpenAI, Anthropic, and Google to consider emergency price reductions for their API products. This is the story of how China turned cost into a competitive weapon and what it means for every developer, business, and AI user in the world.</p>
 
-  <h2>The Qwen3.7 Family: Alibaba's Agentic Flagship</h2>
+  
+  <style>
+    .toc-box{background:var(--bg-elevated,#1a1f2e);border:1px solid var(--border);border-left:3px solid var(--primary,#6C63FF);border-radius:10px;padding:20px 24px;margin:28px 0 32px;max-width:520px}
+    .toc-box h4{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--primary-light,#a78bfa);margin:0 0 12px;display:flex;align-items:center;gap:8px}
+    .toc-list{margin:0;padding:0;list-style:none;counter-reset:toc}
+    .toc-list li{counter-increment:toc;margin-bottom:7px}
+    .toc-list li a{font-size:.85rem;color:var(--text-secondary,#8888aa);text-decoration:none;display:flex;align-items:baseline;gap:8px;transition:color .15s}
+    .toc-list li a::before{content:counter(toc);font-size:.7rem;font-weight:700;color:var(--primary-light,#a78bfa);background:rgba(108,99,255,0.15);border-radius:50%;width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+    .toc-list li a:hover{color:var(--primary-light,#a78bfa)}
+  </style>
+  <div class='toc-box' role='navigation' aria-label='Table of contents'>
+    <h4>&#128220; In This Article</h4>
+    <ol class='toc-list'>
+      <li><a href='#section-1'>The Qwen3.7 Family: Alibaba's Agentic Flagship</a></li>
+      <li><a href='#section-2'>DeepSeek V4-Pro: 1.6 Trillion Parameters, MIT License, Zero Cost</a></li>
+      <li><a href='#section-3'>The Price War: 9x Cheaper, Same Quality</a></li>
+      <li><a href='#section-4'>China's Deployment Strategy: Beyond Benchmarks</a></li>
+      <li><a href='#section-5'>What This Means for You</a></li>
+      <li><a href='#section-6'>Frequently Asked Questions</a></li>
+    </ol>
+  </div>
+<h2 id="section-1">The Qwen3.7 Family: Alibaba's Agentic Flagship</h2>
 
   <p>Alibaba's Qwen3.7-Max, released on May 18, 2026, represents the most technically sophisticated model to emerge from a Chinese laboratory to date. The model is specifically architected for what Alibaba calls the "agent era" — not just answering questions, but autonomously completing long, complex workflows across multiple steps and tools without requiring human intervention at each stage.</p>
 
@@ -203,7 +224,7 @@
 
   <p>The Qwen3.7 series also includes upgraded multimodal capabilities, allowing models to perceive and interact with visual interfaces, real-world scenes, and mobile application GUIs. In a practical demonstration, Qwen3.7-Max autonomously navigated a smartphone's app store, downloaded an application, configured its settings, and completed a user-specified task entirely without human input. This level of agentic mobile capability is genuinely new territory for any AI system.</p>
 
-  <h2>DeepSeek V4-Pro: 1.6 Trillion Parameters, MIT License, Zero Cost</h2>
+  <h2 id="section-2">DeepSeek V4-Pro: 1.6 Trillion Parameters, MIT License, Zero Cost</h2>
 
   <p>If Qwen3.7 represents the agentic frontier, DeepSeek V4-Pro — released as a preview on April 24, 2026 — represents something arguably more disruptive: frontier-level AI performance released as fully open-source software under the MIT license. Anyone, anywhere, for any commercial purpose, can download and run DeepSeek V4-Pro for free.</p>
 
@@ -213,7 +234,7 @@
 
   <p>For developers, the practical implication is profound: a company can now self-host a model that competes with GPT-5.5 on coding benchmarks, with no per-token API fees, no data privacy concerns from sending information to a third-party server, and no dependency on the pricing decisions of a US tech corporation. This is the "local AI" revolution happening at enterprise scale.</p>
 
-  <h2>The Price War: 9x Cheaper, Same Quality</h2>
+  <h2 id="section-3">The Price War: 9x Cheaper, Same Quality</h2>
 
   <p>The most immediate and commercially significant development in the Chinese AI story is pricing. As of June 2026, Alibaba's Qwen3.7 API pricing is approximately 9x cheaper than equivalent OpenAI API access for comparable workloads. For a company running one million API calls per day — not unusual for any mid-sized AI application — this translates to the difference between a $45,000 monthly API bill and a $5,000 monthly API bill.</p>
 
@@ -233,7 +254,7 @@
 
   <p>This pricing gap has created what analysts are calling a "developer migration" — a steady, accelerating movement of API users away from OpenAI and Anthropic toward Chinese model providers. The migration is not driven by ideology. It is driven by mathematics. When the quality gap has effectively closed for most practical tasks, rational actors choose the cheaper option. Chinese labs have engineered a situation where the rational choice aligns with their market share goals.</p>
 
-  <h2>China's Deployment Strategy: Beyond Benchmarks</h2>
+  <h2 id="section-4">China's Deployment Strategy: Beyond Benchmarks</h2>
 
   <p>What is often missed in the Western media coverage of Chinese AI is that the model releases are only part of the story. The more significant long-term development is China's aggressive deployment of AI into critical infrastructure at a scale that has no Western equivalent.</p>
 
@@ -241,7 +262,7 @@
 
   <p>This deployment-first mentality creates a self-reinforcing advantage: more real-world deployment generates more diverse training data, which improves models, which enables more deployment. China is running an AI improvement loop at a national scale that Western companies, constrained by regulatory uncertainty and fragmented deployment environments, cannot easily replicate.</p>
 
-  <h2>What This Means for You</h2>
+  <h2 id="section-5">What This Means for You</h2>
 
   <p>If you are a developer building AI applications: the era of OpenAI monopoly pricing is over. You now have credible, high-quality, significantly cheaper alternatives for every tier of your application stack. Qwen3.7-Max for your flagship agentic features. DeepSeek V4-Flash for high-volume, cost-sensitive inference. DeepSeek V4-Pro self-hosted for sensitive data that cannot leave your infrastructure. The optionality is real and the quality is genuinely competitive.</p>
 
@@ -253,7 +274,7 @@
        2. FAQ SECTION (FAQ Schema Integrated)
        ======================================== -->
   <div class="aph-faq-section">
-    <h2>Frequently Asked Questions</h2>
+    <h2 id="section-6">Frequently Asked Questions</h2>
     <div class="aph-faq-item">
       <div class="aph-faq-question">What is the key takeaway regarding </div>
       <div class="aph-faq-answer">Alibaba's Qwen3.7-Max, released on May 18, 2026, represents the most technically sophisticated model to emerge from a Chinese laboratory to date. The model is specifically architected for what Alibaba calls the "agent era" — not just answering questions, but autonomously completing long, complex workflows across multiple steps and tools without requiring human intervention at each stage.</div>

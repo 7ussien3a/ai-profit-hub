@@ -258,11 +258,32 @@
 
   <span class="source-badge">&#128240; Via WWDC 2026 Developer Documentation</span>
 
-  <h2>Introduction</h2>
+  
+  <style>
+    .toc-box{background:var(--bg-elevated,#1a1f2e);border:1px solid var(--border);border-left:3px solid var(--primary,#6C63FF);border-radius:10px;padding:20px 24px;margin:28px 0 32px;max-width:520px}
+    .toc-box h4{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--primary-light,#a78bfa);margin:0 0 12px;display:flex;align-items:center;gap:8px}
+    .toc-list{margin:0;padding:0;list-style:none;counter-reset:toc}
+    .toc-list li{counter-increment:toc;margin-bottom:7px}
+    .toc-list li a{font-size:.85rem;color:var(--text-secondary,#8888aa);text-decoration:none;display:flex;align-items:baseline;gap:8px;transition:color .15s}
+    .toc-list li a::before{content:counter(toc);font-size:.7rem;font-weight:700;color:var(--primary-light,#a78bfa);background:rgba(108,99,255,0.15);border-radius:50%;width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+    .toc-list li a:hover{color:var(--primary-light,#a78bfa)}
+  </style>
+  <div class='toc-box' role='navigation' aria-label='Table of contents'>
+    <h4>&#128220; In This Article</h4>
+    <ol class='toc-list'>
+      <li><a href='#section-1'>Introduction</a></li>
+      <li><a href='#section-2'>The Dual-Engine AI Architecture Explained</a></li>
+      <li><a href='#section-3'>Implementing the LanguageModel Protocol</a></li>
+      <li><a href='#section-4'>Agentic Coding & The Visual Simulator</a></li>
+      <li><a href='#section-5'>Frequently Asked Questions</a></li>
+      <li><a href='#section-6'>Conclusion & Next Steps</a></li>
+    </ol>
+  </div>
+<h2 id="section-1">Introduction</h2>
   <p>The developer landscape is shifting rapidly. With the rise of autonomous agents capable of drafting, refactoring, and deploying code, IDEs (Integrated Development Environments) have become the primary battleground for AI dominance. At WWDC 2026, Apple made a monumental move by unveiling <strong>Xcode 27</strong>. Instead of trapping developers inside a proprietary ecosystem, Apple introduced a pioneering <strong>dual-engine AI architecture</strong> that bridges the gap between secure, local processing and high-powered cloud reasoning.</p>
   <p>For developers, this isn’t just another autocomplete update; it is a fundamental design shift. Under Xcode 27, you can run fast, local models directly on your Mac's Apple Silicon for daily coding tasks, while seamlessly routing complex tasks—like multi-file architecture refactoring or simulated testing—to industry-leading cloud models like Anthropic's Claude, Google's Gemini, or OpenAI's GPT models. Let's dive deep into how this technology works, how to configure it, and what it means for the future of software development.</p>
 
-  <h2>The Dual-Engine AI Architecture Explained</h2>
+  <h2 id="section-2">The Dual-Engine AI Architecture Explained</h2>
   <p>The core philosophy of Xcode 27's AI system is a two-tiered distribution of computational labor. By splitting tasks between local hardware and cloud intelligence, Apple addresses two of the biggest pain points in AI-assisted software engineering: latency and privacy.</p>
   
   <p>The architecture is divided as follows:</p>
@@ -293,7 +314,7 @@
     </form>
   </div>
 
-  <h2>Implementing the LanguageModel Protocol</h2>
+  <h2 id="section-3">Implementing the LanguageModel Protocol</h2>
   <p>To enable developers to customize how models are queried, Apple introduced the <strong>LanguageModel protocol</strong>. Instead of locking developers into standard API wrappers, Xcode 27 allows you to define custom routing packages. This protocol abstracts the model's communication layer, enabling swift, seamless swapping of backends.</p>
   <p>Here is a simplified, concrete example of how developers can configure custom cloud endpoints inside Xcode 27 using Swift. This example demonstrates a custom handler that delegates complex debugging workflows directly to Claude or Gemini:</p>
 
@@ -344,7 +365,7 @@ public struct CustomCloudRouter: LanguageModel {
 
   <p>By conforming to the <code>LanguageModel</code> protocol, you can configure Xcode 27 to send your tasks to whichever frontier model is performing best. For example, you might use Claude for writing SwiftUI code and switch to Gemini when you need deep search integrations. You can learn more about how these models perform head-to-head in our detailed <a href="gpt-5-vs-claude-4.html">GPT-5 vs Claude 4 Comparison</a>.</p>
 
-  <h2>Agentic Coding & The Visual Simulator</h2>
+  <h2 id="section-4">Agentic Coding & The Visual Simulator</h2>
   <p>Beyond autocomplete, Xcode 27 introduces "Agentic Coding." Through the new <strong>Device Hub</strong>, developers can assign tasks to autonomous coding agents. Instead of simply generating code snippets, these agents can compile the app, run the simulator, visually inspect the screen for UI layout bugs, and perform adjustments automatically.</p>
   <p>For example, you can prompt the agent: <em>"Inspect the settings screen on the iPhone 15 Pro simulator and make sure the logout button is properly aligned with standard iOS margins."</em> The agent will run the app, analyze the simulator's view hierarchy, modify the SwiftUI frame padding, recompile the build, and present the final git diff for your approval.</p>
 
@@ -352,7 +373,7 @@ public struct CustomCloudRouter: LanguageModel {
        2. FAQ SECTION (FAQ Schema Integrated)
        ======================================== -->
   <div class="aph-faq-section">
-    <h2>Frequently Asked Questions</h2>
+    <h2 id="section-5">Frequently Asked Questions</h2>
     <div class="aph-faq-item">
       <div class="aph-faq-question">What is the key takeaway regarding </div>
       <div class="aph-faq-answer">The developer landscape is shifting rapidly. With the rise of autonomous agents capable of drafting, refactoring, and deploying code, IDEs (Integrated Development Environments) have become the primary battleground for AI dominance.</div>
@@ -371,7 +392,7 @@ public struct CustomCloudRouter: LanguageModel {
     <p style="margin:0;line-height:1.75;font-size:.9rem">Apple’s dual-engine approach is a masterclass in pragmatism. By acknowledging that on-device silicon cannot compete with the raw parameters of cloud-based server farms, they avoided launching a substandard coding assistant. Instead, they built a secure local core and created standard protocols for third-party cloud routing. As a developer, I highly recommend using the local engine for daily editing to maintain zero-latency feedback, but setting up a Claude 3.5 API key for large refactoring tasks. This hybrid model saves money, preserves privacy, and provides the highest quality output.</p>
   </div>
 
-  <h2>Conclusion & Next Steps</h2>
+  <h2 id="section-6">Conclusion & Next Steps</h2>
   <p>Xcode 27 represents the maturation of AI integrations within IDEs. Rather than forcing developers into a single, proprietary stack, it acknowledges that the future of development is hybrid, flexible, and open-weights. If you want to configure this setup for your own local development, follow these three steps:</p>
   <ol>
     <li>Open Xcode 27 Settings -> Intelligence.</li>

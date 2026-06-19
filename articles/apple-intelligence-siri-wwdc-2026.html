@@ -159,37 +159,59 @@
 
   <p>At the company's annual Worldwide Developers Conference in June 2026, Apple CEO Tim Cook described the new system as "the biggest leap forward for Siri since its original introduction." That is not marketing hyperbole. The rebuilt assistant is so fundamentally different from the old Siri that it is practically a new product wearing a familiar name. Let's break down every major feature and what it means for you.</p>
 
-  <h2>Deep Personal Context: Siri Finally Knows You</h2>
+  
+  <style>
+    .toc-box{background:var(--bg-elevated,#1a1f2e);border:1px solid var(--border);border-left:3px solid var(--primary,#6C63FF);border-radius:10px;padding:20px 24px;margin:28px 0 32px;max-width:520px}
+    .toc-box h4{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--primary-light,#a78bfa);margin:0 0 12px;display:flex;align-items:center;gap:8px}
+    .toc-list{margin:0;padding:0;list-style:none;counter-reset:toc}
+    .toc-list li{counter-increment:toc;margin-bottom:7px}
+    .toc-list li a{font-size:.85rem;color:var(--text-secondary,#8888aa);text-decoration:none;display:flex;align-items:baseline;gap:8px;transition:color .15s}
+    .toc-list li a::before{content:counter(toc);font-size:.7rem;font-weight:700;color:var(--primary-light,#a78bfa);background:rgba(108,99,255,0.15);border-radius:50%;width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+    .toc-list li a:hover{color:var(--primary-light,#a78bfa)}
+  </style>
+  <div class='toc-box' role='navigation' aria-label='Table of contents'>
+    <h4>&#128220; In This Article</h4>
+    <ol class='toc-list'>
+      <li><a href='#section-1'>Deep Personal Context: Siri Finally Knows You</a></li>
+      <li><a href='#section-2'>Onscreen Awareness: Siri Sees What You See</a></li>
+      <li><a href='#section-3'>Visual Intelligence: A Camera That Thinks</a></li>
+      <li><a href='#section-4'>The Standalone Siri App and Conversational Continuity</a></li>
+      <li><a href='#section-5'>Availability, Compatibility, and Limitations</a></li>
+      <li><a href='#section-6'>What This Means for the AI Industry</a></li>
+      <li><a href='#section-7'>Frequently Asked Questions</a></li>
+    </ol>
+  </div>
+<h2 id="section-1">Deep Personal Context: Siri Finally Knows You</h2>
 
   <p>The most transformative aspect of the new Siri AI is its ability to understand your personal life across all of Apple's apps. The previous Siri was essentially a voice-activated search engine — it could tell you the weather, set timers, and sometimes botch a simple contact search. The new Apple Intelligence-powered Siri is fundamentally different. It securely accesses your data across Messages, Mail, Photos, Calendar, Notes, and third-party apps that opt in, and uses that context to give genuinely useful responses.</p>
 
   <p>Imagine asking Siri, "Did my landlord send me the new lease?" Instead of performing a generic search, Siri digs through your Mail, finds the exact email from your landlord, summarizes the key changes in the lease, and can even draft a reply — all without a single document leaving your device. Apple calls this "on-device intelligence," processing everything using the Neural Engine inside Apple Silicon chips. Nothing gets sent to a server unless you explicitly use a more powerful cloud query, and even then, Apple's "Private Cloud Compute" infrastructure ensures your data is processed in a privacy-preserving environment and never stored on Apple's servers.</p>
 
-  <h2>Onscreen Awareness: Siri Sees What You See</h2>
+  <h2 id="section-2">Onscreen Awareness: Siri Sees What You See</h2>
 
   <p>One of the flashiest new capabilities is Siri's onscreen awareness. The assistant now understands what is actively displayed on your screen and can take intelligent actions based on that content. If you receive a text message from a friend sharing their new address and need to save it, you can simply say "Add this to my Contacts" — and Siri will extract the address from the message and create the contact entry without you needing to copy and paste anything manually.</p>
 
   <p>This extends to every corner of iOS 27 and macOS 27 (Golden Gate). Reading a long article and want Siri to summarize it? Tap and ask. Watching a video and curious about a product shown on screen? Siri can identify it and pull up purchasing options. Writing an email and want to reference a past conversation? Siri fetches it instantly. The old Siri made you adapt to its limitations; the new Siri adapts to you.</p>
 
-  <h2>Visual Intelligence: A Camera That Thinks</h2>
+  <h2 id="section-3">Visual Intelligence: A Camera That Thinks</h2>
 
   <p>Apple has taken the concept of visual AI even further with a feature called Visual Intelligence. On iPhone 16 models and later, a new "Siri Mode" is integrated directly into the Camera app. You tap the shutter button to activate it, point your camera at anything, and Siri interprets what it sees in real time. Point it at a restaurant to get reviews and reservations. Point it at a plant to identify the species and get care instructions. Point it at a business card to instantly add the contact. Point it at a broken appliance part to find a replacement online.</p>
 
   <p>This is the feature that will genuinely change how people interact with the physical world through their phones. It bridges the gap between the real world and the information layer of the internet in a way that feels completely effortless. Apple is essentially embedding a powerful AI vision model into the hardware and making it accessible with a single button tap.</p>
 
-  <h2>The Standalone Siri App and Conversational Continuity</h2>
+  <h2 id="section-4">The Standalone Siri App and Conversational Continuity</h2>
 
   <p>Apple also introduced a dedicated Siri app for the first time. Previously, Siri was just a system function activated by a button or phrase. Now it has its own space on your home screen, with a full chat interface similar to ChatGPT or Claude. Your entire conversation history is logged and synced privately via iCloud, meaning you can start a conversation on your iPhone and seamlessly continue it on your Mac without losing context.</p>
 
   <p>Conversational continuity is another massive upgrade. The old Siri reset itself after every interaction. Ask a follow-up question and it had no memory of what you just said. The new Siri remembers the full thread of a conversation, allowing you to ask naturally evolving questions. "Tell me about the Eiffel Tower." "How tall is it?" "When was it built?" "What's the best time of year to visit?" All answered in one flowing conversation without repeating context each time.</p>
 
-  <h2>Availability, Compatibility, and Limitations</h2>
+  <h2 id="section-5">Availability, Compatibility, and Limitations</h2>
 
   <p>Siri AI requires Apple Silicon hardware — iPhone 15 Pro or Pro Max, iPhone 16 series, iPads with M1 chip or later, and Macs with M1 or later. Older devices will not receive Apple Intelligence features, which is a significant limitation for a large portion of Apple's existing user base. The features are available to developers starting June 2026, with a public beta expected later in the year ahead of the iOS 27 / macOS 27 public release.</p>
 
   <p>There is one major catch: Apple Intelligence will not be available in the European Union or China at launch due to regulatory concerns. The EU's Digital Markets Act compliance requirements have placed Apple in a difficult position where providing the feature as designed is legally complicated. Chinese data privacy laws present similar challenges. This means hundreds of millions of Apple users in two of the world's largest markets will be locked out of the flagship feature at launch.</p>
 
-  <h2>What This Means for the AI Industry</h2>
+  <h2 id="section-6">What This Means for the AI Industry</h2>
 
   <p>Apple's entry as a serious AI player changes the competitive landscape dramatically. Where Google and Microsoft have been battling over cloud AI, and OpenAI has dominated the consumer chatbot market, Apple is carving out a fundamentally different niche: private, deeply personalized, device-native AI. With over a billion active iPhones in the world, Apple does not need to win the AI race in the cloud — it wins it in the pocket of every iPhone user.</p>
 
@@ -199,7 +221,7 @@
        2. FAQ SECTION (FAQ Schema Integrated)
        ======================================== -->
   <div class="aph-faq-section">
-    <h2>Frequently Asked Questions</h2>
+    <h2 id="section-7">Frequently Asked Questions</h2>
     <div class="aph-faq-item">
       <div class="aph-faq-question">What is the key takeaway regarding </div>
       <div class="aph-faq-answer">The most transformative aspect of the new Siri AI is its ability to understand your personal life across all of Apple's apps. The previous Siri was essentially a voice-activated search engine — it could tell you the weather, set timers, and sometimes botch a simple contact search.</div>

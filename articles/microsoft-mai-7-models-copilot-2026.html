@@ -225,7 +225,31 @@
 
   <p>The announcement was quiet by Silicon Valley standards &mdash; no dramatic keynote moment, no leaked benchmarks on Twitter hours before the event. Microsoft's approach was characteristically methodical: a detailed technical blog post, a GitHub integration announcement, and a private preview for enterprise customers. But the implications are anything but quiet. Microsoft has just signaled to <a href="openai-faces-investigation-from-state-attorneys-general-20260613.html">OpenAI</a> &mdash; its largest AI partner &mdash; that it intends to compete with it.</p>
 
-  <h2>The Full MAI Model Family</h2>
+  
+  <style>
+    .toc-box{background:var(--bg-elevated,#1a1f2e);border:1px solid var(--border);border-left:3px solid var(--primary,#6C63FF);border-radius:10px;padding:20px 24px;margin:28px 0 32px;max-width:520px}
+    .toc-box h4{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--primary-light,#a78bfa);margin:0 0 12px;display:flex;align-items:center;gap:8px}
+    .toc-list{margin:0;padding:0;list-style:none;counter-reset:toc}
+    .toc-list li{counter-increment:toc;margin-bottom:7px}
+    .toc-list li a{font-size:.85rem;color:var(--text-secondary,#8888aa);text-decoration:none;display:flex;align-items:baseline;gap:8px;transition:color .15s}
+    .toc-list li a::before{content:counter(toc);font-size:.7rem;font-weight:700;color:var(--primary-light,#a78bfa);background:rgba(108,99,255,0.15);border-radius:50%;width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+    .toc-list li a:hover{color:var(--primary-light,#a78bfa)}
+  </style>
+  <div class='toc-box' role='navigation' aria-label='Table of contents'>
+    <h4>&#128220; In This Article</h4>
+    <ol class='toc-list'>
+      <li><a href='#section-1'>The Full MAI Model Family</a></li>
+      <li><a href='#section-2'>The Roadmap to In-House AI Independence</a></li>
+      <li><a href='#section-3'>MAI-Code-1-Flash: Already in Your Copilot</a></li>
+      <li><a href='#section-4'>MAI-Thinking-1: Microsoft's Answer to Deep Reasoning</a></li>
+      <li><a href='#section-5'>How MAI Stacks Up Against Frontier Competitors</a></li>
+      <li><a href='#section-6'>Why This Threatens OpenAI's Partnership</a></li>
+      <li><a href='#section-7'>Pros &amp; Cons of Microsoft's In-House Strategy</a></li>
+      <li><a href='#section-8'>What Developers Should Do Today</a></li>
+      <li><a href='#section-9'>Frequently Asked Questions</a></li>
+    </ol>
+  </div>
+<h2 id="section-1">The Full MAI Model Family</h2>
   <p>The seven models announced cover the full spectrum of AI capabilities Microsoft needs to run its enterprise software empire independently:</p>
 
   <div class="model-cards">
@@ -286,7 +310,7 @@
   <!-- ========================================
        3. ROADMAP TIMELINE
        ======================================== -->
-  <h2>The Roadmap to In-House AI Independence</h2>
+  <h2 id="section-2">The Roadmap to In-House AI Independence</h2>
   <p>Microsoft's journey from a massive financial investor to a direct model developer took less than four years. Here is how the transition unfolded:</p>
   <div class="aph-timeline">
     <div class="aph-timeline-item">
@@ -309,7 +333,7 @@
     </div>
   </div>
 
-  <h2>MAI-Code-1-Flash: Already in Your Copilot</h2>
+  <h2 id="section-3">MAI-Code-1-Flash: Already in Your Copilot</h2>
   <p>The model that matters most immediately to the largest number of people is <strong>MAI-Code-1-Flash</strong>, and it is not waiting for a general launch &mdash; it is already live. Starting in early June 2026, GitHub Copilot users in Visual Studio Code can select MAI-Code-1-Flash from the model picker, making it the first Microsoft-built model to be available in Copilot's production environment.</p>
 
   <p>The specification is interesting: 5 billion parameters, which places it in the "small but efficient" category rather than the frontier model tier. This is intentional. MAI-Code-1-Flash is not trying to beat <a href="gpt-5-vs-claude-4.html">Claude</a> Opus 4.8 at complex reasoning &mdash; it is trying to beat Claude Haiku 4.5 at coding tasks while being cheaper and faster to run. According to Microsoft's own benchmarks, it succeeds: MAI-Code-1-Flash delivers competitive coding assistance at a significantly lower inference cost per token.</p>
@@ -331,7 +355,7 @@
     >
   </div>
 
-  <h2>MAI-Thinking-1: Microsoft's Answer to Deep Reasoning</h2>
+  <h2 id="section-4">MAI-Thinking-1: Microsoft's Answer to Deep Reasoning</h2>
   <p>The model that has the AI community's attention, however, is <strong>MAI-Thinking-1</strong> &mdash; Microsoft's first attempt at a frontier reasoning model. Currently in private preview for select enterprise customers, MAI-Thinking-1 is positioned as a competitor to OpenAI's o3 reasoning model and Anthropic's extended thinking mode in Claude Opus.</p>
 
   <p>Reasoning models &mdash; AI systems that take extra time to "think through" a problem step by step before responding &mdash; have become the gold standard for complex tasks in 2026: advanced mathematics, legal analysis, scientific research design, and multi-step software architecture. The ability to build a competitive reasoning model in-house would be a significant technical achievement for Microsoft and would reduce its dependence on OpenAI for one of the highest-value, highest-cost categories of AI inference.</p>
@@ -341,7 +365,7 @@
   <!-- ========================================
        4. COMPARISON TABLE
        ======================================== -->
-  <h2>How MAI Stacks Up Against Frontier Competitors</h2>
+  <h2 id="section-5">How MAI Stacks Up Against Frontier Competitors</h2>
   <p>Evaluating Microsoft's new MAI family against major industry players like <a href="chatgpt-prompts-productivity.html">ChatGPT</a> (OpenAI), <a href="google-gemini-3-5-live-translate-20260615.html">Gemini</a> (Google), and <a href="gpt-5-vs-claude-4.html">Claude</a> (Anthropic) reveals different priorities:</p>
   <div class="aph-table-wrapper">
     <table class="aph-table">
@@ -387,7 +411,7 @@
     </table>
   </div>
 
-  <h2>Why This Threatens OpenAI's Partnership</h2>
+  <h2 id="section-6">Why This Threatens OpenAI's Partnership</h2>
   <p>The elephant in the room that no one at Microsoft explicitly acknowledged is what these seven models mean for the OpenAI partnership. Microsoft's $13 billion investment in OpenAI came with rights to use OpenAI models across its products. That has been the engine of Microsoft's AI product strategy. Now Microsoft is building the engines itself.</p>
 
   <p>The strategic logic is clear and defensible: any major technology company that relies entirely on a single external vendor for its core technology is in a structurally weak position. If OpenAI raises prices, Microsoft pays. If OpenAI has an outage, Microsoft's products go down. If OpenAI pivots strategically &mdash; which it is doing by launching enterprise consulting and direct B2B sales &mdash; it competes directly with Microsoft's enterprise AI business. Building in-house models is not a betrayal of the partnership; it is prudent technology risk management.</p>
@@ -397,7 +421,7 @@
   <!-- ========================================
        5. PROS & CONS
        ======================================== -->
-  <h2>Pros &amp; Cons of Microsoft's In-House Strategy</h2>
+  <h2 id="section-7">Pros &amp; Cons of Microsoft's In-House Strategy</h2>
   <div class="aph-pros-cons">
     <div class="aph-pros-box">
       <div class="aph-pros-title">Strategic Pros</div>
@@ -417,7 +441,7 @@
     </div>
   </div>
 
-  <h2>What Developers Should Do Today</h2>
+  <h2 id="section-8">What Developers Should Do Today</h2>
   <p>If you are a developer using GitHub Copilot, try MAI-Code-1-Flash for your next coding session. Open the model picker in VS Code and select it. For standard autocomplete, function generation, and debugging, you will likely find it indistinguishable from the Claude-based models that have been the Copilot default. If you notice a quality difference on complex tasks, you can always switch &mdash; that is the entire point of the model picker.</p>
 
   <p>If you are building on Azure AI Foundry, watch for MAI model updates over the coming months. Microsoft has signaled that MAI-Thinking-1 will be available in Azure AI Foundry once it exits private preview, which would make it directly accessible for enterprise application development.</p>
@@ -438,7 +462,7 @@
        7. FAQ SECTION
        ======================================= -->
   <div class="aph-faq-section">
-    <h2>Frequently Asked Questions</h2>
+    <h2 id="section-9">Frequently Asked Questions</h2>
     <div class="aph-faq-item">
       <div class="aph-faq-question">What is Microsoft MAI?</div>
       <div class="aph-faq-answer">Microsoft AI (MAI) is Microsoft's new family of in-house artificial intelligence models designed to power GitHub Copilot, Teams, and Azure services independently of OpenAI.</div>

@@ -156,19 +156,40 @@
     </ul>
   </div>
 
-  <h2>The Battle for Your Next Laptop</h2>
+  
+  <style>
+    .toc-box{background:var(--bg-elevated,#1a1f2e);border:1px solid var(--border);border-left:3px solid var(--primary,#6C63FF);border-radius:10px;padding:20px 24px;margin:28px 0 32px;max-width:520px}
+    .toc-box h4{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--primary-light,#a78bfa);margin:0 0 12px;display:flex;align-items:center;gap:8px}
+    .toc-list{margin:0;padding:0;list-style:none;counter-reset:toc}
+    .toc-list li{counter-increment:toc;margin-bottom:7px}
+    .toc-list li a{font-size:.85rem;color:var(--text-secondary,#8888aa);text-decoration:none;display:flex;align-items:baseline;gap:8px;transition:color .15s}
+    .toc-list li a::before{content:counter(toc);font-size:.7rem;font-weight:700;color:var(--primary-light,#a78bfa);background:rgba(108,99,255,0.15);border-radius:50%;width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+    .toc-list li a:hover{color:var(--primary-light,#a78bfa)}
+  </style>
+  <div class='toc-box' role='navigation' aria-label='Table of contents'>
+    <h4>&#128220; In This Article</h4>
+    <ol class='toc-list'>
+      <li><a href='#section-1'>The Battle for Your Next Laptop</a></li>
+      <li><a href='#section-2'>1. Pure CPU Performance & Productivity</a></li>
+      <li><a href='#section-3'>2. Battery Life & Power Efficiency</a></li>
+      <li><a href='#section-4'>3. Local AI Performance (NPU Battle)</a></li>
+      <li><a href='#section-5'>4. Graphics & Gaming</a></li>
+      <li><a href='#section-6'>Frequently Asked Questions</a></li>
+    </ol>
+  </div>
+<h2 id="section-1">The Battle for Your Next Laptop</h2>
   <p>The consumer laptop processor market has never been more competitive. In 2026, buyers are no longer choosing just between "Intel and AMD." Instead, they are choosing between entirely different architectures—traditional x86 and mobile-focused ARM—and determining how much local AI horsepower they need. The era of the **AI PC** has arrived in force, and each major silicon designer has a compelling pitch.</p>
   <p>To help you make sense of this landscape, we have compared the four dominant laptop platforms of 2026 side-by-side: **Apple M5**, **Intel Lunar Lake**, **Qualcomm Snapdragon X Elite**, and **AMD Ryzen AI 300**.</p>
 
-  <h2>1. Pure CPU Performance & Productivity</h2>
+  <h2 id="section-2">1. Pure CPU Performance & Productivity</h2>
   <p>When it comes to raw processing speed, the chips split along core layouts. AMD's **Ryzen AI 300 (Zen 5)** offers up to 12 physics cores, making it the undisputed champion for multi-core tasks like compiling large codebases or rendering 3D scenes in Blender.</p>
   <p>Apple's **M5 series** excels in single-core speeds and memory bandwidth, ensuring that macOS feels incredibly responsive and handling professional tasks like video production in Final Cut Pro effortlessly. Qualcomm's **Snapdragon X Elite** offers a balanced, smooth, and silent Windows ARM experience, while Intel's **Lunar Lake** focuses on high IPC single-thread performance, ditching Hyper-Threading to run cool and snappy during office workflows.</p>
 
-  <h2>2. Battery Life & Power Efficiency</h2>
+  <h2 id="section-3">2. Battery Life & Power Efficiency</h2>
   <p>This is where the paradigm shifted in 2026. Historically, Apple Silicon held a monopoly on 15+ hour battery life. No longer.</p>
   <p>Thanks to Lunar Lake's memory-on-package design and optimized Lion Cove and Skymont core architectures, Intel laptops now regularly clear **20 hours of loop video playback**, directly matching Apple's M5 MacBook Air. Qualcomm's Snapdragon X Elite still delivers incredible efficiency, running cool and quiet in fanless designs, while AMD's Ryzen AI 300 offers competitive battery life but prioritizes high performance-per-watt during heavy tasks.</p>
 
-  <h2>3. Local AI Performance (NPU Battle)</h2>
+  <h2 id="section-4">3. Local AI Performance (NPU Battle)</h2>
   <p>With local AI workloads becoming standard, the Neural Processing Unit (NPU) is a critical metric. Microsoft's Copilot+ PC spec requires a minimum of 40 TOPS for local features. Here is how they stack up:</p>
   <ul>
     <li><strong>AMD Ryzen AI 300:</strong> 50 TOPS NPU (Industry leader in raw TOPS)</li>
@@ -178,7 +199,7 @@
   </ul>
   <p>While AMD wins in raw TOPS, Apple's high memory bandwidth (up to 400 GB/s on Pro models) allows it to load larger local LLMs into unified RAM faster than the x86 competitors, which are constrained by standard system RAM speeds.</p>
 
-  <h2>4. Graphics & Gaming</h2>
+  <h2 id="section-5">4. Graphics & Gaming</h2>
   <p>For gamers and GPU-accelerated tasks, x86 still holds a massive advantage over ARM due to game compatibility and driver maturity.</p>
   <p>Intel's **Lunar Lake (Xe2 Battlemage)** and AMD's **Ryzen AI 300 (Radeon 890M)** are excellent, providing near-console level performance at 1080p for games like <i>Elden Ring</i> or <i>Hades II</i>. Apple's M5 offers robust hardware-accelerated ray tracing, but the Mac gaming library remains relatively small. Qualcomm's Snapdragon X Elite suffers from compatibility layer overhead in many x86 games, making it unsuitable for gaming-first users.</p>
 
@@ -200,7 +221,7 @@
 
   <!-- FAQ Accordion -->
   <div class="aph-faq-section">
-    <h2>Frequently Asked Questions</h2>
+    <h2 id="section-6">Frequently Asked Questions</h2>
     <div class="aph-faq-item">
       <div class="aph-faq-question">Which processor has the best battery life in 2026?</div>
       <div class="aph-faq-answer">Intel Lunar Lake and Apple M5 lead the pack, both capable of exceeding 20 hours of normal productivity usage. Qualcomm's Snapdragon X Elite follows closely behind.</div>

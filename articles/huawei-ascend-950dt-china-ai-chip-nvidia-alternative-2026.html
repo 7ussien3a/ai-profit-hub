@@ -156,11 +156,30 @@
     </ul>
   </div>
 
-  <h2>China's Sovereign Computing Strategy</h2>
+  
+  <style>
+    .toc-box{background:var(--bg-elevated,#1a1f2e);border:1px solid var(--border);border-left:3px solid var(--primary,#6C63FF);border-radius:10px;padding:20px 24px;margin:28px 0 32px;max-width:520px}
+    .toc-box h4{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--primary-light,#a78bfa);margin:0 0 12px;display:flex;align-items:center;gap:8px}
+    .toc-list{margin:0;padding:0;list-style:none;counter-reset:toc}
+    .toc-list li{counter-increment:toc;margin-bottom:7px}
+    .toc-list li a{font-size:.85rem;color:var(--text-secondary,#8888aa);text-decoration:none;display:flex;align-items:baseline;gap:8px;transition:color .15s}
+    .toc-list li a::before{content:counter(toc);font-size:.7rem;font-weight:700;color:var(--primary-light,#a78bfa);background:rgba(108,99,255,0.15);border-radius:50%;width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+    .toc-list li a:hover{color:var(--primary-light,#a78bfa)}
+  </style>
+  <div class='toc-box' role='navigation' aria-label='Table of contents'>
+    <h4>&#128220; In This Article</h4>
+    <ol class='toc-list'>
+      <li><a href='#section-1'>China's Sovereign Computing Strategy</a></li>
+      <li><a href='#section-2'>Technical Breakdown: What the Ascend 950DT Offers</a></li>
+      <li><a href='#section-3'>The Silicon Bottleneck: 7nm vs. 2nm</a></li>
+      <li><a href='#section-4'>Frequently Asked Questions</a></li>
+    </ol>
+  </div>
+<h2 id="section-1">China's Sovereign Computing Strategy</h2>
   <p>The geopolitical struggle for artificial intelligence dominance is increasingly fought in the silicon foundries. With the United States expanding bans on high-end NVIDIA and AMD GPUs, Chinese tech giants have faced a stark reality: develop domestic hardware or fall behind in the AI race. Huawei, the vanguard of China's domestic hardware program, is responding aggressively. In 2026, the company is spearheading a massive **$295 billion national AI data center grid** powered almost entirely by domestic silicon.</p>
   <p>At the center of this initiative is the newly announced **Huawei Ascend 950DT** AI accelerator, scheduled to debut in **August 2026**, with a full enterprise launch in the fourth quarter. It is built to serve as a sovereign replacement for NVIDIA's prohibited GPUs.</p>
 
-  <h2>Technical Breakdown: What the Ascend 950DT Offers</h2>
+  <h2 id="section-2">Technical Breakdown: What the Ascend 950DT Offers</h2>
   <p>The Ascend 950DT introduces several key upgrades over the current flagship, the Ascend 910C:</p>
   <ul>
     <li><strong>Optimized FP8 Performance:</strong> AI training and inference are shifting rapidly to low-precision formats to save memory. The 950DT offers native hardware acceleration for FP8 calculations, significantly speeding up large model processing.</li>
@@ -169,7 +188,7 @@
   </ul>
   <p>In practice, Chinese software developers are optimizing architectures like **DeepSeek V4-Pro** and Qwen models to run natively on Ascend clusters, proving that high-parameter models can be successfully trained and queried using domestic chips.</p>
 
-  <h2>The Silicon Bottleneck: 7nm vs. 2nm</h2>
+  <h2 id="section-3">The Silicon Bottleneck: 7nm vs. 2nm</h2>
   <p>Despite these innovations, Huawei face severe physical manufacturing limits. While NVIDIA's next-generation Blackwell and Rubin chips are manufactured on TSMC's ultra-advanced 4nm and 3nm nodes (with 2nm on the horizon), domestic Chinese fabrication is largely stuck at the 7nm node due to import restrictions on EUV (Extreme Ultraviolet) lithography machines.</p>
   <p>To compensate for the lack of transistor density, Huawei is forced to make the silicon dies physically larger and run them at higher power draw, resulting in increased heat and larger physical clusters. The challenge for China in 2026 is not whether they can build competent AI chips, but whether they can manufacture them in high enough yields to sustain their nationwide datacenter expansion.</p>
 
@@ -191,7 +210,7 @@
 
   <!-- FAQ Accordion -->
   <div class="aph-faq-section">
-    <h2>Frequently Asked Questions</h2>
+    <h2 id="section-4">Frequently Asked Questions</h2>
     <div class="aph-faq-item">
       <div class="aph-faq-question">What is the release date for Huawei Ascend 950DT?</div>
       <div class="aph-faq-answer">The Ascend 950DT is scheduled to debut in August 2026, with a broader enterprise roll-out in the fourth quarter of 2026.</div>
