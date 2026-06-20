@@ -9,6 +9,13 @@
   /* ── Article catalogue ─────────────────────────────────────────────── */
   var articles = [
     {
+      title: 'Claude AI Review (2026): Worth It?',
+      url: '/reviews/claude-ai-review.html',
+      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&q=80',
+      tag: '🤖 AI Tools',
+      date: 'June 20 2026'
+    },
+    {
       title: 'Intel Lunar Lake: How Intel Beat ARM',
       url: '/articles/intel-lunar-lake-core-ultra-200v-efficiency-2026.html',
       image: '/images/intel-lunar-lake.webp',
