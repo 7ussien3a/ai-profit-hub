@@ -9,6 +9,20 @@
   /* ── Article catalogue ─────────────────────────────────────────────── */
   var articles = [
     {
+      title: 'ChatGPT Review (2026): Worth It?',
+      url: '/reviews/chatgpt-review.html',
+      image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=400&q=80',
+      tag: '🤖 AI Tools',
+      date: 'June 20 2026'
+    },
+    {
+      title: 'Perplexity AI Review (2026): Worth It?',
+      url: '/reviews/perplexity-review.html',
+      image: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=400&q=80',
+      tag: '🤖 AI Tools',
+      date: 'June 20 2026'
+    },
+    {
       title: 'Claude AI Review (2026): Worth It?',
       url: '/reviews/claude-ai-review.html',
       image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&q=80',
