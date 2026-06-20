@@ -11,21 +11,21 @@
     {
       title: 'Intel Lunar Lake: How Intel Beat ARM',
       url: '/articles/intel-lunar-lake-core-ultra-200v-efficiency-2026.html',
-      image: '/images/intel-lunar-lake.png',
+      image: '/images/intel-lunar-lake.webp',
       tag: '💻 Hardware',
       date: 'June 19 2026'
     },
     {
       title: 'Huawei Ascend 950DT: Replacing NVIDIA',
       url: '/articles/huawei-ascend-950dt-china-ai-chip-nvidia-alternative-2026.html',
-      image: '/images/huawei-ascend-chip.png',
+      image: '/images/huawei-ascend-chip.webp',
       tag: '🇨🇳 China AI',
       date: 'June 19 2026'
     },
     {
       title: 'The Ultimate 2026 CPU Comparison',
       url: '/articles/ultimate-2026-cpu-comparison-apple-m5-lunar-lake-snapdragon-ryzen.html',
-      image: '/images/cpu-comparison-2026.png',
+      image: '/images/cpu-comparison-2026.webp',
       tag: '⚖️ Compare',
       date: 'June 19 2026'
     },
@@ -53,14 +53,14 @@
     {
       title: 'Google Gemma 4 Local AI',
       url: '/articles/google-gemma-4-local-ai-laptop-2026.html',
-      image: '/images/google-gemma-local-ai.png',
+      image: '/images/google-gemma-local-ai.webp',
       tag: '🖥️ Local AI',
       date: 'June 17 2026'
     },
     {
       title: 'Gemini 3.5 Live Translate',
       url: '/articles/google-gemini-3-5-live-translate-20260615.html',
-      image: '/images/gemini-live-translate.png',
+      image: '/images/gemini-live-translate.webp',
       tag: '🤖 AI Tools',
       date: 'June 15 2026'
     },
@@ -95,7 +95,7 @@
     {
       title: 'Samsung HBM4E',
       url: '/articles/samsung-hbm4e-ai-memory-chips.html',
-      image: '/images/cpu-comparison-2026.png',
+      image: '/images/cpu-comparison-2026.webp',
       tag: '🔧 Hardware',
       date: 'May 29 2026'
     },
@@ -123,7 +123,7 @@
     {
       title: 'Best Free AI Tools Students',
       url: '/articles/best-free-ai-tools-students.html',
-      image: '/images/ai-tools-students.png',
+      image: '/images/ai-tools-students.webp',
       tag: '🎓 Education',
       date: 'May 2026'
     },
