@@ -23,6 +23,13 @@
       date: 'June 20 2026'
     },
     {
+      title: 'AI Automation Ultimate Guide (2026)',
+      url: '/articles/ai-automation-guide.html',
+      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=80',
+      tag: '💡 Productivity',
+      date: 'June 20 2026'
+    },
+    {
       title: 'Claude AI Review (2026): Worth It?',
       url: '/reviews/claude-ai-review.html',
       image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&q=80',
