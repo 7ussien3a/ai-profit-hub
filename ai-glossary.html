@@ -55,21 +55,24 @@
 <div id="read-progress"></div>
 <script>(function(){var b=document.getElementById('read-progress');window.addEventListener('scroll',function(){var d=document.documentElement,s=d.scrollTop||document.body.scrollTop,t=d.scrollHeight-d.clientHeight;b.style.width=(t>0?s/t*100:0)+'%';},{passive:true});})();</script>
 
-<header class="header" id="header">
-  <nav class="nav">
-    <a href="/" class="logo"><div class="logo-icon">⚡</div><span>AI Profit Hub</span></a>
-    <ul class="nav-links" id="navLinks">
+  <header class="header">
+    <nav class="nav">
+      <a href="index.html" class="logo"><div class="logo-icon">âš¡</div><span>AI Profit Hub</span></a>
+      <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Home</a></li>
         <li><a href="guides/index.html">Guides</a></li>
         <li><a href="best-ai-tools/index.html">AI Tools</a></li>
         <li><a href="compare/index.html">Compare</a></li>
+        <li><a href="prompts-library.html">Prompts</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="search.html">&#128269; Search</a></li>
-        <li><a href="#newsletter" class="nav-cta">Subscribe</a></li>
+        <li><a href="index.html#newsletter" class="nav-cta">Subscribe</a></li>
       </ul>
-    <button class="mobile-toggle" type="button" id="mobileToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
-  </nav>
-</header>
+      <button class="mobile-toggle" type="button" aria-label="Toggle menu" aria-controls="navLinks" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
 
 <section class="gloss-hero">
   <div class="hero-badge">📖 Complete Reference</div>
@@ -96,7 +99,7 @@
   <div class="letter-group" id="A"><div class="letter-heading">A</div>
     <div class="term-card"><div class="term-name">AGI (Artificial General Intelligence) <span class="term-tag tag-concept">Concept</span></div><p class="term-def">A hypothetical AI that can perform any intellectual task a human can. Unlike today's AI (which specializes in specific tasks), AGI would reason, learn, and adapt across all domains. Most experts believe AGI is still years or decades away.</p></div>
     <div class="term-card"><div class="term-name">Agent / AI Agent <span class="term-tag tag-concept">Concept</span></div><p class="term-def">An AI system that can take actions autonomously — browsing the web, writing code, sending emails, or completing multi-step tasks without constant human input. Agents are the core of "agentic AI" which became mainstream in 2025-2026.</p></div>
-    <div class="term-card"><div class="term-name">Alignment <span class="term-tag tag-concept">Concept</span></div><p class="term-def">The challenge of ensuring AI systems behave in ways that match human values and intentions. A misaligned AI might achieve its goal but in unexpected or harmful ways. Alignment research is a major focus at companies like Anthropic and OpenAI.</p></div>
+    <div class="term-card"><div class="term-name">Alignment <span class="term-tag tag-concept">Concept</span></div><p class="term-def">The challenge of ensuring AI systems behave in ways that match human values and intentions. A misaligned AI might achieve its goal but in unexpected or harmful ways. Alignment research is a major focus at companies like <a href="companies/anthropic.html">Anthropic</a> and <a href="companies/openai.html">OpenAI</a>.</p></div>
     <div class="term-card"><div class="term-name">Anthropic <span class="term-tag tag-tool">Company</span></div><p class="term-def">AI safety company founded in 2021 by former OpenAI researchers, including Dario Amodei. Creators of Claude. Known for their focus on "Constitutional AI" — training AI to be helpful, harmless, and honest.</p></div>
     <div class="term-card"><div class="term-name">API (Application Programming Interface) <span class="term-tag tag-tech">Tech</span></div><p class="term-def">A way for software to talk to other software. When developers say "using the OpenAI API," they mean their app sends text to OpenAI's servers and gets AI responses back. APIs let builders add AI to their own products.</p></div>
     <div class="term-card"><div class="term-name">Attention Mechanism <span class="term-tag tag-tech">Tech</span></div><p class="term-def">The core innovation behind modern AI language models. It lets the AI "pay attention" to different parts of the input when generating output — understanding that "bank" in "river bank" means something different than in "savings bank."</p></div>
@@ -185,7 +188,7 @@
   <div class="letter-group" id="S"><div class="letter-heading">S</div>
     <div class="term-card"><div class="term-name">Stable Diffusion <span class="term-tag tag-tool">Tool</span></div><p class="term-def">An open source AI image generation model that can run locally on consumer hardware. Unlike Midjourney or DALL-E, Stable Diffusion has no content restrictions and is freely modifiable — making it popular with developers and power users.</p></div>
     <div class="term-card"><div class="term-name">System Prompt <span class="term-tag tag-concept">Concept</span></div><p class="term-def">Hidden instructions given to an AI before the conversation starts. App builders use system prompts to define the AI's persona, rules, and limitations. "You are a customer support agent for Acme Corp. Only answer questions about our products."</p></div>
-    <div class="term-card"><div class="term-name">Sora <span class="term-tag tag-tool">Tool</span></div><p class="term-def">OpenAI's AI video generation model. Sora can generate realistic video clips from text prompts. Released for public access in late 2024, it marked a major leap in AI video quality.</p></div>
+    <div class="term-card"><div class="term-name">Sora <span class="term-tag tag-tool">Tool</span></div><p class="term-def">OpenAI's <a href="categories/ai-video.html">AI Video</a> generation model. Sora can generate realistic video clips from text prompts. Released for public access in late 2024, it marked a major leap in AI video quality.</p></div>
   </div>
 
   <div class="letter-group" id="T"><div class="letter-heading">T</div>
@@ -197,7 +200,7 @@
 
   <div class="letter-group" id="V"><div class="letter-heading">V</div>
     <div class="term-card"><div class="term-name">Vector Database <span class="term-tag tag-tech">Tech</span></div><p class="term-def">A database designed to store and search embeddings (numerical representations of text/images). Used in RAG systems to find relevant content quickly. Examples: Pinecone, Weaviate, Chroma. Essential infrastructure for AI-powered search and knowledge bases.</p></div>
-    <div class="term-card"><div class="term-name">Vibe Coding <span class="term-tag tag-concept">Concept</span></div><p class="term-def">A term coined by Andrej Karpathy describing a new coding approach where you describe what you want in plain language and let AI write the code, only intervening when things go wrong. Enabled by AI coding tools like Cursor, Replit, and GitHub Copilot.</p></div>
+    <div class="term-card"><div class="term-name">Vibe Coding <span class="term-tag tag-concept">Concept</span></div><p class="term-def">A term coined by Andrej Karpathy describing a new coding approach where you describe what you want in plain language and let AI write the code, only intervening when things go wrong. Enabled by <a href="categories/ai-coding.html">AI Coding</a> tools like Cursor, Replit, and GitHub Copilot.</p></div>
   </div>
 
   <div class="letter-group" id="Z"><div class="letter-heading">Z</div>

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free AI Prompts Library: Copy & Paste Prompts — AI Profit Hub</title>
+  <meta name="description" content="Access our ultimate library of free ChatGPT, Claude, and Gemini prompts. One-click copy prompts for productivity, coding, writing, and marketing.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ai-profit-hub.com/prompts-library.html">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ai-profit-hub.com/prompts-library.html">
+  <meta property="og:title" content="Free AI Prompts Library: Copy & Paste Prompts — AI Profit Hub">
+  <meta property="og:description" content="Access our ultimate library of free ChatGPT, Claude, and Gemini prompts. One-click copy prompts for productivity, coding, writing, and marketing.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200&h=630&fit=crop">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="stylesheet" href="css/style.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4602905173099480" crossorigin="anonymous"></script>
+
+  <!-- Custom styles for Premium interactive Prompts Library -->
+  <style>
+    .prompts-hero {
+      padding: calc(var(--header-height) + 60px) 24px 60px;
+      text-align: center;
+      background: var(--gradient-hero);
+      position: relative;
+    }
+    .prompts-hero h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .prompts-hero p {
+      color: var(--text-secondary);
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+    .filter-pills {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .filter-pill {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      padding: 10px 20px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: var(--transition);
+      user-select: none;
+    }
+    .filter-pill:hover, .filter-pill.active {
+      background: var(--primary);
+      border-color: var(--primary-light);
+      color: white;
+      box-shadow: 0 0 15px var(--primary-glow);
+    }
+    .prompts-container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+    .prompts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 30px;
+    }
+    .prompt-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .prompt-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--primary);
+      opacity: 0.7;
+    }
+    .prompt-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--border-hover);
+      box-shadow: var(--shadow-md);
+    }
+    .prompt-card-header {
+      margin-bottom: 16px;
+    }
+    .prompt-tag {
+      background: var(--primary-glow);
+      color: var(--primary-light);
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+    .prompt-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 8px;
+      color: var(--text-primary);
+    }
+    .prompt-card p {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .prompt-text-wrapper {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 16px;
+      position: relative;
+      margin-bottom: 24px;
+      max-height: 120px;
+      overflow-y: auto;
+    }
+    .prompt-text {
+      font-family: monospace;
+      font-size: 0.85rem;
+      color: var(--text-primary);
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .copy-btn {
+      width: 100%;
+      background: var(--bg-elevated);
+      color: var(--text-primary);
+      border: 1px solid var(--border);
+      padding: 12px;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: var(--transition);
+    }
+    .copy-btn:hover {
+      background: var(--gradient-primary);
+      border-color: transparent;
+      color: white;
+      box-shadow: 0 4px 15px rgba(108, 99, 255, 0.3);
+    }
+    .optin-card {
+      grid-column: 1 / -1;
+      background: linear-gradient(135deg, rgba(26,31,53,0.9) 0%, rgba(10,14,26,0.95) 100%);
+      border: 2px solid var(--primary);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      margin-top: 40px;
+      box-shadow: var(--shadow-glow);
+    }
+    .optin-content {
+      flex: 1;
+    }
+    .optin-content h2 {
+      font-size: 2rem;
+      margin-bottom: 12px;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .optin-content p {
+      color: var(--text-secondary);
+      margin-bottom: 0;
+      font-size: 1.1rem;
+    }
+    .optin-form {
+      display: flex;
+      gap: 12px;
+      flex-shrink: 0;
+      width: 450px;
+    }
+    .optin-input {
+      flex: 1;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      color: var(--text-primary);
+      padding: 16px;
+      border-radius: var(--radius-sm);
+      font-size: 1rem;
+      transition: var(--transition);
+    }
+    .optin-input:focus {
+      border-color: var(--primary-light);
+      outline: none;
+    }
+    .optin-submit {
+      background: var(--gradient-primary);
+      color: white;
+      border: none;
+      padding: 16px 28px;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .optin-submit:hover {
+      box-shadow: 0 4px 20px rgba(0, 212, 170, 0.4);
+      transform: translateY(-2px);
+    }
+    @media (max-width: 900px) {
+      .optin-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+      }
+      .optin-form {
+        width: 100%;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <!-- Header -->
+      <header class="header">
+    <nav class="nav">
+      <a href="index.html" class="logo"><div class="logo-icon">âš¡</div><span>AI Profit Hub</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="guides/index.html">Guides</a></li>
+        <li><a href="best-ai-tools/index.html">AI Tools</a></li>
+        <li><a href="compare/index.html">Compare</a></li>
+        <li><a href="prompts-library.html" class='active'>Prompts</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="search.html">&#128269; Search</a></li>
+        <li><a href="index.html#newsletter" class="nav-cta">Subscribe</a></li>
+      </ul>
+      <button class="mobile-toggle" type="button" aria-label="Toggle menu" aria-controls="navLinks" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="prompts-hero">
+    <h1>⚡ AI Prompts Library</h1>
+    <p>Copy and paste battle-tested prompts to unlock the full potential of <a href="reviews/chatgpt-review.html">ChatGPT</a>, Claude, and Gemini for productivity, programming, and content creation.</p>
+    
+    <!-- Category Pills -->
+    <div class="filter-pills">
+      <div class="filter-pill active" data-filter="all">All Prompts</div>
+      <div class="filter-pill" data-filter="productivity">💡 Productivity</div>
+      <div class="filter-pill" data-filter="coding">💻 Coding</div>
+      <div class="filter-pill" data-filter="writing">✍️ Writing</div>
+      <div class="filter-pill" data-filter="marketing">📈 Marketing</div>
+    </div>
+  </section>
+
+  <!-- Prompts Grid -->
+  <main id="main-content" class="prompts-container">
+    <div class="prompts-grid">
+      
+      <!-- Prompt 1 -->
+      <div class="prompt-card" data-category="productivity">
+        <div class="prompt-card-header">
+          <span class="prompt-tag">Productivity</span>
+          <h3>Deep Work Planner</h3>
+          <p>Synthesizes your weekly workload into a highly efficient daily schedule blocking out distractions.</p>
+        </div>
+        <div class="prompt-text-wrapper">
+          <div class="prompt-text">I want you to act as an elite productivity coach. I will provide you with my weekly tasks, meetings, and project goals. Analyze this workload and design a 5-day deep work block schedule using the Pomodoro technique. Optimize for cognitive load by scheduling complex tasks in the morning and administrative tasks in the afternoon. Include specific targets, rest periods, and a daily review ritual. Here is my task list: [Insert Tasks]</div>
+        </div>
+        <button class="copy-btn" onclick="copyPrompt(this)">
+          <span>📋 Copy Prompt</span>
+        </button>
+      </div>
+
+      <!-- Prompt 2 -->
+      <div class="prompt-card" data-category="coding">
+        <div class="prompt-card-header">
+          <span class="prompt-tag">Coding</span>
+          <h3>Refactoring &amp; Clean Code Expert</h3>
+          <p>Scans your code block, identifies architectural issues, and outputs clean, commented refactored code.</p>
+        </div>
+        <div class="prompt-text-wrapper">
+          <div class="prompt-text">Act as a principal software engineer. Review the following code block. Identify any performance bottlenecks, security vulnerabilities, code smells, or deviations from SOLID principles. Explain the issues in a concise bullet-point list, and then provide a fully refactored, highly optimized, and clean version of the code with helpful inline comments. Here is my code: [Insert Code]</div>
+        </div>
+        <button class="copy-btn" onclick="copyPrompt(this)">
+          <span>📋 Copy Prompt</span>
+        </button>
+      </div>
+
+      <!-- Prompt 3 -->
+      <div class="prompt-card" data-category="writing">
+        <div class="prompt-card-header">
+          <span class="prompt-tag">Writing</span>
+          <h3>SEO Content Optimizer</h3>
+          <p>Analyzes your drafts and rewrites paragraphs to organically integrate keywords while maintaining tone.</p>
+        </div>
+        <div class="prompt-text-wrapper">
+          <div class="prompt-text">Act as a professional SEO copywriter. I will give you a draft article and a list of target secondary keywords. Rewrite sections of the article to naturally incorporate these keywords without keyword stuffing. Ensure the writing style remains engaging, informative, and keeps the reader on the page. Highlight the changes you made in bold. Target Keywords: [Insert Keywords] Draft: [Insert Draft]</div>
+        </div>
+        <button class="copy-btn" onclick="copyPrompt(this)">
+          <span>📋 Copy Prompt</span>
+        </button>
+      </div>
+
+      <!-- Prompt 4 -->
+      <div class="prompt-card" data-category="marketing">
+        <div class="prompt-card-header">
+          <span class="prompt-tag">Marketing</span>
+          <h3>High-Converting Email Sequence</h3>
+          <p>Generates a 3-part email nurture sequence for cold leads to schedule a demo or trial.</p>
+        </div>
+        <div class="prompt-text-wrapper">
+          <div class="prompt-text">Act as a master direct-response copywriter. Write a 3-part email sequence for a B2B SaaS startup. The first email should focus on a major industry pain point and introduce our unique value proposition. The second should build trust using social proof and statistics. The third should create a gentle sense of urgency with a clear Call to Action (CTA) to book a 15-minute demo. Keep subject lines under 45 characters. SaaS Description: [Insert SaaS Details]</div>
+        </div>
+        <button class="copy-btn" onclick="copyPrompt(this)">
+          <span>📋 Copy Prompt</span>
+        </button>
+      </div>
+
+      <!-- Prompt 5 -->
+      <div class="prompt-card" data-category="coding">
+        <div class="prompt-card-header">
+          <span class="prompt-tag">Coding</span>
+          <h3>SQL Query Optimizer</h3>
+          <p>Diagnoses slow databases and refactors SQL joins and indexing for rapid queries.</p>
+        </div>
+        <div class="prompt-text-wrapper">
+          <div class="prompt-text">You are a database administrator. The following SQL query is running slowly. Analyze the query structure, identify any issues (such as subqueries that could be converted to JOINs, missing indexes, or costly operations), explain the bottlenecks, and output the optimized SQL query. Query: [Insert SQL Query]</div>
+        </div>
+        <button class="copy-btn" onclick="copyPrompt(this)">
+          <span>📋 Copy Prompt</span>
+        </button>
+      </div>
+
+      <!-- Prompt 6 -->
+      <div class="prompt-card" data-category="productivity">
+        <div class="prompt-card-header">
+          <span class="prompt-tag">Productivity</span>
+          <h3>Book &amp; Article Summarizer</h3>
+          <p>Extracts core concepts, action items, and mental frameworks from long-form text.</p>
+        </div>
+        <div class="prompt-text-wrapper">
+          <div class="prompt-text">Analyze the text provided below. Extract the top 5 core lessons, the key mental frameworks presented by the author, and compile a list of 5 actionable tasks I can implement today based on the readings. Format your response using clean markdown headings and bullet points. Text: [Insert Book Chapter or Article Text]</div>
+        </div>
+        <button class="copy-btn" onclick="copyPrompt(this)">
+          <span>📋 Copy Prompt</span>
+        </button>
+      </div>
+
+      <!-- Opt-in Subscription Card -->
+      <div class="optin-card" id="newsletter">
+        <div class="optin-content">
+          <h2>📩 Unlock 100+ Premium Prompts</h2>
+          <p>Join 10,000+ creators, marketers, and developers who receive our weekly newsletter. Get high-converting ChatGPT prompts, tutorials, and early access to reviews.</p>
+        </div>
+        <form class="optin-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing! Check your inbox for the prompt guide.'); this.reset();">
+          <input type="email" class="optin-input" placeholder="Enter your business email..." required>
+          <button type="submit" class="optin-submit">Send Me Prompts 🚀</button>
+        </form>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">⚡</div>
+          <span>AI Profit Hub</span>
+        </a>
+        <p>Your ultimate guide for AI tutorials, ChatGPT prompts, productivity hacks, and the latest tech news.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="editorial-policy.html">Editorial Policy</a></li>
+          <li><a href="how-we-test.html">How We Test</a></li>
+          <li><a href="authors.html">Our Authors</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Categories</h4>
+        <ul class="footer-links">
+          <li><a href="categories/ai-tools.html">AI Tools</a></li>
+          <li><a href="categories/productivity.html">Productivity</a></li>
+          <li><a href="categories/chatgpt.html">ChatGPT</a></li>
+          <li><a href="categories/tech-news.html">Tech News</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul class="footer-links">
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms-of-service.html">Terms of Service</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 AI Profit Hub. All rights reserved.</span>
+      <span>Built with ❤️ for the AI community</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+  <!-- Client-side Interactive Functionality for Prompts Library -->
+  <script>
+    // Copy to Clipboard
+    function copyPrompt(button) {
+      const card = button.closest('.prompt-card');
+      const text = card.querySelector('.prompt-text').textContent;
+      
+      navigator.clipboard.writeText(text).then(() => {
+        const originalText = button.innerHTML;
+        button.innerHTML = '<span>✅ Copied!</span>';
+        button.style.background = 'var(--accent)';
+        button.style.color = '#04120f';
+        
+        setTimeout(() => {
+          button.innerHTML = originalText;
+          button.style.background = '';
+          button.style.color = '';
+        }, 2000);
+      }).catch(err => {
+        console.error('Failed to copy text: ', err);
+      });
+    }
+
+    // Category Filtering
+    document.querySelectorAll('.filter-pill').forEach(pill => {
+      pill.addEventListener('click', () => {
+        // Toggle Active
+        document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        
+        const filter = pill.getAttribute('data-filter');
+        document.querySelectorAll('.prompt-card').forEach(card => {
+          const category = card.getAttribute('data-category');
+          if (filter === 'all' || category === filter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
