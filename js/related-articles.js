@@ -9,6 +9,13 @@
   /* ── Article catalogue ─────────────────────────────────────────────── */
   var articles = [
     {
+      title: 'Claude Fable 5 Shutdown Crisis',
+      url: '/articles/anthropic-claude-fable-5-shutdown-2026.html',
+      image: '/images/anthropic-fable-shutdown.png',
+      tag: '🤖 Tech News',
+      date: 'June 21 2026'
+    },
+    {
       title: 'ChatGPT Review (2026): Worth It?',
       url: '/reviews/chatgpt-review.html',
       image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=400&q=80',
