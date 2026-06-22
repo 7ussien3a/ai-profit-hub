@@ -34,8 +34,10 @@
   <!-- Fonts & Styles -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
+  <!-- Lucide Icons Library -->
+  <script src="https://unpkg.com/lucide@0.400.0/dist/umd/lucide.min.js" defer></script>
 
   <!-- AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4602905173099480" crossorigin="anonymous"></script>
@@ -78,7 +80,7 @@
 
 <!-- ═══ READ PROGRESS + BACK TO TOP ═══ -->
 <div id="read-progress"></div>
-<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">&#8593;</button>
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top" style="display: inline-flex; align-items: center; justify-content: center;"><i data-lucide="arrow-up" class="lucide-icon" style="width: 20px; height: 20px;"></i></button>
 <script>
 (function(){
   var bar=document.getElementById('read-progress'),btn=document.getElementById('backTop');
@@ -93,12 +95,12 @@
 <!-- ═══ HEADER ═══ -->
 <header class="header" id="header">
   <nav class="nav">
-    <a href="/" class="logo"><div class="logo-icon">⚡</div><span>AI Profit Hub</span></a>
+    <a href="/" class="logo"><div class="logo-icon"><i data-lucide="zap" class="lucide-icon"></i></div><span>AI Profit Hub</span></a>
     <ul class="nav-links" id="navLinks">
       <li><a href="/">Home</a></li>
       <li><a href="/start-here.html">Start Here</a></li>
       <li><a href="/ai-tools-directory.html">AI Tools</a></li>
-      <li><a href="/search.html">Search</a></li>
+      <li><a href="/search.html" style="display: inline-flex; align-items: center; gap: 6px;"><i data-lucide="search" class="lucide-icon" style="width: 15px; height: 15px;"></i> Search</a></li>
       <li><a href="/about.html">About</a></li>
     </ul>
     <button class="mobile-toggle" type="button" id="mobileToggle" aria-label="Toggle menu">

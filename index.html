@@ -11,8 +11,10 @@
   <link rel="dns-prefetch" href="https://www.google-analytics.com">
   <!-- Preload critical CSS -->
   <link rel="preload" href="css/style.css" as="style">
-  <!-- Inter font: swap prevents FOIT -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <!-- Fonts: Inter & Outfit -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Lucide Icons Library -->
+  <script src="https://unpkg.com/lucide@0.400.0/dist/umd/lucide.min.js" defer></script>
   <title>AI Profit Hub — Best AI Tools, Tutorials &amp; Productivity Hacks</title>
   <meta name="twitter:image" content="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&amp;q=80&amp;auto=format&amp;fit=crop">
   <meta name="format-detection" content="telephone=no">
@@ -96,7 +98,7 @@
   <!-- Header -->
       <header class="header">
     <nav class="nav">
-      <a href="/" class="logo"><div class="logo-icon">⚡</div><span>AI Profit Hub</span></a>
+      <a href="/" class="logo"><div class="logo-icon"><i data-lucide="zap" class="lucide-icon"></i></div><span>AI Profit Hub</span></a>
       <ul class="nav-links" id="navLinks">
         <li><a href="/" class='active'>Home</a></li>
         <li><a href="guides/index.html">Guides</a></li>
@@ -104,7 +106,7 @@
         <li><a href="compare/index.html">Compare</a></li>
         <li><a href="prompts-library.html">Prompts</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="search.html">&#128269; Search</a></li>
+        <li><a href="search.html" style="display: inline-flex; align-items: center; gap: 6px;"><i data-lucide="search" class="lucide-icon" style="width: 15px; height: 15px;"></i> Search</a></li>
         <li><a href="/#newsletter" class="nav-cta">Subscribe</a></li>
       </ul>
       <button class="mobile-toggle" type="button" aria-label="Toggle menu" aria-controls="navLinks" aria-expanded="false">
@@ -116,7 +118,7 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
-      <div class="hero-badge">🚀 #1 AI Tools &amp; Productivity Blog</div>
+      <div class="hero-badge"><i data-lucide="sparkles" class="lucide-icon" style="width: 14px; height: 14px; color: var(--accent); margin-right: 6px;"></i> #1 AI Tools &amp; Productivity Blog</div>
       <h1>Master AI Tools.<br><span class="gradient-text">Work Smarter, Not Harder.</span></h1>
       <p>Discover the best free AI tools, <a href="reviews/chatgpt-review.html">ChatGPT</a> prompts, and productivity hacks to save hours every week and supercharge your workflow.</p>
       <form class="hero-search" action="search.html" method="GET">
@@ -125,16 +127,16 @@
       </form>
       <div class="hero-quick-links">
         <span>Quick Access:</span>
-        <a href="best-ai-tools/index.html">🛠️ Best Tools</a>
-        <a href="compare/index.html">⚔️ Side-by-Side VS</a>
-        <a href="guides/index.html">📚 Guides & Tutorials</a>
+        <a href="best-ai-tools/index.html" style="display: inline-flex; align-items: center; gap: 4px;"><i data-lucide="wrench" class="lucide-icon" style="width: 14px; height: 14px;"></i> Best Tools</a>
+        <a href="compare/index.html" style="display: inline-flex; align-items: center; gap: 4px;"><i data-lucide="git-compare" class="lucide-icon" style="width: 14px; height: 14px;"></i> Side-by-Side VS</a>
+        <a href="guides/index.html" style="display: inline-flex; align-items: center; gap: 4px;"><i data-lucide="book-open" class="lucide-icon" style="width: 14px; height: 14px;"></i> Guides & Tutorials</a>
       </div>
     </div>
   </section>
 
   <!-- Trending Section -->
   <section class="trending-section">
-    <div class="trending-label">🔥 Trending Now:</div>
+    <div class="trending-label" style="display: inline-flex; align-items: center; gap: 6px;"><i data-lucide="flame" class="lucide-icon" style="width: 16px; height: 16px; color: #ff5e3a;"></i> Trending Now:</div>
     <div class="trending-links">
       <a href="articles/xcode-27-dual-engine-ai-coding-agents-2026.html">Xcode 27 Dual-Engine AI</a>
       <a href="articles/microsoft-mai-7-models-copilot-2026.html">Microsoft MAI Models</a>

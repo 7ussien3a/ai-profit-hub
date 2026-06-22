@@ -255,6 +255,123 @@ document.addEventListener('DOMContentLoaded', () => {
       item.classList.toggle('active');
     }
   });
+
+  // === 3D Tilt & Radial Glow Effects (Spline & Stripe Inspired) ===
+  const interactiveElements = document.querySelectorAll(`
+    .article-card, 
+    .sidebar-card, 
+    .related-card, 
+    .category-card, 
+    .brand-card, 
+    .hero-cta, 
+    .newsletter-form button, 
+    .share-btn
+  `);
+
+  interactiveElements.forEach(el => {
+    el.addEventListener('mousemove', (e) => {
+      const rect = el.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      // Update CSS variables for radial glow position
+      el.style.setProperty('--mouse-x', `${x}px`);
+      el.style.setProperty('--mouse-y', `${y}px`);
+
+      // Apply 3D tilt for cards only
+      if (el.classList.contains('article-card') || 
+          el.classList.contains('sidebar-card') || 
+          el.classList.contains('related-card') || 
+          el.classList.contains('category-card') || 
+          el.classList.contains('brand-card')) {
+        
+        const width = rect.width;
+        const height = rect.height;
+        const normX = (x / width) - 0.5;
+        const normY = (y / height) - 0.5;
+        
+        const maxRotateX = 6; // conservative rotate for premium feel
+        const maxRotateY = 6;
+        
+        const rotateX = -normY * maxRotateX;
+        const rotateY = normX * maxRotateY;
+
+        el.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.01, 1.01, 1.01)`;
+      }
+    });
+
+    el.addEventListener('mouseleave', () => {
+      // Reset smoothly
+      el.style.transform = '';
+      el.style.setProperty('--mouse-x', `0px`);
+      el.style.setProperty('--mouse-y', `0px`);
+    });
+  });
+
+  // === Initialize Lucide Icons & Replace Emojis ===
+  function replaceTagEmojis() {
+    const tagIconsMap = {
+      'Tech News': 'newspaper',
+      'AI Coding': 'code-2',
+      'Education': 'graduation-cap',
+      'Creative AI': 'palette',
+      'Compare': 'git-compare',
+      'Hardware': 'cpu',
+      'China AI': 'globe',
+      'Apple': 'laptop',
+      'Productivity': 'zap',
+      'Business': 'trending-up',
+      'Local AI': 'hard-drive',
+      'Breaking': 'alert-circle',
+      'Video AI': 'video',
+      'Enterprise': 'building-2',
+      'Next-Gen': 'radio',
+      'Search': 'search',
+      'Healthcare': 'activity',
+      'Tutorials': 'book-open',
+      'Marketing': 'megaphone',
+      'Finance': 'dollar-sign',
+      'Future of Work': 'briefcase'
+    };
+
+    const tagElements = document.querySelectorAll('.article-card-tag, .tag-badge, .post-tag, .result-tag');
+    tagElements.forEach(tag => {
+      let text = tag.textContent.trim();
+      // Remove emoji characters from the beginning
+      const textWithoutEmoji = text.replace(/[\u{1F300}-\u{1F9FF}\u{2700}-\u{27BF}\u{1F600}-\u{1F64F}\u{1F680}-\u{1F6FF}\u{2600}-\u{26FF}\u{2300}-\u{23FF}\u{2b50}\u{2a7d}\u{1f800}-\u{1f8ff}\u{1f900}-\u{1f9ff}\u{1f300}-\u{1f5ff}\u{1f600}-\u{1f64f}\u{1f680}-\u{1f6ff}\u{2600}-\u{26ff}\u{2700}-\u{27bf}\u{2b50}\u{1f34e}\u{1f34f}]/gu, '').trim();
+      
+      let iconName = 'tag'; // fallback
+      for (const [key, value] of Object.entries(tagIconsMap)) {
+        if (textWithoutEmoji.toLowerCase().includes(key.toLowerCase()) || text.toLowerCase().includes(key.toLowerCase())) {
+          iconName = value;
+          break;
+        }
+      }
+      
+      // Update HTML with SVG placeholder for Lucide
+      tag.innerHTML = `<i data-lucide="${iconName}" class="lucide-icon" style="width: 13px; height: 13px; margin-right: 6px; vertical-align: -2px;"></i> ${textWithoutEmoji}`;
+    });
+  }
+
+  function loadAndInitLucide() {
+    if (typeof lucide !== 'undefined') {
+      replaceTagEmojis();
+      lucide.createIcons();
+    } else {
+      // Dynamic fallback load if CDN is delayed or not in HTML yet
+      const script = document.createElement('script');
+      script.src = 'https://unpkg.com/lucide@0.400.0/dist/umd/lucide.min.js';
+      script.onload = () => {
+        if (typeof lucide !== 'undefined') {
+          replaceTagEmojis();
+          lucide.createIcons();
+        }
+      };
+      document.head.appendChild(script);
+    }
+  }
+  
+  loadAndInitLucide();
 });
 
 // ========================================

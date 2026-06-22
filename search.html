@@ -66,11 +66,16 @@
       box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.15);
     }
   </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Lucide Icons Library -->
+  <script src="https://unpkg.com/lucide@0.400.0/dist/umd/lucide.min.js" defer></script>
 </head>
 <body>
     <header class="header">
     <nav class="nav">
-      <a href="/" class="logo"><div class="logo-icon">⚡</div><span>AI Profit Hub</span></a>
+      <a href="/" class="logo"><div class="logo-icon"><i data-lucide="zap" class="lucide-icon"></i></div><span>AI Profit Hub</span></a>
       <ul class="nav-links" id="navLinks">
         <li><a href="/">Home</a></li>
         <li><a href="guides/index.html">Guides</a></li>
@@ -78,7 +83,7 @@
         <li><a href="compare/index.html">Compare</a></li>
         <li><a href="prompts-library.html">Prompts</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="search.html" class='active'>&#128269; Search</a></li>
+        <li><a href="search.html" class='active' style="display: inline-flex; align-items: center; gap: 6px;"><i data-lucide="search" class="lucide-icon" style="width: 15px; height: 15px;"></i> Search</a></li>
         <li><a href="/#newsletter" class="nav-cta">Subscribe</a></li>
       </ul>
       <button class="mobile-toggle" type="button" aria-label="Toggle menu" aria-controls="navLinks" aria-expanded="false">
@@ -93,7 +98,7 @@
   <p>Find any article instantly — AI tools, tech news, comparisons, tutorials, and more.</p>
   <div class="search-wrap">
     <div class="search-input-box">
-      <span class="search-icon">&#128269;</span>
+      <span class="search-icon" style="display: flex; align-items: center; justify-content: center;"><i data-lucide="search" class="lucide-icon" style="width: 18px; height: 18px; color: var(--text-secondary);"></i></span>
       <input type="search" id="searchInput" placeholder="Search articles… (Ctrl+K)" autocomplete="off" aria-label="Search articles" autofocus>
       <div class="search-kbd"><kbd>Ctrl</kbd><kbd>K</kbd></div>
     </div>
