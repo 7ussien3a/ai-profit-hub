@@ -9,6 +9,55 @@
   /* ── Article catalogue ─────────────────────────────────────────────── */
   var articles = [
     {
+      title: "Google's New AI SEO Patent",
+      url: '/articles/google-ai-seo-patent-brand-optimization-2026.html',
+      image: '/images/google_seo_patent.png',
+      tag: '🤖 Tech News',
+      date: 'June 22 2026'
+    },
+    {
+      title: 'Embodied AI & WeChat Agents',
+      url: '/articles/qwen-robot-tencent-hunyuan-agents-2026.html',
+      image: '/images/qwen_robot_agents.png',
+      tag: '🤖 Tech News',
+      date: 'June 22 2026'
+    },
+    {
+      title: 'Kling 3.0 Turbo vs LTX-2.3',
+      url: '/articles/kling-3-turbo-ltx-2-video-ai-2026.html',
+      image: '/images/kling_ltx_video.png',
+      tag: '🤖 Tech News',
+      date: 'June 22 2026'
+    },
+    {
+      title: 'Beyond Auto-Complete: AI Agents',
+      url: '/articles/verdent-freebuff-dyad-mirofish-coding-agents-2026.html',
+      image: '/images/verdent_coding_workspace.png',
+      tag: '🤖 AI Tools',
+      date: 'June 22 2026'
+    },
+    {
+      title: 'Google NotebookLM Ultimate Guide',
+      url: '/articles/google-notebooklm-ultimate-guide-2026.html',
+      image: '/images/notebooklm_guide.png',
+      tag: '💡 Productivity',
+      date: 'June 21 2026'
+    },
+    {
+      title: 'Grok 2 & Grok 3 Ultimate Guide',
+      url: '/articles/grok-2-3-xai-llm-guide-2026.html',
+      image: '/images/grok_xai_model.png',
+      tag: '🤖 Tech News',
+      date: 'June 21 2026'
+    },
+    {
+      title: 'Suno v4 vs Udio: Music AI Battle',
+      url: '/articles/suno-v4-vs-udio-ai-music-2026.html',
+      image: '/images/suno_udio_music.png',
+      tag: '⚖️ Compare',
+      date: 'June 20 2026'
+    },
+    {
       title: 'Claude Fable 5 Shutdown Crisis',
       url: '/articles/anthropic-claude-fable-5-shutdown-2026.html',
       image: '/images/anthropic-fable-shutdown.png',

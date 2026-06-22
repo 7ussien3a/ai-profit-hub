@@ -56,13 +56,13 @@
   </url>
   <url>
     <loc>https://ai-profit-hub.com/</loc>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-06-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://ai-profit-hub.com/newsletter.html</loc>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -86,7 +86,7 @@
   </url>
   <url>
     <loc>https://ai-profit-hub.com/search.html</loc>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -349,6 +349,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ai-profit-hub.com/articles/google-ai-seo-patent-brand-optimization-2026.html</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ai-profit-hub.com/articles/google-gemini-3-5-live-translate-20260615.html</loc>
     <lastmod>2026-06-20</lastmod>
     <changefreq>monthly</changefreq>
@@ -363,6 +369,12 @@
   <url>
     <loc>https://ai-profit-hub.com/articles/google-gemma-4-local-ai-laptop-2026.html</loc>
     <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ai-profit-hub.com/articles/google-notebooklm-ultimate-guide-2026.html</loc>
+    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -385,6 +397,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ai-profit-hub.com/articles/grok-2-3-xai-llm-guide-2026.html</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ai-profit-hub.com/articles/huawei-ascend-950dt-china-ai-chip-nvidia-alternative-2026.html</loc>
     <lastmod>2026-06-21</lastmod>
     <changefreq>monthly</changefreq>
@@ -399,6 +417,12 @@
   <url>
     <loc>https://ai-profit-hub.com/articles/jeff-bezos8217s-prometheus-raises-12b-to-build-an-8216a-20260612.html</loc>
     <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ai-profit-hub.com/articles/kling-3-turbo-ltx-2-video-ai-2026.html</loc>
+    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -481,6 +505,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ai-profit-hub.com/articles/qwen-robot-tencent-hunyuan-agents-2026.html</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ai-profit-hub.com/articles/samsung-hbm4e-ai-memory-chips.html</loc>
     <lastmod>2026-06-20</lastmod>
     <changefreq>monthly</changefreq>
@@ -493,6 +523,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ai-profit-hub.com/articles/suno-v4-vs-udio-ai-music-2026.html</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ai-profit-hub.com/articles/theker-just-raised-85m-to-build-the-factory-robot-that-20260612.html</loc>
     <lastmod>2026-06-20</lastmod>
     <changefreq>monthly</changefreq>
@@ -501,6 +537,12 @@
   <url>
     <loc>https://ai-profit-hub.com/articles/ultimate-2026-cpu-comparison-apple-m5-lunar-lake-snapdragon-ryzen.html</loc>
     <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ai-profit-hub.com/articles/verdent-freebuff-dyad-mirofish-coding-agents-2026.html</loc>
+    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -530,7 +572,7 @@
   </url>
   <url>
     <loc>https://ai-profit-hub.com/best-ai-tools/best-ai-tools-students.html</loc>
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-06-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -554,25 +596,25 @@
   </url>
   <url>
     <loc>https://ai-profit-hub.com/categories/ai-coding.html</loc>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ai-profit-hub.com/categories/ai-tools.html</loc>
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ai-profit-hub.com/categories/ai-video.html</loc>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ai-profit-hub.com/categories/ai-writing.html</loc>
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -584,19 +626,19 @@
   </url>
   <url>
     <loc>https://ai-profit-hub.com/categories/productivity.html</loc>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ai-profit-hub.com/categories/tech-news.html</loc>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ai-profit-hub.com/coding/</loc>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-06-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -674,13 +716,13 @@
   </url>
   <url>
     <loc>https://ai-profit-hub.com/guides/</loc>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-06-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ai-profit-hub.com/news/</loc>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-06-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
