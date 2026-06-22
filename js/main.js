@@ -372,6 +372,92 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   
   loadAndInitLucide();
+
+  // === Smart Typing Effect for Hero Title ===
+  const typingTarget = document.querySelector('.hero h1 .gradient-text');
+  if (typingTarget) {
+    const words = [
+      'Work Smarter, Not Harder.',
+      'Build AI Startups.',
+      'Automate Your Workflows.',
+      'Supercharge Productivity.'
+    ];
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typeDelay = 100;
+    
+    typingTarget.classList.add('typing-cursor');
+
+    function typeEffect() {
+      const currentWord = words[wordIndex];
+      
+      if (isDeleting) {
+        typingTarget.textContent = currentWord.substring(0, charIndex - 1);
+        charIndex--;
+        typeDelay = 45;
+      } else {
+        typingTarget.textContent = currentWord.substring(0, charIndex + 1);
+        charIndex++;
+        typeDelay = 95;
+      }
+
+      if (!isDeleting && charIndex === currentWord.length) {
+        typeDelay = 2000; 
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+        typeDelay = 400;
+      }
+
+      setTimeout(typeEffect, typeDelay);
+    }
+
+    setTimeout(typeEffect, 1200);
+  }
+
+  // === Hero Mouse Glow Tracker ===
+  const heroSection = document.querySelector('.hero');
+  const heroGlow = document.querySelector('.hero-mouse-glow');
+  if (heroSection && heroGlow) {
+    heroSection.addEventListener('mousemove', (e) => {
+      const rect = heroSection.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      
+      window.requestAnimationFrame(() => {
+        heroGlow.style.left = `${x}px`;
+        heroGlow.style.top = `${y}px`;
+      });
+    });
+  }
+
+  // === Staggered Scroll Reveal for Article Cards ===
+  const articleCards = document.querySelectorAll('.articles-grid .article-card');
+  if (articleCards.length > 0) {
+    const cardObserver = new IntersectionObserver((entries) => {
+      let delay = 0;
+      const threshold = 100; // ms delay
+      
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const card = entry.target;
+          if (!card.classList.contains('revealed')) {
+            setTimeout(() => {
+              card.classList.add('revealed');
+            }, delay);
+            delay += threshold;
+            cardObserver.unobserve(card);
+          }
+        }
+      });
+    }, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' });
+
+    articleCards.forEach(card => {
+      cardObserver.observe(card);
+    });
+  }
 });
 
 // ========================================
