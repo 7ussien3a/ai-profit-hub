@@ -37,6 +37,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://ai-profit-hub.com/dashboard.html</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://ai-profit-hub.com/disclaimer.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
@@ -56,12 +62,18 @@
   </url>
   <url>
     <loc>https://ai-profit-hub.com/</loc>
-    <lastmod>2026-06-23</lastmod>
+    <lastmod>2026-06-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://ai-profit-hub.com/newsletter.html</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ai-profit-hub.com/playground.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -80,6 +92,12 @@
   </url>
   <url>
     <loc>https://ai-profit-hub.com/prompts-library.html</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ai-profit-hub.com/resources.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -224,7 +242,7 @@
   </url>
   <url>
     <loc>https://ai-profit-hub.com/articles/anthropic-claude-fable-5-shutdown-2026.html</loc>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -350,6 +368,12 @@
   </url>
   <url>
     <loc>https://ai-profit-hub.com/articles/google-ai-seo-patent-brand-optimization-2026.html</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ai-profit-hub.com/articles/google-gemini-2-5-pro-deep-think-2026.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -506,7 +530,7 @@
   </url>
   <url>
     <loc>https://ai-profit-hub.com/articles/qwen-robot-tencent-hunyuan-agents-2026.html</loc>
-    <lastmod>2026-06-23</lastmod>
+    <lastmod>2026-06-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -549,6 +573,12 @@
   <url>
     <loc>https://ai-profit-hub.com/articles/xcode-27-dual-engine-ai-coding-agents-2026.html</loc>
     <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ai-profit-hub.com/articles/zhipu-ai-glm-5-2-open-source-2026.html</loc>
+    <lastmod>2026-06-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

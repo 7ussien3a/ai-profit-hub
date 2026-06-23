@@ -1,0 +1,934 @@
+[
+  {
+    "id": "chatgpt",
+    "name": "ChatGPT",
+    "category": "writing",
+    "tagline": "The world's most popular AI assistant.",
+    "desc": "The benchmark AI assistant developed by OpenAI. Excellent for writing, editing, brainstorming, summarizing, and programming. Powered by GPT-4o, it is fast and supports text, images, code execution, and advanced voice interaction.",
+    "developer": "OpenAI",
+    "pricingType": "Freemium",
+    "pricingDetail": "Free (GPT-4o mini) / $20/mo (Plus)",
+    "rating": 4.9,
+    "lastUpdated": "June 23, 2026",
+    "url": "https://chat.openai.com",
+    "emoji": "🤖",
+    "husseinPick": true,
+    "reviewLink": "reviews/chatgpt-review.html",
+    "pros": [
+      "Extremely versatile across multiple domains",
+      "Native image generation with DALL-E 3",
+      "Advanced voice mode feels incredibly natural",
+      "Powerful Python sandbox code execution"
+    ],
+    "cons": [
+      "Can hallucinate on complex mathematical problems",
+      "Free version is rate-limited during high traffic"
+    ],
+    "alternatives": ["Claude", "Gemini Advanced"],
+    "faq": [
+      {
+        "question": "Can I use ChatGPT for coding?",
+        "answer": "Yes, ChatGPT is highly capable of writing, refactoring, and debugging code in dozens of programming languages."
+      }
+    ],
+    "relatedArticles": [
+      {"title": "ChatGPT Prompts Guide", "url": "../articles/chatgpt-prompts-guide-2026.html"}
+    ],
+    "relatedComparisons": [
+      {"title": "ChatGPT vs Claude", "url": "../compare/chatgpt-vs-claude.html"},
+      {"title": "ChatGPT vs Gemini", "url": "../compare/chatgpt-vs-gemini.html"}
+    ]
+  },
+  {
+    "id": "claude",
+    "name": "Claude",
+    "category": "writing",
+    "tagline": "Best for long-form writing and coding.",
+    "desc": "Anthropic's flagship model, Claude 3.5 Sonnet, excels at deep analysis, technical writing, coding, and multi-document analysis. Features a massive 200K context window that is perfect for books and large code projects.",
+    "developer": "Anthropic",
+    "pricingType": "Freemium",
+    "pricingDetail": "Free / $20/mo (Pro)",
+    "rating": 4.8,
+    "lastUpdated": "June 23, 2026",
+    "url": "https://claude.ai",
+    "emoji": "🧠",
+    "husseinPick": true,
+    "reviewLink": "reviews/claude-ai-review.html",
+    "pros": [
+      "Incredibly natural, human-sounding writing tone",
+      "Massive 200K token context window",
+      "Best-in-class coding logic and explanations",
+      "Artifacts workspace for live code previews"
+    ],
+    "cons": [
+      "No native image generation capability",
+      "Strict hourly message limits on the Pro plan"
+    ],
+    "alternatives": ["ChatGPT", "Gemini Advanced"],
+    "faq": [
+      {
+        "question": "How much text can I upload to Claude?",
+        "answer": "You can upload up to 200,000 tokens, which equals roughly 150,000 words or a 500-page book."
+      }
+    ],
+    "relatedArticles": [],
+    "relatedComparisons": [
+      {"title": "ChatGPT vs Claude", "url": "../compare/chatgpt-vs-claude.html"},
+      {"title": "Claude vs Gemini", "url": "../compare/claude-vs-gemini.html"}
+    ]
+  },
+  {
+    "id": "jasper",
+    "name": "Jasper AI",
+    "category": "writing",
+    "tagline": "Marketing copy specialist for teams.",
+    "desc": "An enterprise-grade marketing platform built to write blog posts, email campaigns, ad copy, and social posts. Features brand voice training so it sounds like your company.",
+    "developer": "Jasper",
+    "pricingType": "Paid",
+    "pricingDetail": "From $39/mo",
+    "rating": 4.5,
+    "lastUpdated": "June 2026",
+    "url": "https://www.jasper.ai",
+    "emoji": "✍️",
+    "husseinPick": false,
+    "pros": [
+      "Excellent campaign building workflows",
+      "Saves custom brand voice guidelines",
+      "Hundreds of marketing template recipes"
+    ],
+    "cons": [
+      "No free tier option",
+      "Expensive for solo creators"
+    ],
+    "alternatives": ["Copy.ai", "ChatGPT"],
+    "faq": [],
+    "relatedArticles": [],
+    "relatedComparisons": []
+  },
+  {
+    "id": "copy-ai",
+    "name": "Copy.ai",
+    "category": "writing",
+    "tagline": "Sales and marketing copy automations.",
+    "desc": "Great tool for generating product descriptions, email sequences, and social media posts at scale. Generous free plan for small creators and marketing teams.",
+    "developer": "Copy.ai Inc.",
+    "pricingType": "Freemium",
+    "pricingDetail": "Free / $36/mo Pro",
+    "rating": 4.4,
+    "lastUpdated": "June 2026",
+    "url": "https://www.copy.ai",
+    "emoji": "📝",
+    "husseinPick": false,
+    "pros": [
+      "Great templates for outbound emails",
+      "Very fast generation speeds",
+      "Good team collaboration features"
+    ],
+    "cons": [
+      "Not as good at long-form analytical writing"
+    ],
+    "alternatives": ["Jasper AI", "ChatGPT"],
+    "faq": [],
+    "relatedArticles": [],
+    "relatedComparisons": []
+  },
+  {
+    "id": "grammarly",
+    "name": "Grammarly",
+    "category": "writing",
+    "tagline": "The gold standard for grammar and tone editing.",
+    "desc": "Works across your browser and desktop apps to provide real-time spelling, grammar, and clarity feedback. Generates rewrites based on tone preferences.",
+    "developer": "Grammarly",
+    "pricingType": "Freemium",
+    "pricingDetail": "Free / $12/mo Premium",
+    "rating": 4.7,
+    "lastUpdated": "June 2026",
+    "url": "https://www.grammarly.com",
+    "emoji": "📖",
+    "husseinPick": false,
+    "pros": [
+      "Seamless integration with Gmail, Docs, Word",
+      "Plagiarism checker in premium plan",
+      "Accurate stylistic tone adjustments"
+    ],
+    "cons": [
+      "Premium plan is billed annually"
+    ],
+    "alternatives": ["Notion AI", "ChatGPT"],
+    "faq": [],
+    "relatedArticles": [],
+    "relatedComparisons": []
+  },
+  {
+    "id": "notion-ai",
+    "name": "Notion AI",
+    "category": "writing",
+    "tagline": "AI integrated directly into your workspace.",
+    "desc": "An add-on for Notion users that summarizes pages, generates draft outlines, adjusts tone, and extracts key action items from meeting notes.",
+    "developer": "Notion Labs",
+    "pricingType": "Paid",
+    "pricingDetail": "$8-$10/mo add-on",
+    "rating": 4.5,
+    "lastUpdated": "June 2026",
+    "url": "https://www.notion.so/product/ai",
+    "emoji": "📓",
+    "husseinPick": false,
+    "pros": [
+      "No context-switching needed",
+      "Excellent table and database auto-fills",
+      "Easy custom action commands"
+    ],
+    "cons": [
+      "Requires an active Notion subscription"
+    ],
+    "alternatives": ["Grammarly", "Notion"],
+    "faq": [],
+    "relatedArticles": [],
+    "relatedComparisons": []
+  },
+  {
+    "id": "midjourney",
+    "name": "Midjourney",
+    "category": "image",
+    "tagline": "The absolute best AI image generator.",
+    "desc": "The industry benchmark for photorealistic and highly detailed AI images. V6 produces unmatched quality. Historically runs in Discord, but web alpha is launching.",
+    "developer": "Midjourney Inc.",
+    "pricingType": "Paid",
+    "pricingDetail": "From $10/mo",
+    "rating": 4.9,
+    "lastUpdated": "June 2026",
+    "url": "https://www.midjourney.com",
+    "emoji": "🎨",
+    "husseinPick": true,
+    "pros": [
+      "Unmatched photorealistic and artistic quality",
+      "Strong custom styles and zoom capabilities",
+      "Active discord community for sharing"
+    ],
+    "cons": [
+      "Steep learning curve inside Discord",
+      "No free tier available"
+    ],
+    "alternatives": ["DALL-E 3", "Stable Diffusion", "Leonardo.ai"],
+    "faq": [],
+    "relatedArticles": [],
+    "relatedComparisons": [
+      {"title": "Midjourney vs DALL-E 3", "url": "../compare/midjourney-vs-dalle.html"}
+    ]
+  },
+  {
+    "id": "dalle",
+    "name": "DALL-E 3",
+    "category": "image",
+    "tagline": "Simple, prompt-accurate image generation.",
+    "desc": "OpenAI's image generator. Known for exceptional prompt compliance and text-rendering capabilities inside images. Fully integrated into ChatGPT Plus.",
+    "developer": "OpenAI",
+    "pricingType": "Paid",
+    "pricingDetail": "Included in ChatGPT Plus ($20/mo)",
+    "rating": 4.6,
+    "lastUpdated": "June 23, 2026",
+    "url": "https://openai.com/dall-e-3",
+    "emoji": "🖼️",
+    "husseinPick": false,
+    "pros": [
+      "Incredible adherence to complex prompts",
+      "Good at rendering text inside images",
+      "Conversational editing inside ChatGPT"
+    ],
+    "cons": [
+      "Images can sometimes look too 'AI-generated'",
+      "Limited daily creation quota"
+    ],
+    "alternatives": ["Midjourney", "Stable Diffusion"],
+    "faq": [],
+    "relatedArticles": [],
+    "relatedComparisons": [
+      {"title": "Midjourney vs DALL-E 3", "url": "../compare/midjourney-vs-dalle.html"}
+    ]
+  },
+  {
+    "id": "stable-diffusion",
+    "name": "Stable Diffusion",
+    "category": "image",
+    "tagline": "Powerful, local, and open-source AI art.",
+    "desc": "An open-source image generation model that can be run locally on consumer graphics cards. Offers absolute control with no subscription limits or censorship.",
+    "developer": "Stability AI",
+    "pricingType": "Free",
+    "pricingDetail": "Free (Open Source)",
+    "rating": 4.7,
+    "lastUpdated": "June 2026",
+    "url": "https://stability.ai",
+    "emoji": "⚡",
+    "husseinPick": false,
+    "pros": [
+      "100% free and private",
+      "Huge library of community-trained models",
+      "ControlNet for precise anatomical layouts"
+    ],
+    "cons": [
+      "Requires high-end PC hardware (NVIDIA GPU)",
+      "Technical setup is difficult for beginners"
+    ],
+    "alternatives": ["Midjourney", "Leonardo.ai"],
+    "faq": [],
+    "relatedArticles": [],
+    "relatedComparisons": []
+  },
+  {
+    "id": "adobe-firefly",
+    "name": "Adobe Firefly",
+    "category": "image",
+    "tagline": "Commercially safe, Photoshop-integrated AI.",
+    "desc": "Trained exclusively on licensed content and public domain images, making it fully safe for commercial brand use. Powering Photoshop Generative Fill.",
+    "developer": "Adobe",
+    "pricingType": "Freemium",
+    "pricingDetail": "Free (Credits) / $5/mo Premium",
+    "rating": 4.4,
+    "lastUpdated": "June 2026",
+    "url": "https://firefly.adobe.com",
+    "emoji": "🔥",
+    "husseinPick": false,
+    "pros": [
+      "100% safe for corporate commercial usage",
+      "Seamless Photoshop Generative Fill tools",
+      "Excellent vector pattern conversion"
+    ],
+    "cons": [
+      "Artistic quality lags behind Midjourney V6"
+    ],
+    "alternatives": ["Midjourney", "DALL-E 3"],
+    "faq": [],
+    "relatedArticles": [],
+    "relatedComparisons": []
+  },
+  {
+    "id": "leonardo-ai",
+    "name": "Leonardo.ai",
+    "category": "image",
+    "tagline": "Excellent for game assets and brand assets.",
+    "desc": "A creative platform featuring custom model tuning, prompt helpers, and canvas editing. Great for creating consistent character concepts and product mockups.",
+    "developer": "Leonardo.ai",
+    "pricingType": "Freemium",
+    "pricingDetail": "Free (150 daily credits) / $12/mo Premium",
+    "rating": 4.6,
+    "lastUpdated": "June 2026",
+    "url": "https://leonardo.ai",
+    "emoji": "🦁",
+    "husseinPick": false,
+    "pros": [
+      "Generous free tier with daily refreshes",
+      "Train custom models on your own images",
+      "Stunning UI with granular controls"
+    ],
+    "cons": [
+      "Interface can feel overwhelming to beginners"
+    ],
+    "alternatives": ["Stable Diffusion", "Midjourney"],
+    "faq": [],
+    "relatedArticles": [],
+    "relatedComparisons": []
+  },
+  {
+    "id": "runway",
+    "name": "Runway Gen-3",
+    "category": "video",
+    "tagline": "The professional standard for AI video.",
+    "desc": "A creative suite offering Gen-3 Alpha, an advanced model generating high-fidelity, highly controllable video clips from prompts or images. Used in movie studios.",
+    "developer": "Runway ML",
+    "pricingType": "Freemium",
+    "pricingDetail": "Free (Credits) / $12/mo Standard",
+    "rating": 4.8,
+    "lastUpdated": "June 2026",
+    "url": "https://runwayml.com",
+    "emoji": "🎬",
+    "husseinPick": true,
+    "pros": [
+      "Stunning film-quality lighting and motion",
+      "Text-to-video and image-to-video support",
+      "Camera motion controls (pan, zoom, orbit)"
+    ],
+    "cons": [
+      "Free rendering credits run out quickly",
+      "Occasional physical glitches in complex scenes"
+    ],
+    "alternatives": ["Sora"],
+    "faq": [],
+    "relatedArticles": [],
+    "relatedComparisons": []
+  },
+  {
+    "id": "sora",
+    "name": "Sora",
+    "category": "video",
+    "tagline": "OpenAI's groundbreaking video simulation.",
+    "desc": "A text-to-video model capable of creating 60-second scenes with detailed camera movements, multiple characters, and consistent background physics.",
+    "developer": "OpenAI",
+    "pricingType": "Paid",
+    "pricingDetail": "Included in ChatGPT Pro/Plus",
+    "rating": 4.7,
+    "lastUpdated": "June 2026",
+    "url": "https://sora.com",
+    "emoji": "🌐",
+    "husseinPick": false,
+    "pros": [
+      "Generates very long scenes (up to 1 minute)",
+      "Unbelievable physics and spatial consistency",
+      "Handles multiple complex camera motions"
+    ],
+    "cons": [
+      "Currently in limited rollout / high cost",
+      "Struggles with action-reaction logic sometimes"
+    ],
+    "alternatives": ["Runway Gen-3"],
+    "faq": [],
+    "relatedArticles": [],
+    "relatedComparisons": []
+  },
+  {
+    "id": "heygen",
+    "name": "HeyGen",
+    "category": "video",
+    "tagline": "Create professional presenter videos with AI.",
+    "desc": "Bypasses cameras and actors by generating high-quality presenter videos from text. Offers ultra-realistic custom avatar cloning with natural voice matching.",
+    "developer": "HeyGen",
+    "pricingType": "Freemium",
+    "pricingDetail": "Free / $24/mo Creator",
+    "rating": 4.7,
+    "lastUpdated": "June 2026",
+    "url": "https://www.heygen.com",
+    "emoji": "👤",
+    "husseinPick": false,
+    "pros": [
+      "Extremely realistic mouth-syncing",
+      "Hundreds of templates and pre-built actors",
+      "Custom voice cloning is flawless"
+    ],
+    "cons": [
+      "Monthly limits on standard plans are low"
+    ],
+    "alternatives": ["Descript"],
+    "faq": [],
+    "relatedArticles": [],
+    "relatedComparisons": []
+  },
+  {
+    "id": "invideo",
+    "name": "InVideo AI",
+    "category": "video",
+    "tagline": "Turn text prompts into full social videos.",
+    "desc": "Generates a script, picks stock video scenes, adds an AI voiceover, and compiles captions in minutes. Great for rapid TikTok and YouTube Shorts scaling.",
+    "developer": "InVideo",
+    "pricingType": "Freemium",
+    "pricingDetail": "Free / $20/mo Plus",
+    "rating": 4.5,
+    "lastUpdated": "June 2026",
+    "url": "https://invideo.io",
+    "emoji": "📹",
+    "husseinPick": false,
+    "pros": [
+      "Generates entire videos in minutes",
+      "Massive database of stock footage integrated",
+      "Easy text-prompt based video editing"
+    ],
+    "cons": [
+      "Stock video clips can look generic"
+    ],
+    "alternatives": ["HeyGen", "Runway Gen-3"],
+    "faq": [],
+    "relatedArticles": [],
+    "relatedComparisons": []
+  },
+  {
+    "id": "descript",
+    "name": "Descript",
+    "category": "video",
+    "tagline": "Edit videos by editing the transcript text.",
+    "desc": "A transcription-first video editor. Edit your recordings by deleting words in the auto-generated text transcript. Features 'Overdub' voice replacement.",
+    "developer": "Descript Inc.",
+    "pricingType": "Freemium",
+    "pricingDetail": "Free / $12/mo Creator",
+    "rating": 4.6,
+    "lastUpdated": "June 2026",
+    "url": "https://www.descript.com",
+    "emoji": "✂️",
+    "husseinPick": false,
+    "pros": [
+      "Editing video via text is incredibly fast",
+      "Studio Sound feature removes 100% background noise",
+      "Excellent screen recording workflows"
+    ],
+    "cons": [
+      "High CPU/RAM demand on the desktop app"
+    ],
+    "alternatives": ["Otter.ai"],
+    "faq": [],
+    "relatedArticles": [],
+    "relatedComparisons": []
+  },
+  {
+    "id": "cursor",
+    "name": "Cursor",
+    "category": "coding",
+    "tagline": "The modern AI-first VS Code fork.",
+    "desc": "The premier code editor of 2026. Merges full VS Code extensions with custom agentic models. Features Composer mode to edit and create code across multiple files.",
+    "developer": "Anysphere",
+    "pricingType": "Freemium",
+    "pricingDetail": "Free / $20/mo Pro",
+    "rating": 4.9,
+    "lastUpdated": "June 23, 2026",
+    "url": "https://cursor.sh",
+    "emoji": "💻",
+    "husseinPick": true,
+    "pros": [
+      "Deep codebase index lets AI understand everything",
+      "Composer mode writes code across files autonomously",
+      "Import VS Code settings and keys in 1 click"
+    ],
+    "cons": [
+      "Premium models query limit on free plan is small"
+    ],
+    "alternatives": ["GitHub Copilot", "Windsurf"],
+    "faq": [],
+    "relatedArticles": [],
+    "relatedComparisons": []
+  },
+  {
+    "id": "github-copilot",
+    "name": "GitHub Copilot",
+    "category": "coding",
+    "tagline": "The original inline coding autocomplete.",
+    "desc": "Developed by Microsoft/GitHub, it fits into VS Code, JetBrains, and Visual Studio. Auto-completes lines, writes functions, and fixes terminal bugs.",
+    "developer": "Microsoft / GitHub",
+    "pricingType": "Paid",
+    "pricingDetail": "$10/mo Individual / $19/mo Business",
+    "rating": 4.7,
+    "lastUpdated": "June 2026",
+    "url": "https://github.com/features/copilot",
+    "emoji": "🐙",
+    "husseinPick": false,
+    "pros": [
+      "Incredibly fast inline autocompletion",
+      "Seamless IDE tab integrations",
+      "Excellent enterprise security protection policies"
+    ],
+    "cons": [
+      "Doesn't edit multiple files together as easily as Cursor"
+    ],
+    "alternatives": ["Cursor", "Windsurf"],
+    "faq": [],
+    "relatedArticles": [],
+    "relatedComparisons": []
+  },
+  {
+    "id": "replit-agent",
+    "name": "Replit Agent",
+    "category": "coding",
+    "tagline": "Build and deploy full applications from text.",
+    "desc": "Describe your web app idea in natural English and Replit Agent installs dependencies, builds databases, writes code, and deploys it automatically.",
+    "developer": "Replit",
+    "pricingType": "Freemium",
+    "pricingDetail": "Free (Basic Workspace) / $25/mo Core",
+    "rating": 4.6,
+    "lastUpdated": "June 2026",
+    "url": "https://replit.com",
+    "emoji": "🚀",
+    "husseinPick": false,
+    "pros": [
+      "Zero local developer environment configuration needed",
+      "Deploys live database-backed apps in 2 minutes",
+      "Great for rapid MVP testing"
+    ],
+    "cons": [
+      "Pricing scales up quickly for compute memory usage"
+    ],
+    "alternatives": ["Cursor", "Windsurf"],
+    "faq": [],
+    "relatedArticles": [],
+    "relatedComparisons": []
+  },
+  {
+    "id": "windsurf",
+    "name": "Windsurf",
+    "category": "coding",
+    "tagline": "Agentic IDE for complex codebases.",
+    "desc": "Built by Codeium, Windsurf features the 'Cascade' engine which runs agent tasks autonomously. Allows developers to edit and review code cooperatively.",
+    "developer": "Codeium",
+    "pricingType": "Freemium",
+    "pricingDetail": "Free / $20/mo Pro",
+    "rating": 4.8,
+    "lastUpdated": "June 2026",
+    "url": "https://codeium.com/windsurf",
+    "emoji": "🏄",
+    "husseinPick": false,
+    "pros": [
+      "Cascade agent operates autonomously and safely",
+      "Highly responsive coding autocomplete",
+      "Generous query allowance on free plans"
+    ],
+    "cons": [
+      "Ecosystem is slightly newer than VS Code forks"
+    ],
+    "alternatives": ["Cursor", "GitHub Copilot"],
+    "faq": [],
+    "relatedArticles": [],
+    "relatedComparisons": []
+  },
+  {
+    "id": "notion",
+    "name": "Notion",
+    "category": "productivity",
+    "tagline": "The ultimate collaborative workspace.",
+    "desc": "Organizes your projects, wikis, and database notes. Its deep AI integrations allow summarizing, outline drafting, and auto-filling databases.",
+    "developer": "Notion Labs",
+    "pricingType": "Freemium",
+    "pricingDetail": "Free / $8/mo Plus",
+    "rating": 4.7,
+    "lastUpdated": "June 2026",
+    "url": "https://www.notion.so",
+    "emoji": "📋",
+    "husseinPick": true,
+    "pros": [
+      "Incredibly flexible relational databases",
+      "Massive community templates library",
+      "Clean, modern minimalist UI design"
+    ],
+    "cons": [
+      "Can get slow when loading very large pages"
+    ],
+    "alternatives": ["Notion AI"],
+    "faq": [],
+    "relatedArticles": [],
+    "relatedComparisons": []
+  },
+  {
+    "id": "otter-ai",
+    "name": "Otter.ai",
+    "category": "productivity",
+    "tagline": "Real-time meeting assistant and notes.",
+    "desc": "Joins calls on Zoom, Teams, and Meet, transcribes conversations in real-time, marks action items, and generates searchable summary reports.",
+    "developer": "Otter.ai Inc.",
+    "pricingType": "Freemium",
+    "pricingDetail": "Free / $10/mo Pro",
+    "rating": 4.5,
+    "lastUpdated": "June 2026",
+    "url": "https://otter.ai",
+    "emoji": "🦦",
+    "husseinPick": false,
+    "pros": [
+      "Accurate real-time multi-speaker labeling",
+      "Sends custom summary emails after calls automatically",
+      "Strong calendar synchronization"
+    ],
+    "cons": [
+      "Monthly free minutes quota is low"
+    ],
+    "alternatives": ["Descript"],
+    "faq": [],
+    "relatedArticles": [],
+    "relatedComparisons": []
+  },
+  {
+    "id": "make",
+    "name": "Make (Integromat)",
+    "category": "productivity",
+    "tagline": "Visual app and database workflow automation.",
+    "desc": "A visually-driven automation tool. Connects 1000+ APIs together. Crucial for building automated pipelines containing ChatGPT models.",
+    "developer": "Celonis",
+    "pricingType": "Freemium",
+    "pricingDetail": "Free / $9/mo Core",
+    "rating": 4.7,
+    "lastUpdated": "June 2026",
+    "url": "https://www.make.com",
+    "emoji": "⚙️",
+    "husseinPick": false,
+    "pros": [
+      "Highly visual drag-and-drop builder interface",
+      "Easily parse JSON, loops, and conditions",
+      "Much cheaper than Zapier for high volume tasks"
+    ],
+    "cons": [
+      "Slightly steeper learning curve than Zapier"
+    ],
+    "alternatives": ["Otter.ai"],
+    "faq": [],
+    "relatedArticles": [],
+    "relatedComparisons": []
+  },
+  {
+    "id": "perplexity",
+    "name": "Perplexity AI",
+    "category": "research",
+    "tagline": "The primary citation-backed AI search.",
+    "desc": "Searches the web and writes concise answers containing primary reference citations. Features 'Pro Search' for multi-step reasoning.",
+    "developer": "Perplexity AI Inc.",
+    "pricingType": "Freemium",
+    "pricingDetail": "Free / $20/mo Pro",
+    "rating": 4.8,
+    "lastUpdated": "June 23, 2026",
+    "url": "https://www.perplexity.ai",
+    "emoji": "🔍",
+    "husseinPick": false,
+    "pros": [
+      "Direct citation linking prevents fake facts",
+      "Pro search solves multi-layered queries step-by-step",
+      "Clean UI replaces standard Google search"
+    ],
+    "cons": [
+      "Struggles with raw creative writing compared to Claude"
+    ],
+    "alternatives": ["ChatGPT", "Gemini Advanced"],
+    "faq": [],
+    "relatedArticles": [],
+    "relatedComparisons": [
+      {"title": "Perplexity vs ChatGPT", "url": "../compare/perplexity-vs-chatgpt.html"}
+    ]
+  },
+  {
+    "id": "gemini-advanced",
+    "name": "Gemini Advanced",
+    "category": "research",
+    "tagline": "Google's powerful multimodal assistant.",
+    "desc": "Features a 1 million token context window. Includes Deep Research mode to browse dozens of sources and compose massive structured reports.",
+    "developer": "Google",
+    "pricingType": "Freemium",
+    "pricingDetail": "Free / $20/mo Advanced",
+    "rating": 4.7,
+    "lastUpdated": "June 23, 2026",
+    "url": "https://gemini.google.com",
+    "emoji": "💎",
+    "husseinPick": true,
+    "pros": [
+      "Unrivaled 1 million token context window size",
+      "Deep Research mode is incredible for complex topics",
+      "Direct Google Workspace integrations (Docs, Gmail)"
+    ],
+    "cons": [
+      "Interface is slightly basic",
+      "Occasional restrictions on image generations"
+    ],
+    "alternatives": ["ChatGPT", "Claude"],
+    "faq": [],
+    "relatedArticles": [],
+    "relatedComparisons": [
+      {"title": "ChatGPT vs Gemini", "url": "../compare/chatgpt-vs-gemini.html"},
+      {"title": "Claude vs Gemini", "url": "../compare/claude-vs-gemini.html"}
+    ]
+  },
+  {
+    "id": "elicit",
+    "name": "Elicit",
+    "category": "research",
+    "tagline": "AI assistant for academic research.",
+    "desc": "Built for students and researchers. Scans millions of academic papers, maps findings, and compiles automatic literature reviews.",
+    "developer": "Elicit",
+    "pricingType": "Freemium",
+    "pricingDetail": "Free / $10/mo Plus",
+    "rating": 4.6,
+    "lastUpdated": "June 2026",
+    "url": "https://elicit.com",
+    "emoji": "🔬",
+    "husseinPick": false,
+    "pros": [
+      "Indexes top academic publishers",
+      "Accurately extracts details from PDFs",
+      "Composes automatic literature summaries"
+    ],
+    "cons": [
+      "Free version features limited search queries"
+    ],
+    "alternatives": ["Consensus"],
+    "faq": [],
+    "relatedArticles": [],
+    "relatedComparisons": []
+  },
+  {
+    "id": "consensus",
+    "name": "Consensus",
+    "category": "research",
+    "tagline": "Evidence-based AI scientific search.",
+    "desc": "Ask a research question, and Consensus finds findings backed strictly by peer-reviewed science. Features consensus meters showing scientific agreement.",
+    "developer": "Consensus",
+    "pricingType": "Freemium",
+    "pricingDetail": "Free / $8/mo Premium",
+    "rating": 4.6,
+    "lastUpdated": "June 2026",
+    "url": "https://consensus.app",
+    "emoji": "📊",
+    "husseinPick": false,
+    "pros": [
+      "Consensus Meter shows percentage of agreement",
+      "Extracts findings from top-tier academic journals",
+      "Superb for fact-checking medical and health claims"
+    ],
+    "cons": [
+      "Limited usage quota on the free tier"
+    ],
+    "alternatives": ["Elicit"],
+    "faq": [],
+    "relatedArticles": [],
+    "relatedComparisons": []
+  },
+  {
+    "id": "elevenlabs",
+    "name": "ElevenLabs",
+    "category": "audio",
+    "tagline": "The gold standard for natural AI voiceovers.",
+    "desc": "Generates realistic text-to-speech voiceovers in 30+ languages. Features instant voice cloning, voice translation, and sound effect generation.",
+    "developer": "ElevenLabs",
+    "pricingType": "Freemium",
+    "pricingDetail": "Free / $5/mo Starter",
+    "rating": 4.9,
+    "lastUpdated": "June 2026",
+    "url": "https://elevenlabs.io",
+    "emoji": "🎙️",
+    "husseinPick": true,
+    "pros": [
+      "Most realistic, emotionally expressive voices",
+      "Voice cloning requires only 60 seconds of reference audio",
+      "Multi-lingual translation with voice preservation"
+    ],
+    "cons": [
+      "Starter plan has tight monthly character limits"
+    ],
+    "alternatives": ["Whisper"],
+    "faq": [],
+    "relatedArticles": [],
+    "relatedComparisons": []
+  },
+  {
+    "id": "suno",
+    "name": "Suno",
+    "category": "audio",
+    "tagline": "Create full musical songs with vocals.",
+    "desc": "Generates full-length vocal and instrumental music tracks from simple text descriptions of style, mood, and lyrics.",
+    "developer": "Suno AI",
+    "pricingType": "Freemium",
+    "pricingDetail": "Free (50 credits/day) / $8/mo Pro",
+    "rating": 4.7,
+    "lastUpdated": "June 2026",
+    "url": "https://suno.ai",
+    "emoji": "🎵",
+    "husseinPick": false,
+    "pros": [
+      "Creates complete songs with lyrics and vocals",
+      "Generates tracks in any musical style",
+      "High quality, radio-ready audio files"
+    ],
+    "cons": [
+      "Struggles with rendering extremely fast vocal lyrics"
+    ],
+    "alternatives": ["Whisper"],
+    "faq": [],
+    "relatedArticles": [],
+    "relatedComparisons": []
+  },
+  {
+    "id": "whisper",
+    "name": "Whisper",
+    "category": "audio",
+    "tagline": "Open-source free speech-to-text model.",
+    "desc": "OpenAI's open-source voice transcription model. Features incredible accuracy across 100+ languages. Free to download and run locally.",
+    "developer": "OpenAI",
+    "pricingType": "Free",
+    "pricingDetail": "Free (Open Source)",
+    "rating": 4.8,
+    "lastUpdated": "June 2026",
+    "url": "https://openai.com/research/whisper",
+    "emoji": "🗣️",
+    "husseinPick": false,
+    "pros": [
+      "100% free and locally private",
+      "Incredible accuracy even with heavy accents",
+      "Automatic language detection and translation"
+    ],
+    "cons": [
+      "No hosted interface; requires terminal/API usage"
+    ],
+    "alternatives": ["ElevenLabs", "Descript"],
+    "faq": [],
+    "relatedArticles": [],
+    "relatedComparisons": []
+  },
+  {
+    "id": "gamma",
+    "name": "Gamma",
+    "category": "business",
+    "tagline": "Generate beautiful presentations in seconds.",
+    "desc": "Creates fully-styled presentation decks, documents, and web pages from text. Built-in card layout system is highly responsive.",
+    "developer": "Gamma App",
+    "pricingType": "Freemium",
+    "pricingDetail": "Free / $8/mo Plus",
+    "rating": 4.8,
+    "lastUpdated": "June 2026",
+    "url": "https://gamma.app",
+    "emoji": "📊",
+    "husseinPick": true,
+    "pros": [
+      "Creates designed presentation decks in 30 seconds",
+      "Modern vector layouts instead of boring PPT slides",
+      "Easily embed interactive files and videos"
+    ],
+    "cons": [
+      "Limited design tweaking control for pro designers"
+    ],
+    "alternatives": ["Tome"],
+    "faq": [],
+    "relatedArticles": [],
+    "relatedComparisons": []
+  },
+  {
+    "id": "einstein",
+    "name": "Salesforce Einstein",
+    "category": "business",
+    "tagline": "CRM and sales business intelligence.",
+    "desc": "Salesforce's AI database CRM system. Analyzes pipeline risks, writes outbound sales responses, and predicts customer deals outcomes.",
+    "developer": "Salesforce",
+    "pricingType": "Paid",
+    "pricingDetail": "Enterprise Quotes",
+    "rating": 4.3,
+    "lastUpdated": "June 2026",
+    "url": "https://www.salesforce.com/products/einstein",
+    "emoji": "☁️",
+    "husseinPick": false,
+    "pros": [
+      "Native Salesforce CRM integration",
+      "Excellent outbound deal pipeline predictions",
+      "Strong corporate data privacy protections"
+    ],
+    "cons": [
+      "Requires complex enterprise integration setup",
+      "Very high cost for small teams"
+    ],
+    "alternatives": ["Gamma", "Tome"],
+    "faq": [],
+    "relatedArticles": [],
+    "relatedComparisons": []
+  },
+  {
+    "id": "tome",
+    "name": "Tome",
+    "category": "business",
+    "tagline": "Interactive storytelling and pitch decks.",
+    "desc": "A responsive presentation tool for creating client pitches. Builds slide cards, compiles layout illustrations, and embeds live data charts.",
+    "developer": "Tome App",
+    "pricingType": "Freemium",
+    "pricingDetail": "Free / $8/mo Pro",
+    "rating": 4.5,
+    "lastUpdated": "June 2026",
+    "url": "https://tome.app",
+    "emoji": "📑",
+    "husseinPick": false,
+    "pros": [
+      "Excellent canvas layout logic for web previews",
+      "Beautiful built-in AI image helper tool",
+      "Seamless integrations with Figma, Miro, Looker"
+    ],
+    "cons": [
+      "Not standard PowerPoint format (slides are scrolled)"
+    ],
+    "alternatives": ["Gamma"],
+    "faq": [],
+    "relatedArticles": [],
+    "relatedComparisons": []
+  }
+]

@@ -63,7 +63,13 @@
     "description": "Take our free 5-question quiz and discover the perfect AI tool for your needs. Get a personalized recommendation based on your goals, budget, and skill level.",
     "url": "https://ai-profit-hub.com/ai-quiz.html"
   }
-  </script><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">`n  <script src="https://unpkg.com/lucide@0.400.0/dist/umd/lucide.min.js" defer></script>
+  </script><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@0.400.0/dist/umd/lucide.min.js" defer></script>
+  <meta property="og:url" content="https://ai-profit-hub.com/ai-quiz.html">
+  <meta name="twitter:title" content="Which AI Tool Is Right for You? [2026 Quiz] | AI Profit Hub">
+  <meta name="twitter:description" content="Take our free 5-question quiz and discover the perfect AI tool for your needs. Get a personalized recommendation based on your goals, budget, and skill level.">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 </head>
 <body>
     <header class="header">
@@ -182,47 +188,58 @@
   </div>
 </main>
 
-    <footer class='footer'>
-    <div class='footer-grid'>
-      <div class='footer-brand'>
-        <a href='/' class='logo'>
-          <div class='logo-icon'>⚡</div>
+    <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">⚡</div>
           <span>AI Profit Hub</span>
         </a>
         <p>Your ultimate guide for AI tutorials, ChatGPT prompts, productivity hacks, and the latest tech news.</p>
       </div>
       <div>
         <h4>Explore</h4>
-        <ul class='footer-links'>
-          <li><a href='/'>Home</a></li>
-          <li><a href='about.html'>About Us</a></li>
-          <li><a href='editorial-policy.html'>Editorial Policy</a></li>
-          <li><a href='how-we-test.html'>How We Test</a></li>
-          <li><a href='authors.html'>Our Authors</a></li>
-          <li><a href='contact.html'>Contact Us</a></li>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="editorial-policy.html">Editorial Policy</a></li>
+          <li><a href="how-we-test.html">How We Test</a></li>
+          <li><a href="authors.html">Our Authors</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
         </ul>
       </div>
       <div>
         <h4>Categories</h4>
-        <ul class='footer-links'>
-          <li><a href='categories/ai-tools.html'>AI Tools</a></li>
-          <li><a href='categories/productivity.html'>Productivity</a></li>
-          <li><a href='categories/chatgpt.html'>ChatGPT</a></li>
-          <li><a href='categories/tech-news.html'>Tech News</a></li>
+        <ul class="footer-links">
+          <li><a href="categories/ai-tools.html">AI Tools</a></li>
+          <li><a href="categories/productivity.html">Productivity</a></li>
+          <li><a href="categories/chatgpt.html">ChatGPT</a></li>
+          <li><a href="categories/tech-news.html">Tech News</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Tools & Play</h4>
+        <ul class="footer-links">
+          <li><a href="playground.html">AI Playground</a></li>
+          <li><a href="prompt-optimizer.html">Prompt Optimizer</a></li>
+          <li><a href="resources.html">Free AI Resources</a></li>
+          <li><a href="ai-glossary.html">AI Glossary</a></li>
+          <li><a href="dashboard.html">My Dashboard</a></li>
         </ul>
       </div>
       <div>
         <h4>Legal</h4>
-        <ul class='footer-links'>
-          <li><a href='privacy-policy.html'>Privacy Policy</a></li>
-          <li><a href='terms-of-service.html'>Terms of Service</a></li>
-          <li><a href='disclaimer.html'>Disclaimer</a></li>
+        <ul class="footer-links">
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms-of-service.html">Terms of Service</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
         </ul>
       </div>
     </div>
-    <div class='footer-bottom'>
+    <div class="footer-bottom">
       <span>&copy; 2026 AI Profit Hub. All rights reserved.</span>
-      <span>Built with ❤️ï¸ for the AI community</span>
+      <span>Built with ❤️ for the AI community</span>
     </div>
   </footer>
 
@@ -262,7 +279,7 @@ function showResult() {
       why:"Based on your answers, ChatGPT is your best starting point. It's the most capable all-around AI assistant — great for writing, research, coding help, and daily tasks. GPT-4o's free tier is genuinely useful, and the $20/month Plus plan unlocks image generation, web browsing, and much more.",
       link:'https://chat.openai.com', linkText:'Try ChatGPT Free →',
       article:'articles/chatgpt-prompts-productivity.html', articleText:'Best ChatGPT Prompts Guide',
-      alts:['Claude','Gemini','Perplexity AI']
+      alts:['Claude','Gemini','<a href="compare/perplexity-vs-chatgpt.html">Perplexity</a> AI']
     },
     claude: {
       emoji:'🧠', tool:'Claude (Anthropic)',
@@ -317,7 +334,7 @@ function showResult() {
   document.getElementById('rTool').textContent = r.tool;
   document.getElementById('rWhy').textContent = r.why;
   document.getElementById('rLinks').innerHTML =
-    '<a href="'+r.link+'" class="btn btn-primary" target="_blank" rel="noopener">'+r.linkText+'</a>' +
+    '<a href="'+r.link+'" class="btn btn-primary" target="_blank" rel="noopener noreferrer">'+r.linkText+'</a>' +
     '<a href="'+r.article+'" class="btn btn-secondary">'+r.articleText+'</a>';
   document.getElementById('rAlts').innerHTML = r.alts.map(function(a){
     return '<span class="alt-tool">'+a+'</span>';

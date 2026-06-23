@@ -1,0 +1,56 @@
+[
+  {
+    "id": "deep-work-planner",
+    "title": "Deep Work Planner",
+    "category": "productivity",
+    "desc": "Synthesizes your weekly workload into a highly efficient daily schedule blocking out distractions.",
+    "prompt": "I want you to act as an elite productivity coach. I will provide you with my weekly tasks, meetings, and project goals. Analyze this workload and design a 5-day deep work block schedule using the Pomodoro technique. Optimize for cognitive load by scheduling complex tasks in the morning and administrative tasks in the afternoon. Include specific targets, rest periods, and a daily review ritual. Here is my task list: [Insert Tasks]",
+    "rating": 4.8,
+    "featured": true
+  },
+  {
+    "id": "clean-code-expert",
+    "title": "Refactoring & Clean Code Expert",
+    "category": "coding",
+    "desc": "Scans your code block, identifies architectural issues, and outputs clean, commented refactored code.",
+    "prompt": "Act as a principal software engineer. Review the following code block. Identify any performance bottlenecks, security vulnerabilities, code smells, or deviations from SOLID principles. Explain the issues in a concise bullet-point list, and then provide a fully refactored, highly optimized, and clean version of the code with helpful inline comments. Here is my code: [Insert Code]",
+    "rating": 4.9,
+    "featured": true
+  },
+  {
+    "id": "seo-content-optimizer",
+    "title": "SEO Content Optimizer",
+    "category": "writing",
+    "desc": "Analyzes your drafts and rewrites paragraphs to organically integrate keywords while maintaining tone.",
+    "prompt": "Act as a professional SEO copywriter. I will give you a draft article and a list of target secondary keywords. Rewrite sections of the article to naturally incorporate these keywords without keyword stuffing. Ensure the writing style remains engaging, informative, and keeps the reader on the page. Highlight the changes you made in bold. Target Keywords: [Insert Keywords] Draft: [Insert Draft]",
+    "rating": 4.7,
+    "featured": false
+  },
+  {
+    "id": "email-sequence-generator",
+    "title": "High-Converting Email Sequence",
+    "category": "marketing",
+    "desc": "Generates a 3-part email nurture sequence for cold leads to schedule a demo or trial.",
+    "prompt": "Act as a master direct-response copywriter. Write a 3-part email sequence for a B2B SaaS startup. The first email should focus on a major industry pain point and introduce our unique value proposition. The second should build trust using social proof and statistics. The third should create a gentle sense of urgency with a clear Call to Action (CTA) to book a 15-minute demo. Keep subject lines under 45 characters. SaaS Description: [Insert SaaS Details]",
+    "rating": 4.8,
+    "featured": true
+  },
+  {
+    "id": "sql-query-optimizer",
+    "title": "SQL Query Optimizer",
+    "category": "coding",
+    "desc": "Diagnoses slow databases and refactors SQL joins and indexing for rapid queries.",
+    "prompt": "You are a database administrator. The following SQL query is running slowly. Analyze the query structure, identify any issues (such as subqueries that could be converted to JOINs, missing indexes, or costly operations), explain the bottlenecks, and output the optimized SQL query. Query: [Insert SQL Query]",
+    "rating": 4.6,
+    "featured": false
+  },
+  {
+    "id": "book-summarizer",
+    "title": "Book & Article Summarizer",
+    "category": "productivity",
+    "desc": "Extracts core concepts, action items, and mental frameworks from long-form text.",
+    "prompt": "Analyze the text provided below. Extract the top 5 core lessons, the key mental frameworks presented by the author, and compile a list of 5 actionable tasks I can implement today based on the readings. Format your response using clean markdown headings and bullet points. Text: [Insert Book Chapter or Article Text]",
+    "rating": 4.7,
+    "featured": false
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "chatgpt-cheat-sheet",
+    "title": "ChatGPT Prompts & Hacks Cheat Sheet",
+    "type": "Cheat Sheet",
+    "format": "PDF / Image",
+    "desc": "A concise, single-page reference sheet with the most useful advanced prompt engineering structures and keyboard shortcuts for ChatGPT.",
+    "downloadUrl": "images/chatgpt_prompts_guide.webp",
+    "tags": ["ChatGPT", "Productivity"],
+    "actionText": "Download WebP/PDF"
+  },
+  {
+    "id": "midjourney-v6-prompting-guide",
+    "title": "Midjourney V6 Prompting Cheat Sheet",
+    "type": "Cheat Sheet",
+    "format": "PDF",
+    "desc": "Learn how to use Midjourney V6 parameters, aspect ratios, image weights, style codes, and style references to generate photorealistic art.",
+    "downloadUrl": "https://www.midjourney.com",
+    "tags": ["Midjourney", "Design"],
+    "actionText": "Download Guide"
+  },
+  {
+    "id": "auto-blogging-workflow",
+    "title": "Automated SEO Blogging Workflow (Make.com)",
+    "type": "Workflow Blueprint",
+    "format": "JSON Blueprint",
+    "desc": "An automation workflow blueprint connecting RSS Feeds, OpenAI GPT-4o, and WordPress to generate drafted SEO articles autonomously.",
+    "downloadUrl": "https://www.make.com",
+    "tags": ["Make", "Automation", "SEO"],
+    "actionText": "Copy Blueprint"
+  },
+  {
+    "id": "linkedin-leads-automation",
+    "title": "LinkedIn Automated Lead Nurturing Campaign",
+    "type": "Workflow Blueprint",
+    "format": "Zapier Shareable",
+    "desc": "Connects Google Sheets, LinkedIn Leads Gen Forms, and OpenAI to send personalized AI outreach emails immediately when a prospect submits a form.",
+    "downloadUrl": "https://zapier.com",
+    "tags": ["Zapier", "Marketing", "SaaS"],
+    "actionText": "Get Zapier Link"
+  }
+]
