@@ -727,10 +727,28 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ai-profit-hub.com/compare/deepseek-r1-vs-qwen-max.html</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ai-profit-hub.com/compare/gemini-2-5-pro-vs-gpt-5-5.html</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ai-profit-hub.com/compare/</loc>
-    <lastmod>2026-06-23</lastmod>
+    <lastmod>2026-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ai-profit-hub.com/compare/midjourney-v6-vs-flux-1.html</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ai-profit-hub.com/compare/midjourney-vs-dalle.html</loc>
@@ -741,6 +759,12 @@
   <url>
     <loc>https://ai-profit-hub.com/compare/perplexity-vs-chatgpt.html</loc>
     <lastmod>2026-06-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ai-profit-hub.com/compare/suno-v4-vs-udio.html</loc>
+    <lastmod>2026-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
