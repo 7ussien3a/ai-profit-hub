@@ -5,8 +5,15 @@
   <link>https://ai-profit-hub.com</link>
   <description>Best AI Tools, Tutorials &amp; Productivity Hacks</description>
   <language>en-us</language>
-  <lastBuildDate>Wed, 24 Jun 2026 00:31:24 +0300</lastBuildDate>
+  <lastBuildDate>Wed, 24 Jun 2026 22:17:34 +0300</lastBuildDate>
   <atom:link href="https://ai-profit-hub.com/rss.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title>Adobe Partners with WPP and Claude Enterprise to Bring Agentic AI to Creative Workflows</title>
+    <link>https://ai-profit-hub.com/articles/adobe-partnerships-agentic-ai-creative-workflows-2026.html</link>
+    <description>Inside Adobe&apos;s landmark partnerships with WPP, Accenture, and Omnicom. Learn how they are integrating agentic AI workflows into Microsoft 365 and Claude Enterprise.</description>
+    <pubDate>Thu, 25 Jun 2026 00:00:00 +0300</pubDate>
+    <guid>https://ai-profit-hub.com/articles/adobe-partnerships-agentic-ai-creative-workflows-2026.html</guid>
+  </item>
   <item>
     <title>Zhipu AI Launches GLM-5.2: The Open-Source Challenger Trained on 100K Huawei Chips</title>
     <link>https://ai-profit-hub.com/articles/zhipu-ai-glm-5-2-open-source-2026.html</link>
@@ -29,11 +36,11 @@
     <guid>https://ai-profit-hub.com/articles/google-ai-seo-patent-brand-optimization-2026.html</guid>
   </item>
   <item>
-    <title>Embodied AI and WeChat Agents: Qwen-Robot Suite and Hunyuan 3.0 Redefine Autonomy</title>
-    <link>https://ai-profit-hub.com/articles/qwen-robot-tencent-hunyuan-agents-2026.html</link>
-    <description>How Alibaba&apos;s Qwen-Robot Suite, Tencent&apos;s Hunyuan 3.0 WeChat agents, and WEF&apos;s Global Lighthouses are bridging language models with physical and digital autonomy in 2026.</description>
+    <title>Google NotebookLM Ultimate Guide: How to Generate AI Podcasts and Organize Your Research</title>
+    <link>https://ai-profit-hub.com/articles/google-notebooklm-ultimate-guide-2026.html</link>
+    <description>Master Google&apos;s NotebookLM: a comprehensive guide on uploading sources, taking grounded notes, and generating automated Audio Overview AI podcasts.</description>
     <pubDate>Tue, 23 Jun 2026 00:00:00 +0300</pubDate>
-    <guid>https://ai-profit-hub.com/articles/qwen-robot-tencent-hunyuan-agents-2026.html</guid>
+    <guid>https://ai-profit-hub.com/articles/google-notebooklm-ultimate-guide-2026.html</guid>
   </item>
   <item>
     <title>Google Launches Gemini 2.5 Pro with &quot;Deep Think&quot; Reasoning Mode</title>
@@ -43,13 +50,6 @@
     <guid>https://ai-profit-hub.com/articles/google-gemini-2-5-pro-deep-think-2026.html</guid>
   </item>
   <item>
-    <title>Grok 2 &amp; Grok 3: Elon Musk&apos;s xAI Challenges the AI Establishment</title>
-    <link>https://ai-profit-hub.com/articles/grok-2-3-xai-llm-guide-2026.html</link>
-    <description>A comprehensive look at xAI&apos;s Grok 2 and Grok 3. Discover how real-time X data access, advanced reasoning, and Flux image generation compare with Claude and ChatGPT.</description>
-    <pubDate>Tue, 23 Jun 2026 00:00:00 +0300</pubDate>
-    <guid>https://ai-profit-hub.com/articles/grok-2-3-xai-llm-guide-2026.html</guid>
-  </item>
-  <item>
     <title>Kling 3.0 Turbo vs LTX-2.3: The Battle for Open and Cinematic Video AI in 2026</title>
     <link>https://ai-profit-hub.com/articles/kling-3-turbo-ltx-2-video-ai-2026.html</link>
     <description>Inside the massive shift in AI video generation: Kuaishou&apos;s Kling 3.0 Turbo, Lightricks&apos; open weights LTX-2.3, Adobe&apos;s agentic Cannes Lions partnerships, and Weavy AI workflows.</description>
@@ -57,11 +57,18 @@
     <guid>https://ai-profit-hub.com/articles/kling-3-turbo-ltx-2-video-ai-2026.html</guid>
   </item>
   <item>
-    <title>Google NotebookLM Ultimate Guide: How to Generate AI Podcasts and Organize Your Research</title>
-    <link>https://ai-profit-hub.com/articles/google-notebooklm-ultimate-guide-2026.html</link>
-    <description>Master Google&apos;s NotebookLM: a comprehensive guide on uploading sources, taking grounded notes, and generating automated Audio Overview AI podcasts.</description>
+    <title>Embodied AI and WeChat Agents: Qwen-Robot Suite and Hunyuan 3.0 Redefine Autonomy</title>
+    <link>https://ai-profit-hub.com/articles/qwen-robot-tencent-hunyuan-agents-2026.html</link>
+    <description>How Alibaba&apos;s Qwen-Robot Suite, Tencent&apos;s Hunyuan 3.0 WeChat agents, and WEF&apos;s Global Lighthouses are bridging language models with physical and digital autonomy in 2026.</description>
     <pubDate>Tue, 23 Jun 2026 00:00:00 +0300</pubDate>
-    <guid>https://ai-profit-hub.com/articles/google-notebooklm-ultimate-guide-2026.html</guid>
+    <guid>https://ai-profit-hub.com/articles/qwen-robot-tencent-hunyuan-agents-2026.html</guid>
+  </item>
+  <item>
+    <title>Grok 2 &amp; Grok 3: Elon Musk&apos;s xAI Challenges the AI Establishment</title>
+    <link>https://ai-profit-hub.com/articles/grok-2-3-xai-llm-guide-2026.html</link>
+    <description>A comprehensive look at xAI&apos;s Grok 2 and Grok 3. Discover how real-time X data access, advanced reasoning, and Flux image generation compare with Claude and ChatGPT.</description>
+    <pubDate>Tue, 23 Jun 2026 00:00:00 +0300</pubDate>
+    <guid>https://ai-profit-hub.com/articles/grok-2-3-xai-llm-guide-2026.html</guid>
   </item>
   <item>
     <title>Beyond Auto-Complete: How Verdent AI, Freebuff, Dyad, and Mirofish Lead the Agentic Wave</title>
@@ -139,13 +146,6 @@
     <description>Anthropic raised $65 billion in a historic Series H funding round, valuing the AI safety company at nearly $1 trillion. Here is what the money means, why Claude Fable 5 matters, and what comes next.</description>
     <pubDate>Wed, 17 Jun 2026 00:00:00 +0300</pubDate>
     <guid>https://ai-profit-hub.com/articles/anthropic-65-billion-fable-5-model-2026.html</guid>
-  </item>
-  <item>
-    <title>Microsoft Launches 7 In-House AI Models: MAI-Thinking-1, MAI-Code-1, and the End of OpenAI Dependency</title>
-    <link>https://ai-profit-hub.com/articles/microsoft-mai-7-models-copilot-2026.html</link>
-    <description>Microsoft unveiled 7 brand-new in-house AI models at Build 2026 — including MAI-Thinking-1, a flagship reasoning model, and MAI-Code-1-Flash already in GitHub Copilot. Here is the full breakdown.</description>
-    <pubDate>Wed, 17 Jun 2026 00:00:00 +0300</pubDate>
-    <guid>https://ai-profit-hub.com/articles/microsoft-mai-7-models-copilot-2026.html</guid>
   </item>
 </channel>
 </rss>
