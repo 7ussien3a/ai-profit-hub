@@ -1,0 +1,31 @@
+# Environment and secrets
+.env
+.env.*
+.env.local
+.env.production
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Node.js
+node_modules/
+npm-debug.log*
+
+# Scripts folder (not for production)
+fix-ga.ps1
+update.ps1
+new-article.ps1
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temp / backup files
+*.bak
+*.backup
+*.orig
+*.tmp
+*.log
