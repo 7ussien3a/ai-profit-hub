@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -58,7 +58,7 @@
         "name": "How does Intel Lunar Lake achieve ARM-like battery life?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Intel achieved this by integrating memory directly on the chip package (reducing data travel energy), ditching hyper-threading to focus on pure IPC efficiency, and utilizing TSMC's highly efficient N3B process node."
+          "text": "Intel achieved this by integrating LPDDR5X memory directly on the chip package (reducing data transit energy by 40%), removing hyper-threading in favor of high-efficiency P/E-cores, and manufacturing compute tiles on TSMC's 3nm N3B node."
         }
       },
       {
@@ -66,7 +66,7 @@
         "name": "Does Lunar Lake support Microsoft Copilot+ AI features?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, Lunar Lake features a brand-new NPU 4.0 that delivers 48 TOPS of performance, easily clearing Microsoft's 40 TOPS requirement for local Copilot+ integration."
+          "text": "Yes, Lunar Lake integrates a newly designed NPU 4.0 delivering 48 TOPS of dedicated AI performance, exceeding Microsoft's 40 TOPS requirement for local Copilot+ PC features."
         }
       },
       {
@@ -74,7 +74,15 @@
         "name": "Can you game on Intel Lunar Lake laptops?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Absolutely. It integrates Xe2-LPG graphics (Battlemage architecture), providing up to a 50% boost in graphical performance and making it highly capable for casual and mid-tier 1080p gaming."
+          "text": "Yes, the integrated Xe2-LPG graphics engine (based on Intel's Battlemage architecture) offers a 50% performance improvement over Meteor Lake, making it capable of smooth 1080p gaming on modern mid-tier titles."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the disadvantages of integrated Memory on Package (MoP)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The main drawback of Memory on Package is the complete lack of upgradability. Laptops are locked to either 16GB or 32GB at purchase, and any memory failure requires replacing the entire CPU package, increasing repair costs."
         }
       }
     ]
@@ -178,25 +186,92 @@
       <li><a href='#section-1'>The End of the x86 Battery Curse</a></li>
       <li><a href='#section-2'>Memory on Package: Borrowing Apple's Secret Weapon</a></li>
       <li><a href='#section-3'>No More Hyper-Threading: A Bold Bid for Efficiency</a></li>
-      <li><a href='#section-4'>NPU 4.0 and Battlemage Graphics: Ready for Local AI</a></li>
-      <li><a href='#section-5'>Frequently Asked Questions</a></li>
+      <li><a href='#section-4'>Deep-Dive Comparison: Lunar Lake vs. Competitors</a></li>
+      <li><a href='#section-5'>NPU 4.0 and Battlemage Graphics: Ready for Local AI</a></li>
+      <li><a href='#section-6'>Frequently Asked Questions</a></li>
     </ol>
   </div>
-<h2 id="section-1">The End of the x86 Battery Curse</h2>
+
+  <h2 id="section-1">The End of the x86 Battery Curse</h2>
   <p>For years, a fundamental compromise plagued the laptop market: if you wanted a Windows laptop with raw x86 application compatibility, you had to accept mediocre battery life. If you wanted day-long battery life, you had to switch to Apple Silicon or deal with the software compatibility hurdles of ARM on Windows. In 2026, Intel has shattered this paradigm with <strong>Lunar Lake (Core Ultra 200V)</strong>, proving that x86 architecture can be just as efficient as ARM.</p>
-  <p>By completely redesigning the silicon layout and partnering with TSMC to leverage their cutting-edge N3B process node, Intel has achieved the holy grail of modern PC engineering: a thin-and-light laptop processor that runs cool, performs exceptionally well, and delivers over 20 hours of real-world battery life on a single charge.</p>
+  <p>By completely redesigning the silicon layout and partnering with TSMC to leverage their cutting-edge N3B process node, Intel has achieved the holy grail of modern PC engineering: a thin-and-light laptop processor that runs cool, performs exceptionally well, and delivers over 20 hours of real-world battery life on a single charge. This marks a massive milestone for Windows users who need long-lasting power without sacrificing compatibility with legacy corporate applications, developer toolchains, or gaming libraries.</p>
+  <p>Instead of relying on Intel's own fabrication facilities, which have faced yield delays on advanced nodes, Intel chose to outsource the production of Lunar Lake's main compute tiles to TSMC. Using TSMC's 3nm node for the CPU and GPU elements allowed Intel's design team to focus entirely on microarchitectural improvements, optimizing power draw at the circuit level and eliminating the parasitic power leakage that hampered previous generations like Meteor Lake and Raptor Lake.</p>
 
   <h2 id="section-2">Memory on Package: Borrowing Apple's Secret Weapon</h2>
   <p>The most striking design choice in Lunar Lake is the integration of system memory (LPDDR5X) directly onto the chip package. Similar to Apple's M-series architecture, this eliminates the need for long motherboard traces to separate RAM slots.</p>
-  <p>By shortening the physical distance data must travel between the CPU cores and the memory, Intel has cut memory power consumption by nearly 40%. The drawback is that RAM is non-upgradable—laptops come pre-configured with either 16GB or 32GB on the package. However, the performance benefits are massive, providing lower latency, increased bandwidth, and a smaller overall motherboard footprint.</p>
+  <p>By shortening the physical distance data must travel between the CPU cores and the memory, Intel has cut memory physical interface (PHY) power consumption by nearly 40%. The reduction in trace length also minimizes signal degradation, allowing Lunar Lake to run LPDDR5X at a blazing fast 8533 MT/s. The physical motherboard footprint is reduced by 250 square millimeters, giving laptop manufacturers more space to install larger battery cells, introduce superior cooling pipes, or design thinner, lighter laptop chassis.</p>
+  <p>However, this integration introduces several trade-offs. Laptops are configured at the factory with either 16GB or 32GB of RAM soldered directly next to the CPU, making post-purchase RAM upgrades impossible. Additionally, if a single memory cell fails, the entire CPU package must be replaced, which can lead to higher out-of-warranty repair costs. For pro-sumers and enterprise users, purchasing the 32GB model (such as the Core Ultra 7 258V or Ultra 9 288V) is highly recommended to future-proof their systems for memory-heavy multitasking and local AI databases.</p>
 
   <h2 id="section-3">No More Hyper-Threading: A Bold Bid for Efficiency</h2>
   <p>In another radical departure, Intel has removed Hyper-Threading from Lunar Lake. Traditionally, Hyper-Threading allowed a single CPU core to run two software threads simultaneously, boosting multi-core speed at the cost of higher power draw and silicon complexity.</p>
-  <p>For Lunar Lake, Intel decided to focus on raw single-thread instructions per clock (IPC) efficiency. The chip features 4 Lion Cove performance cores (P-cores) and 4 Skymont efficiency cores (E-cores). The new Skymont E-cores are so powerful that they match the IPC performance of Intel's older P-cores while consuming a fraction of the power. Without Hyper-Threading, the processor runs much cooler and uses significantly less battery while keeping daily tasks snappy.</p>
+  <p>For Lunar Lake, Intel decided to focus on raw single-thread instructions per clock (IPC) efficiency. The chip features a symmetric core layout with 4 Lion Cove performance cores (P-cores) and 4 Skymont efficiency cores (E-cores). The new Skymont E-cores are so powerful that they match the IPC performance of Intel's older P-cores while consuming a fraction of the power. Without Hyper-Threading, the processor runs much cooler and uses significantly less battery while keeping daily tasks snappy.</p>
+  <p>The scheduling of workloads across these cores is managed by an updated <strong>Intel Thread Director</strong>, which works in tight coordination with the Windows 11 kernel. Thread Director routes background services, email syncing, and video playback exclusively to the low-power Skymont E-cores. P-cores are kept in a low-power sleep state and are only woken up when the user launches demanding tasks like compilers, games, or photo editing software. By avoiding the overhead and thermal spikes of hyper-threaded execution, Lunar Lake operates almost entirely silent and cool to the touch under typical office workloads.</p>
 
-  <h2 id="section-4">NPU 4.0 and Battlemage Graphics: Ready for Local AI</h2>
+  <h2 id="section-4">Deep-Dive Comparison: Lunar Lake vs. Competitors</h2>
+  <p>To see how Intel's new architecture stack up against the best of ARM and x86, let's examine their technical specifications and real-world battery limits:</p>
+
+  <div style="overflow-x:auto; margin: 24px 0;">
+    <table style="width:100%; border-collapse:collapse; text-align:left; background:var(--bg-elevated,#1a1f2e); border:1px solid var(--border); border-radius:8px; font-size:0.875rem;">
+      <thead>
+        <tr style="background:rgba(108,99,255,0.15); border-bottom:2px solid var(--border);">
+          <th style="padding:12px; font-weight:700; color:var(--primary-light);">Metric</th>
+          <th style="padding:12px; font-weight:700; color:var(--primary-light);">Intel Core Ultra 7 258V</th>
+          <th style="padding:12px; font-weight:700; color:var(--primary-light);">Qualcomm Snapdragon X Elite</th>
+          <th style="padding:12px; font-weight:700; color:var(--primary-light);">Apple M3 / M4</th>
+          <th style="padding:12px; font-weight:700; color:var(--primary-light);">AMD Ryzen AI 9 HX 370</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid var(--border);">
+          <td style="padding:12px; font-weight:600;">Instruction Set</td>
+          <td style="padding:12px;">x86 (Native Compatibility)</td>
+          <td style="padding:12px;">ARM64 (Translation required)</td>
+          <td style="padding:12px;">ARM64 (Rosetta translation)</td>
+          <td style="padding:12px;">x86 (Native Compatibility)</td>
+        </tr>
+        <tr style="border-bottom:1px solid var(--border);">
+          <td style="padding:12px; font-weight:600;">Process Node</td>
+          <td style="padding:12px;">TSMC 3nm (N3B)</td>
+          <td style="padding:12px;">TSMC 4nm</td>
+          <td style="padding:12px;">TSMC 3nm (N3E)</td>
+          <td style="padding:12px;">TSMC 4nm</td>
+        </tr>
+        <tr style="border-bottom:1px solid var(--border);">
+          <td style="padding:12px; font-weight:600;">Core Config</td>
+          <td style="padding:12px;">8 Cores (4P + 4E) / 8 Threads</td>
+          <td style="padding:12px;">12 Cores / 12 Threads</td>
+          <td style="padding:12px;">8 Cores (4P + 4E) / 8 Threads</td>
+          <td style="padding:12px;">12 Cores (4P + 8E) / 24 Threads</td>
+        </tr>
+        <tr style="border-bottom:1px solid var(--border);">
+          <td style="padding:12px; font-weight:600;">NPU Performance</td>
+          <td style="padding:12px;">48 TOPS (NPU 4.0)</td>
+          <td style="padding:12px;">45 TOPS (Hexagon)</td>
+          <td style="padding:12px;">38 TOPS (Neural Engine)</td>
+          <td style="padding:12px;">50 TOPS (XDNA 2)</td>
+        </tr>
+        <tr style="border-bottom:1px solid var(--border);">
+          <td style="padding:12px; font-weight:600;">Memory Location</td>
+          <td style="padding:12px;">On-Package (LPDDR5X)</td>
+          <td style="padding:12px;">Motherboard Soldered</td>
+          <td style="padding:12px;">On-Package (LPDDR5)</td>
+          <td style="padding:12px;">Motherboard Soldered / Slot</td>
+        </tr>
+        <tr style="border-bottom:1px solid var(--border);">
+          <td style="padding:12px; font-weight:600;">Battery Life (Video)</td>
+          <td style="padding:12px;">Up to 20+ Hours</td>
+          <td style="padding:12px;">Up to 18-20 Hours</td>
+          <td style="padding:12px;">Up to 20-22 Hours</td>
+          <td style="padding:12px;">Up to 14-16 Hours</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="section-5">NPU 4.0 and Battlemage Graphics: Ready for Local AI</h2>
   <p>With the transition to "AI PCs," Lunar Lake includes a completely redesigned Neural Processing Unit (NPU 4.0) delivering <strong>48 TOPS</strong> (Tera Operations Per Second) of local AI performance. This allows users to run local Large Language Models (LLMs), real-time translations, and image generation on-device without relying on cloud services or draining battery.</p>
-  <p>On the graphics side, Lunar Lake debuts the new Xe2-LPG graphics engine based on Intel's long-awaited "Battlemage" GPU architecture. Testing reveals up to a 50% improvement in graphics over the previous Meteor Lake generation, making Lunar Lake-powered laptops competent gaming machines for titles like <i>Hades II</i> or <i>Cyberpunk 2077</i> at optimized settings.</p>
+  <p>By running AI tasks locally on the NPU rather than spinning up the GPU or CPU, Lunar Lake keeps power consumption under 2 watts during active AI inferencing. Features like Windows Studio Effects (eye contact correction, background blur) and local transcription tools can run continuously in the background during video calls without noticeably impacting battery life or heating up the laptop.</p>
+  <p>On the graphics side, Lunar Lake debuts the new Xe2-LPG graphics engine based on Intel's long-awaited "Battlemage" GPU architecture. Testing reveals up to a 50% improvement in graphics over the previous Meteor Lake generation, making Lunar Lake-powered laptops competent gaming machines. It supports hardware-accelerated ray tracing and incorporates Xe Matrix Extensions (XMX) for AI-driven image upscaling (XeSS). This allows gamers to run demanding titles at playable frame rates at 1080p, offering a superior graphical experience compared to Qualcomm's Adreno GPU and matching AMD's competitive Radeon 890M integrated graphics.</p>
 
   <div class="personal-take">
     <div class="personal-take-label">💬 HUSSEIN'S TAKE</div>
@@ -216,18 +291,26 @@
 
   <!-- FAQ Accordion -->
   <div class="aph-faq-section">
-    <h2 id="section-5">Frequently Asked Questions</h2>
+    <h2 id="section-6">Frequently Asked Questions</h2>
+    
     <div class="aph-faq-item">
       <div class="aph-faq-question">How does Intel Lunar Lake achieve ARM-like battery life?</div>
-      <div class="aph-faq-answer">Intel achieved this by integrating memory directly on the chip package (reducing data travel energy), ditching hyper-threading to focus on pure IPC efficiency, and utilizing TSMC's highly efficient N3B process node.</div>
+      <div class="aph-faq-answer">Intel achieved this by integrating LPDDR5X memory directly on the chip package (reducing data transit energy by 40%), removing hyper-threading in favor of high-efficiency P/E-cores, and manufacturing compute tiles on TSMC's 3nm N3B node.</div>
     </div>
+    
     <div class="aph-faq-item">
       <div class="aph-faq-question">Does Lunar Lake support Microsoft Copilot+ AI features?</div>
-      <div class="aph-faq-answer">Yes, Lunar Lake features a brand-new NPU 4.0 that delivers 48 TOPS of performance, easily clearing Microsoft's 40 TOPS requirement for local Copilot+ integration.</div>
+      <div class="aph-faq-answer">Yes, Lunar Lake integrates a newly designed NPU 4.0 delivering 48 TOPS of dedicated AI performance, exceeding Microsoft's 40 TOPS requirement for local Copilot+ PC features.</div>
     </div>
+    
     <div class="aph-faq-item">
       <div class="aph-faq-question">Can you game on Intel Lunar Lake laptops?</div>
-      <div class="aph-faq-answer">Absolutely. It integrates Xe2-LPG graphics (Battlemage architecture), providing up to a 50% boost in graphical performance and making it highly capable for casual and mid-tier 1080p gaming.</div>
+      <div class="aph-faq-answer">Yes, the integrated Xe2-LPG graphics engine (based on Intel's Battlemage architecture) offers a 50% performance improvement over Meteor Lake, making it capable of smooth 1080p gaming on modern mid-tier titles.</div>
+    </div>
+
+    <div class="aph-faq-item">
+      <div class="aph-faq-question">What are the disadvantages of integrated Memory on Package (MoP)?</div>
+      <div class="aph-faq-answer">The main drawback of Memory on Package is the complete lack of upgradability. Laptops are locked to either 16GB or 32GB at purchase, and any memory failure requires replacing the entire CPU package, increasing repair costs.</div>
     </div>
   </div>
 

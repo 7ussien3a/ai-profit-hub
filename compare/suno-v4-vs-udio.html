@@ -24,7 +24,6 @@
   <link rel="stylesheet" href="../css/style.css">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4602905173099480" crossorigin="anonymous"></script>
 
-  <!-- Schema.org FAQ Page Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -42,6 +41,27 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Udio is widely praised for superior vocal clarity and emotional depth. However, Suno v4 has significantly closed the gap, offering highly energetic pop and rock vocals with fewer digital artifacts."
+      }
+    }, {
+      "@type": "Question",
+      "name": "Can I upload my own audio clips to guide the generation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Both Suno v4 and Udio support audio uploading. You can upload a short clip of your own melody or vocals, and the AI will use it as a foundation to expand and produce a complete song."
+      }
+    }, {
+      "@type": "Question",
+      "name": "What is inpainting in AI music?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Inpainting allows you to highlight a specific section of a generated song (e.g., a lyric mistake or a bad guitar solo) and regenerate only that specific part, leaving the rest of the song unchanged. Udio offers advanced inpainting tools."
+      }
+    }, {
+      "@type": "Question",
+      "name": "Can I export individual instrument tracks (stems)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Both Suno v4 and Udio support splitting generated tracks into stems (e.g., separating vocals from the instrumental track), which is highly useful for professional mixing and editing in DAWs."
       }
     }]
   }
@@ -140,17 +160,44 @@
       </div>
     </div>
 
-    <div class="article-content">
+    <div class="article-content" style="line-height: 1.75; margin-bottom: 40px;">
       <p>Generative AI has democratized music creation. With a simple text prompt or structured lyrics, anyone can write and produce studio-quality songs in minutes. The two tools dominating this landscape are **Suno v4** and **Udio**. Below, we break down how they compare across vocal realism, structural control, pricing, and commercial licensing.</p>
 
-      <h2>1. Vocal Realism & Audio Fidelity</h2>
-      <p>Historically, Udio held a firm lead in vocal emotional depth and clarity. Its tracks sounded organic, with natural breathing and rich harmonies. However, Suno's release of **Suno v4** has bridged this gap significantly. Suno v4 introduces higher-fidelity audio outputs and reduces digital "metallic" artifacts.
-      In general, Udio remains the go-to for emotional genres (jazz, indie, cinematic ballads), while Suno v4 is superior for energetic, driving tracks (pop, electronic dance, metal).</p>
+      <h2>1. Audio Fidelity and Vocal Realism</h2>
+      <p>The core quality of any music generator lies in its raw audio output and the realism of its synthesized vocals. For a long time, Udio held a firm lead in vocal quality, producing rich, emotionally expressive voices that sounded like human studio recordings, complete with natural breathing, pitch adjustments, and vibrato. Suno's older models were often criticized for a metallic, "underwater" sound profile that made generations sound obviously synthesized.</p>
+      <p>The release of **Suno v4** has significantly closed this gap. Suno v4 introduces a revamped neural synthesis engine that outputs tracks in 48kHz stereo, drastically reducing compression artifacts. It excels at high-energy, driving vocals suitable for pop, rock, heavy metal, and electronic dance music. However, Udio still maintains a slight edge in slow-tempo, emotional genres like jazz, blues, and cinematic ballads, where it achieves a warmth and spatial depth that sounds organic.</p>
 
-      <h2>2. Lyric Control & Structure</h2>
-      <p>Suno v4 offers a highly structured "Custom Mode" where you can input exact verses, choruses, and style tags. It is highly obedient to song structure tags (e.g. [Chorus], [Guitar Solo]). Udio provides a highly flexible "Inpainting" and "Extensions" workflow, allowing you to crop a section of a track and extend it in either direction. Udio is often favored by advanced producers who want granular control over song arrangements.</p>
+      <h2>2. Generation Length and Arranging Workflow</h2>
+      <p>The songwriting workflow on these two platforms is completely different:</p>
+      <ul>
+        <li><strong>Suno v4:</strong> Focuses on ease of use and speed. It can generate up to 4 minutes of a song in a single click. By writing your lyrics in the prompt box and organizing them with standard song structure tags (e.g. `[Verse]`, `[Chorus]`, `[Guitar Solo]`), Suno v4 will regularly output a complete, fully arranged track with an intro, verses, choruses, and a logical outro without requiring manual extensions.</li>
+        <li><strong>Udio:</strong> Designed for modular creation. By default, Udio generates tracks in 2-minute segments. Once you get a snippet you like, you use the "Extend" tool to build the song incrementally, adding 30-second to 2-minute sections before or after the original clip. While this takes longer, it grants professional producers much greater control over transitions, bridges, and key changes.</li>
+      </ul>
 
-      <h2>3. Benchmarks & Features Comparison</h2>
+      <h2>3. Advanced Controls & Audio Uploads</h2>
+      <p>For advanced musicians and producers, Udio is the more powerful workspace. It features **inpainting**, which allows you to highlight a specific section of a song (such as a misspelled vocal lyric or a sloppy guitar lick) and regenerate just that specific slice of audio while keeping the surrounding music identical. Udio also offers granular generation settings, including prompt strength sliders, lyric weight, and clip quality settings.</p>
+      <p>Suno v4, while more streamlined, has added its own set of powerful features. It supports **Audio Uploading**, allowing users to record a melody, hum a tune, or upload a short piano loop from their local files. The AI then processes this audio seed and expands it into a fully orchestrated song. Both platforms now support **Stem Separation**, allowing paid users to download the vocals and instrumentals as separate audio files, which is an invaluable feature for remixing and clean mixing in Digital Audio Workstations (DAWs).</p>
+
+      <h2>4. Licensing, Monetization, and Pricing Tiers</h2>
+      <p>Both Suno v4 and Udio operate on freemium models, but their commercial licensing rules are strict:</p>
+      <ul>
+        <li><strong>Suno v4 Pricing:</strong>
+          <ul>
+            <li><em>Free Tier:</em> 50 credits daily (approx. 10 songs). You do not own the commercial rights; the songs belong to Suno and cannot be monetized on platforms like Spotify or YouTube.</li>
+            <li><em>Pro Tier ($10/month):</em> 2,500 credits monthly. Grants you full commercial ownership of the songs generated under this plan, allowing you to upload them to streaming services or use them in commercials.</li>
+            <li><em>Premier Tier ($30/month):</em> 10,000 credits monthly. Grants full commercial ownership and priority processing speeds.</li>
+          </ul>
+        </li>
+        <li><strong>Udio Pricing:</strong>
+          <ul>
+            <li><em>Free Tier:</em> 100 credits monthly. No commercial rights; tracks are restricted to non-commercial personal use.</li>
+            <li><em>Standard Tier ($10/month):</em> 1,200 credits monthly. Grants full commercial ownership of the tracks generated under this plan.</li>
+            <li><em>Pro Tier ($30/month):</em> 4,800 credits monthly. Grants commercial ownership, priority processing, and advanced metadata controls.</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>5. Benchmarks & Features Comparison</h2>
       <p>A quick breakdown of how they compare across key specifications:</p>
       
       <table class="cmp-table">
@@ -177,15 +224,39 @@
           </tr>
           <tr>
             <td><strong>Audio Fidelity</strong></td>
-            <td>48kHz (Suno v4)</td>
-            <td>44.1kHz / 48kHz (Udio)</td>
+            <td>48kHz stereo output</td>
+            <td>44.1kHz / 48kHz stereo</td>
             <td>Tie</td>
           </tr>
           <tr>
             <td><strong>Paid Plan Starts At</strong></td>
-            <td>$10/month (Pro - 2,500 credits)</td>
-            <td>$10/month (Standard - 1,200 credits)</td>
-            <td>Suno v4 (More credits)</td>
+            <td>$10/month (2,500 credits)</td>
+            <td>$10/month (1,200 credits)</td>
+            <td>Suno v4 (More credits/value)</td>
+          </tr>
+          <tr>
+            <td><strong>Stem Splitting</strong></td>
+            <td>✅ Yes (Separate vocals & instrumental)</td>
+            <td>✅ Yes (Separate vocals & instrumental)</td>
+            <td>Tie</td>
+          </tr>
+          <tr>
+            <td><strong>Inpainting / Local Editing</strong></td>
+            <td>❌ No</td>
+            <td>✅ Yes (Regenerate specific sections)</td>
+            <td>Udio</td>
+          </tr>
+          <tr>
+            <td><strong>Vocal Clarity (Energetic Pop/Rock)</strong></td>
+            <td>Excellent, highly polished production feel</td>
+            <td>Very good, but can sound soft</td>
+            <td>Suno v4</td>
+          </tr>
+          <tr>
+            <td><strong>Vocal Depth (Acoustic/Jazz)</strong></td>
+            <td>Good, but can sound slightly synthesized</td>
+            <td>Excellent, human-like warmth & vibrato</td>
+            <td>Udio</td>
           </tr>
         </tbody>
       </table>
@@ -201,7 +272,7 @@
         <div style="font-size: 1.5rem;">💬</div>
         <div>
           <h4 style="margin:0 0 6px;color:var(--text-primary);font-size:0.95rem;font-weight:700;">HUSSEIN'S INSIGHT</h4>
-          <p style="margin:0;font-size:0.875rem;color:var(--text-secondary);line-height:1.65;">Suno v4's ability to output 4-minute tracks in a single click is a massive time-saver. While Udio has the edge in raw emotional vocal quality, Suno's pop, rock, and EDM generations sound like polished commercial tracks right out of the box.</p>
+          <p style="margin:0;font-size:0.875rem;color:var(--text-secondary);line-height:1.65;">Suno v4's ability to output 4-minute tracks in a single click is a massive time-saver. While Udio has the edge in raw emotional vocal quality, Suno's pop, rock, and EDM generations sound like polished commercial tracks right out of the box. For most content creators looking for background beats, Suno v4 is the more practical tool.</p>
         </div>
       </div>
 
@@ -217,6 +288,16 @@
           <button onclick="var d=this.nextElementSibling;d.style.display=d.style.display==='none'?'block':'none';this.querySelector('.fi').textContent=d.style.display==='block'?'−':'+'" style="width:100%;text-align:left;padding:16px 20px;background:none;border:none;color:var(--text-primary);font-weight:700;font-size:0.9rem;cursor:pointer;display:flex;justify-content:space-between;">
             Can I upload my own audio clips to guide the generation?<span class="fi" style="flex-shrink:0;margin-left:12px;">+</span></button>
           <div style="display:none;padding:0 20px 16px;"><p style="margin:0;font-size:0.875rem;color:var(--text-secondary);line-height:1.7;">Yes. Both platforms support audio uploading. You can upload a short clip of your own melody or vocals, and the AI will use it as a foundation to expand and produce a complete song.</p></div>
+        </div>
+        <div style="margin-bottom:14px;background:var(--bg-elevated,#1a1f2e);border:1px solid var(--border);border-radius:10px;overflow:hidden;">
+          <button onclick="var d=this.nextElementSibling;d.style.display=d.style.display==='none'?'block':'none';this.querySelector('.fi').textContent=d.style.display==='block'?'−':'+'" style="width:100%;text-align:left;padding:16px 20px;background:none;border:none;color:var(--text-primary);font-weight:700;font-size:0.9rem;cursor:pointer;display:flex;justify-content:space-between;">
+            What is inpainting in AI music?<span class="fi" style="flex-shrink:0;margin-left:12px;">+</span></button>
+          <div style="display:none;padding:0 20px 16px;"><p style="margin:0;font-size:0.875rem;color:var(--text-secondary);line-height:1.7;">Inpainting allows you to highlight a specific section of a generated song (e.g., a lyric mistake or a bad guitar solo) and regenerate only that specific part, leaving the rest of the song unchanged. Udio offers advanced inpainting tools.</p></div>
+        </div>
+        <div style="margin-bottom:14px;background:var(--bg-elevated,#1a1f2e);border:1px solid var(--border);border-radius:10px;overflow:hidden;">
+          <button onclick="var d=this.nextElementSibling;d.style.display=d.style.display==='none'?'block':'none';this.querySelector('.fi').textContent=d.style.display==='block'?'−':'+'" style="width:100%;text-align:left;padding:16px 20px;background:none;border:none;color:var(--text-primary);font-weight:700;font-size:0.9rem;cursor:pointer;display:flex;justify-content:space-between;">
+            Can I export individual instrument tracks (stems)?<span class="fi" style="flex-shrink:0;margin-left:12px;">+</span></button>
+          <div style="display:none;padding:0 20px 16px;"><p style="margin:0;font-size:0.875rem;color:var(--text-secondary);line-height:1.7;">Yes. Both Suno v4 and Udio support splitting generated tracks into stems (e.g., separating vocals from the instrumental track), which is highly useful for professional mixing and editing in DAWs.</p></div>
         </div>
       </div>
 

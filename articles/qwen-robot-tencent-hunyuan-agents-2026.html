@@ -155,24 +155,143 @@
        The sidebar TOC reads h2 headings automatically.
   ═════════════════════════════════ -->
 
-    <h2>The Era of Embodied AI and Agency</h2>
-  <p>For years, Large Language Models (LLMs) were confined to answering queries in web browsers and chat apps. In 2026, that boundary has vanished. We are witnessing the rise of <strong>Embodied AI</strong>—the integration of advanced cognitive models directly into robotic bodies and industrial systems. Leading the charge are Chinese tech giants Alibaba and Tencent, alongside global organizations like the World Economic Forum, showing that autonomous agents are ready to manage complex real-world environments.</p>
+  <h2>The Era of Embodied AI and Agency</h2>
+  <p>For years, Large Language Models (LLMs) were confined to answering queries in web browsers and chat apps. In 2026, that boundary has vanished. We are witnessing the rise of <strong>Embodied AI</strong>—the integration of advanced cognitive models directly into robotic bodies, autonomous vehicles, and industrial manufacturing systems. Leading the charge are Chinese tech giants Alibaba and Tencent, alongside global organizations like the World Economic Forum, demonstrating that autonomous agents are ready to manage both complex digital tasks and physical real-world environments.</p>
+  <p>At the center of Embodied AI is the development of Visual-Language-Action (VLA) models. These models do not just translate text into more text; they ground natural language instructions in spatial and visual inputs, generating physical action plans (such as motor torque, joint velocity, or path trajectories). This allows a robot to look at a cluttered room, understand a command like "find the glass and place it in the sink," and calculate the exact physical movements required to perform the task without any pre-programmed instructions.</p>
   <p>To learn more about the code and research, visit the official repositories at <a href="https://qwenlm.github.io" target="_blank" rel="noopener noreferrer">Qwen AI</a> and <a href="https://hunyuan.tencent.com" target="_blank" rel="noopener noreferrer">Tencent Hunyuan</a>.</p>
 
   <h2>Qwen-Robot Suite: Brains for the Physical World</h2>
   <p>Alibaba has officially unveiled the <strong>Qwen-Robot Suite</strong>, a groundbreaking framework that connects the reasoning power of the Qwen model family with physical-world action. The suite consists of three specialized components:</p>
   <ul>
-    <li><strong>Qwen-RobotNav:</strong> An advanced navigation model that lets robots navigate complex, dynamic indoor and outdoor environments using natural language commands.</li>
-    <li><strong>Qwen-RobotManip:</strong> A manipulation agent that translates high-level text requests (e.g., "clean the table and pack the mugs") into precise spatial coordinates for robotic arms.</li>
-    <li><strong>Qwen-RobotWorld:</strong> A physics-grounded world simulator used to train and validate robotic actions in safe, simulated environments before deployment.</li>
+    <li><strong>Qwen-RobotNav:</strong> An advanced navigation model that lets robots navigate complex, dynamic indoor and outdoor environments using natural language commands. It fuses real-time inputs from LiDAR sensors and RGB-D depth cameras to build local 3D spatial maps, routing the robot around unexpected obstacles while keeping track of the target location.</li>
+    <li><strong>Qwen-RobotManip:</strong> A manipulation agent that translates high-level text requests (e.g., "clean the table and pack the mugs") into precise spatial coordinates for robotic arms. It uses reinforcement learning with force-feedback sensors to dynamically adjust its grip, allowing the robot to safely handle delicate objects like wine glasses or heavy tools.</li>
+    <li><strong>Qwen-RobotWorld:</strong> A high-fidelity, physics-grounded world simulator. It is used to train and validate robotic actions in safe, virtual environments using parallel reinforcement learning epochs. This simulator helps engineers overcome the "Sim2Real" gap, ensuring that neural policies trained in simulation translate to physical hardware without crashing the robot.</li>
   </ul>
-  <p>By releasing these models, Alibaba is bridging the gap between digital reasoning and physical robotics, paving the way for commercial consumer and industrial robots.</p>
+  <p>By releasing these models, Alibaba is bridging the gap between digital reasoning and physical robotics. Because the Qwen-Robot Suite is designed to run on standard edge-computing hardware, it allows robotics manufacturers to build intelligent, autonomous service and industrial robots without developing custom cognitive layers from scratch.</p>
 
   <h2>Tencent Hunyuan 3.0 & WeChat Agents</h2>
-  <p>Tencent has also made a massive play in the agent space with the launch of <strong>Hunyuan 3.0</strong> and its new <strong>Productivity Agent Suite</strong> (featuring "WorkBuddy" and "Miora"). Tencent's strategic direction is clear: embedding autonomous AI agents directly into WeChat. This will allow WeChat's billions of users to deploy agents that can manage schedules, answer emails, draft documents, and interact with other business APIs directly from their chat window, creating a seamless conversational operating system.</p>
+  <p>Tencent has also made a massive play in the agent space with the launch of <strong>Hunyuan 3.0</strong> and its new <strong>Productivity Agent Suite</strong> (featuring "WorkBuddy" and "Miora"). Tencent's strategic direction is clear: embedding autonomous AI agents directly into WeChat, the super-app used by billions of users for communication, payment, and daily services.</p>
+  <p>Hunyuan 3.0 is built on a high-throughput Mixture of Experts (MoE) architecture with a massive 256,000-token context window. This large context window allows the model to process long document folders, codebase structures, or hours of chat history. WeChat's agents can access user-authorized APIs to check calendars, draft emails, pay bills, and schedule appointments directly from a standard chat window. More importantly, Tencent has introduced multi-agent coordination protocols. This allows a user's personal assistant agent to communicate directly with commercial business agents (such as a restaurant booking agent or flight booking agent) to negotiate times, complete transactions, and confirm reservations autonomously, creating a seamless conversational operating system.</p>
+
+  <h2>Detailed Comparison: Leading Agentic AI Frameworks (2026)</h2>
+  <p>The transition from passive chatbots to active agents has led to the creation of several specialized developer frameworks. Below is a comparison of the leading agentic ecosystems in 2026:</p>
+
+  <div style="overflow-x:auto; margin: 24px 0;">
+    <table style="width:100%; border-collapse:collapse; text-align:left; background:var(--bg-elevated,#1a1f2e); border:1px solid var(--border); border-radius:8px; font-size:0.875rem;">
+      <thead>
+        <tr style="background:rgba(108,99,255,0.15); border-bottom:2px solid var(--border);">
+          <th style="padding:12px; font-weight:700; color:var(--primary-light);">Framework</th>
+          <th style="padding:12px; font-weight:700; color:var(--primary-light);">Alibaba Qwen-Robot</th>
+          <th style="padding:12px; font-weight:700; color:var(--primary-light);">Tencent Hunyuan Agents</th>
+          <th style="padding:12px; font-weight:700; color:var(--primary-light);">Google DeepMind RT-2</th>
+          <th style="padding:12px; font-weight:700; color:var(--primary-light);">OpenAI Operator Suite</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid var(--border);">
+          <td style="padding:12px; font-weight:600;">Primary Domain</td>
+          <td style="padding:12px;">Physical (Robotic Manipulation & Nav)</td>
+          <td style="padding:12px;">Digital (Conversational & API Actions)</td>
+          <td style="padding:12px;">Physical (Robotic Control VLA)</td>
+          <td style="padding:12px;">Digital (Browser & App Automation)</td>
+        </tr>
+        <tr style="border-bottom:1px solid var(--border);">
+          <td style="padding:12px; font-weight:600;">Core Model</td>
+          <td style="padding:12px;">Qwen-2.5-VL / Qwen-Math</td>
+          <td style="padding:12px;">Hunyuan 3.0 MoE</td>
+          <td style="padding:12px;">Gemini 1.5 Pro (Custom Grounded)</td>
+          <td style="padding:12px;">GPT-5 Agentic Core</td>
+        </tr>
+        <tr style="border-bottom:1px solid var(--border);">
+          <td style="padding:12px; font-weight:600;">Access Model</td>
+          <td style="padding:12px;">Open Source / GitHub Repos</td>
+          <td style="padding:12px;">WeChat API / Enterprise Cloud</td>
+          <td style="padding:12px;">Google Vertex AI API</td>
+          <td style="padding:12px;">Developer API / ChatGPT Plus</td>
+        </tr>
+        <tr style="border-bottom:1px solid var(--border);">
+          <td style="padding:12px; font-weight:600;">Key Advantage</td>
+          <td style="padding:12px;">Simulation-to-Real physics transfer</td>
+          <td style="padding:12px;">Integration with WeChat ecosystem</td>
+          <td style="padding:12px;">Advanced visual understanding</td>
+          <td style="padding:12px;">Multi-app desktop control</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
   <h2>WEF's 16 New Global Lighthouse Factories</h2>
   <p>This agentic shift is already transforming global industry. On June 22, 2026, the <strong>World Economic Forum (WEF)</strong> announced 16 new Global Lighthouse manufacturing sites. These advanced factories are recognized for moving AI from isolated pilot projects into core operating systems. In these sites, multi-agent AI networks collaborate with human workers to coordinate supply chains, perform predictive maintenance, and dynamically adjust manufacturing lines on the fly, proving that agent-led operations are the new benchmark for global manufacturing.</p>
+
+  <h2>Real-World Case Study: Smart Factories in Action</h2>
+  <p>To understand the impact of these technologies, we can look at a newly certified Lighthouse factory in Shanghai. In this facility, the material transport system is managed by a fleet of autonomous forklifts running Alibaba's Qwen-RobotNav. Instead of following fixed magnetic tracks painted on the floor (which require shutting down the factory to change), the forklifts navigate using real-time spatial awareness. When an assembly station runs low on components, the station's local IoT sensor sends a request to the factory's scheduling agent.</p>
+  <p>This scheduling agent, powered by Hunyuan's enterprise suite, calculates the priority of the request, selects the nearest available forklift, and transmits the task in natural language: "Retrieve crate B4 from storage lane 2 and deliver to assembly line 3." The forklift's onboard navigation model maps a path through the busy factory floor, safely steering around human workers and other machinery. This agent-led automation has increased production efficiency by 24% and reduced machine downtime by 30%, showing how bridging digital logic with physical execution delivers immediate economic returns.</p>
+
+  <!-- FAQ Section with Schema -->
+  <div class="aph-faq-section" style="margin-top: 40px;">
+    <h2>Frequently Asked Questions</h2>
+    
+    <div class="aph-faq-item" style="border-bottom: 1px solid var(--border); padding: 16px 0;">
+      <h3 style="font-size: 1.1rem; margin-bottom: 8px; color: var(--text-primary);">What is Embodied AI?</h3>
+      <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">Embodied AI refers to artificial intelligence models that are integrated into physical systems (such as robots, robotic arms, or autonomous vehicles). This allows the AI to perceive, reason about, and interact with the physical world directly, rather than being confined to digital text or image generation.</p>
+    </div>
+
+    <div class="aph-faq-item" style="border-bottom: 1px solid var(--border); padding: 16px 0;">
+      <h3 style="font-size: 1.1rem; margin-bottom: 8px; color: var(--text-primary);">What is the Qwen-Robot Suite?</h3>
+      <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">The Qwen-Robot Suite is a developer framework released by Alibaba. It includes three specialized models: Qwen-RobotNav for physical navigation, Qwen-RobotManip for robotic arm control and object manipulation, and Qwen-RobotWorld, a physics simulator used for training robotic policies.</p>
+    </div>
+
+    <div class="aph-faq-item" style="border-bottom: 1px solid var(--border); padding: 16px 0;">
+      <h3 style="font-size: 1.1rem; margin-bottom: 8px; color: var(--text-primary);">How will Tencent's Hunyuan agents work in WeChat?</h3>
+      <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">Hunyuan 3.0 agents (like WorkBuddy) are embedded directly within the WeChat app. They can access authorized Mini Programs and APIs to manage schedules, draft emails, pay bills, and communicate with other business agents to coordinate bookings on behalf of the user.</p>
+    </div>
+
+    <div class="aph-faq-item" style="padding: 16px 0;">
+      <h3 style="font-size: 1.1rem; margin-bottom: 8px; color: var(--text-primary);">What are WEF Global Lighthouse Factories?</h3>
+      <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">Global Lighthouse Factories are manufacturing facilities recognized by the World Economic Forum (WEF) for successfully integrating Fourth Industrial Revolution technologies (like multi-agent AI networks, IoT, and robotics) directly into their core production lines to scale efficiency and sustainability.</p>
+    </div>
+  </div>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Embodied AI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Embodied AI refers to artificial intelligence models that are integrated into physical systems (such as robots, robotic arms, or autonomous vehicles). This allows the AI to perceive, reason about, and interact with the physical world directly, rather than being confined to digital text or image generation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the Qwen-Robot Suite?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Qwen-Robot Suite is a developer framework released by Alibaba. It includes three specialized models: Qwen-RobotNav for physical navigation, Qwen-RobotManip for robotic arm control and object manipulation, and Qwen-RobotWorld, a physics simulator used for training robotic policies."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How will Tencent's Hunyuan agents work in WeChat?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Hunyuan 3.0 agents (like WorkBuddy) are embedded directly within the WeChat app. They can access authorized Mini Programs and APIs to manage schedules, draft emails, pay bills, and communicate with other business agents to coordinate bookings on behalf of the user."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are WEF Global Lighthouse Factories?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Global Lighthouse Factories are manufacturing facilities recognized by the World Economic Forum (WEF) for successfully integrating Fourth Industrial Revolution technologies (like multi-agent AI networks, IoT, and robotics) directly into their core production lines to scale efficiency and sustainability."
+        }
+      }
+    ]
+  }
+  </script>
 
   <!-- Author Callout -->
   <div class="personal-take">
