@@ -1,6 +1,12 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>
+    if (window.location.pathname.endsWith('/index.html')) {
+      var cleanPath = window.location.pathname.substring(0, window.location.pathname.length - 10);
+      window.location.replace(window.location.protocol + '//' + window.location.host + cleanPath + window.location.search + window.location.hash);
+    }
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Critical Resource Hints for Core Web Vitals -->
@@ -103,9 +109,9 @@
       <a href="/" class="logo"><div class="logo-icon"><i data-lucide="zap" class="lucide-icon"></i></div><span>AI Profit Hub</span></a>
       <ul class="nav-links" id="navLinks">
         <li><a href="/" class='active'>Home</a></li>
-        <li><a href="guides/index.html">Guides</a></li>
-        <li><a href="best-ai-tools/index.html">AI Tools</a></li>
-        <li><a href="compare/index.html">Compare</a></li>
+        <li><a href="guides/">Guides</a></li>
+        <li><a href="best-ai-tools/">AI Tools</a></li>
+        <li><a href="compare/">Compare</a></li>
         <li><a href="prompts-library.html">Prompts</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="search.html" style="display: inline-flex; align-items: center; gap: 6px;"><i data-lucide="search" class="lucide-icon" style="width: 15px; height: 15px;"></i> Search</a></li>
@@ -137,9 +143,9 @@
       </form>
       <div class="hero-quick-links">
         <span>Quick Access:</span>
-        <a href="best-ai-tools/index.html" style="display: inline-flex; align-items: center; gap: 4px;"><i data-lucide="wrench" class="lucide-icon" style="width: 14px; height: 14px;"></i> Best Tools</a>
-        <a href="compare/index.html" style="display: inline-flex; align-items: center; gap: 4px;"><i data-lucide="git-compare" class="lucide-icon" style="width: 14px; height: 14px;"></i> Side-by-Side VS</a>
-        <a href="guides/index.html" style="display: inline-flex; align-items: center; gap: 4px;"><i data-lucide="book-open" class="lucide-icon" style="width: 14px; height: 14px;"></i> Guides & Tutorials</a>
+        <a href="best-ai-tools/" style="display: inline-flex; align-items: center; gap: 4px;"><i data-lucide="wrench" class="lucide-icon" style="width: 14px; height: 14px;"></i> Best Tools</a>
+        <a href="compare/" style="display: inline-flex; align-items: center; gap: 4px;"><i data-lucide="git-compare" class="lucide-icon" style="width: 14px; height: 14px;"></i> Side-by-Side VS</a>
+        <a href="guides/" style="display: inline-flex; align-items: center; gap: 4px;"><i data-lucide="book-open" class="lucide-icon" style="width: 14px; height: 14px;"></i> Guides & Tutorials</a>
       </div>
     </div>
   </section>
@@ -1248,7 +1254,7 @@
         </a>
       </div>
       <div style="text-align: center; margin-top: 36px;">
-        <a href="compare/index.html" class="view-all-link">View All Comparisons &rarr;</a>
+        <a href="compare/" class="view-all-link">View All Comparisons &rarr;</a>
       </div>
     </section>
 
@@ -1270,7 +1276,7 @@
       <footer class="footer">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="index.html" class="logo">
+        <a href="./" class="logo">
           <div class="logo-icon">⚡</div>
           <span>AI Profit Hub</span>
         </a>
@@ -1279,7 +1285,7 @@
       <div>
         <h4>Explore</h4>
         <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="./">Home</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="editorial-policy.html">Editorial Policy</a></li>
           <li><a href="how-we-test.html">How We Test</a></li>
