@@ -5,8 +5,15 @@
   <link>https://ai-profit-hub.com</link>
   <description>Best AI Tools, Tutorials &amp; Productivity Hacks</description>
   <language>en-us</language>
-  <lastBuildDate>Sat, 27 Jun 2026 06:00:00 +0300</lastBuildDate>
+  <lastBuildDate>Mon, 29 Jun 2026 13:30:00 +0300</lastBuildDate>
   <atom:link href="https://ai-profit-hub.com/rss.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title>Google Gemini Compute Limits: The Infrastructure Crisis Forcing Meta onto Internal "Muse Spark"</title>
+    <link>https://ai-profit-hub.com/articles/google-gemini-compute-limits-meta-2026.html</link>
+    <description>Inside Google's compute capacity restrictions on Meta's access to Gemini AI. We analyze the rising infrastructure bottlenecks, data center constraints, and Meta's shift to its internal Muse Spark models.</description>
+    <pubDate>Mon, 29 Jun 2026 13:30:00 +0300</pubDate>
+    <guid>https://ai-profit-hub.com/articles/google-gemini-compute-limits-meta-2026.html</guid>
+  </item>
   <item>
     <title>Google Gemini 3.5 Flash vs Anthropic Claude Fable 5: The Battle of Agentic AI Search</title>
     <link>https://ai-profit-hub.com/compare/gemini-3-5-flash-vs-claude-fable-5.html</link>
