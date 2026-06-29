@@ -5,8 +5,15 @@
   <link>https://ai-profit-hub.com</link>
   <description>Best AI Tools, Tutorials &amp; Productivity Hacks</description>
   <language>en-us</language>
-  <lastBuildDate>Mon, 29 Jun 2026 13:30:00 +0300</lastBuildDate>
+  <lastBuildDate>Mon, 29 Jun 2026 13:45:00 +0300</lastBuildDate>
   <atom:link href="https://ai-profit-hub.com/rss.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title>OpenAI Unveils "Jalapeño": The First In-House Inference Chip Built to Cut Token Costs by 50%</title>
+    <link>https://ai-profit-hub.com/articles/openai-unveils-jalapeno-custom-inference-chip-2026.html</link>
+    <description>OpenAI, in partnership with Broadcom, has officially unveiled Jalapeño, its first in-house AI chip built for LLM inference. Read our analysis of its 50% token cost reduction.</description>
+    <pubDate>Mon, 29 Jun 2026 13:45:00 +0300</pubDate>
+    <guid>https://ai-profit-hub.com/articles/openai-unveils-jalapeno-custom-inference-chip-2026.html</guid>
+  </item>
   <item>
     <title>Google Gemini Compute Limits: The Infrastructure Crisis Forcing Meta onto Internal "Muse Spark"</title>
     <link>https://ai-profit-hub.com/articles/google-gemini-compute-limits-meta-2026.html</link>
