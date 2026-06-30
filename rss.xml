@@ -5,8 +5,15 @@
   <link>https://ai-profit-hub.com</link>
   <description>Best AI Tools, Tutorials &amp; Productivity Hacks</description>
   <language>en-us</language>
-  <lastBuildDate>Wed, 01 Jul 2026 02:00:00 +0300</lastBuildDate>
+  <lastBuildDate>Wed, 01 Jul 2026 02:15:00 +0300</lastBuildDate>
   <atom:link href="https://ai-profit-hub.com/rss.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title>DeepSeek-R1 vs Meituan LongCat-2.0: Chinese AI Giants Face Off</title>
+    <link>https://ai-profit-hub.com/compare/deepseek-r1-vs-meituan-longcat-2.html</link>
+    <description>An honest, technical side-by-side comparison of DeepSeek-R1 and Meituan LongCat-2.0. We analyze architectures, context windows, and compute infrastructure.</description>
+    <pubDate>Wed, 01 Jul 2026 02:15:00 +0300</pubDate>
+    <guid>https://ai-profit-hub.com/compare/deepseek-r1-vs-meituan-longcat-2.html</guid>
+  </item>
   <item>
     <title>Meituan Releases LongCat-2.0: Trillion-Parameter MoE Model Trained on Chinese ASIC Cluster</title>
     <link>https://ai-profit-hub.com/articles/meituan-releases-longcat-2-trillion-parameter-moe-chinese-asic-2026.html</link>
