@@ -5,8 +5,15 @@
   <link>https://ai-profit-hub.com</link>
   <description>Best AI Tools, Tutorials &amp; Productivity Hacks</description>
   <language>en-us</language>
-  <lastBuildDate>Tue, 30 Jun 2026 22:00:00 +0300</lastBuildDate>
+  <lastBuildDate>Wed, 01 Jul 2026 02:00:00 +0300</lastBuildDate>
   <atom:link href="https://ai-profit-hub.com/rss.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title>Meituan Releases LongCat-2.0: Trillion-Parameter MoE Model Trained on Chinese ASIC Cluster</title>
+    <link>https://ai-profit-hub.com/articles/meituan-releases-longcat-2-trillion-parameter-moe-chinese-asic-2026.html</link>
+    <description>Beijing-based Meituan has released LongCat-2.0, a 1.6-trillion-parameter open-source MoE model trained entirely on domestic Chinese hardware.</description>
+    <pubDate>Wed, 01 Jul 2026 02:00:00 +0300</pubDate>
+    <guid>https://ai-profit-hub.com/articles/meituan-releases-longcat-2-trillion-parameter-moe-chinese-asic-2026.html</guid>
+  </item>
   <item>
     <title>Alphabet Closes Historic $84.75 Billion Equity Raise for AI Infrastructure</title>
     <link>https://ai-profit-hub.com/articles/alphabet-closes-historic-84-billion-raise-ai-infrastructure-2026.html</link>
