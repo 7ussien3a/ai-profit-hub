@@ -1740,6 +1740,40 @@
   </footer>
 
   <script src="js/main.js" defer></script>
+
+<script>
+/* Performance: Lazy-load article cards beyond first 30 */
+(function() {
+  function lazyCards() {
+    var grid = document.querySelector('.articles-grid');
+    if (!grid) return;
+    var cards = Array.from(grid.querySelectorAll('.article-card'));
+    if (cards.length <= 30) return;
+    // Hide cards beyond 30
+    cards.slice(30).forEach(function(c) { c.style.display = 'none'; c.dataset.lazy = '1'; });
+    // Add Load More button
+    var btn = document.createElement('button');
+    btn.textContent = 'Load More Articles (' + (cards.length - 30) + ' more)';
+    btn.id = 'load-more-btn';
+    btn.style.cssText = 'display:block;margin:2rem auto;padding:.9rem 2.5rem;background:linear-gradient(135deg,#6c63ff,#f97316);color:#fff;border:none;border-radius:50px;font-size:1rem;font-weight:700;cursor:pointer;';
+    grid.after(btn);
+    var shown = 30;
+    btn.addEventListener('click', function() {
+      var hidden = Array.from(grid.querySelectorAll('[data-lazy="1"]')).slice(0, 30);
+      hidden.forEach(function(c) { c.style.display = ''; delete c.dataset.lazy; });
+      shown += hidden.length;
+      if (shown >= cards.length) btn.remove();
+      else btn.textContent = 'Load More Articles (' + (cards.length - shown) + ' more)';
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', lazyCards);
+  } else {
+    lazyCards();
+  }
+})();
+</script>
+
 </body>
 </html>
 
