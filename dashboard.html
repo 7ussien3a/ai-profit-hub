@@ -12,17 +12,17 @@
 </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My AI Dashboard — AI Profit Hub</title>
+  <title>My AI Dashboard ï¿½ AI Profit Hub</title>
   <meta name="description" content="Manage your saved AI tools, custom prompts, reading lists, and track your active AI Tech Stack.">
   <meta name="robots" content="noindex, nofollow">
   <link rel="canonical" href="https://ai-profit-hub.com/dashboard.html">
-  <meta property="og:title" content="My AI Dashboard — AI Profit Hub">
+  <meta property="og:title" content="My AI Dashboard ï¿½ AI Profit Hub">
   <meta property="og:description" content="Manage your saved AI tools, custom prompts, reading lists, and track your active AI Tech Stack.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ai-profit-hub.com/dashboard.html">
   <meta property="og:image" content="/images/robot-technology.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="My AI Dashboard — AI Profit Hub">
+  <meta name="twitter:title" content="My AI Dashboard ï¿½ AI Profit Hub">
   <meta name="twitter:description" content="Manage your saved AI tools, custom prompts, reading lists, and track your active AI Tech Stack.">
   <meta name="twitter:image" content="/images/robot-technology.jpg">
 
@@ -437,5 +437,19 @@
 
   <script src="js/main.js" defer></script>
   <script src="js/dashboard.js" defer></script>
+
+<style>
+#back-to-top{position:fixed;bottom:2rem;right:2rem;width:44px;height:44px;background:linear-gradient(135deg,#6c63ff,#f97316);color:#fff;border:none;border-radius:50%;font-size:1.2rem;cursor:pointer;opacity:0;transform:translateY(20px);transition:opacity .3s,transform .3s;z-index:1000;box-shadow:0 4px 15px rgba(108,99,255,.4);}
+#back-to-top.visible{opacity:1;transform:translateY(0);}
+</style>
+<script>
+(function(){
+  var btn=document.createElement('button');btn.id='back-to-top';btn.innerHTML='&#8679;';btn.title='Back to top';
+  document.body&&document.body.appendChild(btn);
+  window.addEventListener('scroll',function(){btn.classList.toggle('visible',window.scrollY>400);},{passive:true});
+  btn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+})();
+</script>
+
 </body>
 </html>
