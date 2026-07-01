@@ -156,6 +156,59 @@
   .toc-box a{color:var(--text-secondary,#aaa);text-decoration:none;transition:color .15s;}
   .toc-box a:hover{color:#6c63ff;}
   </style>
+  <style>
+  .key-takeaways{background:linear-gradient(135deg,rgba(108,99,255,.1),rgba(249,115,22,.07));border:1px solid rgba(108,99,255,.3);border-left:4px solid #6c63ff;border-radius:14px;padding:1.4rem 1.6rem;margin:1.5rem 0 2rem;}
+  .key-takeaways h3{font-size:.9rem;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:#6c63ff;margin:0 0 .9rem;display:flex;align-items:center;gap:.45rem;}
+  .key-takeaways ul{margin:0;padding-left:1.3rem;display:flex;flex-direction:column;gap:.5rem;}
+  .key-takeaways li{font-size:.93rem;color:var(--text-primary,#e8eaf0);line-height:1.5;}
+  .key-takeaways li::marker{color:#6c63ff;}
+  </style>
+  <style>
+  .faq-section{margin:2.5rem 0;}
+  .faq-section h2{font-size:1.35rem;font-weight:700;margin-bottom:1.25rem;}
+  .faq-item{border:1px solid rgba(255,255,255,.1);border-radius:12px;margin-bottom:.75rem;overflow:hidden;}
+  .faq-question{width:100%;text-align:left;background:rgba(255,255,255,.04);border:none;padding:1rem 1.2rem;color:var(--text-primary,#fff);font-size:.97rem;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:background .2s;}
+  .faq-question:hover{background:rgba(108,99,255,.12);}
+  .faq-question::after{content:'+';font-size:1.3rem;color:#6c63ff;transition:transform .25s;flex-shrink:0;}
+  .faq-item.open .faq-question::after{transform:rotate(45deg);}
+  .faq-answer{max-height:0;overflow:hidden;transition:max-height .3s ease;}
+  .faq-item.open .faq-answer{max-height:300px;}
+  .faq-answer p{padding:.75rem 1.2rem 1rem;margin:0;color:var(--text-secondary,#aaa);font-size:.92rem;line-height:1.65;border-top:1px solid rgba(255,255,255,.06);}
+  </style>
+  <script>
+  document.addEventListener('DOMContentLoaded',function(){
+    document.querySelectorAll('.faq-question').forEach(function(btn){
+      btn.addEventListener('click',function(){
+        var item=this.closest('.faq-item');
+        var wasOpen=item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(function(el){el.classList.remove('open');});
+        if(!wasOpen)item.classList.add('open');
+      });
+    });
+  });
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do Chinese AI models compare to US counterparts?","acceptedAnswer":{"@type":"Answer","text":"Chinese AI models have rapidly closed the gap with Western counterparts, particularly in multilingual capabilities, cost efficiency, and specialized domain performance. Models like DeepSeek and Qwen now rival GPT-class performance on many benchmarks."}},{"@type":"Question","name":"Are Chinese AI tools available internationally?","acceptedAnswer":{"@type":"Answer","text":"Many Chinese AI models are available globally through open-source releases and API access. DeepSeek, for instance, offers an open-weight model that anyone can download and run locally."}},{"@type":"Question","name":"What makes Chinese AI development unique?","acceptedAnswer":{"@type":"Answer","text":"Chinese AI development is characterized by massive government investment, a strong focus on efficiency (achieving high performance at lower compute costs), and rapid iteration cycles driven by intense domestic competition."}},{"@type":"Question","name":"Is it safe to use Chinese AI models?","acceptedAnswer":{"@type":"Answer","text":"Using open-source Chinese AI models for non-sensitive tasks is generally considered safe. As with any AI tool, users should review privacy policies and avoid sharing sensitive personal or business data."}}]}
+  </script>  <style>
+  .sources-section{margin:2rem 0;padding:1.25rem 1.5rem;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;}
+  .sources-section h3{font-size:.88rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--text-secondary,#aaa);margin:0 0 .75rem;}
+  .sources-section ol{margin:0;padding-left:1.3rem;display:flex;flex-direction:column;gap:.4rem;}
+  .sources-section li{font-size:.85rem;color:var(--text-secondary,#aaa);line-height:1.5;}
+  .sources-section a{color:#6c63ff;text-decoration:none;}
+  .sources-section a:hover{text-decoration:underline;}
+  </style>
+  <style>
+  .author-bio-enhanced{display:flex;gap:1.25rem;align-items:flex-start;padding:1.5rem;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:16px;margin:2rem 0;}
+  .author-bio-enhanced img{width:72px;height:72px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid rgba(108,99,255,.4);}
+  .author-bio-avatar-fallback{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,#6c63ff,#f97316);display:flex;align-items:center;justify-content:center;font-size:1.8rem;flex-shrink:0;}
+  .author-bio-info{flex:1;}
+  .author-bio-name{font-weight:700;font-size:1rem;color:var(--text-primary,#fff);margin:0 0 .2rem;}
+  .author-bio-title{font-size:.82rem;color:#6c63ff;font-weight:600;margin:0 0 .5rem;}
+  .author-bio-text{font-size:.88rem;color:var(--text-secondary,#aaa);margin:0 0 .75rem;line-height:1.6;}
+  .author-bio-links{display:flex;gap:.6rem;flex-wrap:wrap;}
+  .author-bio-links a{font-size:.8rem;color:var(--text-secondary,#aaa);text-decoration:none;padding:.25rem .7rem;border:1px solid rgba(255,255,255,.12);border-radius:12px;transition:color .2s,border-color .2s;}
+  .author-bio-links a:hover{color:#6c63ff;border-color:rgba(108,99,255,.4);}
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -233,6 +286,16 @@
 
         </ol>
       </nav>
+      
+      <div class="key-takeaways">
+        <h3>⚡ Key Takeaways</h3>
+        <ul>
+            <li>Adversarial Distillation: What is Model Harvesting?</li>
+            <li>Anatomy of the 28 Million Exchange Campaign</li>
+            <li>The U.S.-China AI Cold War Escalates</li>
+            <li>Future Defensive Strategies: Guarding the Frontier</li>
+        </ul>
+      </div>
       <h2 id="toc-0">Adversarial Distillation: What is Model Harvesting?</h2>
       <p>In AI development, **distillation** is a standard technique where a smaller, faster model (the "student") is trained using data generated by a larger, more advanced model (the "teacher"). While distillation is legally and ethically sound when done internally by a model builder, doing it on a competitor's proprietary model via API scraping violates service terms, intellectual property protections, and corporate boundaries.</p>
       
@@ -300,6 +363,21 @@
         <button class="share-btn s-copy" id="copyBtn" onclick="navigator.clipboard.writeText(location.href).then(function(){document.getElementById('copyBtn').textContent='✅ Copied!';setTimeout(function(){document.getElementById('copyBtn').textContent='🔗 Copy Link'},2000)})">🔗 Copy Link</button>
         <a class="share-btn s-x" href="javascript:void(0)" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title),'_blank','width=600,height=400')">𝕏 Share</a>
         <a class="share-btn s-wa" href="javascript:void(0)" onclick="window.open('https://wa.me/?text='+encodeURIComponent(document.title+' '+location.href),'_blank')">💬 WhatsApp</a>
+      </div>
+    
+      <div class="author-bio-enhanced">
+        <div class="author-bio-avatar-fallback">🤖</div>
+        <div class="author-bio-info">
+          <p class="author-bio-name">AI Profit Hub Editorial Team</p>
+          <p class="author-bio-title">AI Research & Analysis Team</p>
+          <p class="author-bio-text">Our editorial team comprises AI researchers, tech journalists, and industry analysts with combined expertise spanning large language models, AI product development, and digital business strategy. We independently test AI tools and verify all claims against primary sources before publication.</p>
+          <div class="author-bio-links">
+            <a href="/about.html">About Us</a>
+            <a href="/editorial-policy.html">Editorial Policy</a>
+            <a href="/how-we-test.html">How We Test</a>
+            <a href="/authors.html">Meet the Team</a>
+          </div>
+        </div>
       </div>
     </article>
   </main>
