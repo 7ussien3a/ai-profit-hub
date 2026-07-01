@@ -163,6 +163,15 @@
   }
   </script>
   <link rel="alternate" type="application/rss+xml" title="AI Profit Hub RSS Feed" href="https://ai-profit-hub.com/rss.xml">
+
+  <style>
+  .toc-box{background:rgba(108,99,255,.08);border:1px solid rgba(108,99,255,.25);border-left:4px solid #6c63ff;border-radius:12px;padding:1.25rem 1.5rem;margin:1.5rem 0 2rem;max-width:480px;}
+  .toc-box h3{font-size:.9rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#6c63ff;margin:0 0 .75rem;display:flex;align-items:center;gap:.4rem;}
+  .toc-box ol{margin:0;padding-left:1.2rem;display:flex;flex-direction:column;gap:.35rem;}
+  .toc-box li{font-size:.9rem;line-height:1.4;}
+  .toc-box a{color:var(--text-secondary,#aaa);text-decoration:none;transition:color .15s;}
+  .toc-box a:hover{color:#6c63ff;}
+  </style>
 </head>
 <body>
 
@@ -229,7 +238,23 @@
 
   <!-- --------------------------------
        WRITE YOUR ARTICLE CONTENT HERE
-       Add as many <h2> and <p> as needed.
+       Add as many 
+      <nav class="toc-box" aria-label="Table of Contents">
+        <h3>📋 Table of Contents</h3>
+        <ol>
+          <li><a href="#toc-0">and  as needed.
+       The sidebar TOC reads h2 headings automatically.
+  ------</a></li>
+<li><a href="#toc-1">Kling 3.0 Turbo: The Chinese Powerhouse</a></li>
+<li><a href="#toc-2">LTX-2.3: Lightricks' Open-Weights Alternative</a></li>
+<li><a href="#toc-3">Detailed Comparison: Leading AI Video Models (2026)</a></li>
+<li><a href="#toc-4">Adobe Cannes Lions Partnerships & Weavy AI</a></li>
+<li><a href="#toc-5">Workflow Integration: Node-Based AI Video Pipelines</a></li>
+<li><a href="#toc-6">Frequently Asked Questions</a></li>
+
+        </ol>
+      </nav>
+      <h2 id="toc-0"> and <p> as needed.
        The sidebar TOC reads h2 headings automatically.
   --------------------------------- -->
 
@@ -237,15 +262,15 @@
   <p>In mid-2026, the artificial intelligence video generation landscape has reached a critical turning point. Creators are no longer satisfied with short, erratic clips showing unnatural morphing or drifting perspectives. The demand is now for long-term consistency, cinematic camera controls, native multi-character dialog, and realistic physical simulations. Two major platforms have stepped up to define this new era: Kuaishou's <strong>Kling AI</strong> and Lightricks' <strong>LTX Studio</strong>. Both platforms represent fundamentally different philosophies�closed cloud-based ecosystems versus open-weights, workstation-ready software�yet both are pushing cinematic <a href="../categories/ai-video.html">AI Video</a> to its absolute limits.</p>
   <p>For more details on the tools and to test them yourself, visit the official platforms at <a href="https://klingai.com" target="_blank" rel="noopener noreferrer">Kling AI</a> and <a href="https://ltxstudio.com" target="_blank" rel="noopener noreferrer">LTX Studio</a>.</p>
 
-  <h2>Kling 3.0 Turbo: The Chinese Powerhouse</h2>
+  <h2 id="toc-1">Kling 3.0 Turbo: The Chinese Powerhouse</h2>
   <p>Kuaishou's Kling AI has launched its highly anticipated <strong>Kling 3.0 Turbo</strong> model, cementing its position as a leader in cinematic output. Building on the strengths of the Kling 3.0 Diffusion Transformer (DiT) architecture, the Turbo version introduces outstanding improvements in facial consistency, motion dynamics, and rendering speed. Kling 3.0 Turbo can generate up to 15 seconds of high-fidelity 1080p video in a single pass. Crucially, it features native audio generation and multi-character dialog support, meaning characters can speak with lip-syncing that matches the scene's emotional context.</p>
   <p>Kling's technical edge comes from its massive training dataset, sourced from Kuaishou's short-video ecosystem. This dataset provides the model with a rich understanding of human movement, joints, and real-world physical reactions. The model excels at simulating complex activities like dancing, gymnastics, and sports, which have long been the downfall of video generation algorithms. The spatial-temporal attention mechanism in Kling 3.0 Turbo calculates the physical forces acting on objects in the frame, reducing common AI artifacts like limbs disappearing or solid objects blending together.</p>
 
-  <h2>LTX-2.3: Lightricks' Open-Weights Alternative</h2>
+  <h2 id="toc-2">LTX-2.3: Lightricks' Open-Weights Alternative</h2>
   <p>On the other side of the spectrum, Lightricks has taken a massive step toward democratizing AI film production with the release of <strong>LTX-2</strong> and <strong>LTX-2.3</strong>. Unlike closed models like <a href="../companies/openai.html">OpenAI</a>'s Sora or Google's Veo, Lightricks has released these video models with open weights. This means studios can run the models locally on their own workstations or enterprise cloud nodes, eliminating per-second generation fees and ensuring complete data privacy.</p>
   <p>To make local execution viable, Lightricks has optimized the model's spatial compression autoencoders, allowing LTX-2.3 to run on workstation GPUs with 24GB of VRAM (such as the NVIDIA RTX 4090 or RTX 6000 Ada). By compressing the video into a compact latent space before applying temporal attention blocks, LTX-2.3 achieves rendering speeds that are up to three times faster than previous open models. LTX Studio has integrated these models into a comprehensive workspace featuring "Flows." Flows allow filmmakers to generate a complete script-to-storyboard sequence, establish persistent character identities across scenes, and exercise precise motion control over camera paths, camera angles, and object movement. By running LTX-2.3 on local hardware, independent creators can iterate infinitely without worrying about API costs.</p>
 
-  <h2>Detailed Comparison: Leading AI Video Models (2026)</h2>
+  <h2 id="toc-3">Detailed Comparison: Leading AI Video Models (2026)</h2>
   <p>The AI video market has split into distinct segments based on cost, access models, and target audience. Below is a comparison of the top video models currently available to creators:</p>
 
   <div style="overflow-x:auto; margin: 24px 0;">
@@ -299,18 +324,18 @@
     </table>
   </div>
 
-  <h2>Adobe Cannes Lions Partnerships & Weavy AI</h2>
+  <h2 id="toc-4">Adobe Cannes Lions Partnerships & Weavy AI</h2>
   <p>The enterprise creative industry is also undergoing a major reorganization. On June 22, 2026, at the Cannes Lions festival, <strong>Adobe</strong> announced new "agentic AI" partnerships with advertising giants Accenture, WPP, and Omnicom. These partnerships aim to build an automated infrastructure layer for brands, allowing AI agents to generate, personalize, and optimize content supply chains across global markets. Visit <a href="https://adobe.com" target="_blank" rel="noopener noreferrer">Adobe AI</a> for more information on their enterprise integrations.</p>
   <p>Through this system, WPP can link Adobe Firefly's video generator with custom brand databases. When a new product is launched, automated AI agents can draft the script, generate regional variations in video content, compile voiceovers, and output finished advertisements targeted to specific viewer demographics, reducing the time required to deploy localized global marketing campaigns from weeks to minutes.</p>
   <p>Additionally, smaller, modular tools are gaining traction. <strong>Weavy AI (Figma Weave)</strong> has emerged as a favorite among designers. It offers a node-based, AI-powered workflow platform that lets users connect text generation, image rendering, and editing models in automated pipelines, showing that the future of design is modular and agent-assisted.</p>
 
-  <h2>Workflow Integration: Node-Based AI Video Pipelines</h2>
+  <h2 id="toc-5">Workflow Integration: Node-Based AI Video Pipelines</h2>
   <p>The real power of modern video generation is unlocked when creators stop treating AI tools as isolated text-box prompts and instead integrate them into unified production pipelines. Using Figma Weave or custom automation platforms, digital agencies are building node-based pipelines that link different AI specialties together. For example, a typical workflow might begin with a scripting node powered by Claude 3.5. This script is passed to a layout node that generates high-res character sheets using Flux.1. Those character assets are then fed into LTX-2.3 to animate the scenes while keeping character outfits and facial structure consistent across shots.</p>
   <p>By automating the data transfer between writing, design, and animation models, creators can run rapid prototyping loops. A solo director can generate a 3-minute cinematic teaser overnight by running batch render jobs locally, proving that modular, node-based workflows are democratizing the tools of mass media production.</p>
 
   <!-- FAQ Section with Schema -->
   <div class="aph-faq-section" style="margin-top: 40px;">
-    <h2>Frequently Asked Questions</h2>
+    <h2 id="toc-6">Frequently Asked Questions</h2>
     
     <div class="aph-faq-item" style="border-bottom: 1px solid var(--border); padding: 16px 0;">
       <h3 style="font-size: 1.1rem; margin-bottom: 8px; color: var(--text-primary);">What is the difference between closed-cloud and open-weights video AI?</h3>
@@ -427,5 +452,40 @@
 <script src="../js/related-articles.js" defer></script>
 
 <script src="../js/article.js" defer></script>
+
+<!-- Cookie Consent Banner (GDPR / AdSense Compliance) -->
+<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:rgba(10,14,26,.97);border-top:1px solid rgba(108,99,255,.3);padding:1rem 1.5rem;backdrop-filter:blur(10px);">
+  <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;justify-content:space-between;">
+    <div style="flex:1;min-width:280px;">
+      <p style="margin:0;font-size:.88rem;color:rgba(255,255,255,.8);line-height:1.5;">
+        🍪 We use cookies to enhance your experience, serve personalized ads via <strong>Google AdSense</strong>, and analyze site traffic with <strong>Google Analytics</strong>. By clicking <strong>Accept All</strong>, you consent to our use of cookies.
+        <a href="/privacy-policy.html" style="color:#6c63ff;text-decoration:underline;">Privacy Policy</a>
+      </p>
+    </div>
+    <div style="display:flex;gap:.75rem;flex-shrink:0;flex-wrap:wrap;">
+      <button id="cookie-decline" style="padding:.6rem 1.2rem;background:transparent;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.7);border-radius:25px;font-size:.85rem;cursor:pointer;transition:border-color .2s;" onmouseover="this.style.borderColor='rgba(255,255,255,.5)'" onmouseout="this.style.borderColor='rgba(255,255,255,.2)'">Essential Only</button>
+      <button id="cookie-accept" style="padding:.6rem 1.5rem;background:linear-gradient(135deg,#6c63ff,#f97316);color:#fff;border:none;border-radius:25px;font-size:.85rem;font-weight:700;cursor:pointer;transition:transform .2s;" onmouseover="this.style.transform='translateY(-1px)'" onmouseout="this.style.transform='translateY(0)'">Accept All ✓</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var COOKIE_KEY = 'aph_cookie_consent';
+  var banner = document.getElementById('cookie-banner');
+  var consent = localStorage.getItem(COOKIE_KEY);
+  if (!consent) {
+    setTimeout(function(){ if(banner) banner.style.display = 'block'; }, 800);
+  }
+  function hide(val) {
+    localStorage.setItem(COOKIE_KEY, val);
+    if(banner) { banner.style.opacity='0'; banner.style.transition='opacity .3s'; setTimeout(function(){ banner.style.display='none'; }, 300); }
+  }
+  var btnA = document.getElementById('cookie-accept');
+  var btnD = document.getElementById('cookie-decline');
+  if(btnA) btnA.addEventListener('click', function(){ hide('all'); });
+  if(btnD) btnD.addEventListener('click', function(){ hide('essential'); });
+})();
+</script>
+
 </body>
 </html>

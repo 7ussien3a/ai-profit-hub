@@ -163,6 +163,15 @@
   }
   </script>
   <link rel="alternate" type="application/rss+xml" title="AI Profit Hub RSS Feed" href="https://ai-profit-hub.com/rss.xml">
+
+  <style>
+  .toc-box{background:rgba(108,99,255,.08);border:1px solid rgba(108,99,255,.25);border-left:4px solid #6c63ff;border-radius:12px;padding:1.25rem 1.5rem;margin:1.5rem 0 2rem;max-width:480px;}
+  .toc-box h3{font-size:.9rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#6c63ff;margin:0 0 .75rem;display:flex;align-items:center;gap:.4rem;}
+  .toc-box ol{margin:0;padding-left:1.2rem;display:flex;flex-direction:column;gap:.35rem;}
+  .toc-box li{font-size:.9rem;line-height:1.4;}
+  .toc-box a{color:var(--text-secondary,#aaa);text-decoration:none;transition:color .15s;}
+  .toc-box a:hover{color:#6c63ff;}
+  </style>
 </head>
 <body>
 
@@ -229,7 +238,23 @@
 
   <!-- --------------------------------
        WRITE YOUR ARTICLE CONTENT HERE
-       Add as many <h2> and <p> as needed.
+       Add as many 
+      <nav class="toc-box" aria-label="Table of Contents">
+        <h3>📋 Table of Contents</h3>
+        <ol>
+          <li><a href="#toc-0">and  as needed.
+       The sidebar TOC reads h2 headings automatically.
+  ------</a></li>
+<li><a href="#toc-1">Qwen-Robot Suite: Brains for the Physical World</a></li>
+<li><a href="#toc-2">Tencent Hunyuan 3.0 & WeChat Agents</a></li>
+<li><a href="#toc-3">Detailed Comparison: Leading Agentic AI Frameworks (2026)</a></li>
+<li><a href="#toc-4">WEF's 16 New Global Lighthouse Factories</a></li>
+<li><a href="#toc-5">Real-World Case Study: Smart Factories in Action</a></li>
+<li><a href="#toc-6">Frequently Asked Questions</a></li>
+
+        </ol>
+      </nav>
+      <h2 id="toc-0"> and <p> as needed.
        The sidebar TOC reads h2 headings automatically.
   --------------------------------- -->
 
@@ -238,7 +263,7 @@
   <p>At the center of Embodied AI is the development of Visual-Language-Action (VLA) models. These models do not just translate text into more text; they ground natural language instructions in spatial and visual inputs, generating physical action plans (such as motor torque, joint velocity, or path trajectories). This allows a robot to look at a cluttered room, understand a command like "find the glass and place it in the sink," and calculate the exact physical movements required to perform the task without any pre-programmed instructions.</p>
   <p>To learn more about the code and research, visit the official repositories at <a href="https://qwenlm.github.io" target="_blank" rel="noopener noreferrer">Qwen AI</a> and <a href="https://hunyuan.tencent.com" target="_blank" rel="noopener noreferrer">Tencent Hunyuan</a>.</p>
 
-  <h2>Qwen-Robot Suite: Brains for the Physical World</h2>
+  <h2 id="toc-1">Qwen-Robot Suite: Brains for the Physical World</h2>
   <p>Alibaba has officially unveiled the <strong>Qwen-Robot Suite</strong>, a groundbreaking framework that connects the reasoning power of the Qwen model family with physical-world action. The suite consists of three specialized components:</p>
   <ul>
     <li><strong>Qwen-RobotNav:</strong> An advanced navigation model that lets robots navigate complex, dynamic indoor and outdoor environments using natural language commands. It fuses real-time inputs from LiDAR sensors and RGB-D depth cameras to build local 3D spatial maps, routing the robot around unexpected obstacles while keeping track of the target location.</li>
@@ -247,11 +272,11 @@
   </ul>
   <p>By releasing these models, Alibaba is bridging the gap between digital reasoning and physical robotics. Because the Qwen-Robot Suite is designed to run on standard edge-computing hardware, it allows robotics manufacturers to build intelligent, autonomous service and industrial robots without developing custom cognitive layers from scratch.</p>
 
-  <h2>Tencent Hunyuan 3.0 & WeChat Agents</h2>
+  <h2 id="toc-2">Tencent Hunyuan 3.0 & WeChat Agents</h2>
   <p>Tencent has also made a massive play in the agent space with the launch of <strong>Hunyuan 3.0</strong> and its new <strong>Productivity Agent Suite</strong> (featuring "WorkBuddy" and "Miora"). Tencent's strategic direction is clear: embedding autonomous AI agents directly into WeChat, the super-app used by billions of users for communication, payment, and daily services.</p>
   <p>Hunyuan 3.0 is built on a high-throughput Mixture of Experts (MoE) architecture with a massive 256,000-token context window. This large context window allows the model to process long document folders, codebase structures, or hours of chat history. WeChat's agents can access user-authorized APIs to check calendars, draft emails, pay bills, and schedule appointments directly from a standard chat window. More importantly, Tencent has introduced multi-agent coordination protocols. This allows a user's personal assistant agent to communicate directly with commercial business agents (such as a restaurant booking agent or flight booking agent) to negotiate times, complete transactions, and confirm reservations autonomously, creating a seamless conversational operating system.</p>
 
-  <h2>Detailed Comparison: Leading Agentic AI Frameworks (2026)</h2>
+  <h2 id="toc-3">Detailed Comparison: Leading Agentic AI Frameworks (2026)</h2>
   <p>The transition from passive chatbots to active agents has led to the creation of several specialized developer frameworks. Below is a comparison of the leading agentic ecosystems in 2026:</p>
 
   <div style="overflow-x:auto; margin: 24px 0;">
@@ -298,16 +323,16 @@
     </table>
   </div>
 
-  <h2>WEF's 16 New Global Lighthouse Factories</h2>
+  <h2 id="toc-4">WEF's 16 New Global Lighthouse Factories</h2>
   <p>This agentic shift is already transforming global industry. On June 22, 2026, the <strong>World Economic Forum (WEF)</strong> announced 16 new Global Lighthouse manufacturing sites. These advanced factories are recognized for moving AI from isolated pilot projects into core operating systems. In these sites, multi-agent AI networks collaborate with human workers to coordinate supply chains, perform predictive maintenance, and dynamically adjust manufacturing lines on the fly, proving that agent-led operations are the new benchmark for global manufacturing.</p>
 
-  <h2>Real-World Case Study: Smart Factories in Action</h2>
+  <h2 id="toc-5">Real-World Case Study: Smart Factories in Action</h2>
   <p>To understand the impact of these technologies, we can look at a newly certified Lighthouse factory in Shanghai. In this facility, the material transport system is managed by a fleet of autonomous forklifts running Alibaba's Qwen-RobotNav. Instead of following fixed magnetic tracks painted on the floor (which require shutting down the factory to change), the forklifts navigate using real-time spatial awareness. When an assembly station runs low on components, the station's local IoT sensor sends a request to the factory's scheduling agent.</p>
   <p>This scheduling agent, powered by Hunyuan's enterprise suite, calculates the priority of the request, selects the nearest available forklift, and transmits the task in natural language: "Retrieve crate B4 from storage lane 2 and deliver to assembly line 3." The forklift's onboard navigation model maps a path through the busy factory floor, safely steering around human workers and other machinery. This agent-led automation has increased production efficiency by 24% and reduced machine downtime by 30%, showing how bridging digital logic with physical execution delivers immediate economic returns.</p>
 
   <!-- FAQ Section with Schema -->
   <div class="aph-faq-section" style="margin-top: 40px;">
-    <h2>Frequently Asked Questions</h2>
+    <h2 id="toc-6">Frequently Asked Questions</h2>
     
     <div class="aph-faq-item" style="border-bottom: 1px solid var(--border); padding: 16px 0;">
       <h3 style="font-size: 1.1rem; margin-bottom: 8px; color: var(--text-primary);">What is Embodied AI?</h3>
@@ -424,5 +449,40 @@
 <script src="../js/related-articles.js" defer></script>
 
 <script src="../js/article.js" defer></script>
+
+<!-- Cookie Consent Banner (GDPR / AdSense Compliance) -->
+<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:rgba(10,14,26,.97);border-top:1px solid rgba(108,99,255,.3);padding:1rem 1.5rem;backdrop-filter:blur(10px);">
+  <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;justify-content:space-between;">
+    <div style="flex:1;min-width:280px;">
+      <p style="margin:0;font-size:.88rem;color:rgba(255,255,255,.8);line-height:1.5;">
+        🍪 We use cookies to enhance your experience, serve personalized ads via <strong>Google AdSense</strong>, and analyze site traffic with <strong>Google Analytics</strong>. By clicking <strong>Accept All</strong>, you consent to our use of cookies.
+        <a href="/privacy-policy.html" style="color:#6c63ff;text-decoration:underline;">Privacy Policy</a>
+      </p>
+    </div>
+    <div style="display:flex;gap:.75rem;flex-shrink:0;flex-wrap:wrap;">
+      <button id="cookie-decline" style="padding:.6rem 1.2rem;background:transparent;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.7);border-radius:25px;font-size:.85rem;cursor:pointer;transition:border-color .2s;" onmouseover="this.style.borderColor='rgba(255,255,255,.5)'" onmouseout="this.style.borderColor='rgba(255,255,255,.2)'">Essential Only</button>
+      <button id="cookie-accept" style="padding:.6rem 1.5rem;background:linear-gradient(135deg,#6c63ff,#f97316);color:#fff;border:none;border-radius:25px;font-size:.85rem;font-weight:700;cursor:pointer;transition:transform .2s;" onmouseover="this.style.transform='translateY(-1px)'" onmouseout="this.style.transform='translateY(0)'">Accept All ✓</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var COOKIE_KEY = 'aph_cookie_consent';
+  var banner = document.getElementById('cookie-banner');
+  var consent = localStorage.getItem(COOKIE_KEY);
+  if (!consent) {
+    setTimeout(function(){ if(banner) banner.style.display = 'block'; }, 800);
+  }
+  function hide(val) {
+    localStorage.setItem(COOKIE_KEY, val);
+    if(banner) { banner.style.opacity='0'; banner.style.transition='opacity .3s'; setTimeout(function(){ banner.style.display='none'; }, 300); }
+  }
+  var btnA = document.getElementById('cookie-accept');
+  var btnD = document.getElementById('cookie-decline');
+  if(btnA) btnA.addEventListener('click', function(){ hide('all'); });
+  if(btnD) btnD.addEventListener('click', function(){ hide('essential'); });
+})();
+</script>
+
 </body>
 </html>

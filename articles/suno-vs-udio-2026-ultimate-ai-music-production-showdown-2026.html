@@ -141,6 +141,21 @@
   }
   </script>
   <link rel="alternate" type="application/rss+xml" title="AI Profit Hub RSS Feed" href="https://ai-profit-hub.com/rss.xml">
+  <!-- Article OG Meta -->
+  <meta property="article:published_time" content="2026-06-29">
+  <meta property="article:modified_time" content="2026-06-29">
+  <meta property="article:author" content="https://ai-profit-hub.com/authors.html">
+  <meta property="article:section" content="AI Tools">
+  <meta name="author" content="AI Profit Hub Editorial Team">
+
+  <style>
+  .toc-box{background:rgba(108,99,255,.08);border:1px solid rgba(108,99,255,.25);border-left:4px solid #6c63ff;border-radius:12px;padding:1.25rem 1.5rem;margin:1.5rem 0 2rem;max-width:480px;}
+  .toc-box h3{font-size:.9rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#6c63ff;margin:0 0 .75rem;display:flex;align-items:center;gap:.4rem;}
+  .toc-box ol{margin:0;padding-left:1.2rem;display:flex;flex-direction:column;gap:.35rem;}
+  .toc-box li{font-size:.9rem;line-height:1.4;}
+  .toc-box a{color:var(--text-secondary,#aaa);text-decoration:none;transition:color .15s;}
+  .toc-box a:hover{color:#6c63ff;}
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -216,6 +231,19 @@
         </ul>
       </div>
 
+      
+      <nav class="toc-box" aria-label="Table of Contents">
+        <h3>📋 Table of Contents</h3>
+        <ol>
+          <li><a href="#toc-0">1. Introduction: The AI Music Revolution in 2026</a></li>
+<li><a href="#toc-1">2. Technical Specifications: Audio Fidelity &amp; Resolution</a></li>
+<li><a href="#toc-2">3. Feature Set Comparison: Suno Studio DAW vs. Udio Granular Inpainting</a></li>
+<li><a href="#toc-3">4. Legal Stabilization: Settlements and Licensing Models</a></li>
+<li><a href="#toc-4">5. Copyright and Creative Ownership Guidelines</a></li>
+<li><a href="#toc-5">6. Frequently Asked Questions (FAQ)</a></li>
+
+        </ol>
+      </nav>
       <h2 id="introduction">1. Introduction: The AI Music Revolution in 2026</h2>
       <p>The AI music landscape in 2026 has transitioned from simple, experimental novelty tracks to professional-grade production environments. Leading this shift are **Suno** and **Udio**, two platforms that have evolved their generative systems into powerful tools for creators, composers, and sound designers.</p>
 
@@ -370,5 +398,40 @@
   </footer>
   <script src="../js/main.js" defer></script>
   <script src="../js/article.js" defer></script>
+
+<!-- Cookie Consent Banner (GDPR / AdSense Compliance) -->
+<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:rgba(10,14,26,.97);border-top:1px solid rgba(108,99,255,.3);padding:1rem 1.5rem;backdrop-filter:blur(10px);">
+  <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;justify-content:space-between;">
+    <div style="flex:1;min-width:280px;">
+      <p style="margin:0;font-size:.88rem;color:rgba(255,255,255,.8);line-height:1.5;">
+        🍪 We use cookies to enhance your experience, serve personalized ads via <strong>Google AdSense</strong>, and analyze site traffic with <strong>Google Analytics</strong>. By clicking <strong>Accept All</strong>, you consent to our use of cookies.
+        <a href="/privacy-policy.html" style="color:#6c63ff;text-decoration:underline;">Privacy Policy</a>
+      </p>
+    </div>
+    <div style="display:flex;gap:.75rem;flex-shrink:0;flex-wrap:wrap;">
+      <button id="cookie-decline" style="padding:.6rem 1.2rem;background:transparent;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.7);border-radius:25px;font-size:.85rem;cursor:pointer;transition:border-color .2s;" onmouseover="this.style.borderColor='rgba(255,255,255,.5)'" onmouseout="this.style.borderColor='rgba(255,255,255,.2)'">Essential Only</button>
+      <button id="cookie-accept" style="padding:.6rem 1.5rem;background:linear-gradient(135deg,#6c63ff,#f97316);color:#fff;border:none;border-radius:25px;font-size:.85rem;font-weight:700;cursor:pointer;transition:transform .2s;" onmouseover="this.style.transform='translateY(-1px)'" onmouseout="this.style.transform='translateY(0)'">Accept All ✓</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var COOKIE_KEY = 'aph_cookie_consent';
+  var banner = document.getElementById('cookie-banner');
+  var consent = localStorage.getItem(COOKIE_KEY);
+  if (!consent) {
+    setTimeout(function(){ if(banner) banner.style.display = 'block'; }, 800);
+  }
+  function hide(val) {
+    localStorage.setItem(COOKIE_KEY, val);
+    if(banner) { banner.style.opacity='0'; banner.style.transition='opacity .3s'; setTimeout(function(){ banner.style.display='none'; }, 300); }
+  }
+  var btnA = document.getElementById('cookie-accept');
+  var btnD = document.getElementById('cookie-decline');
+  if(btnA) btnA.addEventListener('click', function(){ hide('all'); });
+  if(btnD) btnD.addEventListener('click', function(){ hide('essential'); });
+})();
+</script>
+
 </body>
 </html>

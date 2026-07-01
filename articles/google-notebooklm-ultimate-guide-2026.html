@@ -163,6 +163,15 @@
   }
   </script>
   <link rel="alternate" type="application/rss+xml" title="AI Profit Hub RSS Feed" href="https://ai-profit-hub.com/rss.xml">
+
+  <style>
+  .toc-box{background:rgba(108,99,255,.08);border:1px solid rgba(108,99,255,.25);border-left:4px solid #6c63ff;border-radius:12px;padding:1.25rem 1.5rem;margin:1.5rem 0 2rem;max-width:480px;}
+  .toc-box h3{font-size:.9rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#6c63ff;margin:0 0 .75rem;display:flex;align-items:center;gap:.4rem;}
+  .toc-box ol{margin:0;padding-left:1.2rem;display:flex;flex-direction:column;gap:.35rem;}
+  .toc-box li{font-size:.9rem;line-height:1.4;}
+  .toc-box a{color:var(--text-secondary,#aaa);text-decoration:none;transition:color .15s;}
+  .toc-box a:hover{color:#6c63ff;}
+  </style>
 </head>
 <body>
 
@@ -229,7 +238,23 @@
 
   <!-- --------------------------------
        WRITE YOUR ARTICLE CONTENT HERE
-       Add as many <h2> and <p> as needed.
+       Add as many 
+      <nav class="toc-box" aria-label="Table of Contents">
+        <h3>📋 Table of Contents</h3>
+        <ol>
+          <li><a href="#toc-0">and  as needed.
+       The sidebar TOC reads h2 headings automatically.
+  ------</a></li>
+<li><a href="#toc-1">How NotebookLM Works: The Grounded RAG Architecture</a></li>
+<li><a href="#toc-2">Unlocking Advanced Features: Studio Guides and Notes</a></li>
+<li><a href="#toc-3">Generating AI Podcasts: Custom Audio Overviews</a></li>
+<li><a href="#toc-4">Comparison: NotebookLM vs. Traditional AI Tools</a></li>
+<li><a href="#toc-5">Real-World Research Scenarios</a></li>
+<li><a href="#toc-6">Tips for Optimal NotebookLM Workflows</a></li>
+
+        </ol>
+      </nav>
+      <h2 id="toc-0"> and <p> as needed.
        The sidebar TOC reads h2 headings automatically.
   --------------------------------- -->
 
@@ -237,7 +262,7 @@
   <p>Google's <strong>NotebookLM</strong> has quietly become one of the most powerful productivity tools for students, researchers, and professional knowledge workers. Unlike general-purpose AI chat assistants, NotebookLM works by grounding its intelligence strictly in the sources you provide, eliminating hallucinations and ensuring that every response is cited back to your documents. Powering the system is Google's advanced Gemini architecture, leveraging a massive context window to synthesize and map information across diverse documents simultaneously.</p>
   <p>Get started with the tool directly at <a href="https://notebooklm.google.com" target="_blank" rel="noopener noreferrer">Google NotebookLM</a>. By creating a closed-loop environment where the AI can only reference your approved uploads, Google has solved one of the most persistent bottlenecks of modern language models: the lack of verifiable evidence. Every query returns clear inline citations that link back to the exact passage in the source document, letting you check the source text in a single click.</p>
 
-  <h2>How NotebookLM Works: The Grounded RAG Architecture</h2>
+  <h2 id="toc-1">How NotebookLM Works: The Grounded RAG Architecture</h2>
   <p>At its core, NotebookLM is an advanced implementation of Retrieval-Augmented Generation (RAG). When you create a virtual "Notebook," you are setting up a private, secure database. Once you upload documents, the system processes the text, converts it into mathematical vectors, and indexes it. When you submit a question, the model retrieves the most semantically relevant paragraphs from your sources, feeds them into the prompt window alongside your query, and generates an answer grounded strictly in that content.</p>
   <p>Within each notebook, you can upload up to <strong>50 sources</strong>, with each source containing up to <strong>500,000 words</strong>. The system supports a wide range of source types, including:</p>
   <ul>
@@ -247,7 +272,7 @@
     <li><strong>YouTube Videos:</strong> Provide a public YouTube link, and NotebookLM will automatically import and analyze the video's transcript.</li>
   </ul>
 
-  <h2>Unlocking Advanced Features: Studio Guides and Notes</h2>
+  <h2 id="toc-2">Unlocking Advanced Features: Studio Guides and Notes</h2>
   <p>NotebookLM is much more than a simple document search tool. It provides a suite of advanced features designed to accelerate knowledge synthesis:</p>
   <ul>
     <li><strong>Briefing Documents:</strong> Automatically compiles key themes, executive summaries, and action points across all uploaded files into a cohesive briefing.</li>
@@ -256,7 +281,7 @@
     <li><strong>Shared Notebooks:</strong> Collaboratively share your notebooks with colleagues or classmates. You can grant view-only access or edit permissions, allowing teams to build joint knowledge hubs.</li>
   </ul>
 
-  <h2>Generating AI Podcasts: Custom Audio Overviews</h2>
+  <h2 id="toc-3">Generating AI Podcasts: Custom Audio Overviews</h2>
   <p>The most popular feature of NotebookLM is <strong>Audio Overviews</strong>. With a single click, the tool generates a highly realistic, conversational audio discussion based on your uploaded sources. Two AI co-hosts (a male and a female voice) speak naturally, banter, summarize key points, and explain complex concepts in plain English. This feature makes it incredibly easy to upload massive research papers, textbooks, or corporate earnings reports and listen to them as an engaging podcast during your commute.</p>
   <p>In mid-2026, Google introduced <strong>Custom Podcast Controls</strong>. Instead of accepting the default overview, users can now provide instructions to the hosts. You can direct the co-hosts to:
     <ul>
@@ -267,7 +292,7 @@
     This level of personalization turns the podcast feature from a fun novelty into a targeted, high-performance study tool.
   </p>
 
-  <h2>Comparison: NotebookLM vs. Traditional AI Tools</h2>
+  <h2 id="toc-4">Comparison: NotebookLM vs. Traditional AI Tools</h2>
   <p>How does NotebookLM compare to other AI research workflows? Let's analyze the differences:</p>
   <table border="1" cellpadding="10" cellspacing="0" style="width:100%; text-align:left; margin-bottom: 24px; border-collapse: collapse; font-size: 0.9rem; border-color: var(--border);">
     <tr style="background-color: var(--bg-elevated); color: var(--text-primary);">
@@ -314,7 +339,7 @@
     </tr>
   </table>
 
-  <h2>Real-World Research Scenarios</h2>
+  <h2 id="toc-5">Real-World Research Scenarios</h2>
   
   <h3>Scenario 1: Academic Literature Review</h3>
   <p>A PhD candidate is writing a literature review on "microplastic accumulation in urban rivers." They have gathered 40 research papers in PDF format. Instead of reading them linearly over weeks, they upload all 40 PDFs into a NotebookLM notebook. </p>
@@ -324,7 +349,7 @@
   <p>A software-as-a-service (SaaS) company is launching a major enterprise update. The training department has 12 files, including API manuals, user guides, slide presentations, and QA logs. They upload these files to NotebookLM to train their support agents.</p>
   <p>Support reps use the chat interface as a real-time assistant during live client calls to retrieve obscure API specs instantly with grounded accuracy. Simultaneously, the training team generates a 10-minute Audio Overview. New hires listen to this podcast on their phone, getting a natural, highly engaging summary of the API update, complete with real-world explanations of why the updates matter.</p>
 
-  <h2>Tips for Optimal NotebookLM Workflows</h2>
+  <h2 id="toc-6">Tips for Optimal NotebookLM Workflows</h2>
   <p>To get the most out of NotebookLM, keep these best practices in mind:</p>
   <ol>
     <li><strong>Clean Your Sources:</strong> Ensure your PDFs have clear, readable text (OCR-processed) so the AI can index the contents accurately.</li>
@@ -492,5 +517,40 @@
 <script src="../js/related-articles.js" defer></script>
 
 <script src="../js/article.js" defer></script>
+
+<!-- Cookie Consent Banner (GDPR / AdSense Compliance) -->
+<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:rgba(10,14,26,.97);border-top:1px solid rgba(108,99,255,.3);padding:1rem 1.5rem;backdrop-filter:blur(10px);">
+  <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;justify-content:space-between;">
+    <div style="flex:1;min-width:280px;">
+      <p style="margin:0;font-size:.88rem;color:rgba(255,255,255,.8);line-height:1.5;">
+        🍪 We use cookies to enhance your experience, serve personalized ads via <strong>Google AdSense</strong>, and analyze site traffic with <strong>Google Analytics</strong>. By clicking <strong>Accept All</strong>, you consent to our use of cookies.
+        <a href="/privacy-policy.html" style="color:#6c63ff;text-decoration:underline;">Privacy Policy</a>
+      </p>
+    </div>
+    <div style="display:flex;gap:.75rem;flex-shrink:0;flex-wrap:wrap;">
+      <button id="cookie-decline" style="padding:.6rem 1.2rem;background:transparent;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.7);border-radius:25px;font-size:.85rem;cursor:pointer;transition:border-color .2s;" onmouseover="this.style.borderColor='rgba(255,255,255,.5)'" onmouseout="this.style.borderColor='rgba(255,255,255,.2)'">Essential Only</button>
+      <button id="cookie-accept" style="padding:.6rem 1.5rem;background:linear-gradient(135deg,#6c63ff,#f97316);color:#fff;border:none;border-radius:25px;font-size:.85rem;font-weight:700;cursor:pointer;transition:transform .2s;" onmouseover="this.style.transform='translateY(-1px)'" onmouseout="this.style.transform='translateY(0)'">Accept All ✓</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var COOKIE_KEY = 'aph_cookie_consent';
+  var banner = document.getElementById('cookie-banner');
+  var consent = localStorage.getItem(COOKIE_KEY);
+  if (!consent) {
+    setTimeout(function(){ if(banner) banner.style.display = 'block'; }, 800);
+  }
+  function hide(val) {
+    localStorage.setItem(COOKIE_KEY, val);
+    if(banner) { banner.style.opacity='0'; banner.style.transition='opacity .3s'; setTimeout(function(){ banner.style.display='none'; }, 300); }
+  }
+  var btnA = document.getElementById('cookie-accept');
+  var btnD = document.getElementById('cookie-decline');
+  if(btnA) btnA.addEventListener('click', function(){ hide('all'); });
+  if(btnD) btnD.addEventListener('click', function(){ hide('essential'); });
+})();
+</script>
+
 </body>
 </html>

@@ -151,6 +151,15 @@
   }
   </script>
   <link rel="alternate" type="application/rss+xml" title="AI Profit Hub RSS Feed" href="https://ai-profit-hub.com/rss.xml">
+
+  <style>
+  .toc-box{background:rgba(108,99,255,.08);border:1px solid rgba(108,99,255,.25);border-left:4px solid #6c63ff;border-radius:12px;padding:1.25rem 1.5rem;margin:1.5rem 0 2rem;max-width:480px;}
+  .toc-box h3{font-size:.9rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#6c63ff;margin:0 0 .75rem;display:flex;align-items:center;gap:.4rem;}
+  .toc-box ol{margin:0;padding-left:1.2rem;display:flex;flex-direction:column;gap:.35rem;}
+  .toc-box li{font-size:.9rem;line-height:1.4;}
+  .toc-box a{color:var(--text-secondary,#aaa);text-decoration:none;transition:color .15s;}
+  .toc-box a:hover{color:#6c63ff;}
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -213,19 +222,31 @@
     <div class="article-content">
       <p>The artificial intelligence race in mid-2026 is moving beyond raw parameter size and focusing squarely on cognitive architecture. On June 22, 2026, Google announced the official release of <strong>Gemini 2.5 Pro</strong>, a model that sets a new high-water mark for conversational reasoning. Packed with a massive 2-million-token context window, the headline feature is the integration of an advanced <strong>"Deep Think"</strong> reasoning mode, representing a major challenge to OpenAI’s reasoning models and Anthropic's newly released <a href="../articles/anthropic-65-billion-fable-5-model-2026.html">Claude Fable 5</a>. This release signals a broader industry consensus: the path to Artificial General Intelligence (AGI) lies not just in scanning more web data, but in developing models that can deliberately plan and critique their own work.</p>
 
-      <h2>What is Gemini "Deep Think" Mode?</h2>
+      
+      <nav class="toc-box" aria-label="Table of Contents">
+        <h3>📋 Table of Contents</h3>
+        <ol>
+          <li><a href="#toc-0">What is Gemini "Deep Think" Mode?</a></li>
+<li><a href="#toc-1">Technical Deep Dive: The Mechanics of Multi-Modal Reasoning</a></li>
+<li><a href="#toc-2">The Power of the 2-Million-Token Context Window</a></li>
+<li><a href="#toc-3">Real-World Use Cases & Execution Scenarios</a></li>
+<li><a href="#toc-4">Benchmark Comparison: Gemini 2.5 Pro vs. Competitors</a></li>
+
+        </ol>
+      </nav>
+      <h2 id="toc-0">What is Gemini "Deep Think" Mode?</h2>
       <p>In standard Large Language Models, when you present a prompt, the model calculates the most probable sequence of words instantaneously. This represents what psychologists call "System 1" thinking—fast, intuitive, and automatic. While this works well for creative writing, translation, or basic summarization, it frequently falls short in complex fields like mathematics, advanced programming, and formal logic. Deep Think mode changes this paradigm by introducing "System 2" thinking—a dedicated, deliberate <strong>Chain-of-Thought (CoT)</strong> reasoning loop before presenting the final output.</p>
       <p>When Deep Think is enabled, Gemini 2.5 Pro pauses to internally generate a step-by-step thinking tree. It formulates hypotheses, runs virtual simulations of code execution, checks its math, and corrects its own errors before showing the user the final, verified solution. During this phase, the model writes a hidden internal monologue. This process allows Gemini to evaluate multiple potential paths to a solution, discarding logical dead-ends. This internal verification significantly reduces model hallucinations and ensures high accuracy in complex technical fields.</p>
 
-      <h2>Technical Deep Dive: The Mechanics of Multi-Modal Reasoning</h2>
+      <h2 id="toc-1">Technical Deep Dive: The Mechanics of Multi-Modal Reasoning</h2>
       <p>What sets Google's reasoning engine apart is its native multi-modality. Unlike other reasoning systems that are text-only at their core and rely on separate helper models to process images or audio, Gemini 2.5 Pro was trained from the ground up on text, code, audio, images, and video. When "Deep Think" is applied to an image or video, the model's reasoning loops operate directly on the visual and temporal tokens. </p>
       <p>For example, if you upload a complex engineering diagram alongside a query about electrical load balancing, the model doesn't just read a text transcription of the diagram. It reasons about the spatial layout of components, traces the wire paths, models the voltage drop across resistors in its scratchpad, and verifies the calculations before providing a recommendations report. This represents a massive leap forward for mechanical, civil, and software engineering troubleshooting.</p>
 
-      <h2>The Power of the 2-Million-Token Context Window</h2>
+      <h2 id="toc-2">The Power of the 2-Million-Token Context Window</h2>
       <p>While reasoning capabilities are critical, Google’s key strategic advantage remains its massive context window. Gemini 2.5 Pro retains the industry-leading <strong>2-million-token context capacity</strong>, allowing it to process massive datasets in a single query. Users can upload hours of high-definition video, millions of lines of codebase, or dozens of financial reports, and ask the model to perform deep reasoning across the entire document set.</p>
       <p>Unlike Western competitors that require chunking or using external Vector Databases (RAG) which often lose contextual nuance, Gemini 2.5 Pro can analyze relationships between distant entities directly inside its working memory. In testing, the model achieves a 99.9% success rate on "needle-in-a-haystack" retrieval tasks across the entire 2-million-token span. This is a game-changer for enterprise code migrations and legal contract analysis, where a single missing clause in a 500-page document can have multi-million dollar implications.</p>
 
-      <h2>Real-World Use Cases & Execution Scenarios</h2>
+      <h2 id="toc-3">Real-World Use Cases & Execution Scenarios</h2>
       
       <h3>Use Case 1: Legacy Code Migration & Architecture Audits</h3>
       <p>A financial services provider wants to migrate a legacy COBOL billing system (consisting of 80,000 lines of code across dozens of files) to modern Java microservices. Under traditional workflows, software architects would spend weeks mapping dependencies, documenting database schemas, and rewriting logic manually, risking critical bugs.</p>
@@ -235,7 +256,7 @@
       <p>An investigative journalism team receives a leaked 4-hour video recording of a corporate board meeting. They need to locate specific statements regarding a regulatory violation, verify if those statements match the company's public financial disclosures, and pinpoint any contradictions.</p>
       <p>The journalists upload the entire 4-hour video along with the company's 300-page annual financial report into Google AI Studio. By toggling "Deep Think," Gemini 2.5 Pro analyzes the audio, video frames, and financial text. It maps out a chronological timeline of the meeting, identifies the exact timestamps where executive officers discussed the compliance failure, compares their spoken words with the published report, and generates a structured table highlighting direct contradictions, citing page numbers and video timestamps.</p>
 
-      <h2>Benchmark Comparison: Gemini 2.5 Pro vs. Competitors</h2>
+      <h2 id="toc-4">Benchmark Comparison: Gemini 2.5 Pro vs. Competitors</h2>
       <p>In terms of performance, Google’s internal and independent third-party evaluations put Gemini 2.5 Pro at the absolute top tier for graduate-level science and software engineering benchmarks:</p>
       <table border="1" cellpadding="10" cellspacing="0" style="width:100%; text-align:left; margin-bottom: 24px; border-collapse: collapse; font-size: 0.9rem; border-color: var(--border);">
         <tr style="background-color: var(--bg-elevated); color: var(--text-primary);">
@@ -424,5 +445,40 @@
   <script src="../js/article-sidebar.js" defer></script>
   <script src="../js/related-articles.js" defer></script>
 <script src="../js/article.js" defer></script>
+
+<!-- Cookie Consent Banner (GDPR / AdSense Compliance) -->
+<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:rgba(10,14,26,.97);border-top:1px solid rgba(108,99,255,.3);padding:1rem 1.5rem;backdrop-filter:blur(10px);">
+  <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;justify-content:space-between;">
+    <div style="flex:1;min-width:280px;">
+      <p style="margin:0;font-size:.88rem;color:rgba(255,255,255,.8);line-height:1.5;">
+        🍪 We use cookies to enhance your experience, serve personalized ads via <strong>Google AdSense</strong>, and analyze site traffic with <strong>Google Analytics</strong>. By clicking <strong>Accept All</strong>, you consent to our use of cookies.
+        <a href="/privacy-policy.html" style="color:#6c63ff;text-decoration:underline;">Privacy Policy</a>
+      </p>
+    </div>
+    <div style="display:flex;gap:.75rem;flex-shrink:0;flex-wrap:wrap;">
+      <button id="cookie-decline" style="padding:.6rem 1.2rem;background:transparent;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.7);border-radius:25px;font-size:.85rem;cursor:pointer;transition:border-color .2s;" onmouseover="this.style.borderColor='rgba(255,255,255,.5)'" onmouseout="this.style.borderColor='rgba(255,255,255,.2)'">Essential Only</button>
+      <button id="cookie-accept" style="padding:.6rem 1.5rem;background:linear-gradient(135deg,#6c63ff,#f97316);color:#fff;border:none;border-radius:25px;font-size:.85rem;font-weight:700;cursor:pointer;transition:transform .2s;" onmouseover="this.style.transform='translateY(-1px)'" onmouseout="this.style.transform='translateY(0)'">Accept All ✓</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var COOKIE_KEY = 'aph_cookie_consent';
+  var banner = document.getElementById('cookie-banner');
+  var consent = localStorage.getItem(COOKIE_KEY);
+  if (!consent) {
+    setTimeout(function(){ if(banner) banner.style.display = 'block'; }, 800);
+  }
+  function hide(val) {
+    localStorage.setItem(COOKIE_KEY, val);
+    if(banner) { banner.style.opacity='0'; banner.style.transition='opacity .3s'; setTimeout(function(){ banner.style.display='none'; }, 300); }
+  }
+  var btnA = document.getElementById('cookie-accept');
+  var btnD = document.getElementById('cookie-decline');
+  if(btnA) btnA.addEventListener('click', function(){ hide('all'); });
+  if(btnD) btnD.addEventListener('click', function(){ hide('essential'); });
+})();
+</script>
+
 </body>
 </html>

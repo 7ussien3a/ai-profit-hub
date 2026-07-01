@@ -163,6 +163,15 @@
   }
   </script>
   <link rel="alternate" type="application/rss+xml" title="AI Profit Hub RSS Feed" href="https://ai-profit-hub.com/rss.xml">
+
+  <style>
+  .toc-box{background:rgba(108,99,255,.08);border:1px solid rgba(108,99,255,.25);border-left:4px solid #6c63ff;border-radius:12px;padding:1.25rem 1.5rem;margin:1.5rem 0 2rem;max-width:480px;}
+  .toc-box h3{font-size:.9rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#6c63ff;margin:0 0 .75rem;display:flex;align-items:center;gap:.4rem;}
+  .toc-box ol{margin:0;padding-left:1.2rem;display:flex;flex-direction:column;gap:.35rem;}
+  .toc-box li{font-size:.9rem;line-height:1.4;}
+  .toc-box a{color:var(--text-secondary,#aaa);text-decoration:none;transition:color .15s;}
+  .toc-box a:hover{color:#6c63ff;}
+  </style>
 </head>
 <body>
 
@@ -229,7 +238,22 @@
 
   <!-- --------------------------------
        WRITE YOUR ARTICLE CONTENT HERE
-       Add as many <h2> and <p> as needed.
+       Add as many 
+      <nav class="toc-box" aria-label="Table of Contents">
+        <h3>📋 Table of Contents</h3>
+        <ol>
+          <li><a href="#toc-0">and  as needed.
+       The sidebar TOC reads h2 headings automatically.
+  ------</a></li>
+<li><a href="#toc-1">Google's New AI Search Patent Revealed</a></li>
+<li><a href="#toc-2">"Teach the AI Who You Are"</a></li>
+<li><a href="#toc-3">SEO vs. GEO: How the Rules Have Changed</a></li>
+<li><a href="#toc-4">Real-World Optimization Use Cases</a></li>
+<li><a href="#toc-5">Preparing for the Generative Web</a></li>
+
+        </ol>
+      </nav>
+      <h2 id="toc-0"> and <p> as needed.
        The sidebar TOC reads h2 headings automatically.
   --------------------------------- -->
 
@@ -237,7 +261,7 @@
   <p>For over two decades, Search Engine Optimization (SEO) was about keywords, meta tags, and backlinks. In 2026, the rise of Large Language Models (LLMs) like Gemini, <a href="../reviews/chatgpt-review.html">ChatGPT</a>, and <a href="../companies/perplexity.html">Perplexity</a> has disrupted traditional search traffic. Search engines are increasingly providing direct, generative answers rather than listing web links. To survive, businesses must pivot to <strong>Generative Engine Optimization (GEO)</strong>�the art of optimizing content to be selected and recommended by generative AI search systems.</p>
   <p>To follow Google's official research updates, check out <a href="https://google.ai" target="_blank" rel="noopener noreferrer">Google AI</a>. The transition from clicking traditional blue links to consuming summarized AI answers means that if your brand is not mentioned in the conversational response, your organic visibility drops to zero. This makes understanding the algorithms behind generative recommendation engines the most critical digital marketing skill of the late 2020s.</p>
 
-  <h2>Google's New AI Search Patent Revealed</h2>
+  <h2 id="toc-1">Google's New AI Search Patent Revealed</h2>
   <p>On June 22, 2026, a newly published patent from Google (filing US2026/0189421A1, titled <em>"Generative Information Extraction and Entity-Relationship Recommendation in Conversational Search"</em>) revealed the inner workings of how search engines rank and select brands for LLM-generated responses. The patent describes a system that evaluates web sources based on data accuracy, contextual relationships, and verifiable entities. Instead of looking for simple keyword matches, Google's generative engine crawls the web to build a structured graph of your brand's authority, products, and customer satisfaction.</p>
   <p>The patent outlines three primary modules that govern conversational outputs:</p>
   <ul>
@@ -246,7 +270,7 @@
     <li><strong>The Sentiment and Cohort Allocator:</strong> Analyzes user reviews, forum discussions, and social media mentions to categorize the brand's target audience and reputation score.</li>
   </ul>
 
-  <h2>"Teach the AI Who You Are"</h2>
+  <h2 id="toc-2">"Teach the AI Who You Are"</h2>
   <p>The patent outlines a clear strategy for modern digital marketing: you must <strong>teach the AI who you are</strong>. To be recommended by generative search, businesses need to follow several key practices:</p>
   
   <h3>1. Implement Deep Structured Data</h3>
@@ -258,7 +282,7 @@
   <h3>3. Verifiable Accuracy and Coherence</h3>
   <p>Maintain consistent information across all public directories (social profiles, registry entries, press releases). LLMs are trained to detect and penalize contradictory or unverified brand claims. If your website claims you were founded in 2018, but your Crunchbase profile says 2020, and your LinkedIn says 2019, the Factuality Evaluator module flags the data as untrustworthy, severely lowering the probability of your brand being recommended in a user's conversational prompt.</p>
 
-  <h2>SEO vs. GEO: How the Rules Have Changed</h2>
+  <h2 id="toc-3">SEO vs. GEO: How the Rules Have Changed</h2>
   <p>Understanding the difference between traditional search optimization and generative engine optimization is essential for structuring your digital strategy:</p>
   <table border="1" cellpadding="10" cellspacing="0" style="width:100%; text-align:left; margin-bottom: 24px; border-collapse: collapse; font-size: 0.9rem; border-color: var(--border);">
     <tr style="background-color: var(--bg-elevated); color: var(--text-primary);">
@@ -293,7 +317,7 @@
     </tr>
   </table>
 
-  <h2>Real-World Optimization Use Cases</h2>
+  <h2 id="toc-4">Real-World Optimization Use Cases</h2>
   
   <h3>Use Case 1: Local Service Optimization for Conversational AI</h3>
   <p>A regional plumbing service in Chicago wants to be the primary recommendation when a user asks Gemini, <em>"Who is the most reliable emergency plumber in Chicago with transparent pricing?"</em> Under traditional SEO, they would build landing pages stuffed with "Chicago plumber reviews."</p>
@@ -303,7 +327,7 @@
   <p>A startup offering a "no-code CRM for medical offices" wants to be cited when developers and managers ask Perplexity, <em>"What is the best HIPAA-compliant CRM for small practices?"</em></p>
   <p>The startup publishes detailed, peer-reviewed whitepapers on medical data security, structures their documentation with medical schema, and ensures their HIPAA compliance is audited and listed on third-party security directories like SOC 2 and HITRUST registries. Perplexity's retrieval-augmented generation (RAG) gathers these authoritative documents, matches the semantic context of HIPAA compliance with the startup's entity, and displays a summary recommending the CRM as a top secure choice, backed by citations from the security registries.</p>
 
-  <h2>Preparing for the Generative Web</h2>
+  <h2 id="toc-5">Preparing for the Generative Web</h2>
   <p>As search engines transition to conversational assistants, the focus shifts from winning raw clicks to securing AI recommendations. If an AI model cannot verify your business registry, read consistent reviews about your service, or understand your brand's core offering, it will simply recommend a competitor. Teaching generative AI who you are is no longer optional�it is the core of 2026 digital marketing.</p>
 
   <!-- Author Callout -->
@@ -465,5 +489,40 @@
 <script src="../js/related-articles.js" defer></script>
 
 <script src="../js/article.js" defer></script>
+
+<!-- Cookie Consent Banner (GDPR / AdSense Compliance) -->
+<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:rgba(10,14,26,.97);border-top:1px solid rgba(108,99,255,.3);padding:1rem 1.5rem;backdrop-filter:blur(10px);">
+  <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;justify-content:space-between;">
+    <div style="flex:1;min-width:280px;">
+      <p style="margin:0;font-size:.88rem;color:rgba(255,255,255,.8);line-height:1.5;">
+        🍪 We use cookies to enhance your experience, serve personalized ads via <strong>Google AdSense</strong>, and analyze site traffic with <strong>Google Analytics</strong>. By clicking <strong>Accept All</strong>, you consent to our use of cookies.
+        <a href="/privacy-policy.html" style="color:#6c63ff;text-decoration:underline;">Privacy Policy</a>
+      </p>
+    </div>
+    <div style="display:flex;gap:.75rem;flex-shrink:0;flex-wrap:wrap;">
+      <button id="cookie-decline" style="padding:.6rem 1.2rem;background:transparent;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.7);border-radius:25px;font-size:.85rem;cursor:pointer;transition:border-color .2s;" onmouseover="this.style.borderColor='rgba(255,255,255,.5)'" onmouseout="this.style.borderColor='rgba(255,255,255,.2)'">Essential Only</button>
+      <button id="cookie-accept" style="padding:.6rem 1.5rem;background:linear-gradient(135deg,#6c63ff,#f97316);color:#fff;border:none;border-radius:25px;font-size:.85rem;font-weight:700;cursor:pointer;transition:transform .2s;" onmouseover="this.style.transform='translateY(-1px)'" onmouseout="this.style.transform='translateY(0)'">Accept All ✓</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var COOKIE_KEY = 'aph_cookie_consent';
+  var banner = document.getElementById('cookie-banner');
+  var consent = localStorage.getItem(COOKIE_KEY);
+  if (!consent) {
+    setTimeout(function(){ if(banner) banner.style.display = 'block'; }, 800);
+  }
+  function hide(val) {
+    localStorage.setItem(COOKIE_KEY, val);
+    if(banner) { banner.style.opacity='0'; banner.style.transition='opacity .3s'; setTimeout(function(){ banner.style.display='none'; }, 300); }
+  }
+  var btnA = document.getElementById('cookie-accept');
+  var btnD = document.getElementById('cookie-decline');
+  if(btnA) btnA.addEventListener('click', function(){ hide('all'); });
+  if(btnD) btnD.addEventListener('click', function(){ hide('essential'); });
+})();
+</script>
+
 </body>
 </html>
