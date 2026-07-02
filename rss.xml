@@ -2,6 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
   <item>
+    <title>DeepSeek-V2's Open-Source MoE: China's AI Breakthrough Redefining Cost &amp; Performance</title>
+    <link>https://ai-profit-hub.com/articles/deepseek-v2-s-open-source-moe-china-s-ai-breakthrough-redefining-cost-performance-20260702.html</link>
+    <description>A new frontier in artificial intelligence is emerging, spearheaded by an unexpected champion: China&apos;s DeepSeek-V2. This groundbreaking open-source Mixture-of-Experts (MoE) large language model (LLM) i...</description>
+    <pubDate>Thu, 02 Jul 2026 19:00:41 +0300</pubDate>
+    <guid>https://ai-profit-hub.com/articles/deepseek-v2-s-open-source-moe-china-s-ai-breakthrough-redefining-cost-performance-20260702.html</guid>
+  </item>
+
+  <item>
     <title>Huawei's Pangu AI: Unleashing China's Full-Stack AI Dominance</title>
     <link>https://ai-profit-hub.com/articles/huawei-s-pangu-ai-unleashing-china-s-full-stack-ai-dominance-20260702.html</link>
     <description>In the fiercely competitive global race for artificial intelligence leadership, Huawei&apos;s Pangu AI stands as a monumental pillar, driving China&apos;s ambition towards comprehensive AI dominance. This suite...</description>
@@ -61,7 +69,7 @@
   <link>https://ai-profit-hub.com</link>
   <description>Best AI Tools, Tutorials &amp; Productivity Hacks</description>
   <language>en-us</language>
-  <lastBuildDate>Thu, 02 Jul 2026 18:00:40 +0300</lastBuildDate>
+  <lastBuildDate>Thu, 02 Jul 2026 19:00:41 +0300</lastBuildDate>
   <atom:link href="https://ai-profit-hub.com/rss.xml" rel="self" type="application/rss+xml" />
   <item>
     <title>DeepSeek-R1 vs Meituan LongCat-2.0: Chinese AI Giants Face Off</title>
