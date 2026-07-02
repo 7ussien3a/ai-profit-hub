@@ -209,6 +209,66 @@
   .author-bio-links a{font-size:.8rem;color:var(--text-secondary,#aaa);text-decoration:none;padding:.25rem .7rem;border:1px solid rgba(255,255,255,.12);border-radius:12px;transition:color .2s,border-color .2s;}
   .author-bio-links a:hover{color:#6c63ff;border-color:rgba(108,99,255,.4);}
   </style>
+  <!-- Mobile Responsiveness Fixes -->
+  <style>
+  /* ─── Core mobile fixes ─── */
+  @media (max-width: 768px) {
+    /* Article layout */
+    .article-container, .article-content, .article-body {
+      width: 100% !important;
+      max-width: 100% !important;
+      padding: 0 1rem !important;
+      overflow-x: hidden !important;
+      box-sizing: border-box !important;
+    }
+    /* Main article image */
+    .article-hero img, .article-main-image, img {
+      max-width: 100% !important;
+      height: auto !important;
+    }
+    /* Tables */
+    table { display: block; overflow-x: auto; width: 100% !important; }
+    /* Code blocks */
+    pre, code { overflow-x: auto; max-width: 100%; white-space: pre-wrap; word-break: break-word; }
+    /* Related grid */
+    .related-grid { grid-template-columns: 1fr !important; }
+    .related-card { width: 100% !important; }
+    /* TOC */
+    .toc-box { max-width: 100% !important; }
+    /* Author bio */
+    .author-bio-enhanced { flex-direction: column !important; }
+    /* Share buttons */
+    .share-section { flex-wrap: wrap !important; gap: .5rem !important; }
+    /* Key takeaways */
+    .key-takeaways { margin: 1rem 0 !important; }
+    /* Newsletter */
+    .newsletter-inline form { flex-direction: column !important; }
+    .newsletter-inline input[type="email"] { width: 100% !important; min-width: unset !important; }
+    /* H1 */
+    h1 { font-size: 1.5rem !important; line-height: 1.35 !important; }
+    h2 { font-size: 1.2rem !important; }
+    /* Nav if exists */
+    nav { overflow-x: hidden !important; }
+    /* Body overflow */
+    body { overflow-x: hidden !important; }
+    /* Article meta */
+    .article-meta { flex-wrap: wrap !important; gap: .5rem !important; }
+    /* FAQ */
+    .faq-question { font-size: .9rem !important; padding: .9rem 1rem !important; }
+    /* Sources */
+    .sources-section { padding: 1rem !important; }
+    /* Cookie banner */
+    #cookie-banner > div { flex-direction: column !important; gap: .75rem !important; }
+  }
+  @media (max-width: 480px) {
+    h1 { font-size: 1.3rem !important; }
+    .article-container { padding: 0 .75rem !important; }
+  }
+  /* Prevent horizontal scroll globally */
+  html, body { max-width: 100% !important; overflow-x: hidden !important; }
+  * { box-sizing: border-box; }
+  img { max-width: 100%; height: auto; }
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -361,7 +421,7 @@
       </div>
     
       <div class="author-bio-enhanced">
-        <div class="author-bio-avatar-fallback">🤖</div>
+        <img src="../images/author-hussein.jpg" alt="Hussein - AI Profit Hub Editor" width="72" height="72" style="width:72px;height:72px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid rgba(108,99,255,.4);" loading="lazy">
         <div class="author-bio-info">
           <p class="author-bio-name">AI Profit Hub Editorial Team</p>
           <p class="author-bio-title">AI Research & Analysis Team</p>
