@@ -949,8 +949,14 @@ h1, h2, h3, h4, h5, h6, .logo {
 }
 
 .animate-in {
-  animation: fadeInUp 0.6s ease forwards;
-  opacity: 0;
+  animation: fadeInUp 0.6s ease both;
+  opacity: 1;
+}
+
+.article-content.animate-in {
+  animation: none;
+  opacity: 1;
+  transform: none;
 }
 
 .animate-in:nth-child(1) { animation-delay: 0.1s; }

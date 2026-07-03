@@ -24,8 +24,10 @@
 
   <title>ARTICLE_TITLE | AI Profit Hub</title>
   <meta name="description" content="ARTICLE_DESCRIPTION">
-  <meta name="robots" content="noindex, nofollow">
+  <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://ai-profit-hub.com/articles/ARTICLE_URL_SLUG.html">
+  <meta property="article:published_time" content="ARTICLE_PUBLISHED_DATE">
+  <meta property="article:modified_time" content="ARTICLE_PUBLISHED_DATE">
 
   <!-- Open Graph -->
   <meta property="og:title" content="ARTICLE_TITLE">
@@ -33,6 +35,7 @@
   <meta property="og:image" content="ARTICLE_IMAGE_URL">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://ai-profit-hub.com/articles/ARTICLE_URL_SLUG.html">
+  <meta property="og:site_name" content="AI Profit Hub">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
@@ -45,13 +48,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/article.css">
   <!-- Lucide Icons Library -->
   <script src="https://unpkg.com/lucide@0.400.0/dist/umd/lucide.min.js" defer></script>
 
   <!-- AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4602905173099480" crossorigin="anonymous"></script>
 
-  <!-- Schema.org Structured Data (change values below) -->
+  <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -59,11 +63,22 @@
     "headline": "ARTICLE_TITLE",
     "description": "ARTICLE_DESCRIPTION",
     "image": "ARTICLE_IMAGE_URL",
-    "author": {"@type": "Person", "name": "Hussein", "url": "https://ai-profit-hub.com/about.html"},
-    "publisher": {"@type": "Organization", "name": "AI Profit Hub", "url": "https://ai-profit-hub.com"},
-    "datePublished": "2026-06-18",
-    "dateModified": "2026-06-18",
+    "author": {"@type": "Person", "name": "Hussein Harby", "url": "https://ai-profit-hub.com/author/hussein-harby.html"},
+    "publisher": {"@type": "Organization", "name": "AI Profit Hub", "url": "https://ai-profit-hub.com", "logo": {"@type": "ImageObject", "url": "https://ai-profit-hub.com/images/ai-person-laptop.jpg"}},
+    "datePublished": "ARTICLE_PUBLISHED_DATE",
+    "dateModified": "ARTICLE_PUBLISHED_DATE",
     "mainEntityOfPage": {"@type": "WebPage", "@id": "https://ai-profit-hub.com/articles/ARTICLE_URL_SLUG.html"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://ai-profit-hub.com"},
+      {"@type": "ListItem", "position": 2, "name": "Tech News", "item": "https://ai-profit-hub.com/categories/tech-news.html"},
+      {"@type": "ListItem", "position": 3, "name": "ARTICLE_TITLE"}
+    ]
   }
   </script>
 
@@ -138,8 +153,8 @@
     <h1>ARTICLE_TITLE</h1>
     <div class="article-meta">
       <span>&#9997; Hussein</span>
-      <span>&#128197; <span class="last-updated">Last Updated: June 18, 2026</span></span>
-      <span>&#9201; 7 min read</span>
+      <span>&#128197; <span class="last-updated">Last Updated: ARTICLE_PUBLISHED_HUMAN</span></span>
+      <span>&#9201; ARTICLE_READ_TIME min read</span>
       <span>&#128240; SOURCE_NAME</span>
     </div>
   </div>
