@@ -2,6 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
   <item>
+    <title>Huawei Pangu AI's Ascent: How Sanctions Fuel China's Breakthrough LLMs</title>
+    <link>https://ai-profit-hub.com/articles/huawei-pangu-ai-s-ascent-how-sanctions-fuel-china-s-breakthrough-llms-20260703.html</link>
+    <description>The narrative of technological advancement often features global collaboration, but for Huawei, a different story unfolds. Faced with stringent US sanctions that severely limited access to advanced ch...</description>
+    <pubDate>Fri, 03 Jul 2026 19:00:38 +0300</pubDate>
+    <guid>https://ai-profit-hub.com/articles/huawei-pangu-ai-s-ascent-how-sanctions-fuel-china-s-breakthrough-llms-20260703.html</guid>
+  </item>
+
+  <item>
     <title>DeepSeek-V2: The Open-Source LLM Challenging AI Giants</title>
     <link>https://ai-profit-hub.com/articles/deepseek-v2-the-open-source-llm-challenging-ai-giants-20260703.html</link>
     <description>In the rapidly evolving landscape of artificial intelligence, a new contender has emerged from China, set to redefine the boundaries of what open-source models can achieve. DeepSeek-V2, an innovative ...</description>
@@ -157,7 +165,7 @@
   <link>https://ai-profit-hub.com</link>
   <description>Best AI Tools, Tutorials &amp; Productivity Hacks</description>
   <language>en-us</language>
-  <lastBuildDate>Fri, 03 Jul 2026 18:10:07 +0300</lastBuildDate>
+  <lastBuildDate>Fri, 03 Jul 2026 19:00:38 +0300</lastBuildDate>
   <atom:link href="https://ai-profit-hub.com/rss.xml" rel="self" type="application/rss+xml" />
   <item>
     <title>DeepSeek-R1 vs Meituan LongCat-2.0: Chinese AI Giants Face Off</title>
