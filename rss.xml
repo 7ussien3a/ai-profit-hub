@@ -2,6 +2,78 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
   <item>
+    <title>OpenAI Proposes 5% Government Stake to Trump Administration</title>
+    <link>https://ai-profit-hub.com/articles/openai-proposes-5-percent-government-stake-trump-20260703.html</link>
+    <description>OpenAI proposed giving the US government a 5% equity stake in the company, marking an unprecedented shift in AI-government relations.</description>
+    <pubDate>Thu, 03 Jul 2026 10:00:00 +0300</pubDate>
+    <guid>https://ai-profit-hub.com/articles/openai-proposes-5-percent-government-stake-trump-20260703.html</guid>
+  </item>
+
+  <item>
+    <title>Anthropic Redeploys Fable 5 Globally with New Jailbreak Framework</title>
+    <link>https://ai-profit-hub.com/articles/anthropic-redeploys-fable-5-globally-jailbreak-framework-20260703.html</link>
+    <description>Anthropic's Fable 5 returns globally July 1 with a new industry-wide framework for scoring jailbreak severity, developed with Amazon, Microsoft, and Google.</description>
+    <pubDate>Thu, 03 Jul 2026 09:30:00 +0300</pubDate>
+    <guid>https://ai-profit-hub.com/articles/anthropic-redeploys-fable-5-globally-jailbreak-framework-20260703.html</guid>
+  </item>
+
+  <item>
+    <title>South Korea Announces $518 Billion Chipmaking Hub with Samsung and SK</title>
+    <link>https://ai-profit-hub.com/articles/south-korea-518-billion-chipmaking-hub-samsung-sk-20260703.html</link>
+    <description>South Korean tech giants Samsung and SK announce a $518 billion chipmaking hub to serve soaring AI demand.</description>
+    <pubDate>Thu, 03 Jul 2026 09:00:00 +0300</pubDate>
+    <guid>https://ai-profit-hub.com/articles/south-korea-518-billion-chipmaking-hub-samsung-sk-20260703.html</guid>
+  </item>
+
+  <item>
+    <title>China's Z.ai Claims to Match Anthropic Mythos on Cybersecurity</title>
+    <link>https://ai-profit-hub.com/articles/chinas-z-ai-matches-anthropic-mythos-cybersecurity-20260703.html</link>
+    <description>China's Z.ai claims to match Anthropic's Mythos 5 on cybersecurity capabilities, resetting the AI race between the US and China.</description>
+    <pubDate>Thu, 03 Jul 2026 08:30:00 +0300</pubDate>
+    <guid>https://ai-profit-hub.com/articles/chinas-z-ai-matches-anthropic-mythos-cybersecurity-20260703.html</guid>
+  </item>
+
+  <item>
+    <title>DeepSeek V4 Optimized for Huawei Ascend with 75% Price Cut</title>
+    <link>https://ai-profit-hub.com/articles/deepseek-v4-huawei-ascend-75-percent-price-cut-20260703.html</link>
+    <description>DeepSeek V4 was optimized for Huawei Ascend processors with a permanent 75% price cut on the V4-Pro tier.</description>
+    <pubDate>Thu, 03 Jul 2026 08:00:00 +0300</pubDate>
+    <guid>https://ai-profit-hub.com/articles/deepseek-v4-huawei-ascend-75-percent-price-cut-20260703.html</guid>
+  </item>
+
+  <item>
+    <title>DeepSeek V4 vs GPT-5.6 Sol: Complete Comparison</title>
+    <link>https://ai-profit-hub.com/compare/deepseek-v4-vs-gpt-5-6-sol.html</link>
+    <description>A detailed comparison of DeepSeek V4 and GPT-5.6 Sol covering performance, pricing, coding, reasoning, and use cases.</description>
+    <pubDate>Thu, 03 Jul 2026 07:30:00 +0300</pubDate>
+    <guid>https://ai-profit-hub.com/compare/deepseek-v4-vs-gpt-5-6-sol.html</guid>
+  </item>
+
+  <item>
+    <title>Claude Sonnet 5 vs Gemini 3.5 Flash: Which Is Better?</title>
+    <link>https://ai-profit-hub.com/compare/claude-sonnet-5-vs-gemini-3-5-flash.html</link>
+    <description>An in-depth comparison of Anthropic's Claude Sonnet 5 and Google's Gemini 3.5 Flash.</description>
+    <pubDate>Thu, 03 Jul 2026 07:00:00 +0300</pubDate>
+    <guid>https://ai-profit-hub.com/compare/claude-sonnet-5-vs-gemini-3-5-flash.html</guid>
+  </item>
+
+  <item>
+    <title>Claude Sonnet 5 Review: Anthropic's Latest Frontier Model</title>
+    <link>https://ai-profit-hub.com/reviews/claude-sonnet-5-review.html</link>
+    <description>A comprehensive review of Claude Sonnet 5, Anthropic's latest model delivering frontier performance.</description>
+    <pubDate>Thu, 03 Jul 2026 06:30:00 +0300</pubDate>
+    <guid>https://ai-profit-hub.com/reviews/claude-sonnet-5-review.html</guid>
+  </item>
+
+  <item>
+    <title>How to Use DeepSeek V4 for Coding in 2026</title>
+    <link>https://ai-profit-hub.com/guides/how-to-use-deepseek-v4-for-coding-2026.html</link>
+    <description>A step-by-step guide to using DeepSeek V4 for coding with code examples for Python, JavaScript, and SQL.</description>
+    <pubDate>Thu, 03 Jul 2026 06:00:00 +0300</pubDate>
+    <guid>https://ai-profit-hub.com/guides/how-to-use-deepseek-v4-for-coding-2026.html</guid>
+  </item>
+
+  <item>
     <title>DeepSeek V2's Revolutionary Architecture Unleashes Unprecedented Open-Source LLM Power</title>
     <link>https://ai-profit-hub.com/articles/deepseek-v2-s-revolutionary-architecture-unleashes-unprecedented-open-source-llm-power-20260702.html</link>
     <description>In the rapidly evolving landscape of artificial intelligence, a new contender has emerged, poised to redefine the capabilities of large language models. DeepSeek V2&apos;s revolutionary architecture is not...</description>
