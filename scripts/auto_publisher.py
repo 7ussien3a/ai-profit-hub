@@ -245,7 +245,48 @@ def md_to_html(md):
 # ============================================================
 # 4) بناء المقال من القالب (Template-Driven)
 # ============================================================
-def build_article(title, description, body_html, image_url):
+def download_and_optimize_image(url, slug):
+    """تحميل الصورة من pollinations.ai وتحويلها إلى WebP مضغوط للحفاظ على الحجم أقل من 200KB."""
+    temp_path = os.path.join(SITE_DIR, 'images', f"{slug}_temp.png")
+    final_filename = f"{slug}.webp"
+    final_path = os.path.join(SITE_DIR, 'images', final_filename)
+    os.makedirs(os.path.dirname(temp_path), exist_ok=True)
+    
+    try:
+        print(f"[INFO] Downloading image from: {url}")
+        req = urllib.request.Request(
+            url,
+            headers={'User-Agent': 'Mozilla/5.0'}
+        )
+        with urllib.request.urlopen(req, timeout=60) as response:
+            with open(temp_path, 'wb') as f:
+                f.write(response.read())
+        
+        # Open with PIL and convert/save as webp
+        from PIL import Image
+        with Image.open(temp_path) as img:
+            if img.mode in ('RGBA', 'P'):
+                img = img.convert('RGB')
+            img.save(final_path, 'WEBP', quality=80)
+        
+        if os.path.exists(temp_path):
+            os.remove(temp_path)
+            
+        size_kb = os.path.getsize(final_path) / 1024
+        print(f"[OK] Image saved and optimized: images/{final_filename} ({size_kb:.1f} KB)")
+        return final_filename
+    except Exception as e:
+        print(f"[ERROR] Failed to download or optimize image: {e}")
+        if os.path.exists(temp_path):
+            try:
+                os.rename(temp_path, os.path.join(SITE_DIR, 'images', f"{slug}.png"))
+                return f"{slug}.png"
+            except Exception:
+                pass
+        return None
+
+
+def build_article(title, description, body_html, image_url_rel, image_url_abs):
     """تحميل article-template.html وتعبئة الـ placeholders."""
     template_path = os.path.join(SITE_DIR, 'article-template.html')
     with open(template_path, 'r', encoding='utf-8') as f:
@@ -261,7 +302,8 @@ def build_article(title, description, body_html, image_url):
         'ARTICLE_TITLE': title,
         'ARTICLE_DESCRIPTION': description,
         'ARTICLE_URL_SLUG': slug,
-        'ARTICLE_IMAGE_URL': image_url,
+        'ARTICLE_IMAGE_URL': image_url_rel,
+        'ARTICLE_IMAGE_URL_ABS': image_url_abs,
         'ARTICLE_TAG': f'{cat["emoji"]} {cat["name"]}',
         'ARTICLE_PUBLISHED_DATE': date_iso,
         'ARTICLE_PUBLISHED_HUMAN': date_human,
@@ -276,7 +318,7 @@ def build_article(title, description, body_html, image_url):
 
 
 def get_image_url(title):
-    """توليد رابط صورة Pollinations (سيُنزَّل محلياً لاحقاً)."""
+    """توليد رابط صورة Pollinations."""
     keywords = re.sub(r'[^a-zA-Z0-9 ]', '', title.lower())[:60].replace(' ', '%20')
     seed = abs(hash(title)) % 10000
     return f"https://image.pollinations.ai/prompt/{keywords}?width=1600&height=900&nologo=true&seed={seed}"
@@ -405,14 +447,21 @@ def validate_article(filepath):
 # ============================================================
 # 7) Git
 # ============================================================
-def push_to_github(dry_run=False):
+def push_to_github(article_filename, local_image_name, dry_run=False):
     """Commit + push."""
     if dry_run:
         print("[DRY-RUN] skipping git push")
         return
     print("[INFO] Pushing to GitHub...")
     try:
-        subprocess.run(["git", "add", "."], cwd=SITE_DIR, check=True, capture_output=True)
+        # Force add the new article and its image (since they are in git exclude)
+        subprocess.run(["git", "add", "-f", f"articles/{article_filename}"], cwd=SITE_DIR, check=True, capture_output=True)
+        if local_image_name:
+            subprocess.run(["git", "add", "-f", f"images/{local_image_name}"], cwd=SITE_DIR, check=True, capture_output=True)
+        
+        # Add index, sitemap, rss
+        subprocess.run(["git", "add", "index.html", "sitemap.xml", "rss.xml"], cwd=SITE_DIR, check=True, capture_output=True)
+        
         msg = f"Auto-publish: {datetime.date.today().isoformat()}"
         subprocess.run(["git", "commit", "-m", msg], cwd=SITE_DIR, check=True, capture_output=True)
         subprocess.run(["git", "push"], cwd=SITE_DIR, check=True, capture_output=True)
@@ -455,9 +504,18 @@ def main():
     body_html = md_to_html(body_md)
 
     image_url = get_image_url(title)
+    local_image_name = download_and_optimize_image(image_url, slug)
+    if local_image_name:
+        image_url_rel = f"../images/{local_image_name}"
+        image_url_abs = f"https://ai-profit-hub.com/images/{local_image_name}"
+        image_url_index = f"images/{local_image_name}"
+    else:
+        image_url_rel = image_url
+        image_url_abs = image_url
+        image_url_index = image_url
 
     print("[3/6] Building article from template...")
-    article_html, slug_out, cat = build_article(title, description, body_html, image_url)
+    article_html, slug_out, cat = build_article(title, description, body_html, image_url_rel, image_url_abs)
 
     article_path = os.path.join(ARTICLES_DIR, filename)
     with open(article_path, 'w', encoding='utf-8') as f:
@@ -473,11 +531,11 @@ def main():
     print("       All quality checks passed.")
 
     print("[6/6] Updating index/sitemap/rss...")
-    update_index_page(title, slug, filename, description, image_url, cat)
+    update_index_page(title, slug, filename, description, image_url_index, cat)
     update_sitemap(filename)
     update_rss(title, slug, filename, description)
 
-    push_to_github(dry_run=args.dry_run)
+    push_to_github(filename, local_image_name, dry_run=args.dry_run)
     print(f"\n[DONE] Published: {title}")
     print(f"       URL: https://ai-profit-hub.com/articles/{filename}")
 
