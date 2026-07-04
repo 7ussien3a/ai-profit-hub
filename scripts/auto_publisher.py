@@ -246,11 +246,10 @@ def md_to_html(md):
 # 4) بناء المقال من القالب (Template-Driven)
 # ============================================================
 def download_and_optimize_image(url, slug):
-    """تحميل الصورة من pollinations.ai وتحويلها إلى WebP مضغوط للحفاظ على الحجم أقل من 200KB."""
-    temp_path = os.path.join(SITE_DIR, 'images', f"{slug}_temp.png")
-    final_filename = f"{slug}.webp"
+    """تحميل الصورة من pollinations.ai وحفظها محلياً بصيغة jpg مباشرة بدون مكتبات خارجية."""
+    final_filename = f"{slug}.jpg"
     final_path = os.path.join(SITE_DIR, 'images', final_filename)
-    os.makedirs(os.path.dirname(temp_path), exist_ok=True)
+    os.makedirs(os.path.dirname(final_path), exist_ok=True)
     
     try:
         print(f"[INFO] Downloading image from: {url}")
@@ -259,30 +258,15 @@ def download_and_optimize_image(url, slug):
             headers={'User-Agent': 'Mozilla/5.0'}
         )
         with urllib.request.urlopen(req, timeout=60) as response:
-            with open(temp_path, 'wb') as f:
-                f.write(response.read())
-        
-        # Open with PIL and convert/save as webp
-        from PIL import Image
-        with Image.open(temp_path) as img:
-            if img.mode in ('RGBA', 'P'):
-                img = img.convert('RGB')
-            img.save(final_path, 'WEBP', quality=80)
-        
-        if os.path.exists(temp_path):
-            os.remove(temp_path)
+            data = response.read()
+            with open(final_path, 'wb') as f:
+                f.write(data)
             
         size_kb = os.path.getsize(final_path) / 1024
-        print(f"[OK] Image saved and optimized: images/{final_filename} ({size_kb:.1f} KB)")
+        print(f"[OK] Image saved: images/{final_filename} ({size_kb:.1f} KB)")
         return final_filename
     except Exception as e:
-        print(f"[ERROR] Failed to download or optimize image: {e}")
-        if os.path.exists(temp_path):
-            try:
-                os.rename(temp_path, os.path.join(SITE_DIR, 'images', f"{slug}.png"))
-                return f"{slug}.png"
-            except Exception:
-                pass
+        print(f"[ERROR] Failed to download image: {e}")
         return None
 
 
