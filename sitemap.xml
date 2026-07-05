@@ -1218,4 +1218,28 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://ai-profit-hub.com/articles/china-s-ai-leap-deepseek-s-7-4b-funding-and-huawei-s-ascend-950-series.html</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ai-profit-hub.com/articles/anthropic-surpasses-openai-in-revenue-as-google-prepares-agentic-gemini-3-5-pro.html</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ai-profit-hub.com/articles/japan-s-sovereign-physical-ai-softbank-leads-6-16b-noetra-consortium.html</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ai-profit-hub.com/articles/south-korea-s-500b-ai-supercycle-samsung-hbm4-and-sk-hynix-factory-expansion.html</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

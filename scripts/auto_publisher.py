@@ -50,7 +50,7 @@ if os.path.isdir(os.path.join(_SCRIPT_DIR, 'site')):
     SITE_DIR = os.path.join(_SCRIPT_DIR, 'site')
 else:
     # الحالة (ب): السكربت داخل site/scripts/
-    SITE_DIR = os.path.dirname(os.path.dirname(_SCRIPT_DIR))  # = site/
+    SITE_DIR = os.path.dirname(_SCRIPT_DIR)                   # = site/
     ROOT_DIR = os.path.dirname(SITE_DIR)                      # = مشروع قوقل ادسنس/
 ARTICLES_DIR = os.path.join(SITE_DIR, 'articles')
 CONFIG_PATH = os.path.join(_SCRIPT_DIR, 'publish-config.json')
@@ -95,7 +95,7 @@ def slugify(text):
 def call_gemini(prompt, max_tokens=8192):
     """استدعاء Gemini API للحصول على نص خام (مع إعادة المحاولة)."""
     url = ("https://generativelanguage.googleapis.com/v1beta/models/"
-           "gemini-2.5-flash:generateContent?key=" + API_KEY)
+           "gemini-2.0-flash:generateContent?key=" + API_KEY)
     data = {
         "contents": [{"parts": [{"text": prompt}]}],
         "generationConfig": {"temperature": 0.8, "maxOutputTokens": max_tokens},
@@ -181,14 +181,14 @@ def generate_topic(existing):
 def generate_content(title):
     """توليد محتوى المقال فقط (بدون HTML كامل)."""
     cat = detect_category(title)
-    prompt = f"""You are an expert SEO content writer. Write an in-depth article titled "{title}".
+    prompt = f"""You are an expert SEO tech journalist. Write an in-depth article titled "{title}".
 
 CRITICAL RULES:
 1. OUTPUT: Plain Markdown only (NOT HTML). Use ## for H2, ### for H3.
 2. LENGTH: Minimum 900 words. Be detailed, thorough, actionable.
 3. STRUCTURE: Introduction, 4-6 main sections with ##, conclusion, 3 FAQ questions.
-4. TONE: Authoritative, engaging, fact-based.
-5. NO fabricated quotes, NO made-up statistics without clear hedging.
+4. TONE: Authoritative, engaging, STRICTLY FACT-BASED reporting.
+5. REAL FACTS ONLY: Base the content strictly on real-world events from July 2026. Use accurate numbers (e.g., DeepSeek's $7.4B funding, Huawei's Ascend 950, SoftBank's Noetra $6.16B consortium, Samsung's HBM4, Anthropic's $47B revenue run-rate). NO fabricated quotes, NO made-up statistics.
 6. Category: {cat['emoji']} {cat['name']}
 
 OUTPUT FORMAT (strict):
@@ -273,6 +273,8 @@ def download_and_optimize_image(url, slug):
 def build_article(title, description, body_html, image_url_rel, image_url_abs):
     """تحميل article-template.html وتعبئة الـ placeholders."""
     template_path = os.path.join(SITE_DIR, 'article-template.html')
+    if not os.path.exists(template_path):
+        template_path = os.path.join(ROOT_DIR, 'article-template.html')
     with open(template_path, 'r', encoding='utf-8') as f:
         tmpl = f.read()
 
@@ -304,6 +306,7 @@ def build_article(title, description, body_html, image_url_rel, image_url_abs):
 def get_image_url(title):
     """توليد رابط صورة Pollinations."""
     keywords = re.sub(r'[^a-zA-Z0-9 ]', '', title.lower())[:60].replace(' ', '%20')
+    keywords += "%20abstract%20technology%20design%20no%20humans%20no%20faces"
     seed = abs(hash(title)) % 10000
     return f"https://image.pollinations.ai/prompt/{keywords}?width=1600&height=900&nologo=true&seed={seed}"
 
@@ -316,6 +319,9 @@ def update_index_page(title, slug, filename, description, image_url, cat):
     index_path = os.path.join(SITE_DIR, 'index.html')
     with open(index_path, 'r', encoding='utf-8') as f:
         content = f.read()
+    if filename in content:
+        print("[WARN] Article already in index.html, skipping insertion")
+        return
     date_str = datetime.date.today().strftime("%B %d, %Y")
     card = f"""
       <article class="article-card animate-in">
