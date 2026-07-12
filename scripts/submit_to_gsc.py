@@ -27,12 +27,12 @@ def get_access_token():
         credentials.refresh(request)
         return credentials.token
     except Exception as e:
-        print(f"\u274c Error authenticating with Google: {e}")
+        print(f"[Error] authenticating with Google: {e}")
         sys.exit(1)
 
 def get_recent_urls_from_sitemap(hours_ago=24):
     if not os.path.exists(SITEMAP_FILE):
-        print(f"\u274c Error: {SITEMAP_FILE} not found.")
+        print(f"[Error] {SITEMAP_FILE} not found.")
         sys.exit(1)
 
     recent_urls = []
@@ -44,28 +44,34 @@ def get_recent_urls_from_sitemap(hours_ago=24):
         namespace = {'ns': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
         
         for url in root.findall('ns:url', namespace):
-            loc = url.find('ns:loc', namespace).text
-            lastmod = url.find('ns:lastmod', namespace)
+            loc_elem = url.find('ns:loc', namespace)
+            lastmod_elem = url.find('ns:lastmod', namespace)
             
-            if lastmod is not None:
+            if loc_elem is not None and lastmod_elem is not None:
                 try:
                     # Parse the ISO format date
-                    mod_time = datetime.fromisoformat(lastmod.text.replace('Z', '+00:00'))
+                    mod_str = lastmod_elem.text.replace('Z', '+00:00')
+                    mod_time = datetime.fromisoformat(mod_str)
+                    
+                    # Make naive datetimes aware (assume UTC)
+                    if mod_time.tzinfo is None:
+                        mod_time = mod_time.replace(tzinfo=timezone.utc)
+                        
                     if mod_time > cutoff_time:
-                        recent_urls.append(loc)
+                        recent_urls.append(loc_elem.text)
                 except ValueError:
                     pass
     except Exception as e:
-        print(f"\u274c Error parsing sitemap: {e}")
+        print(f"[Error] parsing sitemap: {e}")
         
     return recent_urls
 
 def notify_google(urls):
     if not urls:
-        print("\u2139\ufe0f No recent URLs found in sitemap.xml to index.")
+        print("[Info] No recent URLs found in sitemap.xml to index.")
         return
 
-    print(f"\ud83d\udd04 Found {len(urls)} URLs modified in the last 24 hours. Requesting indexing...")
+    print(f"[*] Found {len(urls)} URLs modified in the last 24 hours. Requesting indexing...")
     token = get_access_token()
     headers = {
         "Content-Type": "application/json",
@@ -82,17 +88,17 @@ def notify_google(urls):
         try:
             response = requests.post(ENDPOINT, headers=headers, json=payload)
             if response.status_code == 200:
-                print(f"\u2705 Success: {url}")
+                print(f"[Success] {url}")
                 success_count += 1
             elif response.status_code == 429:
-                print(f"\u26a0\ufe0f Quota exceeded for today: {url}")
+                print(f"[Warning] Quota exceeded for today: {url}")
                 break
             else:
-                print(f"\u274c Failed: {url} | Status: {response.status_code} | Response: {response.text}")
+                print(f"[Failed] {url} | Status: {response.status_code} | Response: {response.text}")
         except Exception as e:
-            print(f"\u274c Request error for {url}: {e}")
+            print(f"[Error] Request error for {url}: {e}")
 
-    print(f"\n\ud83c\udfaf Finished. Successfully requested indexing for {success_count} out of {len(urls)} URLs.")
+    print(f"\n[Finished] Successfully requested indexing for {success_count} out of {len(urls)} URLs.")
 
 if __name__ == "__main__":
     recent_urls = get_recent_urls_from_sitemap(hours_ago=24)
