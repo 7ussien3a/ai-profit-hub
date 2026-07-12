@@ -311,31 +311,30 @@
   tocItems.forEach(function (item, i) { if (realH2s[i]) item.id = realH2s[i].id; });
 
   // ─── 4.5. DYNAMIC TRUST & CONVERSION ENHANCEMENTS ─────────────────────────
-  // A. Check and inject Author Bio Box if missing
-  var hasAuthorBio = false;
-  bodyEls.forEach(function (el) {
-    var cls = el.className || '';
-    if (cls.indexOf('author-bio') > -1) hasAuthorBio = true;
+  // A. Clean up ANY existing hardcoded author bios to avoid duplicates
+  for (var k = bodyEls.length - 1; k >= 0; k--) {
+    var el = bodyEls[k];
+    var c = el.className || '';
     var txt = el.textContent || '';
-    if (txt.indexOf('Hussein — AI Profit Hub') > -1 || txt.indexOf('Hussein – AI Profit Hub') > -1 || txt.indexOf('Hussein - AI Profit Hub') > -1) {
-      hasAuthorBio = true;
-      if (el.classList && !el.classList.contains('author-bio')) {
-        el.classList.add('author-bio');
-      }
+    if (c.indexOf('author-bio') > -1 || 
+        txt.indexOf('Hussein — AI Profit Hub') > -1 || 
+        txt.indexOf('Hussein – AI Profit Hub') > -1 || 
+        txt.indexOf('Hussein - AI Profit Hub') > -1 ||
+        txt.indexOf('Hussein is the founder of AI Profit Hub') > -1) {
+      bodyEls.splice(k, 1);
     }
-  });
-
-  if (!hasAuthorBio) {
-    var bioBox = document.createElement('div');
-    bioBox.className = 'author-bio';
-    bioBox.style.cssText = 'display:flex;gap:20px;align-items:center;margin:40px 0 0;padding:24px;background:var(--bg-elevated,#1a1f2e);border:1px solid var(--border,#2a2f3e);border-radius:12px;';
-    bioBox.innerHTML = '<img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face" alt="Hussein" style="width:72px;height:72px;border-radius:50%;object-fit:cover;flex-shrink:0;">' +
-                       '<div>' +
-                       '<p style="margin:0 0 4px;font-weight:700;font-size:.95rem">Hussein — AI Profit Hub</p>' +
-                       '<p style="margin:0;font-size:.85rem;line-height:1.6;color:var(--text-secondary)">Daily AI news, tool reviews, and practical guides. Follow AI Profit Hub for everything happening in artificial intelligence.</p>' +
-                       '</div>';
-    bodyEls.push(bioBox);
   }
+
+  // B. Inject the SINGLE unified Author Bio Box
+  var bioBox = document.createElement('div');
+  bioBox.className = 'author-bio';
+  bioBox.style.cssText = 'display:flex;gap:20px;align-items:center;margin:40px 0 0;padding:24px;background:var(--bg-elevated,#1a1f2e);border:1px solid var(--border,#2a2f3e);border-radius:12px;';
+  bioBox.innerHTML = '<img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face" alt="Hussein" style="width:72px;height:72px;border-radius:50%;object-fit:cover;flex-shrink:0;">' +
+                     '<div>' +
+                     '<p style="margin:0 0 4px;font-weight:700;font-size:.95rem">Hussein — AI Profit Hub</p>' +
+                     '<p style="margin:0;font-size:.85rem;line-height:1.6;color:var(--text-secondary)">Daily AI news, tool reviews, and practical guides. Follow AI Profit Hub for everything happening in artificial intelligence.</p>' +
+                     '</div>';
+  bodyEls.push(bioBox);
 
   // B. Check and inject Lead Magnet Newsletter Subscription Box if missing
   var hasNewsletter = false;
