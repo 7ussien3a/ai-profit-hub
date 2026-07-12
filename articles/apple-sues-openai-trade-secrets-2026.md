@@ -1,54 +1,54 @@
 ---
-title: "أبل تقاضي OpenAI: حرب الأسرار التجارية تشتعل بعد هجرة 400 موظف"
-description: "في صدمة للأوساط التقنية، رفعت أبل دعوى قضائية فيدرالية ضد OpenAI بتهمة سرقة أسرار تجارية عبر استقطاب 400 مهندس، مما يهدد مستقبل الذكاء الاصطناعي في آيفون."
+title: "Apple Sues OpenAI: Trade Secret War Ignites Over 400 Poached Employees"
+description: "In a shock to the tech world, Apple has filed a federal lawsuit against OpenAI alleging trade secret theft through the poaching of 400 engineers, threatening the future of AI on the iPhone."
 slug: apple-sues-openai-trade-secrets-2026
-tag: \ud83d\ude80 AI News
+tag: 🚀 AI News
 image: /images/apple_sues_openai_2026.jpg
 ---
 
-# أبل تقاضي OpenAI: حرب الأسرار التجارية تشتعل بعد هجرة 400 موظف
+# Apple Sues OpenAI: Trade Secret War Ignites Over 400 Poached Employees
 
-في تحول درامي لم يتوقعه أشد المحللين تشاؤماً، تحولت الشراكة التاريخية التي أُعلن عنها مؤخراً بين عملاق الهواتف الذكية **أبل (Apple)** ورائدة الذكاء الاصطناعي **OpenAI** إلى معركة قانونية طاحنة. في 11 يوليو 2026، اهتزت أروقة وادي السيليكون بخبر رفع أبل دعوى قضائية فيدرالية ضد حليفتها، متهمة إياها بسرقة أسرار تجارية حيوية. بقلم [Hussein Harby](/author/hussein-harby/).
+In a dramatic turn of events that defied even the most pessimistic analysts' expectations, the historic partnership recently announced between smartphone giant **Apple** and AI pioneer **OpenAI** has devolved into a bitter legal battle. On July 11, 2026, Silicon Valley was shaken by the news that Apple had filed a federal lawsuit against its ally, accusing it of stealing critical trade secrets. By [Hussein Harby](/author/hussein-harby/).
 
-## لماذا رفعت أبل قضية ضد OpenAI؟
+## Why Did Apple File a Lawsuit Against OpenAI?
 
-رفعت أبل الدعوى القضائية ضد OpenAI لاتهامها بتنفيذ حملة منظمة وممنهجة لاستقطاب أكثر من 400 مهندس وباحث سابق من فريق تطوير "أبل إنتليجنس" (Apple Intelligence). وتزعم أبل أن الهدف لم يكن مجرد توظيف مواهب، بل استخراج تقنيات وأسرار تجارية حساسة تتعلق بمعمارية الحوسبة الطرفية (On-Device AI) وتوظيفها في نماذج OpenAI الجديدة.
+Apple filed the lawsuit against OpenAI, alleging it executed a highly organized, systemic campaign to poach over 400 former engineers and researchers from the "Apple Intelligence" development team. Apple claims the objective wasn't merely acquiring talent, but rather extracting sensitive trade secrets related to on-device AI computing architecture and integrating them into OpenAI's new models.
 
-## قصة 400 موظف: هجرة مواهب أم اختراق متعمد؟
+## The Story of 400 Employees: Talent Exodus or Intentional Infiltration?
 
-بدأت القصة تتكشف عندما لاحظت الإدارة العليا في كوبرتينو نزيفاً غير طبيعي للكفاءات من قسم الذكاء الاصطناعي الخاص بها. وفقاً لملف القضية الفيدرالية، فإن عمليات الانتقال لم تكن عشوائية؛ بل استهدفت OpenAI بشكل مباشر رؤساء الفرق ومهندسي المعمارية الذين كانوا يعملون على تقنيات تصغير النماذج (Model Quantization) لجعلها تعمل بكفاءة على معالجات الآيفون دون الحاجة للاتصال بالإنترنت.
+The narrative began to unfold when senior management in Cupertino noticed an unnatural hemorrhage of talent from its AI division. According to the federal court filing, these transitions were not random; OpenAI directly targeted team leads and architecture engineers who were working on model quantization techniques designed to make AI run efficiently on iPhone processors without requiring an internet connection.
 
-تدعي أبل أن OpenAI عرضت حزم تعويضات خيالية (تضمنت حصصاً ضخمة من الأسهم) لا يمكن تبريرها إلا إذا كانت تتوقع الحصول على "ملكية فكرية" جاهزة توفر عليها سنوات من البحث والتطوير. هذا "النزيف" البشري يضعف موقف أبل التنافسي ويعطل خارطة طريق تطوير المساعد الرقمي Siri.
+Apple claims that OpenAI offered exorbitant compensation packages (including massive equity grants) that could only be justified if OpenAI expected to receive "ready-made intellectual property" that would save them years of research and development. This human "hemorrhage" weakens Apple's competitive position and disrupts the development roadmap for its digital assistant, Siri.
 
-## مصير "أبل إنتليجنس" وشراكة ChatGPT المعلقة
+## The Fate of "Apple Intelligence" and the Suspended ChatGPT Partnership
 
-السؤال الذي يشغل بال ملايين المستخدمين الآن: ما هو مصير الدمج المنتظر لـ ChatGPT في نظام iOS؟ 
+The question on the minds of millions of users now is: What is the fate of the highly anticipated ChatGPT integration into iOS?
 
-حتى لحظة كتابة هذا التقرير، لم تعلن أي من الشركتين عن إنهاء الشراكة رسمياً. ومع ذلك، تشير المصادر الداخلية إلى أن أبل أوقفت مؤقتاً عملية التكامل العميقة (Deep Integration) التي كانت تخطط لها، واكتفت بالوصول السطحي لواجهة برمجة التطبيقات (API). أبل تجد نفسها في مأزق حقيقي؛ فهي بحاجة إلى قدرات ChatGPT لتعويض تأخرها في سباق النماذج اللغوية الكبيرة (LLMs)، لكنها في الوقت نفسه لا تستطيع الوثوق بشريك يعتبره محاموها "سارقاً استراتيجياً".
+As of this writing, neither company has officially announced the termination of the partnership. However, internal sources indicate that Apple has temporarily paused the deep integration process it had planned, settling for superficial API access. Apple finds itself in a real dilemma; it needs ChatGPT's capabilities to compensate for its lag in the Large Language Model (LLM) race, but at the same time, it cannot trust a partner its lawyers consider a "strategic thief."
 
-## الإطلاق المتزامن لـ GPT-5.6: رسالة تحدٍ من سام ألتمان؟
+## The Simultaneous Launch of GPT-5.6: A Defiant Message from Sam Altman?
 
-مما زاد الطين بلة هو التوقيت. قبل يومين فقط من تسريب خبر القضية، أعلنت OpenAI عن إطلاق عائلة نماذج **GPT-5.6** (والتي تشمل Sol، Terra، و Luna). هذه النماذج قدمت قفزة نوعية في كفاءة التشغيل وسرعة الاستجابة، وهي بالضبط الميزات التي كانت أبل تعتقد أنها تحتكر أسرارها عبر مهندسيها.
+Making matters worse is the timing. Just two days before the lawsuit leaked, OpenAI announced the release of the **GPT-5.6** model family (which includes Sol, Terra, and Luna). These models represent a quantum leap in operational efficiency and response speed—exactly the features Apple believed it was monopolizing through its engineers' secrets.
 
-الكثير من المحللين يرون في هذا الإطلاق المتزامن رسالة تحدٍ من سام ألتمان وإدارته، مفادها أن OpenAI قادرة على تجاوز كل العقبات التقنية (والقانونية) لترسيخ هيمنتها، وأنها لم تعد بحاجة للاعتماد على أجهزة أبل للوصول إلى المستخدم النهائي بنفس القدر الذي تحتاجه أبل للحصول على التكنولوجيا.
+Many analysts view this simultaneous launch as a defiant message from Sam Altman and his executive team, signaling that OpenAI is capable of overcoming all technical (and legal) hurdles to cement its dominance, and that it no longer needs to rely on Apple's hardware to reach the end user as much as Apple needs its technology.
 
 ## Hussein's Take
 
-ما نراه اليوم بين أبل و OpenAI ليس مجرد خلاف حول براءات اختراع أو سطور من الكود؛ إنها معركة إثبات أن "العقول البشرية" هي المورد الأكثر ندرة في عصر الذكاء الاصطناعي. أبل، التي طالما اعتادت على سحق منافسيها بأطنان الكاش، تستيقظ اليوم على حقيقة قاسية: في عالم الذكاء الاصطناعي المولد، الأموال لا تصنع المعجزات، بل المهندسون هم من يفعلون. استقطاب 400 موظف هو اختراق لأهم حصون أبل، وهو مؤشر خطير على أن OpenAI لم تعد تكتفي بالسيطرة على البرمجيات، بل تريد تفريغ المنافسين من قدرتهم على التفكير المستقل. أعتقد أن هذه القضية ستنتهي بتسوية مالية ضخمة خارج أروقة المحاكم، لأن كلتا الشركتين تمتلكان أسلحة دمار شامل تضر ببعضهما البعض، لكن الثقة بينهما قد ماتت للأبد.
+What we are witnessing today between Apple and OpenAI is not merely a dispute over patents or lines of code; it is a battle to prove that "human minds" are the rarest resource in the AI era. Apple, which has long been accustomed to crushing competitors with mountains of cash, is waking up to a harsh reality: in the world of generative AI, money doesn't create miracles—engineers do. Poaching 400 employees is a breach of Apple's most critical fortress, and a dangerous indicator that OpenAI is no longer content with dominating software; it wants to drain competitors of their capacity for independent thought. I believe this case will end in a massive financial settlement outside the courtroom, because both companies possess weapons of mass destruction that could harm one another, but the trust between them is dead forever.
 
-## خاتمة
+## Conclusion
 
-بينما ننتظر ما ستسفر عنه أروقة المحاكم الفيدرالية، الأكيد أن شهر العسل بين أبل و OpenAI قد انتهى قبل أن يبدأ فعلياً. هذا الصراع قد يدفع أبل لتسريع استحواذاتها على شركات ذكاء اصطناعي أصغر، أو ربما تعميق شراكاتها مع منافسي OpenAI مثل Google أو Anthropic لتقليل المخاطر.
+As we wait to see what unfolds in the federal courts, one thing is certain: the honeymoon phase between Apple and OpenAI ended before it truly began. This conflict may push Apple to accelerate its acquisitions of smaller AI startups, or perhaps deepen its partnerships with OpenAI rivals like Google or Anthropic to mitigate risk.
 
-ابقوا معنا في AI Profit Hub لنوافيكم بأدق التفاصيل وأحدث التطورات في هذه القضية التي قد تغير مسار صناعة التكنولوجيا للأبد.
+Stay tuned to AI Profit Hub as we bring you the most accurate details and latest developments in this case, which could alter the trajectory of the tech industry forever.
 
-## أسئلة شائعة (FAQ)
+## Frequently Asked Questions (FAQ)
 
-**لماذا قامت أبل برفع قضية على OpenAI؟**  
-تتهم أبل شركة OpenAI بسرقة أسرار تجارية وتقنيات حساسة عبر حملة استقطاب ممنهجة شملت أكثر من 400 مهندس وباحث من فريق أبل المتخصص في الذكاء الاصطناعي.
+**Why did Apple file a lawsuit against OpenAI?**  
+Apple accuses OpenAI of stealing trade secrets and sensitive technologies through a systemic poaching campaign that involved over 400 engineers and researchers from Apple's dedicated AI team.
 
-**هل سيتوفر ChatGPT في التحديث القادم للآيفون؟**  
-رغم القضية المرفوعة، لم يتم إلغاء الشراكة رسمياً حتى الآن. من المتوقع أن يتوفر ChatGPT كميزة اختيارية محدودة، لكن خطط التكامل العميقة تم تجميدها مؤقتاً.
+**Will ChatGPT be available in the next iPhone update?**  
+Despite the lawsuit, the partnership has not been officially canceled yet. It is expected that ChatGPT will be available as a limited, optional feature, but deep integration plans have been temporarily frozen.
 
-**ما هي التقنيات التي تزعم أبل سرقتها؟**  
-تركزت الاتهامات على تقنيات "الحوسبة الطرفية" (On-Device AI) وأسرار ضغط وتصغير النماذج (Quantization) التي تسمح للذكاء الاصطناعي بالعمل بكفاءة على هواتف آيفون دون استهلاك كبير للبطارية.
+**What technologies does Apple claim were stolen?**  
+The accusations focus on "On-Device AI" computing techniques and secrets regarding model compression and quantization, which allow AI to run efficiently on iPhones without massive battery consumption.

@@ -1,68 +1,68 @@
 ---
-title: "من يربح سباق الذكاء الاصطناعي 2026؟ مقارنة شاملة (أمريكا، الصين، كوريا، اليابان)"
-description: "تحليل شامل لسباق الذكاء الاصطناعي في يوليو 2026. اكتشف كيف تتنافس أمريكا والصين، وما هو الدور المحوري لكوريا الجنوبية واليابان في أشباه الموصلات وسلاسل التوريد."
+title: "Who Wins the 2026 AI Race? A Comprehensive Comparison (US, China, Korea, Japan)"
+description: "A comprehensive analysis of the global AI race in July 2026. Discover how the US and China are competing, and the pivotal roles of South Korea and Japan in semiconductors and supply chains."
 slug: global-ai-race-us-china-korea-japan-2026
-tag: \ud83d\ude80 AI News
+tag: 🚀 AI News
 image: /images/global_ai_race_2026.jpg
 ---
 
-# من يربح سباق الذكاء الاصطناعي 2026؟ مقارنة شاملة (أمريكا، الصين، كوريا، واليابان)
+# Who Wins the 2026 AI Race? A Comprehensive Comparison (US, China, Korea, and Japan)
 
-بحلول منتصف عام 2026، لم يعد سباق الذكاء الاصطناعي مقتصراً على من يمتلك النموذج اللغوي الأذكى أو من يستطيع توليد نصوص وصور بدقة أعلى. لقد تحول المشهد إلى صراع جيوسياسي واقتصادي معقد يعتمد على ثلاثة أعمدة رئيسية: القوة الحسابية (Compute)، أشباه الموصلات، والطاقة. في هذا السباق المحموم، تبرز أربع قوى عظمى تعيد رسم خريطة التكنولوجيا العالمية: الولايات المتحدة الأمريكية، الصين، كوريا الجنوبية، واليابان.
+By mid-2026, the artificial intelligence race is no longer simply about who possesses the smartest language model or who can generate text and images with the highest fidelity. The landscape has morphed into a complex geopolitical and economic conflict that rests on three main pillars: Compute, Semiconductors, and Energy. In this frantic race, four superpowers stand out, redrawing the global technology map: The United States, China, South Korea, and Japan.
 
-في هذا المقال، سنغوص في تفاصيل المشهد التكنولوجي كما يبدو في يوليو 2026، لنقارن بين الاستراتيجيات المتباينة لهذه الدول. سنستكشف كيف تحافظ أمريكا على صدارتها في النماذج الرائدة، وكيف تكتسح الصين الأسواق بنماذجها مفتوحة المصدر، ولماذا تعتبر كوريا الجنوبية واليابان حجر الزاوية الذي لا يمكن لأي من العملاقين الاستغناء عنه. بقلم [Hussein Harby](/author/hussein-harby/).
+In this article, we will dive into the details of the technological landscape as it stands in July 2026, comparing the divergent strategies of these nations. We will explore how America maintains its lead in frontier models, how China is sweeping markets with its open-source models, and why South Korea and Japan are considered the cornerstones that neither giant can afford to lose. By [Hussein Harby](/author/hussein-harby/).
 
-## من يتصدر سباق الذكاء الاصطناعي في 2026؟
+## Who Is Leading the AI Race in 2026?
 
-يتصدر سباق الذكاء الاصطناعي في 2026 نموذج القطبين، حيث تتفوق **الولايات المتحدة** في النماذج الرائدة (Frontier Models) والبنية التحتية السحابية الضخمة، بينما تقود **الصين** ثورة النماذج مفتوحة المصدر والأسعار التنافسية. في الوقت ذاته، تسيطر **كوريا الجنوبية** و**اليابان** على سلسلة توريد أشباه الموصلات والعتاد الصلب، مما يجعلهما ركيزتين أساسيتين لا غنى عنهما لاستمرار هذا السباق العالمي.
+The AI race in 2026 is defined by a bipolar model: the **United States** excels in Frontier Models and massive cloud infrastructure, while **China** leads the revolution in highly efficient, open-source, and cost-competitive models. At the same time, **South Korea** and **Japan** control the semiconductor and hardware supply chain, making them indispensable pillars for the continuation of this global race.
 
-## الولايات المتحدة: السيطرة على القوة الغاشمة للذكاء الاصطناعي
+## The United States: Dominating AI Brute Force
 
-لا تزال الولايات المتحدة الأمريكية تحتل المركز الأول عالمياً من حيث الاستثمارات وحجم الابتكار في النماذج الرائدة (Frontier Models). الشركات الأمريكية العملاقة مثل OpenAI، Anthropic، و Google DeepMind تواصل دفع حدود ما يمكن للذكاء الاصطناعي تحقيقه.
+The United States of America continues to hold the global number one spot in terms of investments and innovation volume in Frontier Models. American tech giants like OpenAI, Anthropic, and Google DeepMind continue to push the boundaries of what AI can achieve.
 
-ما يميز الاستراتيجية الأمريكية في 2026 هو التركيز الهائل على البنية التحتية. رأينا كيف قامت شركات مثل [Alphabet بضخ 84 مليار دولار في البنية التحتية](/articles/alphabet-historic-84-billion-ai-infrastructure-investment.html) لبناء مراكز بيانات ضخمة تعمل بالطاقة النظيفة وتستخدم معالجات TPU مخصصة. أمريكا تراهن على القوة الغاشمة (Brute Force) وتوسيع قدرات الحوسبة (Compute) لدعم النماذج الأكبر والأكثر تعقيداً. إضافة إلى ذلك، تسعى الإدارة الأمريكية إلى تأمين سلاسل التوريد الخاصة بها وتقييد وصول المنافسين إلى أحدث شرائح الذكاء الاصطناعي عبر قوانين التصدير الصارمة.
+What distinguishes the American strategy in 2026 is its massive focus on infrastructure. We saw how companies like [Alphabet pumped $84 billion into infrastructure](/articles/alphabet-historic-84-billion-ai-infrastructure-investment.html) to build colossal data centers powered by clean energy and utilizing custom TPU processors. America is betting on "Brute Force" and expanding compute capabilities to support larger and more complex models. Furthermore, the US administration seeks to secure its own supply chains and restrict competitors' access to the latest AI chips through strict export controls.
 
-## الصين: غزو العالم عبر النماذج مفتوحة المصدر
+## China: Conquering the World via Open-Source Models
 
-على الجانب الآخر من المحيط الهادئ، اتخذت الصين مساراً مختلفاً وذكياً للغاية. بدلاً من التنافس المباشر والمكلف لتطوير نماذج تتفوق هامشياً على نماذج OpenAI، ركزت الشركات الصينية مثل Alibaba (صاحبة نموذج Qwen) و DeepSeek على استراتيجية النماذج "الجيدة بما فيه الكفاية" (Good Enough) ومفتوحة المصدر.
+On the other side of the Pacific, China has taken a different and highly intelligent path. Instead of engaging in a direct, expensive competition to develop models that marginally outperform OpenAI's, Chinese companies like Alibaba (creator of Qwen) and DeepSeek have focused on a "Good Enough," open-source strategy.
 
-في منتصف عام 2026، أثبتت الصين قدرتها على تحطيم أسعار واجهات برمجة التطبيقات (API). لقد رأينا كيف قامت [DeepSeek بتحدي عمالقة التكنولوجيا](/articles/deepseek-v2-the-open-source-llm-challenging-ai-giants-20260703.html) من خلال تقديم نماذج تنافس في جودتها طرازات GPT-4 ولكن بتكلفة لا تتجاوز 10% من سعرها. هذه الاستراتيجية سمحت للصين بغزو الأسواق الناشئة في جنوب شرق آسيا، الشرق الأوسط، وإفريقيا، حيث تعتبر التكلفة عاملاً حاسماً في تبني تقنيات الذكاء الاصطناعي. علاوة على ذلك، تستمر شركات مثل Huawei في تطوير شرائح Ascend كبديل محلي واعد لمعالجات NVIDIA لمواجهة العقوبات الأمريكية.
+By mid-2026, China proved its ability to crash API pricing. We witnessed how [DeepSeek challenged tech giants](/articles/deepseek-v2-the-open-source-llm-challenging-ai-giants-20260703.html) by offering models that rival the quality of GPT-4 class models at less than 10% of the cost. This strategy allowed China to penetrate emerging markets in Southeast Asia, the Middle East, and Africa, where cost is a decisive factor in AI adoption. Additionally, companies like Huawei continue to develop Ascend chips as a promising domestic alternative to NVIDIA processors to counter US sanctions.
 
-## كوريا الجنوبية: استثمار 880 مليار دولار للهيمنة على العتاد
+## South Korea: An $880 Billion Investment for Hardware Hegemony
 
-قد لا تتصدر كوريا الجنوبية العناوين بأسماء نماذج لغوية شهيرة، لكنها بدون شك تلعب دور "صانع الملوك" في سباق الذكاء الاصطناعي. في يوليو 2026، أعلنت الحكومة الكورية عن خطة استثمارية صناعية عملاقة بقيمة 880 مليار دولار تهدف إلى تعزيز هيمنتها في مجالات الذكاء الاصطناعي، أشباه الموصلات، والروبوتات.
+South Korea might not dominate the headlines with famous language model names, but it undeniably plays the role of "kingmaker" in the AI race. In July 2026, the South Korean government announced a massive $880 billion industrial investment plan aimed at bolstering its dominance in the fields of AI, semiconductors, and robotics.
 
-تعتمد كوريا الجنوبية بشكل كبير على عمالقة مثل Samsung و SK Hynix. شركة SK Hynix، على وجه الخصوص، تسيطر على سوق ذاكرة النطاق الترددي العالي (HBM) والتي تعتبر المكون السري الذي يجعل شرائح NVIDIA قادرة على تدريب نماذج الذكاء الاصطناعي الضخمة. بدون رقائق الذاكرة الكورية، سيتوقف تطوير الذكاء الاصطناعي في كل من أمريكا والصين. إلى جانب ذلك، تسعى كوريا للتحول إلى مركز إقليمي لتصنيع العتاد المتطور للذكاء الاصطناعي، مستفيدة من التوترات الجيوسياسية لتوسيع حصتها السوقية.
+South Korea relies heavily on giants like Samsung and SK Hynix. SK Hynix, in particular, dominates the High Bandwidth Memory (HBM) market—the secret ingredient that allows NVIDIA chips to train massive AI models. Without Korean memory chips, AI development in both America and China would grind to a halt. Alongside this, Korea seeks to transform into a regional hub for manufacturing advanced AI hardware, leveraging geopolitical tensions to expand its market share.
 
-## اليابان: الجندي المجهول في سلسلة توريد الذكاء الاصطناعي
+## Japan: The Unsung Hero of the AI Supply Chain
 
-لطالما عُرفت اليابان بريادتها في الإلكترونيات، وفي عصر الذكاء الاصطناعي، قررت التركيز على ما تجيده حقاً: توفير البنية التحتية الدقيقة والأساسية. استراتيجية اليابان في 2026 لا تسعى لمنافسة وادي السيليكون في البرمجيات، بل تتمركز في كونها حلقة وصل حيوية لا يمكن الاستغناء عنها في سلسلة توريد الذكاء الاصطناعي.
+Japan has long been known for its pioneering electronics, and in the age of AI, it has decided to focus on what it does best: providing precise and foundational infrastructure. Japan's strategy in 2026 does not aim to compete with Silicon Valley in software; instead, it positions itself as a vital, irreplaceable link in the AI supply chain.
 
-تستثمر الشركات اليابانية، بقيادة مؤسسات ضخمة مثل SoftBank، في مشاريع البنية التحتية السيادية مثل [مشروع Noetra الاستراتيجي](/articles/japan-noetra-sovereign-ai-2026.html). كما تحتكر اليابان تصنيع المواد الكيميائية المتخصصة، والمعدات الضوئية، وأجهزة الرقابة التي تستخدم في مصانع أشباه الموصلات في تايوان وكوريا. اليابان تلعب دوراً صامتاً ولكنه قاتل؛ فبدون التكنولوجيا اليابانية عالية الدقة، لا يمكن لشركات مثل TSMC تصنيع أحدث معالجات الذكاء الاصطناعي التي تعتمد عليها أمريكا والصين.
+Japanese companies, led by massive institutions like SoftBank, are investing in sovereign infrastructure projects like the [strategic Noetra project](/articles/japan-noetra-sovereign-ai-2026.html). Japan also monopolizes the manufacturing of specialized chemicals, optical equipment, and monitoring devices used in semiconductor fabs in Taiwan and Korea. Japan plays a silent but lethal role; without high-precision Japanese technology, companies like TSMC could not manufacture the cutting-edge AI processors upon which America and China rely.
 
-## مستقبل التحالفات التكنولوجية العالمية
+## The Future of Global Tech Alliances
 
-السباق لم يعد فردياً؛ بل أصبح يعتمد على التحالفات. الولايات المتحدة تعمل على توثيق علاقاتها مع اليابان وكوريا الجنوبية لإنشاء حائط صد تكنولوجي يمنع الصين من الوصول إلى تكنولوجيا تصنيع الرقائق المتقدمة. في المقابل، تسرع الصين من وتيرة تطوير سلسلة توريد محلية بالكامل، مستغلة سوقها الداخلي الضخم وعلاقاتها التجارية في دول الجنوب العالمي.
+The race is no longer an individual sprint; it relies entirely on alliances. The United States is working to tighten its ties with Japan and South Korea to create a technological firewall that prevents China from accessing advanced chip manufacturing technology. Conversely, China is accelerating the development of a fully localized supply chain, leveraging its massive domestic market and trade relationships in the Global South.
 
-هذا التشابك يعني أن أي اضطراب في جزء من السلسلة (مثلاً أزمة طاقة، أو نقص في مواد التصنيع) سيؤثر على الجميع. في الأشهر القادمة من عام 2026، لن يكون التحدي متمثلاً في "من سيصل إلى الذكاء الاصطناعي العام (AGI) أولاً؟" بل سيكون "من سيستطيع توفير الطاقة والرقائق لتشغيل نماذجه بتكلفة مستدامة؟"
+This entanglement means that any disruption in one part of the chain (e.g., an energy crisis or a shortage of manufacturing materials) will affect everyone. In the coming months of 2026, the challenge won't be "Who will reach AGI first?" but rather "Who will be able to secure the energy and chips to run their models at a sustainable cost?"
 
 ## Hussein's Take
 
-يُخطئ من يظن أن سباق الذكاء الاصطناعي يُحسم فقط داخل مختبرات الأبحاث في سان فرانسيسكو أو بكين. الحقيقة المرة التي تتجاهلها التغطيات الإعلامية هي أن الذكاء الاصطناعي أصبح صناعة ثقيلة، تماماً مثل صناعة الصلب أو السيارات في القرن الماضي. قوة النموذج اللغوي لا تعني شيئاً إذا لم تكن قادراً على تحمل تكلفة تشغيله أو توفير الطاقة لتبريد خوادمه. أمريكا تمتلك العقول، والصين تمتلك التكلفة وقدرة التصنيع، لكن كوريا واليابان تمسكان بصمامات الأمان عبر احتكار أشباه الموصلات المتقدمة والمعدات. الفائز الحقيقي في هذا السباق لن يكون الشركة التي تصدر أذكى روبوت دردشة، بل الدولة التي تنجح في السيطرة على سلسلة التوريد من المواد الخام وحتى واجهة المستخدم.
+Those who think the AI race will be decided solely within research labs in San Francisco or Beijing are mistaken. The bitter truth ignored by mainstream media coverage is that AI has become heavy industry, much like the steel or automotive industries of the last century. The power of a language model means nothing if you cannot afford the cost to run it or secure the energy to cool its servers. America has the brains, and China has the cost efficiency and manufacturing capability, but Korea and Japan hold the safety valves through their monopoly on advanced semiconductors and equipment. The true winner in this race will not be the company that releases the smartest chatbot, but the nation that successfully controls the supply chain from raw materials all the way to the user interface.
 
-## خاتمة
+## Conclusion
 
-في يوليو 2026، يتشكل عالم الذكاء الاصطناعي من أقطاب متعددة يكمل بعضها بعضاً بقدر ما يتنافسون. بينما ترسم أمريكا والصين ملامح البرمجيات والنماذج الرائدة ومفتوحة المصدر، تقف كوريا الجنوبية واليابان كدعائم أساسية في البنية التحتية وصناعة الرقائق الدقيقة. فهم هذا المشهد المعقد هو مفتاح لمعرفة كيف ستبدو التكنولوجيا والاقتصاد في العقد القادم.
+In July 2026, the AI world is shaped by multiple poles that complement one another just as much as they compete. While America and China draw the contours of software, frontier models, and open-source ecosystems, South Korea and Japan stand as fundamental pillars in infrastructure and microchip manufacturing. Understanding this complex landscape is key to knowing what the technology and economy of the next decade will look like.
 
-للمزيد من التحليلات والتقارير العميقة حول الاستثمارات التكنولوجية، تابع قسم الأخبار والتقارير الاستراتيجية على AI Profit Hub — نغطي كل التطورات لحظة بلحظة.
+For more in-depth analysis and reports on technology investments, follow the news and strategic reports section on AI Profit Hub—we cover every development, moment by moment.
 
-## أسئلة شائعة (FAQ)
+## Frequently Asked Questions (FAQ)
 
-**من يتفوق حالياً في الذكاء الاصطناعي، أمريكا أم الصين؟**  
-تتفوق الولايات المتحدة في قوة وتعقيد النماذج الرائدة (Frontier Models) وحجم الاستثمارات، بينما تتفوق الصين في كفاءة التكلفة وانتشار النماذج مفتوحة المصدر وتطبيقاتها العملية في الأسواق الناشئة.
+**Who is currently leading in AI, America or China?**  
+The United States leads in the power and complexity of Frontier Models and investment volume, while China excels in cost efficiency, the proliferation of open-source models, and their practical applications in emerging markets.
 
-**ما هو دور كوريا الجنوبية في ثورة الذكاء الاصطناعي 2026؟**  
-دور كوريا الجنوبية محوري كدولة مصنعة ومزودة لشرائح الذاكرة المتطورة (HBM) التي تعتمد عليها معالجات الذكاء الاصطناعي، وقد استثمرت مؤخراً 880 مليار دولار لتعزيز هذه الهيمنة.
+**What is South Korea's role in the 2026 AI revolution?**  
+South Korea plays a pivotal role as the manufacturer and supplier of advanced High Bandwidth Memory (HBM) chips, upon which AI processors depend. It recently announced an $880 billion investment plan to solidify this dominance.
 
-**كيف تؤثر العقوبات الأمريكية على تطور الذكاء الاصطناعي في الصين؟**  
-رغم أن العقوبات أبطأت وصول الصين لأحدث شرائح NVIDIA، إلا أنها أدت إلى نتائج عكسية بتسريع جهود الصين في تحقيق الاكتفاء الذاتي من خلال تطوير شرائح محلية مثل سلسلة Ascend من هواوي والاعتماد على خوارزميات عالية الكفاءة.
+**How do US sanctions affect AI development in China?**  
+Although sanctions have slowed China's access to the latest NVIDIA chips, they have inadvertently accelerated China's efforts to achieve self-sufficiency by developing domestic chips, such as Huawei's Ascend series, and relying on highly efficient algorithms.
