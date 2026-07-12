@@ -5,12 +5,17 @@ import datetime
 import urllib.parse
 from datetime import timezone
 
+try:
+    import google_indexer
+except ImportError:
+    google_indexer = None
+
 def parse_markdown(md_path):
     with open(md_path, 'r', encoding='utf-8') as f:
         content = f.read()
 
     # Parse frontmatter
-    frontmatter_match = re.match(r'^---\s*(.*?)\s*---', content, re.DOTALL)
+    frontmatter_match = re.search(r'---\s*(.*?)\s*---', content, re.DOTALL)
     if not frontmatter_match:
         print("Error: Missing frontmatter.")
         sys.exit(1)
@@ -99,7 +104,13 @@ def main(md_file):
     with open(out_path, 'w', encoding='utf-8') as f:
         f.write(html)
         
-    print(f"✅ Published successfully to: {out_path}")
+    print(f"Published successfully to: {out_path}")
+    
+    # Ping Google Indexing API
+    if google_indexer:
+        target_url = f"https://ai-profit-hub.com/{meta.get('slug', '')}"
+        print(f"Attempting to ping Google Indexing API for: {target_url}")
+        google_indexer.ping_google(target_url)
 
 if __name__ == '__main__':
     if len(sys.argv) < 2:

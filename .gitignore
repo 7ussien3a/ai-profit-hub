@@ -29,3 +29,7 @@ desktop.ini
 *.orig
 *.tmp
 *.log
+
+# Google Credentials
+scripts/service-account.json
+service-account.json
