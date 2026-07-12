@@ -7,8 +7,6 @@ tag: "💻 Programming"
 source: "TechCrunch"
 ---
 
-# What is Agentic Coding? The Rise of Autonomous AI Developers
-
 The software engineering world has officially entered its most disruptive phase since the invention of the compiler. We have rapidly moved past the era of AI simply auto-completing our lines of code or suggesting a better function name. Welcome to the era of **agentic coding**—where autonomous AI coding agents now manage entire repositories, handle complex debugging cycles, and deploy full-stack applications with minimal human intervention.
 
 If you are wondering whether these tools will replace junior developers, the answer is already unfolding in front of us. In this comprehensive guide, we will explore exactly what agentic coding means, how it works, and why the future of software engineering looks nothing like its past.

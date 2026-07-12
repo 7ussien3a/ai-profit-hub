@@ -7,8 +7,6 @@ image: /images/alphabet_84_billion_ai_raise.jpg
 source: Google / Alphabet Investor Relations
 ---
 
-# Alphabet's Historic $84.75 Billion AI Infrastructure Investment: Everything You Need to Know
-
 In an unprecedented move that is reshaping the global technology landscape, **Alphabet** — Google's parent company — has closed a record-breaking funding round valued at **$84.75 billion**. This is the largest capital raise in the history of technology companies, and it sends an unambiguous signal about where the future of artificial intelligence is headed. Far more than a number on Wall Street, this investment is a declaration of intent: Alphabet is building the physical backbone of the AI era, and it intends to own it completely.
 
 In this in-depth analysis, you will learn exactly where this capital is being deployed, why custom TPU silicon matters more than ever, how drastically inference costs are dropping, and what the AI infrastructure arms race means for developers, businesses, and the broader economy in 2026 and beyond.

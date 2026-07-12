@@ -9,7 +9,6 @@ source: "Alibaba Cloud / DeepSeek / The Verge"
 
 By [Hussein Harby](/author/hussein-harby/)
 
-# China's AI Price War: How Alibaba Qwen3.7 and DeepSeek V4 Are Forcing OpenAI to Panic
 
 For the past two years, the global AI conversation has been dominated by a single narrative: the United States leads, everyone else follows. OpenAI releases GPT, [Anthropic](/companies/anthropic.html) releases Claude, Google releases Gemini, and the rest of the world watches and integrates. That narrative is now officially dead. In mid-2026, Chinese AI laboratories have not just caught up — in several critical dimensions including cost, deployment scale, and open-source contribution, they have pulled ahead. And the Western AI giants are quietly panicking.
 

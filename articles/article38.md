@@ -7,8 +7,6 @@ tag: "📰 Tech News"
 source: "TechCrunch / Bloomberg"
 ---
 
-# Anthropic 65 Billion Investment: Inside the Most Valuable AI Company in History
-
 In the annals of startup funding, May 28, 2026, will be forever remembered as the day a four-year-old AI company approached a valuation of nearly a trillion dollars. Anthropic, the AI safety-focused enterprise founded by former OpenAI executives Dario Amodei and Daniela Amodei, officially announced a historic **Anthropic 65 billion investment** in its Series H funding round. This staggering capital injection has pushed its post-money valuation to approximately $965 billion. To put this monumental achievement in perspective, Anthropic's new valuation surpasses the combined market capitalization of industry titans like General Motors, Ford, and Boeing. A company that did not exist before 2021 has managed to secure its position at the apex of the generative AI competition by positioning itself as the responsible, safety-first alternative in an industry often plagued by race-to-capability thinking and aggressive AI deployments.
 
 ## What Does the Anthropic 65 Billion Investment Mean for the Industry?

@@ -3,10 +3,8 @@ title: "The AI Distillation War: Anthropic Accuses Rivals of LLM Output Harvesti
 description: "In July 2026, the AI model distillation controversy has ignited a fierce battle among the Big Three. Learn why tech giants are accusing each other of scraping AI outputs to train competing models."
 slug: ai-model-distillation-war-2026
 tag: 🚀 AI News
-image: /images/ai-distillation-war-2026.jpg
+image: ../images/ai-distillation-war.png
 ---
-
-# The AI Distillation War: Anthropic Accuses Rivals of LLM Output Harvesting
 
 By July 2026, the artificial intelligence industry has stumbled into an unprecedented conflict. The era of quietly scraping the internet for human-generated text is over; the new battlefield revolves around the **AI model distillation controversy**. In this fierce dispute, industry heavyweights—chiefly Anthropic, OpenAI, and Google—are locking horns over the ethics and legality of using the outputs of one leading AI model to train or refine another.
 

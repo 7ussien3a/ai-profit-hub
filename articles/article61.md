@@ -10,8 +10,6 @@ source_name: "Bloomberg Technology"
 source_url: "https://www.bloomberg.com"
 ---
 
-# Anthropic Surpasses OpenAI in Revenue as Google Prepares Agentic Gemini 3.5 Pro
-
 July 2026 will undoubtedly be remembered as a massive and historic turning point in the generative artificial intelligence industry. For the very first time since the highly publicized launch of ChatGPT in late 2022, OpenAI is no longer the undisputed revenue leader in the global AI space. According to recent financial disclosures and extensive industry analysis, Anthropic—the San Francisco-based AI safety and research company founded by former OpenAI executives—has officially surpassed its primary rival, achieving an absolutely staggering $47 billion annualized revenue run-rate.
 
 This monumental shift in market leadership has sent shockwaves through Silicon Valley and Wall Street alike. It fundamentally proves that while consumer-facing chat interfaces capture public attention, social media buzz, and media headlines, it is the strict, uncompromising demands of the enterprise sector that truly drive massive, sustainable profitability. Simultaneously, as this battle for supremacy between Anthropic and OpenAI reaches a fever pitch, Google has strategically announced the impending, global rollout of its highly anticipated Agentic Gemini 3.5 Pro. This bold move by Alphabet sets the stage for a brutal, three-way battle for enterprise dominance in the latter half of the year, redefining how businesses interact with autonomous software systems.

@@ -7,8 +7,6 @@ tag: "🍎 Apple"
 source: "Apple / The Verge"
 ---
 
-# Apple Reinvents Siri: The Complete Guide to Apple Intelligence at WWDC 2026
-
 For over a decade, Siri has been the butt of every tech joke. Developers mocked it, users abandoned it for Google Assistant and ChatGPT, and even Apple fans quietly admitted it had fallen way behind the competition. WWDC 2026 was supposed to be just another software update cycle. Instead, Apple walked onto that stage and announced what might be the most consequential reimagining of a digital assistant in the history of consumer technology. Say hello to the new Siri AI, powered by Apple Intelligence – and yes, this time it actually works.
 
 At the company's annual Worldwide Developers Conference in June 2026, Apple CEO Tim Cook described the new system as "the biggest leap forward for Siri since its original introduction." That is not marketing hyperbole. The rebuilt assistant is so fundamentally different from the old Siri that it is practically a new product wearing a familiar name. Let's break down every major feature and what it means for you.

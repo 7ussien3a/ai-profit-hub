@@ -8,8 +8,6 @@ image: "/images/adobe_agentic_ai_creative.webp"
 category: "tech-news"
 ---
 
-# How Adobe Agentic AI Creative Workflows Transform Marketing with WPP & Claude
-
 Are you struggling to scale your global marketing campaigns across multiple regions without losing brand consistency? The era of manual asset generation and tedious localization is ending. With the newly announced Adobe agentic AI creative workflows—powered by strategic partnerships with WPP and Claude Enterprise—marketing teams can now deploy autonomous systems that plan, generate, and govern creative campaigns at unprecedented speeds. This breakthrough promises to reshape how agencies handle production bottlenecks and compliance auditing.
 
 ## What Are Adobe Agentic AI Creative Workflows?

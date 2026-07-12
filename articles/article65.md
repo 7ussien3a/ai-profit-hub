@@ -6,10 +6,6 @@ keywords: AI automation, Zapier AI, automate daily tasks, workflow automation
 author: Hussein Harby
 ---
 
-# How to Automate Your Daily Tasks Using AI – Complete Beginner's Guide
-
-![Robot Hand and Human Hand working together on automation](/images/article65-automate.jpg)
-
 Here is a hard truth: If you are doing the exact same sequence of clicks on your computer more than three times a week, you are acting like a robot. And robots shouldn't be doing human work. 
 
 When I finally sat down to figure out how to automate it, I realized something shocking: **You don't need to know how to code anymore.** AI has made automation accessible to absolutely everyone. If you're tired of feeling like a glorified data-entry clerk, this guide is for you. Here is exactly how a total beginner can start automating their daily tasks using AI to save countless hours every week.

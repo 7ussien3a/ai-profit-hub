@@ -3,10 +3,8 @@ title: "July 2026 AI Strategy Comparison: How US, China, Korea, and Japan Are Di
 description: "An in-depth AI strategy comparison for 2026. See how the US, China, South Korea, and Japan are deploying capital, open-source models, and sovereign supply chains."
 slug: july-2026-ai-strategy-comparison-us-china-korea-japan
 tag: 🚀 AI News
-image: /images/ai-global-strategies-2026.jpg
+image: ../images/ai-strategy-comparison.png
 ---
-
-# July 2026 AI Strategy Comparison: How US, China, Korea, and Japan Are Diverging
 
 As we progress through the second half of the year, the [global AI race between the US, China, Korea, and Japan](/articles/global-ai-race-us-china-korea-japan-2026.html) has shifted from a battle of raw parameters to a complex game of strategic divergence. The latest updates from July 2026 reveal that these four technological superpowers are no longer trying to beat each other at the exact same game. Instead, an intriguing **AI strategy comparison 2026** highlights distinct national priorities—ranging from infrastructure mega-plans to sovereign supply chains. By [Hussein Harby](/author/hussein-harby/).
 

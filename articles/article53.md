@@ -6,8 +6,6 @@ keywords: "Anthropic Claude Science, AI in drug discovery, clinical trials AI, m
 image: "../images/article53_claude_science.jpg"
 ---
 
-# Anthropic Launches Claude Science: AI Suite for Accelerated Drug Discovery and Clinical Trials
-
 By [Hussein Harby](/author/hussein-harby/)
 
 **Anthropic** has officially unveiled its highly anticipated platform, **Claude Science**, representing a monumental leap in the intersection of artificial intelligence and life sciences. Designed specifically to accelerate molecular screening, enhance drug discovery workflows, and optimize clinical trial designs, this AI suite is a transformative tool for the biopharmaceutical sector. According to [Anthropic's official blog](https://www.anthropic.com/news), the new offering provides specialized capabilities tailored to the complex and heavily regulated nature of medical research, marking a massive milestone in healthcare technology.

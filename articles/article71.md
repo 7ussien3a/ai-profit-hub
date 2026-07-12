@@ -7,10 +7,6 @@ image: "/images/article71.jpg"
 slug: "article71"
 ---
 
-# BIS Warns $1 Trillion AI Spending Bubble Could Trigger Global Financial Crisis
-
-![AI bubble and global financial crisis warning](/images/article71.jpg)
-
 The Bank for International Settlements (BIS), often described as the central bank for central banks, has sounded a massive alarm regarding the unchecked acceleration of artificial intelligence capital expenditures. In a landmark 2026 economic report, the BIS explicitly warns that the tech industry’s debt-fueled race to build AI data centers—combined with opaque shadow banking connections—could precipitate a global financial crisis reminiscent of the 2008 crash.
 
 As the world's most powerful tech conglomerates borrow unprecedented sums of money to construct infrastructure for generative AI models whose long-term commercial viability remains questionable, financial regulators are growing increasingly nervous. This article unpacks the BIS warning, examining how hyper-spending, circular financing, and shadow banking have created a volatile ecosystem that threatens the broader global economy.
