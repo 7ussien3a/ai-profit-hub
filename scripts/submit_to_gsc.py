@@ -101,5 +101,5 @@ def notify_google(urls):
     print(f"\n[Finished] Successfully requested indexing for {success_count} out of {len(urls)} URLs.")
 
 if __name__ == "__main__":
-    recent_urls = get_recent_urls_from_sitemap(hours_ago=24)
+    recent_urls = get_recent_urls_from_sitemap(hours_ago=99999)
     notify_google(recent_urls)

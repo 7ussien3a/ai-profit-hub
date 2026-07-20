@@ -62,14 +62,14 @@ def validate_article(html_path):
     else:
         print("[Fail] 5. Missing or invalid JSON-LD.")
         
-    # 6. >= 900 words (updated from 800)
+    # 6. >= 1000 words (updated from 900)
     text = soup.get_text(separator=' ')
     words = len(text.split())
-    if words >= 900:
-        print(f"[Pass] 6. Word count is {words} (>= 900).")
+    if words >= 1000:
+        print(f"[Pass] 6. Word count is {words} (>= 1000).")
         passed += 1
     else:
-        print(f"[Fail] 6. Word count is {words} (< 900).")
+        print(f"[Fail] 6. Word count is {words} (< 1000).")
         
     # 7. H1 present (only one)
     h1s = soup.find_all('h1')
