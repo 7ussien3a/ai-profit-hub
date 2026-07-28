@@ -1,7 +1,63 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
+    <item>
+    <title>Qwen 3.8-Max vs. Claude Opus 5: The New Frontier of AI Efficiency (July 2026)</title>
+    <link>https://ai-profit-hub.com/articles/qwen-38-max-vs-claude-opus-5-comparison-july-2026.html</link>
+    <description>Alibaba&apos;s Qwen 3.8-Max and Anthropic&apos;s Claude Opus 5 both launched in July 2026 — one from China&apos;s WAIC, one from Silicon Valley. We compare specs, pricing, availability, and what each model means for developers and businesses.</description>
+    <pubDate>Tue, 28 Jul 2026 21:19:13 +0300</pubDate>
+    <guid>https://ai-profit-hub.com/articles/qwen-38-max-vs-claude-opus-5-comparison-july-2026.html</guid>
+  </item>
   <item>
+    <title>Claude Opus 5: Anthropic&apos;s Most Practical Model Yet — Full Review</title>
+    <link>https://ai-profit-hub.com/articles/claude-opus-5-anthropic-review-july-2026.html</link>
+    <description>Anthropic launched Claude Opus 5 on July 24, 2026. It delivers near-Fable-5 performance at half the price, with a 1M token context window and thinking enabled by default. Here&apos;s the complete breakdown.</description>
+    <pubDate>Tue, 28 Jul 2026 21:19:07 +0300</pubDate>
+    <guid>https://ai-profit-hub.com/articles/claude-opus-5-anthropic-review-july-2026.html</guid>
+  </item>
+  <item>
+    <title>China Launches WAICO: A Rival AI Governance Body That Splits the World</title>
+    <link>https://ai-profit-hub.com/articles/china-waico-ai-governance-organization-july-2026.html</link>
+    <description>China established WAICO on July 16, 2026 — a 29-nation AI cooperation organization that directly challenges Western-led governance frameworks. Here&apos;s what it means for the global AI order.</description>
+    <pubDate>Tue, 28 Jul 2026 21:18:54 +0300</pubDate>
+    <guid>https://ai-profit-hub.com/articles/china-waico-ai-governance-organization-july-2026.html</guid>
+  </item>
+  <item>
+    <title>Late July 2026: Sovereign AI in Japan and Korea vs. The US-China Model Race</title>
+    <link>https://ai-profit-hub.com/articles/sovereign-ai-japan-korea-vs-us-china-july-2026.html</link>
+    <description>A comprehensive analysis of global AI trends in late July 2026. Japan pivots to Physical AI and South Korea focuses on Cybersecurity, while the US and China escalate the LLM parameter war.</description>
+    <pubDate>Tue, 21 Jul 2026 05:34:11 +0300</pubDate>
+    <guid>https://ai-profit-hub.com/articles/sovereign-ai-japan-korea-vs-us-china-july-2026.html</guid>
+  </item>
+  <item>
+    <title>Why Did Apple File a Federal Lawsuit Against OpenAI in Mid-2026? (Deep Analysis)</title>
+    <link>https://ai-profit-hub.com/articles/apple-sues-openai-trade-secret-theft-2026.html</link>
+    <description>Apple is suing OpenAI for &apos;trade secret theft&apos; in a massive federal lawsuit that threatens OpenAI&apos;s ambitions in the consumer hardware market. Discover the details of the clash shaking Silicon Valley.</description>
+    <pubDate>Tue, 21 Jul 2026 05:34:08 +0300</pubDate>
+    <guid>https://ai-profit-hub.com/articles/apple-sues-openai-trade-secret-theft-2026.html</guid>
+  </item>
+  <item>
+    <title>DeepSeek V4 Unveiled: China&apos;s Direct Answer to OpenAI&apos;s GPT-5.6</title>
+    <link>https://ai-profit-hub.com/articles/deepseek-v4-china-ai-model-2026.html</link>
+    <description>DeepSeek officially announces V4, a massive foundational model trained entirely on Chinese Ascend silicon. We break down the specs, the geopolitical implications, and how it challenges OpenAI.</description>
+    <pubDate>Tue, 21 Jul 2026 02:00:15 +0300</pubDate>
+    <guid>https://ai-profit-hub.com/articles/deepseek-v4-china-ai-model-2026.html</guid>
+  </item>
+  <item>
+    <title>Cursor vs. Windsurf: Which Coding Assistant Best Utilizes GPT-5.6 Sol?</title>
+    <link>https://ai-profit-hub.com/articles/cursor-vs-windsurf-gpt-5-6-sol-2026.html</link>
+    <description>A comprehensive comparison between Cursor AI and Windsurf in 2026. We evaluate how both agentic IDEs leverage the massive reasoning power of GPT-5.6 Sol for complex software engineering.</description>
+    <pubDate>Tue, 21 Jul 2026 01:59:42 +0300</pubDate>
+    <guid>https://ai-profit-hub.com/articles/cursor-vs-windsurf-gpt-5-6-sol-2026.html</guid>
+  </item>
+  <item>
+    <title>Sovereign AI Race: South Korea&apos;s Physical AI vs. Japan&apos;s Noetra Project</title>
+    <link>https://ai-profit-hub.com/articles/south-korea-vs-japan-sovereign-ai-2026.html</link>
+    <description>Explore the battle for sovereign AI in Asia. South Korea heavily invests in Physical AI and robotics, while Japan doubles down on the Noetra project to preserve its linguistic heritage.</description>
+    <pubDate>Tue, 21 Jul 2026 01:59:39 +0300</pubDate>
+    <guid>https://ai-profit-hub.com/articles/south-korea-vs-japan-sovereign-ai-2026.html</guid>
+  </item>
+<item>
     <title>South Korea&apos;s $500B AI Supercycle: Samsung HBM4 and SK Hynix Factory Expansion</title>
     <link>https://ai-profit-hub.com/articles/south-korea-s-500b-ai-supercycle-samsung-hbm4-and-sk-hynix-factory-expansion.html</link>
     <description>South Korea enters a $500B AI Supercycle as Samsung begins mass production of HBM4 and SK Hynix aggressively expands factory capacity.</description>
