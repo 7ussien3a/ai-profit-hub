@@ -1,0 +1,16 @@
+{
+  "items": [
+    {
+      "type": "file",
+      "ctime": 1785200000000,
+      "path": "Dashboard.md",
+      "title": "Content Dashboard"
+    },
+    {
+      "type": "folder",
+      "ctime": 1785200000001,
+      "path": "templates",
+      "title": "Templates"
+    }
+  ]
+}

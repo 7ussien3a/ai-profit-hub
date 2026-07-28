@@ -34,7 +34,7 @@ def parse_markdown(md_path):
 def convert_body_to_html(body_text):
     # Extremely simple markdown parser for the specific needs
     # Extract Hussein's Take if present
-    take_match = re.search(r'##\s*(Hussein\'s Take|رأي حسين|HUSSEIN\'S TAKE)(.*?)(?=##|\Z)', body_text, re.IGNORECASE | re.DOTALL)
+    take_match = re.search(r'##\s*(Hussein\'s Take|HUSSEIN\'S TAKE)(.*?)(?=##|\Z)', body_text, re.IGNORECASE | re.DOTALL)
     take_text = ""
     if take_match:
         take_text = take_match.group(2).strip()

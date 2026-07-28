@@ -9,6 +9,7 @@
   // State variables
   let allTools = [];
   let allPrompts = [];
+  let generatedContentIndex = [];
   let activeCategory = "all"; // 'all', 'articles', 'tools', 'prompts', 'compare'
   let searchQuery = "";
 
@@ -66,14 +67,16 @@
     setupEventListeners();
 
     try {
-      // Fetch Tools and Prompts dynamically
-      const [toolsRes, promptsRes] = await Promise.all([
+      // Fetch static and generated search databases.
+      const [toolsRes, promptsRes, contentRes] = await Promise.all([
         fetch("data/tools.json"),
-        fetch("data/prompts.json")
+        fetch("data/prompts.json"),
+        fetch("data/search-index.json").catch(() => null)
       ]);
 
       if (toolsRes.ok) allTools = await toolsRes.json();
       if (promptsRes.ok) allPrompts = await promptsRes.json();
+      if (contentRes && contentRes.ok) generatedContentIndex = await contentRes.json();
 
       updateStatsMessage();
       applySearch();
@@ -85,7 +88,7 @@
   function updateStatsMessage() {
     const stats = document.getElementById("searchStats");
     if (!stats) return;
-    const articleCount = window.ARTICLES ? window.ARTICLES.length : 0;
+    const articleCount = (window.ARTICLES ? window.ARTICLES.length : 0) + generatedContentIndex.length;
     const toolCount = allTools.length;
     const promptCount = allPrompts.length;
     const compareCount = COMPARISONS.length;
@@ -202,6 +205,20 @@
         }
       });
     }
+
+    generatedContentIndex.forEach(a => {
+      const haystack = [
+        a.title,
+        a.description,
+        a.category,
+        a.contentType,
+        (a.tags || []).join(" "),
+        (a.keywords || []).join(" ")
+      ].join(" ").toLowerCase();
+      if (haystack.includes(q)) {
+        items.push({ title: a.title, url: a.url, type: a.contentType || "Article", emoji: "📰" });
+      }
+    });
 
     // Tools
     allTools.forEach(t => {
@@ -333,6 +350,24 @@
       });
     }
 
+    if (activeCategory === "all" || activeCategory === "articles") {
+      generatedContentIndex.forEach(a => {
+        items.push({
+          type: "article",
+          title: a.title,
+          url: a.url,
+          desc: a.description,
+          body: a.body,
+          date: a.date,
+          cat: a.category,
+          img: a.image,
+          author: a.author,
+          tags: a.tags || [],
+          keywords: a.keywords || []
+        });
+      });
+    }
+
     // 2. Tools
     if (activeCategory === "all" || activeCategory === "tools") {
       allTools.forEach(t => {
@@ -388,7 +423,11 @@
                      item.title.toLowerCase().includes(q) || 
                      (item.desc && item.desc.toLowerCase().includes(q)) || 
                      (item.prompt && item.prompt.toLowerCase().includes(q)) || 
-                     (item.tagline && item.tagline.toLowerCase().includes(q));
+                     (item.tagline && item.tagline.toLowerCase().includes(q)) ||
+                     (item.body && item.body.toLowerCase().includes(q)) ||
+                     (item.author && item.author.toLowerCase().includes(q)) ||
+                     (item.tags && item.tags.join(" ").toLowerCase().includes(q)) ||
+                     (item.keywords && item.keywords.join(" ").toLowerCase().includes(q));
 
       // Extra dropdown filters (keep backwards compatibility with existing reviews/articles filters)
       let matchType = true;

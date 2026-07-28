@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI Profit Hub Content Frontmatter",
+  "type": "object",
+  "required": [
+    "title",
+    "slug",
+    "description",
+    "contentType",
+    "category",
+    "author",
+    "status",
+    "updatedAt",
+    "featuredImage",
+    "imageAlt",
+    "language"
+  ],
+  "properties": {
+    "title": { "type": "string", "minLength": 8 },
+    "slug": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+    "description": { "type": "string", "minLength": 60 },
+    "contentType": {
+      "type": "string",
+      "enum": ["article", "news", "review", "comparison", "guide", "tool", "company", "model", "prompt"]
+    },
+    "category": { "type": "string", "minLength": 2 },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "author": { "type": "string", "minLength": 2 },
+    "editor": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "review", "scheduled", "published", "archived"]
+    },
+    "publishedAt": { "type": "string" },
+    "updatedAt": { "type": "string" },
+    "featuredImage": { "type": "string" },
+    "imageAlt": { "type": "string", "minLength": 10 },
+    "canonical": { "type": "string" },
+    "keywords": { "type": "array", "items": { "type": "string" } },
+    "language": { "type": "string", "enum": ["en"] },
+    "featured": { "type": "boolean" },
+    "draft": { "type": "boolean" },
+    "difficulty": { "type": "string" },
+    "sources": { "type": "array" },
+    "related": { "type": "array", "items": { "type": "string" } },
+    "schemaType": { "type": "string" },
+    "factChecked": { "type": "boolean" },
+    "lastReviewed": { "type": "string" },
+    "testedBy": { "type": "string" },
+    "disclosure": { "type": "string" }
+  }
+}

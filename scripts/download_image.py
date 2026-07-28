@@ -1,10 +1,10 @@
 import urllib.request
 import urllib.error
 import sys
-import os
+from pathlib import Path
 
 url = "https://image.pollinations.ai/prompt/Avataar%20AI%20video%20generation%20cultural%20awareness%20india%20technology?width=1280&height=720&nologo=true"
-output_path = r"c:\Users\Admin\Desktop\X\مشروع قوقل ادسنس\site\images\article73-avataar-ai.jpg"
+output_path = Path(__file__).resolve().parent.parent / "images" / "article73-avataar-ai.jpg"
 
 try:
     req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})

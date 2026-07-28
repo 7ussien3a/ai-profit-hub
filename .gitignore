@@ -9,6 +9,12 @@ __pycache__/
 *.pyc
 *.pyo
 
+# Obsidian local workspace state
+content/.obsidian/workspace.json
+content/.obsidian/workspace-mobile.json
+content/.obsidian/cache/
+content/.trash/
+
 # Node.js
 node_modules/
 npm-debug.log*

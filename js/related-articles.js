@@ -250,6 +250,32 @@
     return normPath === normUrl || path.endsWith(articleUrl);
   }
 
+  function normalizeGeneratedArticle(item) {
+    return {
+      title: item.title,
+      url: item.url,
+      image: item.image || '/images/placeholder-ai.jpg',
+      tag: item.category || item.contentType || 'Article',
+      date: item.date || ''
+    };
+  }
+
+  function loadGeneratedRelated(callback) {
+    fetch('/data/related-content.json')
+      .then(function (response) {
+        return response.ok ? response.json() : [];
+      })
+      .then(function (items) {
+        if (Array.isArray(items) && items.length > 0) {
+          articles = items.map(normalizeGeneratedArticle).concat(articles);
+        }
+        callback();
+      })
+      .catch(function () {
+        callback();
+      });
+  }
+
   /* ── Inject styles ──────────────────────────────────────────────────── */
   function injectStyles() {
     if (document.getElementById('related-articles-styles')) return;
@@ -445,8 +471,10 @@
 
   // Run when DOM is ready
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
+    document.addEventListener('DOMContentLoaded', function () {
+      loadGeneratedRelated(init);
+    });
   } else {
-    init();
+    loadGeneratedRelated(init);
   }
 })();

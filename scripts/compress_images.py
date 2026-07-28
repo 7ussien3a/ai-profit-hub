@@ -6,16 +6,16 @@ sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='repla
 """
 compress_images.py - AI Profit Hub
 ====================================
-يضغط جميع الصور التي يتجاوز حجمها 200KB في مجلد /images/
-مع الحفاظ على الجودة البصرية وتحويل PNG إلى WebP.
+Compresses images over 200KB in the /images/ folder while preserving visual
+quality and converting PNG files to WebP when useful.
 
-الخوارزمية:
-1. يبحث عن كل صورة > 200KB (JPG, PNG, WebP)
-2. يحاول الضغط بجودة تنازلية حتى يصل للهدف
-3. PNG → يُحوَّل إلى WebP (أصغر وأسرع)
-4. JPG/WebP → يُضغط بجودة مُحسَّنة
-5. يُنشئ نسخة احتياطية في images/backup/ قبل أي تعديل
-6. يُولِّد تقريراً تفصيلياً في نهاية العملية
+Workflow:
+1. Finds images over 200KB (JPG, PNG, WebP).
+2. Tries progressively lower quality settings until the target is reached.
+3. Converts PNG to WebP when that produces a smaller file.
+4. Optimizes JPG and WebP files.
+5. Creates backups in images/backup/ before modifying files.
+6. Prints a summary report at the end.
 """
 
 import os
@@ -27,26 +27,26 @@ from datetime import datetime
 try:
     from PIL import Image, ImageOps
 except ImportError:
-    print("❌ Pillow غير مثبت. شغّل: pip install Pillow")
+    print("[ERROR] Pillow is not installed. Run: pip install Pillow")
     sys.exit(1)
 
-# ─── إعدادات ──────────────────────────────────────────────────────────────────
+# Configuration
 IMAGES_DIR   = Path(__file__).parent.parent / "images"
 BACKUP_DIR   = IMAGES_DIR / "backup"
-MAX_SIZE_KB  = 200          # الحد الأقصى المسموح (كيلوبايت)
-TARGET_KB    = 180          # الهدف الفعلي (هامش أمان 10%)
-QUALITY_START = 85          # جودة البداية
-QUALITY_MIN   = 55          # أدنى جودة مسموحة
-QUALITY_STEP  = 5           # خطوة التخفيض
-MAX_DIMENSION = 1920        # الحد الأقصى للعرض/الطول (بكسل)
+MAX_SIZE_KB  = 200          # Maximum allowed size in kilobytes.
+TARGET_KB    = 180          # Practical target with a small safety buffer.
+QUALITY_START = 85          # Initial output quality.
+QUALITY_MIN   = 55          # Lowest allowed output quality.
+QUALITY_STEP  = 5           # Quality decrement step.
+MAX_DIMENSION = 1920        # Maximum width or height in pixels.
 EXTENSIONS    = {'.jpg', '.jpeg', '.png', '.webp'}
 
-# ─── مساعدات ──────────────────────────────────────────────────────────────────
+# Helpers
 def size_kb(path: Path) -> float:
     return path.stat().st_size / 1024
 
 def compress_jpg_webp(img: Image.Image, output_path: Path, target_kb: float) -> bool:
-    """يضغط JPG أو WebP بجودة تنازلية حتى يصل للحجم المطلوب."""
+    """Compress a JPG or WebP image until it reaches the target size."""
     fmt = "WEBP" if output_path.suffix.lower() == ".webp" else "JPEG"
     for quality in range(QUALITY_START, QUALITY_MIN - 1, -QUALITY_STEP):
         import io
@@ -58,31 +58,31 @@ def compress_jpg_webp(img: Image.Image, output_path: Path, target_kb: float) -> 
         if buf.tell() / 1024 <= target_kb:
             output_path.write_bytes(buf.getvalue())
             return True
-    # إذا لم يكفِ التخفيض، احفظ بأدنى جودة مسموحة
+    # If the target is still missed, save at the lowest allowed quality.
     buf = io.BytesIO()
     img.save(buf, format=fmt, quality=QUALITY_MIN, optimize=True)
     output_path.write_bytes(buf.getvalue())
     return buf.tell() / 1024 <= MAX_SIZE_KB
 
 def png_to_webp(img: Image.Image, original_path: Path, target_kb: float) -> tuple[Path, bool]:
-    """يحوّل PNG إلى WebP ويضغطه، يُرجع (المسار الجديد, نجح؟)."""
+    """Convert a PNG to WebP and return the new path and success flag."""
     webp_path = original_path.with_suffix(".webp")
     success = compress_jpg_webp(img, webp_path, target_kb)
-    # إذا نجح التحويل، احذف PNG الأصلي
+    # Remove the original PNG only after a usable WebP file exists.
     if webp_path.exists() and size_kb(webp_path) < MAX_SIZE_KB:
         original_path.unlink()
         return webp_path, True
     return webp_path, success
 
 def resize_if_needed(img: Image.Image) -> Image.Image:
-    """يُصغِّر الصورة إذا كان أحد أبعادها يتجاوز MAX_DIMENSION."""
+    """Resize the image when either dimension exceeds MAX_DIMENSION."""
     w, h = img.size
     if w > MAX_DIMENSION or h > MAX_DIMENSION:
         img.thumbnail((MAX_DIMENSION, MAX_DIMENSION), Image.LANCZOS)
     return img
 
 def ensure_rgb(img: Image.Image) -> Image.Image:
-    """يتأكد من أن الصورة بصيغة RGB (لحفظ JPG بشكل صحيح)."""
+    """Ensure RGB mode so JPG output saves correctly."""
     if img.mode in ("RGBA", "P", "LA"):
         background = Image.new("RGB", img.size, (255, 255, 255))
         if img.mode == "P":
@@ -92,15 +92,15 @@ def ensure_rgb(img: Image.Image) -> Image.Image:
         return background
     return img.convert("RGB") if img.mode != "RGB" else img
 
-# ─── المنطق الرئيسي ────────────────────────────────────────────────────────────
+# Main workflow
 def process_images():
     if not IMAGES_DIR.exists():
-        print(f"❌ مجلد الصور غير موجود: {IMAGES_DIR}")
+        print(f"[ERROR] Images directory not found: {IMAGES_DIR}")
         sys.exit(1)
 
     BACKUP_DIR.mkdir(exist_ok=True)
 
-    # اجمع كل الصور الكبيرة
+    # Collect all images that exceed the configured size limit.
     big_images = [
         p for p in IMAGES_DIR.iterdir()
         if p.is_file()
@@ -110,7 +110,7 @@ def process_images():
     ]
 
     if not big_images:
-        print("✅ لا توجد صور تتجاوز 200KB — الموقع في حالة ممتازة!")
+        print("[OK] No images exceed 200KB. The site is in good shape.")
         return
 
     big_images.sort(key=lambda p: size_kb(p), reverse=True)
@@ -130,21 +130,21 @@ def process_images():
         ext = img_path.suffix.lower()
         print(f"[{i:02d}/{len(big_images)}] {img_path.name:<55} {original_kb:>7.1f}KB -> ", end="", flush=True)
 
-        # نسخة احتياطية
+        # Backup before modifying the original file.
         backup_path = BACKUP_DIR / img_path.name
         if not backup_path.exists():
             shutil.copy2(img_path, backup_path)
 
         try:
             img = Image.open(img_path)
-            img = ImageOps.exif_transpose(img)   # تصحيح الدوران
+            img = ImageOps.exif_transpose(img)   # Correct camera rotation.
             img = resize_if_needed(img)
 
             new_path = img_path
             success = False
 
             if ext == ".png":
-                # حوّل PNG → WebP
+                # Convert PNG to WebP.
                 rgb_img = ensure_rgb(img) if img.mode not in ("RGBA", "P") else img
                 new_path, success = png_to_webp(rgb_img, img_path, TARGET_KB)
             elif ext in (".jpg", ".jpeg"):
@@ -158,7 +158,7 @@ def process_images():
             saved = original_kb - new_kb
             total_saved_kb += saved
             status = "[OK]" if new_kb <= MAX_SIZE_KB else "[!] "
-            print(f"{new_kb:>7.1f}KB  {status}  (وفّر: {saved:+.1f}KB)")
+            print(f"{new_kb:>7.1f}KB  {status}  (saved: {saved:+.1f}KB)")
 
             results.append({
                 "name":        img_path.name,
@@ -171,14 +171,14 @@ def process_images():
             })
 
         except Exception as e:
-            print(f"❌ خطأ: {e}")
+            print(f"[ERROR] {e}")
             results.append({
                 "name": img_path.name, "new_name": img_path.name,
                 "original_kb": original_kb, "new_kb": original_kb,
                 "saved_kb": 0, "success": False, "converted": False,
             })
 
-    # ─── تقرير نهائي ──────────────────────────────────────────────────────────
+    # Final report
     success_count = sum(1 for r in results if r["success"])
     failed = [r for r in results if not r["success"]]
     converted_count = sum(1 for r in results if r["converted"])
@@ -201,7 +201,7 @@ def process_images():
     print(f"\n  [BAK] Backups saved in: {BACKUP_DIR}")
     print(f"{'='*60}\n")
 
-    # ─── تنبيه بالصور المحوَّلة لتحديث HTML ──────────────────────────────────
+    # Warn about converted images so HTML references can be updated.
     png_converted = [r for r in results if r["converted"]]
     if png_converted:
         print(f"[!] WARNING: {len(png_converted)} PNG files converted to WebP.")
