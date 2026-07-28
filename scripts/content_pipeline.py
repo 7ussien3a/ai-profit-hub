@@ -8,6 +8,7 @@ import datetime as dt
 import html
 import json
 import re
+import subprocess
 import sys
 import textwrap
 import urllib.request
@@ -396,6 +397,7 @@ def build() -> int:
     lookup = build_lookup(items)
     published = [item for item in items if item.is_published]
     manifest = load_manifest()
+    previous_paths = set(manifest.values())
     remove_stale_pages(manifest, published)
     for item in published:
         item.html_body = render_markdown(item.body, lookup)
@@ -404,8 +406,8 @@ def build() -> int:
     write_manifest(published)
     write_search_index(published)
     write_related_content(published)
-    update_sitemap(published)
-    update_rss(published)
+    update_sitemap(published, previous_paths)
+    update_rss(published, previous_paths)
     print(f"Built {len(published)} published Markdown page(s).")
     return 0
 
@@ -843,7 +845,7 @@ def write_related_content(items: list[ContentItem]) -> None:
     (DATA / "related-content.json").write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
-def update_sitemap(items: list[ContentItem]) -> None:
+def update_sitemap(items: list[ContentItem], previous_paths: set[str] | None = None) -> None:
     path = ROOT / "sitemap.xml"
     ET.register_namespace("", "http://www.sitemaps.org/schemas/sitemap/0.9")
     if path.exists():
@@ -856,6 +858,12 @@ def update_sitemap(items: list[ContentItem]) -> None:
     if root.tag.startswith("{"):
         ns = root.tag.split("}", 1)[0] + "}"
     existing = {node.findtext(f"{ns}loc"): node for node in root.findall(f"{ns}url")}
+    keep_urls = {item.public_url for item in items}
+    stale_urls = {f"{BASE_URL}/{path}" for path in (previous_paths or set()) if f"{BASE_URL}/{path}" not in keep_urls}
+    for url in stale_urls:
+        node = existing.get(url)
+        if node is not None:
+            root.remove(node)
     for item in items:
         node = existing.get(item.public_url)
         if node is None:
@@ -877,8 +885,9 @@ def set_child(node: ET.Element, ns: str, name: str, value: str) -> None:
     child.text = value
 
 
-def update_rss(items: list[ContentItem]) -> None:
+def update_rss(items: list[ContentItem], previous_paths: set[str] | None = None) -> None:
     path = ROOT / "rss.xml"
+    ET.register_namespace("atom", "http://www.w3.org/2005/Atom")
     if path.exists():
         tree = ET.parse(path)
         root = tree.getroot()
@@ -890,6 +899,12 @@ def update_rss(items: list[ContentItem]) -> None:
         channel = ET.SubElement(root, "channel")
         tree = ET.ElementTree(root)
     existing = {node.findtext("guid") or node.findtext("link"): node for node in channel.findall("item")}
+    keep_urls = {item.public_url for item in items}
+    stale_urls = {f"{BASE_URL}/{path}" for path in (previous_paths or set()) if f"{BASE_URL}/{path}" not in keep_urls}
+    for url in stale_urls:
+        node = existing.get(url)
+        if node is not None:
+            channel.remove(node)
     for item in items:
         if item.content_type not in RSS_TYPES:
             continue
@@ -1025,6 +1040,7 @@ def publish_check() -> int:
         ("audit", audit),
         ("build", build),
         ("route-check", route_check),
+        ("site-audit", lambda: run_python_script("site_audit.py")),
     ]
     for name, fn in steps:
         print(f"\nRunning {name}...")
@@ -1034,6 +1050,12 @@ def publish_check() -> int:
             return code
     print("\nPublish checks passed. Review the Git diff, then commit and push when ready.")
     return 0
+
+
+def run_python_script(script_name: str) -> int:
+    script = ROOT / "scripts" / script_name
+    result = subprocess.run([sys.executable, str(script)], cwd=ROOT)
+    return result.returncode
 
 
 def main() -> int:

@@ -7,7 +7,7 @@ category: "Site Operations"
 tags: ["Obsidian", "Content Workflow", "AI Profit Hub"]
 author: "Hussein Harby"
 editor: "AI Profit Hub Editorial"
-status: "published"
+status: "review"
 publishedAt: "2026-07-29T00:00:00+03:00"
 updatedAt: "2026-07-29T00:00:00+03:00"
 featuredImage: "/images/future-technology-abstract.jpg"
@@ -16,7 +16,7 @@ canonical: "https://ai-profit-hub.com/articles/obsidian-content-workflow-demo.ht
 keywords: ["Obsidian workflow", "AI Profit Hub content", "Markdown publishing"]
 language: "en"
 featured: false
-draft: false
+draft: true
 difficulty: "Beginner"
 sources:
   - title: "Obsidian Help"

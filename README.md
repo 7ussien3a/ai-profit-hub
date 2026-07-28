@@ -13,6 +13,7 @@ python scripts/content_pipeline.py audit
 python scripts/content_pipeline.py validate
 python scripts/content_pipeline.py build
 python scripts/content_pipeline.py route-check
+python scripts/site_audit.py
 python scripts/content_pipeline.py preview --port 4173
 .\scripts\publish-content.ps1
 ```
@@ -25,3 +26,5 @@ The build command renders published Markdown content to static HTML, then update
 - `rss.xml`
 
 See `content/README.md` and `docs/obsidian-content-workflow.md` for the full schema, template, preview, and publishing workflow.
+
+See `docs/engineering-audit-2026-07-29.md` for the latest production hardening audit notes.

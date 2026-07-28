@@ -1,6 +1,6 @@
 /**
  * Related Articles – "You May Also Like"
- * Automatically injects 3 random article cards before the <footer>.
+ * Automatically injects 3 context-aware article cards before the <footer>.
  * Fully self-contained: styles are injected via JS, no external CSS needed.
  */
 (function () {
@@ -229,16 +229,56 @@
 
   /* ── Helpers ────────────────────────────────────────────────────────── */
 
-  /** Fisher-Yates shuffle (returns new array) */
-  function shuffle(arr) {
-    var a = arr.slice();
-    for (var i = a.length - 1; i > 0; i--) {
-      var j = Math.floor(Math.random() * (i + 1));
-      var tmp = a[i];
-      a[i] = a[j];
-      a[j] = tmp;
-    }
-    return a;
+  function escapeHtml(value) {
+    return String(value || '').replace(/[&<>"']/g, function (char) {
+      return {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#39;'
+      }[char];
+    });
+  }
+
+  function normalizeText(value) {
+    return String(value || '')
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, ' ')
+      .trim();
+  }
+
+  function getCurrentSignals() {
+    var title = normalizeText(document.querySelector('h1') ? document.querySelector('h1').textContent : document.title);
+    var category = normalizeText(
+      (document.querySelector('.article-card-tag') || document.querySelector('.source-badge') || {}).textContent || ''
+    );
+    var path = normalizeText(window.location.pathname.split('/').pop() || '');
+    var words = {};
+
+    [title, category, path].join(' ').split(/\s+/).forEach(function (word) {
+      if (word.length > 2) words[word] = true;
+    });
+
+    return { title: title, category: category, words: words };
+  }
+
+  function scoreArticle(article, signals, index) {
+    var score = 0;
+    var articleTitle = normalizeText(article.title);
+    var articleTag = normalizeText(article.tag);
+    var articleUrl = normalizeText(article.url);
+
+    if (signals.category && articleTag.indexOf(signals.category) !== -1) score += 12;
+    if (signals.category && signals.category.indexOf(articleTag) !== -1) score += 8;
+
+    Object.keys(signals.words).forEach(function (word) {
+      if (articleTitle.indexOf(word) !== -1) score += 3;
+      if (articleTag.indexOf(word) !== -1) score += 2;
+      if (articleUrl.indexOf(word) !== -1) score += 1;
+    });
+
+    return score * 1000 - index;
   }
 
   /** Check if a URL matches the current page */
@@ -254,7 +294,7 @@
     return {
       title: item.title,
       url: item.url,
-      image: item.image || '/images/placeholder-ai.jpg',
+      image: item.image || '/images/robot-technology.jpg',
       tag: item.category || item.contentType || 'Article',
       date: item.date || ''
     };
@@ -432,12 +472,12 @@
       return (
         '<article class="related-card">' +
           '<div class="related-card-img-wrapper">' +
-            '<img src="' + a.image + '" alt="' + a.title + '" loading="lazy" />' +
+            '<img src="' + escapeHtml(a.image) + '" alt="' + escapeHtml(a.title) + '" loading="lazy" />' +
           '</div>' +
           '<div class="related-card-body">' +
-            '<span class="related-card-tag">' + a.tag + '</span>' +
-            '<a href="' + a.url + '" class="related-card-title">' + a.title + '</a>' +
-            '<span class="related-card-date">' + a.date + '</span>' +
+            '<span class="related-card-tag">' + escapeHtml(a.tag) + '</span>' +
+            '<a href="' + escapeHtml(a.url) + '" class="related-card-title">' + escapeHtml(a.title) + '</a>' +
+            '<span class="related-card-date">' + escapeHtml(a.date) + '</span>' +
           '</div>' +
         '</article>'
       );
@@ -461,8 +501,18 @@
 
     if (candidates.length === 0) return;
 
-    // Pick up to 3 random articles
-    var picks = shuffle(candidates).slice(0, 3);
+    var signals = getCurrentSignals();
+    var picks = candidates
+      .map(function (article, index) {
+        return { article: article, score: scoreArticle(article, signals, index) };
+      })
+      .sort(function (a, b) {
+        return b.score - a.score;
+      })
+      .slice(0, 3)
+      .map(function (item) {
+        return item.article;
+      });
 
     injectStyles();
     var section = buildSection(picks);

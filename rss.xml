@@ -1,13 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<rss xmlns:ns0="http://www.w3.org/2005/Atom" version="2.0">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
-    <item>
-      <title>Demo: Obsidian Content Workflow for AI Profit Hub</title>
-      <link>https://ai-profit-hub.com/articles/obsidian-content-workflow-demo.html</link>
-      <description>A production-safe demo article proving that AI Profit Hub can publish English Markdown content from the Obsidian content workspace.</description>
-      <pubDate>Wed, 29 Jul 2026 00:00:00 +0300</pubDate>
-      <guid>https://ai-profit-hub.com/articles/obsidian-content-workflow-demo.html</guid>
-    </item>
     <item>
       <title>Qwen 3.8-Max vs. Claude Opus 5: The New Frontier of AI Efficiency (July 2026)</title>
       <link>https://ai-profit-hub.com/articles/qwen-38-max-vs-claude-opus-5-comparison-july-2026.html</link>
@@ -335,7 +328,7 @@
     <description>Best AI Tools, Tutorials &amp; Productivity Hacks</description>
     <language>en-us</language>
     <lastBuildDate>Sun, 05 Jul 2026 05:34:15 +0300</lastBuildDate>
-    <ns0:link href="https://ai-profit-hub.com/rss.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ai-profit-hub.com/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DeepSeek-R1 vs Meituan LongCat-2.0: Chinese AI Giants Face Off</title>
       <link>https://ai-profit-hub.com/compare/deepseek-r1-vs-meituan-longcat-2.html</link>
