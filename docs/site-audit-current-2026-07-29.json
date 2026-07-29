@@ -1,0 +1,9 @@
+{
+  "errors": 0,
+  "warnings": 0,
+  "issues": [],
+  "info": [
+    "protected local credential remains ignored and untracked: credentials.json",
+    "protected local credential remains ignored and untracked: scripts/service-account.json"
+  ]
+}

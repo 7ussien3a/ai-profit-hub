@@ -197,17 +197,24 @@
   })();
   // Back to top
   (function(){
-    var btn = document.createElement('button');
-    btn.id = 'back-to-top';
-    btn.innerHTML = '&#8679;';
-    btn.title = 'Back to top';
-    document.body.appendChild(btn);
-    window.addEventListener('scroll', function(){
-      btn.classList.toggle('visible', window.scrollY > 400);
-    }, {passive:true});
-    btn.addEventListener('click', function(){
-      window.scrollTo({top:0, behavior:'smooth'});
-    });
+    function initializeBackToTop() {
+      var btn = document.createElement('button');
+      btn.id = 'back-to-top';
+      btn.innerHTML = '&#8679;';
+      btn.title = 'Back to top';
+      document.body.appendChild(btn);
+      window.addEventListener('scroll', function(){
+        btn.classList.toggle('visible', window.scrollY > 400);
+      }, {passive:true});
+      btn.addEventListener('click', function(){
+        window.scrollTo({top:0, behavior:'smooth'});
+      });
+    }
+    if (document.body) {
+      initializeBackToTop();
+    } else {
+      document.addEventListener('DOMContentLoaded', initializeBackToTop, {once:true});
+    }
   })();
   // Copy link
   function copyArticleLink(){
@@ -874,28 +881,28 @@ response = client.chat.completions.create(<br>
       <div class="related-section">
         <h2>You May Also Like</h2>
         <div class="related-grid">
-          <a href="../articles/ai-coding-assistants.html" class="related-card">
+          <a href="/articles/ai-coding-assistants.html" class="related-card">
             <img src="../images/poll_22334.jpg" alt="AI Coding Assistants" loading="lazy">
             <div class="related-card-body">
               <span class="related-card-tag">💻 Programming</span>
               <p class="related-card-title">5 AI Coding Assistants That Will Help You Code Faster in 2026</p>
             </div>
           </a>
-          <a href="../articles/agentic-coding-future.html" class="related-card">
+          <a href="/articles/agentic-coding-future.html" class="related-card">
             <img src="../images/poll_55667.jpg" alt="Agentic Coding Future" loading="lazy">
             <div class="related-card-body">
               <span class="related-card-tag">🤖 Future Tech</span>
               <p class="related-card-title">What is Agentic Coding? The Rise of Autonomous AI Developers</p>
             </div>
           </a>
-          <a href="../articles/ai-seo-optimization-guide.html" class="related-card">
+          <a href="/articles/ai-seo-optimization-guide.html" class="related-card">
             <img src="../images/poll_88990.jpg" alt="AI SEO Optimization" loading="lazy">
             <div class="related-card-body">
               <span class="related-card-tag">📈 SEO</span>
               <p class="related-card-title">AI SEO Optimization Guide: Rank Higher with AI in 2026</p>
             </div>
           </a>
-          <a href="../articles/ai-automation-guide.html" class="related-card">
+          <a href="/articles/ai-automation-guide.html" class="related-card">
             <img src="../images/poll_11223.jpg" alt="AI Automation Guide" loading="lazy">
             <div class="related-card-body">
               <span class="related-card-tag">⚡ Automation</span>

@@ -65,6 +65,10 @@
     setupSuggestionsUI();
     setupTabPills();
     setupEventListeners();
+    const searchInput = document.getElementById("searchInput");
+    if (searchInput) {
+      searchQuery = searchInput.value;
+    }
 
     try {
       // Fetch static and generated search databases.
@@ -88,7 +92,7 @@
   function updateStatsMessage() {
     const stats = document.getElementById("searchStats");
     if (!stats) return;
-    const articleCount = (window.ARTICLES ? window.ARTICLES.length : 0) + generatedContentIndex.length;
+    const articleCount = generatedContentIndex.length || (window.ARTICLES ? window.ARTICLES.length : 0);
     const toolCount = allTools.length;
     const promptCount = allPrompts.length;
     const compareCount = COMPARISONS.length;
@@ -198,25 +202,25 @@
     const items = [];
 
     // Articles
-    if (window.ARTICLES) {
-      window.ARTICLES.forEach(a => {
-        if (a.title.toLowerCase().includes(q)) {
-          items.push({ title: a.title, url: a.url, type: "Article", emoji: "📰" });
-        }
-      });
-    }
-
-    generatedContentIndex.forEach(a => {
+    const articleSource = generatedContentIndex.length
+      ? generatedContentIndex
+      : (window.ARTICLES || []);
+    articleSource.forEach(a => {
       const haystack = [
         a.title,
-        a.description,
-        a.category,
+        a.description || a.desc,
+        a.category || a.cat,
         a.contentType,
         (a.tags || []).join(" "),
         (a.keywords || []).join(" ")
       ].join(" ").toLowerCase();
       if (haystack.includes(q)) {
-        items.push({ title: a.title, url: a.url, type: a.contentType || "Article", emoji: "📰" });
+        items.push({
+          title: a.title,
+          url: a.url,
+          type: a.contentType || "Article",
+          emoji: "📰"
+        });
       }
     });
 
@@ -248,12 +252,12 @@
 
     // Render up to 5 suggestions
     suggestionsContainer.innerHTML = items.slice(0, 5).map(item => `
-      <a href="${item.url}" class="suggestion-item">
+      <a href="${escapeAttribute(safeUrl(item.url))}" class="suggestion-item">
         <div class="suggestion-icon">${item.emoji}</div>
         <div class="suggestion-body">
-          <div class="suggestion-title">${item.title}</div>
+          <div class="suggestion-title">${escapeHtml(item.title)}</div>
           <div class="suggestion-meta">
-            <span class="suggestion-tag">${item.type}</span>
+            <span class="suggestion-tag">${escapeHtml(item.type)}</span>
           </div>
         </div>
       </a>
@@ -336,31 +340,20 @@
     let items = [];
 
     // 1. Articles
-    if (window.ARTICLES && (activeCategory === "all" || activeCategory === "articles")) {
-      window.ARTICLES.forEach(a => {
-        items.push({
-          type: "article",
-          title: a.title,
-          url: a.url,
-          desc: a.desc,
-          date: a.date,
-          cat: a.cat,
-          img: a.img
-        });
-      });
-    }
-
     if (activeCategory === "all" || activeCategory === "articles") {
-      generatedContentIndex.forEach(a => {
+      const articleSource = generatedContentIndex.length
+        ? generatedContentIndex
+        : (window.ARTICLES || []);
+      articleSource.forEach(a => {
         items.push({
           type: "article",
           title: a.title,
           url: a.url,
-          desc: a.description,
+          desc: a.description || a.desc || "",
           body: a.body,
-          date: a.date,
-          cat: a.category,
-          img: a.image,
+          date: a.date || "",
+          cat: a.category || a.cat || "Articles",
+          img: a.image || a.img || "",
           author: a.author,
           tags: a.tags || [],
           keywords: a.keywords || []
@@ -468,14 +461,14 @@
         // Standard card with image
         return `
           <article class="result-card">
-            <a href="${item.url}">
-              <img src="${item.img || 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=300&fit=crop'}" alt="${item.title.replace(/"/g, '&quot;')}" loading="lazy">
+            <a href="${escapeAttribute(safeUrl(item.url))}">
+              <img src="${escapeAttribute(safeUrl(item.img || '/images/robot-technology.jpg'))}" alt="${escapeAttribute(item.title)}" loading="lazy">
             </a>
             <div class="result-card-body">
-              <span class="result-tag" style="background:var(--primary-glow);">${item.cat}</span>
-              <h3><a href="${item.url}">${highlightText(item.title, q)}</a></h3>
-              <p class="result-desc">${highlightText(item.desc, q)}</p>
-              <div class="result-meta">${item.date || ""}</div>
+              <span class="result-tag" style="background:var(--primary-glow);">${escapeHtml(item.cat)}</span>
+              <h3><a href="${escapeAttribute(safeUrl(item.url))}">${highlightText(item.title, q)}</a></h3>
+              <p class="result-desc">${highlightText(item.desc || "", q)}</p>
+              <div class="result-meta">${escapeHtml(item.date || "")}</div>
             </div>
           </article>
         `;
@@ -492,16 +485,16 @@
                 <span style="font-size: 2rem;">${item.emoji}</span>
                 <div>
                   <h3 style="font-size: 1.15rem; font-weight:800; margin:0;"><a href="ai-tools-directory.html">${highlightText(item.title, q)}</a></h3>
-                  <span style="font-size: 0.72rem; color: var(--text-secondary);">by ${item.developer}</span>
+                  <span style="font-size: 0.72rem; color: var(--text-secondary);">by ${escapeHtml(item.developer || "")}</span>
                 </div>
               </div>
-              <span class="result-tag" style="background:var(--primary-glow);">${item.cat}</span>
+              <span class="result-tag" style="background:var(--primary-glow);">${escapeHtml(item.cat)}</span>
               <p class="result-desc" style="margin-top: 10px;">${highlightText(item.desc, q)}</p>
             </div>
             
             <div style="border-top:1px solid var(--border); padding-top:14px; margin-top:16px; display:flex; justify-content:space-between; align-items:center;">
               <span style="color:#fbbf24; font-weight:700; font-size:0.85rem;">★ ${item.rating.toFixed(1)}</span>
-              <span class="badge ${pricingClass}" style="font-size:0.75rem; border-radius:20px; font-weight:700; padding:2px 8px;">${item.pricing}</span>
+              <span class="badge ${pricingClass}" style="font-size:0.75rem; border-radius:20px; font-weight:700; padding:2px 8px;">${escapeHtml(item.pricing)}</span>
             </div>
           </article>
         `;
@@ -511,7 +504,7 @@
           <article class="result-card" style="padding: 24px; justify-content: space-between;">
             <div>
               <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
-                <span class="result-tag" style="background:rgba(108,99,255,0.1); color: var(--primary-light);">${item.cat}</span>
+                <span class="result-tag" style="background:rgba(108,99,255,0.1); color: var(--primary-light);">${escapeHtml(item.cat)}</span>
                 <span style="color:#fbbf24; font-weight:700; font-size:0.85rem;">★ ${item.rating.toFixed(1)}</span>
               </div>
               <h3 style="font-size: 1.1rem; font-weight:800; margin-bottom:8px;"><a href="prompts-library.html">${highlightText(item.title, q)}</a></h3>
@@ -534,9 +527,31 @@
   }
 
   function highlightText(text, q) {
-    if (!q) return text;
+    const escapedText = escapeHtml(text || "");
+    if (!q) return escapedText;
     const re = new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
-    return text.replace(re, '<mark>$1</mark>');
+    return escapedText.replace(re, '<mark>$1</mark>');
+  }
+
+  function escapeHtml(value) {
+    return String(value || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
+
+  function escapeAttribute(value) {
+    return escapeHtml(value);
+  }
+
+  function safeUrl(value) {
+    const url = String(value || "").trim();
+    if (url && !/^(?:javascript|data|vbscript):/i.test(url) && !url.startsWith("//")) {
+      return url;
+    }
+    return "#";
   }
 
   // Bind global helper for copying prompts in search results

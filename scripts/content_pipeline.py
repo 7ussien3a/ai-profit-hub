@@ -14,9 +14,11 @@ import textwrap
 import urllib.request
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass, field
+from html.parser import HTMLParser
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 from pathlib import Path
 from typing import Any
+from urllib.parse import urlparse
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -404,10 +406,10 @@ def build() -> int:
         item.body_text = strip_tags(item.html_body)
         write_page(item)
     write_manifest(published)
-    write_search_index(published)
-    write_related_content(published)
     update_sitemap(published, previous_paths)
     update_rss(published, previous_paths)
+    search_entries = write_search_index(published)
+    write_related_content(published, search_entries)
     print(f"Built {len(published)} published Markdown page(s).")
     return 0
 
@@ -806,42 +808,234 @@ def extract_faq_schema(body_html: str) -> dict[str, Any] | None:
     return {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": pairs}
 
 
-def write_search_index(items: list[ContentItem]) -> None:
+class SearchDocumentParser(HTMLParser):
+    """Extract searchable production metadata from a static HTML page."""
+
+    SKIPPED_ELEMENTS = {"footer", "nav", "noscript", "script", "style", "svg"}
+
+    def __init__(self) -> None:
+        super().__init__(convert_charrefs=True)
+        self.meta: dict[str, str] = {}
+        self.title_parts: list[str] = []
+        self.h1_parts: list[str] = []
+        self.body_parts: list[str] = []
+        self.in_title = False
+        self.in_h1 = False
+        self.in_body = False
+        self.skipped_depth = 0
+        self.first_time = ""
+        self.has_meta_refresh = False
+
+    def handle_starttag(
+        self, tag: str, attrs: list[tuple[str, str | None]]
+    ) -> None:
+        tag = tag.lower()
+        values = {key.lower(): value or "" for key, value in attrs}
+        if tag in self.SKIPPED_ELEMENTS:
+            self.skipped_depth += 1
+        if tag == "body":
+            self.in_body = True
+        elif tag == "title":
+            self.in_title = True
+        elif tag == "h1" and not self.h1_parts:
+            self.in_h1 = True
+        elif tag == "meta":
+            key = (values.get("name") or values.get("property") or "").lower()
+            content = values.get("content", "").strip()
+            if key and content and key not in self.meta:
+                self.meta[key] = content
+            if values.get("http-equiv", "").lower() == "refresh":
+                self.has_meta_refresh = True
+        elif tag == "time" and not self.first_time:
+            self.first_time = values.get("datetime", "").strip()
+
+    def handle_endtag(self, tag: str) -> None:
+        tag = tag.lower()
+        if tag == "body":
+            self.in_body = False
+        elif tag == "title":
+            self.in_title = False
+        elif tag == "h1":
+            self.in_h1 = False
+        if tag in self.SKIPPED_ELEMENTS and self.skipped_depth:
+            self.skipped_depth -= 1
+
+    def handle_data(self, data: str) -> None:
+        value = re.sub(r"\s+", " ", data).strip()
+        if not value:
+            return
+        if self.in_title:
+            self.title_parts.append(value)
+        if self.in_h1:
+            self.h1_parts.append(value)
+        if self.in_body and not self.skipped_depth:
+            self.body_parts.append(value)
+
+
+def normalize_search_image(src: str) -> str:
+    src = src.strip()
+    if not src:
+        return ""
+    if src.startswith(("https://", "http://", "/")):
+        return src
+    while src.startswith("../"):
+        src = src[3:]
+    return "/" + src.lstrip("./")
+
+
+def search_content_type(route: str) -> str:
+    segment = route.strip("/").split("/", 1)[0]
+    return {
+        "articles": "article",
+        "reviews": "review",
+        "compare": "comparison",
+        "guides": "guide",
+        "companies": "company",
+        "best-ai-tools": "tool",
+        "categories": "category",
+        "tutorials": "guide",
+    }.get(segment, "page")
+
+
+def infer_search_category(route: str, content_type: str) -> str:
+    if content_type == "page":
+        return "Site Page"
+    return {
+        "article": "Articles",
+        "review": "Reviews",
+        "comparison": "Compare",
+        "guide": "Guides",
+        "company": "Companies",
+        "tool": "AI Tools",
+        "category": "Categories",
+    }.get(content_type, content_type.title())
+
+
+def html_path_for_public_url(public_url: str) -> Path | None:
+    parsed = urlparse(public_url)
+    if parsed.netloc and parsed.netloc != urlparse(BASE_URL).netloc:
+        return None
+    route = parsed.path or "/"
+    relative_path = route.lstrip("/")
+    if not relative_path:
+        relative_path = "index.html"
+    elif route.endswith("/"):
+        relative_path += "index.html"
+    elif not Path(relative_path).suffix:
+        relative_path += ".html"
+    return ROOT / relative_path
+
+
+def parse_public_html(public_url: str) -> SearchDocumentParser | None:
+    path = html_path_for_public_url(public_url)
+    if path is None or not path.exists() or path.suffix.lower() != ".html":
+        return None
+    parser = SearchDocumentParser()
+    parser.feed(path.read_text(encoding="utf-8-sig"))
+    return parser
+
+
+def public_html_is_indexable(public_url: str) -> bool:
+    parser = parse_public_html(public_url)
+    if parser is None:
+        return False
+    return "noindex" not in parser.meta.get("robots", "").lower() and not parser.has_meta_refresh
+
+
+def sitemap_html_entries() -> list[dict[str, Any]]:
+    sitemap = ROOT / "sitemap.xml"
+    if not sitemap.exists():
+        return []
+    namespace = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
+    entries: list[dict[str, Any]] = []
+    tree = ET.parse(sitemap)
+    for loc in tree.findall(".//sm:loc", namespace):
+        public_url = (loc.text or "").strip()
+        parsed = urlparse(public_url)
+        if parsed.netloc != urlparse(BASE_URL).netloc:
+            continue
+        route = parsed.path or "/"
+        parser = parse_public_html(public_url)
+        if parser is None:
+            continue
+        robots = parser.meta.get("robots", "").lower()
+        if "noindex" in robots or parser.has_meta_refresh:
+            continue
+        title = " ".join(parser.h1_parts or parser.title_parts).strip()
+        description = parser.meta.get("description", "").strip()
+        if not title or not description:
+            continue
+        content_type = search_content_type(route)
+        keywords = [
+            value.strip()
+            for value in parser.meta.get("keywords", "").split(",")
+            if value.strip()
+        ]
+        entries.append(
+            {
+                "title": title,
+                "url": route,
+                "description": description,
+                "body": " ".join(parser.body_parts)[:5000],
+                "category": parser.meta.get("article:section")
+                or infer_search_category(route, content_type),
+                "tags": keywords,
+                "contentType": content_type,
+                "author": parser.meta.get("author", ""),
+                "keywords": keywords,
+                "image": normalize_search_image(
+                    parser.meta.get("og:image")
+                    or parser.meta.get("twitter:image")
+                    or ""
+                ),
+                "date": parser.meta.get("article:published_time")
+                or parser.meta.get("date")
+                or parser.first_time,
+            }
+        )
+    return entries
+
+
+def write_search_index(items: list[ContentItem]) -> list[dict[str, Any]]:
     DATA.mkdir(exist_ok=True)
-    data = []
+    by_url = {entry["url"]: entry for entry in sitemap_html_entries()}
     for item in items:
         meta = item.meta
-        data.append(
-            {
-                "title": item.title,
-                "url": item.public_path,
-                "description": meta.get("description"),
-                "body": item.body_text[:5000],
-                "category": meta.get("category"),
-                "tags": meta.get("tags") or [],
-                "contentType": item.content_type,
-                "author": meta.get("author"),
-                "keywords": meta.get("keywords") or [],
-                "image": public_image_path(str(meta.get("featuredImage") or "")),
-                "date": meta.get("publishedAt") or meta.get("updatedAt"),
-            }
-        )
+        url = "/" + item.public_path.lstrip("/")
+        by_url[url] = {
+            "title": item.title,
+            "url": url,
+            "description": meta.get("description"),
+            "body": item.body_text[:5000],
+            "category": meta.get("category"),
+            "tags": meta.get("tags") or [],
+            "contentType": item.content_type,
+            "author": meta.get("author"),
+            "keywords": meta.get("keywords") or [],
+            "image": normalize_search_image(str(meta.get("featuredImage") or "")),
+            "date": meta.get("publishedAt") or meta.get("updatedAt"),
+        }
+    data = list(by_url.values())
     (DATA / "search-index.json").write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    return data
 
 
-def write_related_content(items: list[ContentItem]) -> None:
-    data = []
-    for item in items:
-        data.append(
-            {
-                "title": item.title,
-                "url": "/" + item.public_path,
-                "image": absolute_image(str(item.meta.get("featuredImage") or "")),
-                "tag": item.meta.get("category"),
-                "date": format_date(str(item.meta.get("publishedAt") or item.meta.get("updatedAt"))),
-                "contentType": item.content_type,
-            }
-        )
+def write_related_content(
+    items: list[ContentItem], search_entries: list[dict[str, Any]] | None = None
+) -> None:
+    del items
+    data = [
+        {
+            "title": entry["title"],
+            "url": entry["url"],
+            "image": entry.get("image", ""),
+            "tag": entry.get("category", ""),
+            "date": format_date(str(entry.get("date") or "")),
+            "contentType": entry.get("contentType", "article"),
+        }
+        for entry in (search_entries or [])
+        if entry.get("contentType") != "page"
+    ]
     (DATA / "related-content.json").write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
@@ -857,7 +1051,15 @@ def update_sitemap(items: list[ContentItem], previous_paths: set[str] | None = N
     ns = ""
     if root.tag.startswith("{"):
         ns = root.tag.split("}", 1)[0] + "}"
-    existing = {node.findtext(f"{ns}loc"): node for node in root.findall(f"{ns}url")}
+    existing: dict[str | None, ET.Element] = {}
+    for node in list(root.findall(f"{ns}url")):
+        url = node.findtext(f"{ns}loc")
+        if url in existing:
+            root.remove(node)
+        elif not url or not public_html_is_indexable(url):
+            root.remove(node)
+        else:
+            existing[url] = node
     keep_urls = {item.public_url for item in items}
     stale_urls = {f"{BASE_URL}/{path}" for path in (previous_paths or set()) if f"{BASE_URL}/{path}" not in keep_urls}
     for url in stale_urls:
@@ -898,7 +1100,15 @@ def update_rss(items: list[ContentItem], previous_paths: set[str] | None = None)
         root = ET.Element("rss", {"version": "2.0"})
         channel = ET.SubElement(root, "channel")
         tree = ET.ElementTree(root)
-    existing = {node.findtext("guid") or node.findtext("link"): node for node in channel.findall("item")}
+    existing: dict[str | None, ET.Element] = {}
+    for node in list(channel.findall("item")):
+        url = node.findtext("guid") or node.findtext("link")
+        if url in existing:
+            channel.remove(node)
+        elif not url or not public_html_is_indexable(url):
+            channel.remove(node)
+        else:
+            existing[url] = node
     keep_urls = {item.public_url for item in items}
     stale_urls = {f"{BASE_URL}/{path}" for path in (previous_paths or set()) if f"{BASE_URL}/{path}" not in keep_urls}
     for url in stale_urls:
@@ -990,7 +1200,7 @@ def audit() -> int:
     print(f"HTML files: {html_count}")
     print(f"Article HTML files: {article_count}")
     print(f"Content Markdown files: {md_count}")
-    print("Search: Legacy inline window.ARTICLES plus generated data/search-index.json")
+    print("Search: Sitemap-backed data/search-index.json with a legacy inline fallback")
     print("Sitemap: sitemap.xml in the site root")
     print("RSS: rss.xml in the site root")
     print("Images: Production images are stored in images/")

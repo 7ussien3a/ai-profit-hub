@@ -31,6 +31,28 @@ class ContentPipelineTests(unittest.TestCase):
         self.assertEqual(meta["tags"], ["AI", "SEO"])
         self.assertEqual(body, "Body")
 
+    def test_search_document_parser(self):
+        parser = pipeline.SearchDocumentParser()
+        parser.feed(
+            """
+            <html><head>
+              <title>Fallback Title | AI Profit Hub</title>
+              <meta name="description" content="A useful production description.">
+              <meta property="og:image" content="/images/example.jpg">
+              <meta http-equiv="refresh" content="0; url=/articles/example.html">
+            </head><body>
+              <nav>Navigation text</nav>
+              <main><h1>Visible Article Title</h1><p>Searchable body text.</p></main>
+              <script>ignored()</script>
+            </body></html>
+            """
+        )
+        self.assertEqual(" ".join(parser.h1_parts), "Visible Article Title")
+        self.assertEqual(parser.meta["description"], "A useful production description.")
+        self.assertIn("Searchable body text.", parser.body_parts)
+        self.assertNotIn("Navigation text", parser.body_parts)
+        self.assertTrue(parser.has_meta_refresh)
+
 
 if __name__ == "__main__":
     unittest.main()
