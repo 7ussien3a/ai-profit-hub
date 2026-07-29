@@ -152,7 +152,7 @@ def request_fallback_translation(text: str) -> str:
 def split_long_text(text: str, limit: int = MAX_BATCH_CHARS) -> list[str]:
     if len(text) <= limit:
         return [text]
-    sentences = re.split(r"(?<=[.!?؟])\s+", text)
+    sentences = re.split(r"(?<=[.!?\u061f])\s+", text)
     chunks: list[str] = []
     current = ""
     for sentence in sentences:
