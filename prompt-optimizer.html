@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <!-- Google tag (gtag.js) -->
@@ -20,18 +20,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lucide@0.400.0/dist/umd/lucide.min.js" defer></script>
-  
+
   <title>Free AI Prompt Optimizer & Generator | AI Profit Hub</title>
   <meta name="description" content="Optimize and generate high-converting prompts for ChatGPT, Claude, and Gemini instantly. Turn simple ideas into structured, professional AI prompts.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://ai-profit-hub.com/prompt-optimizer.html">
-  
+
   <!-- Open Graph -->
   <meta property="og:title" content="Free AI Prompt Optimizer & Generator | AI Profit Hub">
   <meta property="og:description" content="Optimize and generate high-converting prompts for ChatGPT, Claude, and Gemini instantly. Turn simple ideas into structured, professional AI prompts.">
   <meta property="og:url" content="https://ai-profit-hub.com/prompt-optimizer.html">
   <meta property="og:type" content="website">
-  
+
   <link rel="stylesheet" href="css/style.css">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4602905173099480" crossorigin="anonymous"></script>
 
@@ -71,7 +71,7 @@
         grid-template-columns: 1fr;
       }
     }
-    
+
     /* Interactive Card Style */
     .tool-card {
       background: var(--bg-card, #1A1F35);
@@ -91,7 +91,7 @@
       border-bottom: 1px solid var(--border);
       padding-bottom: 10px;
     }
-    
+
     /* Input styling */
     .form-group {
       margin-bottom: 20px;
@@ -124,7 +124,7 @@
       resize: vertical;
       min-height: 100px;
     }
-    
+
     /* Select styling */
     select.tool-input {
       appearance: none;
@@ -133,7 +133,7 @@
       background-position: right 12px center;
       padding-right: 36px;
     }
-    
+
     /* Checkbox Group */
     .checkbox-group {
       display: grid;
@@ -159,7 +159,7 @@
       height: 16px;
       cursor: pointer;
     }
-    
+
     /* Optimize Button */
     .tool-btn {
       width: 100%;
@@ -184,7 +184,7 @@
     .tool-btn:active {
       transform: scale(0.98);
     }
-    
+
     /* Output styling */
     .output-area {
       position: relative;
@@ -226,7 +226,7 @@
       background: var(--bg-elevated);
       border-color: var(--primary);
     }
-    
+
     /* Ad placeholder */
     .tool-ad {
       margin-top: 32px;
@@ -238,7 +238,7 @@
       font-size: 0.75rem;
       color: var(--text-secondary);
     }
-    
+
     /* Newsletter Conversion box */
     .tool-newsletter {
       margin-top: 32px;
@@ -259,7 +259,7 @@
   <!-- HEADER -->
       <header class="header">
     <nav class="nav">
-      <a href="/" class="logo"><div class="logo-icon">?</div><span>AI Profit Hub</span></a>
+      <a href="/" class="logo"><div class="logo-icon">&#9889;</div><span>AI Profit Hub</span></a>
       <ul class="nav-links" id="navLinks">
         <li><a href="/">Home</a></li>
         <li><a href="guides/">Guides</a></li>
@@ -278,25 +278,25 @@
 
   <!-- HERO -->
   <section class="page-header">
-    <div class="hero-badge">?? Free Web Tool</div>
+    <div class="hero-badge"> Free Web Tool</div>
     <h1>AI Prompt Optimizer</h1>
-    <p>Convert simple ideas into structured, high-performing prompts for <a href="reviews/chatgpt-review.html">ChatGPT</a>, Claude, and Gemini.</p>
+    <p>Convert simple ideas into structured, high-performing prompts for <a href="/articles/gpt-5-6-sol-review-2026.html">ChatGPT</a>, Claude, and Gemini.</p>
   </section>
 
   <!-- MAIN TOOL VIEW -->
   <main class="tool-container" id="main-content">
-    
+
     <div class="tool-grid">
-      
+
       <!-- INPUT CARD -->
       <div class="tool-card">
-        <h2><span>?</span> Formulate Your Request</h2>
-        
+        <h2><span aria-hidden="true">&#9998;</span> Formulate Your Request</h2>
+
         <div class="form-group">
           <label for="basePrompt">1. What is your basic task or idea?</label>
           <textarea id="basePrompt" class="tool-input" placeholder="e.g. Write a marketing email for my software product that sells a monthly subscription..." required></textarea>
         </div>
-        
+
         <div class="form-group">
           <label for="aiRole">2. Select the AI Persona / Role</label>
           <select id="aiRole" class="tool-input">
@@ -307,7 +307,7 @@
             <option value="Business & Financial Analyst">Wall Street Financial & Business Strategist</option>
           </select>
         </div>
-        
+
         <div class="form-group">
           <label for="aiTone">3. Select Tone of Voice</label>
           <select id="aiTone" class="tool-input">
@@ -318,7 +318,7 @@
             <option value="clear, simple and beginner-friendly">Simple & Plain English</option>
           </select>
         </div>
-        
+
         <div class="form-group">
           <label>4. Add Extra Constraints</label>
           <div class="checkbox-group">
@@ -336,23 +336,23 @@
             </label>
           </div>
         </div>
-        
+
         <button id="optimizeBtn" class="tool-btn" type="button">
-          Optimize Prompt ??
+          Optimize Prompt
         </button>
       </div>
-      
+
       <!-- OUTPUT CARD -->
       <div class="tool-card output-area">
-        <h2><span>??</span> Optimized Prompt Output</h2>
+        <h2><span></span> Optimized Prompt Output</h2>
         <button id="copyBtn" class="copy-btn" type="button">Copy Prompt</button>
         <textarea id="outputPrompt" class="output-box" readonly placeholder="Your optimized prompt template will appear here..."></textarea>
-        
+
         <p style="font-size:0.75rem;color:var(--text-secondary);line-height:1.4;margin:0;">
-          ?? <strong>How to use:</strong> Copy this structured prompt and paste it into ChatGPT, Claude, or Gemini. Replace any bracketed values (like [Product Name]) with your specific details.
+           <strong>How to use:</strong> Copy this structured prompt and paste it into ChatGPT, Claude, or Gemini. Replace any bracketed values (like [Product Name]) with your specific details.
         </p>
       </div>
-      
+
     </div>
 
     <!-- Ad placeholder -->
@@ -382,7 +382,7 @@
         <input type="hidden" name="anticsrf" value="true">
         <button type="submit" style="padding:10px 20px;background:var(--primary);color:#fff;border:none;border-radius:6px;font-weight:600;cursor:pointer;">Join Free</button>
       </form>
-      <div id="opt-newsletter-success" style="display:none; color:#00D4AA; font-weight:600; font-size:0.9rem; text-align:center; padding:10px 0;">?? Thank you for subscribing! Please check your inbox.</div>
+      <div id="opt-newsletter-success" style="display:none; color:#00D4AA; font-weight:600; font-size:0.9rem; text-align:center; padding:10px 0;"> Thank you for subscribing! Please check your inbox.</div>
     </div>
 
     <!-- SEO & Content Rich Section -->
@@ -391,12 +391,12 @@
       <p>
         Artificial Intelligence models like ChatGPT, Claude, and Gemini are incredibly capable, but their output is entirely dependent on the quality of the input they receive. This input is called a <strong>prompt</strong>. The practice of designing and refining these prompts to get the most accurate, relevant, and structured outputs is known as <strong>Prompt Engineering</strong>.
       </p>
-      
+
       <h3 style="font-size: 1.3rem; font-weight: 700; color: var(--primary-light); margin: 28px 0 12px;">Why Simple Prompts Often Fail</h3>
       <p>
         When you give an LLM (Large Language Model) a simple, one-sentence request like <em>"write a blog post about fitness,"</em> the AI has to make hundreds of assumptions. It guesses the target audience, the tone, the formatting, the level of detail, and the perspective. Often, these guesses do not match what you actually need, leading to generic, shallow, or robotic content.
       </p>
-      
+
       <h3 style="font-size: 1.3rem; font-weight: 700; color: var(--primary-light); margin: 28px 0 12px;">The Core Pillars of a Perfect Prompt</h3>
       <p>
         To get professional-grade results, your prompt needs structure. This tool uses a proven engineering framework to automatically rebuild your raw ideas into high-converting prompts by injecting the following elements:
@@ -407,7 +407,7 @@
         <li style="margin-bottom: 8px;"><strong>Tone & Style:</strong> Defining the personality of the output (e.g., authoritative, persuasive, simple) to match your brand voice.</li>
         <li style="margin-bottom: 8px;"><strong>Output Constraints:</strong> Setting rules such as "use markdown formatting," "use bullet points," or "avoid jargon" to prevent the AI from generating messy or unstructured walls of text.</li>
       </ul>
-      
+
       <h3 style="font-size: 1.3rem; font-weight: 700; color: var(--primary-light); margin: 28px 0 12px;">Step-by-Step Guide to Using the Prompt Optimizer</h3>
       <p>
         To get the best out of this generator, follow these simple steps:
@@ -428,7 +428,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="./" class="logo">
-          <div class="logo-icon">?</div>
+          <div class="logo-icon">&#9889;</div>
           <span>AI Profit Hub</span>
         </a>
         <p>Your ultimate guide for AI tutorials, ChatGPT prompts, productivity hacks, and the latest tech news.</p>
@@ -461,7 +461,7 @@
           <li><a href="prompt-optimizer.html">Prompt Optimizer</a></li>
           <li><a href="resources.html">Free AI Resources</a></li>
           <li><a href="ai-glossary.html">AI Glossary</a></li>
-          <li><a href="dashboard.html">My Dashboard</a></li>
+          <li>My Dashboard</li>
         </ul>
       </div>
       <div>
@@ -480,7 +480,7 @@
   </footer>
 
   <script src="js/main.js" defer></script>
-  
+
   <script>
   document.addEventListener('DOMContentLoaded', function() {
     var basePrompt = document.getElementById('basePrompt');
@@ -489,7 +489,7 @@
     var optimizeBtn = document.getElementById('optimizeBtn');
     var outputPrompt = document.getElementById('outputPrompt');
     var copyBtn = document.getElementById('copyBtn');
-    
+
     optimizeBtn.addEventListener('click', function() {
       var base = basePrompt.value.trim();
       if (!base) {
@@ -497,7 +497,7 @@
         basePrompt.focus();
         return;
       }
-      
+
       // Build constraints list
       var constraints = [];
       if (document.getElementById('cMarkdown').checked) {
@@ -512,12 +512,12 @@
       if (document.getElementById('cExamples').checked) {
         constraints.push("- Include concrete, practical examples or code snippets where applicable to clarify concepts.");
       }
-      
+
       var constraintsStr = constraints.length > 0 ? '\n' + constraints.join('\n') : '- No specific constraints.';
-      
+
       // Build structured optimized prompt template
       var optimized = `# SYSTEM PERSONA & ROLE
-You are acting as a ${aiRole.value}. 
+You are acting as a ${aiRole.value}.
 Your target communication tone is ${aiTone.value}. You must write with extreme expertise and accuracy.
 
 # CONTEXT & OBJECTIVE
@@ -544,11 +544,11 @@ Deliver your output formatted clearly using the requested constraints. Begin you
 
       outputPrompt.value = optimized;
     });
-    
+
     copyBtn.addEventListener('click', function() {
       var text = outputPrompt.value.trim();
       if (!text) return;
-      
+
       navigator.clipboard.writeText(text).then(function() {
         copyBtn.textContent = 'Copied!';
         setTimeout(function() {

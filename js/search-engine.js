@@ -20,7 +20,7 @@
       url: "compare/chatgpt-vs-claude.html",
       desc: "An in-depth side-by-side comparison of ChatGPT and Claude 3.5 Sonnet across writing quality, coding, context size, and pricing.",
       cat: "Compare",
-      img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=300&fit=crop",
+      img: "/images/tech_abstract_design.webp",
       date: "June 23, 2026"
     },
     {
@@ -113,7 +113,7 @@
     // Create container for dropdown suggestions
     suggestionsContainer = document.createElement("div");
     suggestionsContainer.className = "search-suggestions";
-    
+
     // Inject styling directly to avoid external dependencies
     const style = document.createElement("style");
     style.id = "suggestions-styles";
@@ -412,10 +412,10 @@
     // Filter elements
     let filtered = items.filter(item => {
       // Search keyword filter
-      const matchQ = !q || 
-                     item.title.toLowerCase().includes(q) || 
-                     (item.desc && item.desc.toLowerCase().includes(q)) || 
-                     (item.prompt && item.prompt.toLowerCase().includes(q)) || 
+      const matchQ = !q ||
+                     item.title.toLowerCase().includes(q) ||
+                     (item.desc && item.desc.toLowerCase().includes(q)) ||
+                     (item.prompt && item.prompt.toLowerCase().includes(q)) ||
                      (item.tagline && item.tagline.toLowerCase().includes(q)) ||
                      (item.body && item.body.toLowerCase().includes(q)) ||
                      (item.author && item.author.toLowerCase().includes(q)) ||
@@ -435,8 +435,8 @@
       const selectCompany = document.getElementById("companyFilter") ? document.getElementById("companyFilter").value : "all";
       if (selectCompany !== "all") {
         const compName = selectCompany.toLowerCase();
-        matchCompany = item.title.toLowerCase().includes(compName) || 
-                       (item.desc && item.desc.toLowerCase().includes(compName)) || 
+        matchCompany = item.title.toLowerCase().includes(compName) ||
+                       (item.desc && item.desc.toLowerCase().includes(compName)) ||
                        (item.url && item.url.toLowerCase().includes(compName));
       }
 
@@ -491,7 +491,7 @@
               <span class="result-tag" style="background:var(--primary-glow);">${escapeHtml(item.cat)}</span>
               <p class="result-desc" style="margin-top: 10px;">${highlightText(item.desc, q)}</p>
             </div>
-            
+
             <div style="border-top:1px solid var(--border); padding-top:14px; margin-top:16px; display:flex; justify-content:space-between; align-items:center;">
               <span style="color:#fbbf24; font-weight:700; font-size:0.85rem;">★ ${item.rating.toFixed(1)}</span>
               <span class="badge ${pricingClass}" style="font-size:0.75rem; border-radius:20px; font-weight:700; padding:2px 8px;">${escapeHtml(item.pricing)}</span>

@@ -520,8 +520,13 @@
       "permanent": true
     },
     {
+      "source": "/articles/deepseek-v4-huawei-ascend-75-percent-price-cut-20260703.html",
+      "destination": "/articles/deepseek-v4-china-ai-model-2026.html",
+      "permanent": true
+    },
+    {
       "source": "/articles/gemini-vs-claude-fable-1782528977487.html",
-      "destination": "/compare/gemini-3-5-flash-vs-claude-fable-5.html",
+      "destination": "/compare/claude-sonnet-5-vs-gemini-3-5-flash.html",
       "permanent": true
     },
     {
@@ -540,8 +545,23 @@
       "permanent": true
     },
     {
+      "source": "/articles/openai-gpt56-release-sol-terra-luna-2026.html",
+      "destination": "/articles/gpt-5-6-sol-review-2026.html",
+      "permanent": true
+    },
+    {
       "source": "/articles/openai-guide.html",
       "destination": "/companies/openai.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/openai-previews-gpt-5-6-sol-terra-luna-o3-retirement-2026.html",
+      "destination": "/articles/gpt-5-6-sol-review-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/openai-releases-gpt-5-6-sol-tiered-reasoning-models-2026.html",
+      "destination": "/articles/gpt-5-6-sol-review-2026.html",
       "permanent": true
     },
     {
@@ -555,6 +575,16 @@
       "permanent": true
     },
     {
+      "source": "/articles/suno-v4-vs-udio-ai-music-2026.html",
+      "destination": "/compare/suno-v4-vs-udio.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/suno-vs-udio-2026-ultimate-ai-music-production-showdown-2026.html",
+      "destination": "/compare/suno-v4-vs-udio.html",
+      "permanent": true
+    },
+    {
       "source": "/articles/the-ai-20260704-220003.html",
       "destination": "/articles/what-is-artificial-intelligence-complete-guide.html",
       "permanent": true
@@ -565,8 +595,23 @@
       "permanent": true
     },
     {
+      "source": "/compare/gemini-3-5-flash-vs-claude-fable-5.html",
+      "destination": "/compare/claude-sonnet-5-vs-gemini-3-5-flash.html",
+      "permanent": true
+    },
+    {
       "source": "/index.html",
       "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/reviews/chatgpt-review.html",
+      "destination": "/articles/gpt-5-6-sol-review-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/reviews/claude-ai-review.html",
+      "destination": "/reviews/claude-sonnet-5-review.html",
       "permanent": true
     },
     {

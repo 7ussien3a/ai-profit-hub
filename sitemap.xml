@@ -1,36 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ai-profit-hub.com/articles/qwen-38-max-vs-claude-opus-5-comparison-july-2026.html</loc>
-    <lastmod>2026-07-28T18:19:13Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/claude-opus-5-anthropic-review-july-2026.html</loc>
-    <lastmod>2026-07-28T18:19:07Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/china-waico-ai-governance-organization-july-2026.html</loc>
-    <lastmod>2026-07-28T18:18:54Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/sovereign-ai-japan-korea-vs-us-china-july-2026.html</loc>
-    <lastmod>2026-07-21T02:34:11Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/apple-sues-openai-trade-secret-theft-2026.html</loc>
-    <lastmod>2026-07-21T02:34:08Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ai-profit-hub.com/articles/deepseek-v4-china-ai-model-2026.html</loc>
     <lastmod>2026-07-20T23:00:15Z</lastmod>
     <changefreq>daily</changefreq>
@@ -43,25 +13,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ai-profit-hub.com/articles/south-korea-vs-japan-sovereign-ai-2026.html</loc>
-    <lastmod>2026-07-20T22:59:39Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/kimi-k3-moonshot-ai-largest-open-model-2026.html</loc>
-    <lastmod>2026-07-17T12:00:00Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ai-profit-hub.com/articles/gpt-5-6-sol-review-2026.html</loc>
-    <lastmod>2026-07-17T12:00:00Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/apple-sues-openai-trade-secrets-2026.html</loc>
     <lastmod>2026-07-17T12:00:00Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
@@ -73,44 +25,8 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ai-profit-hub.com/articles/agentic-ai-enterprise-adoption-2026.html</loc>
-    <lastmod>2026-07-13T20:45:00Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/gpt-5-6-vs-claude-5-comparison-2026.html</loc>
-    <lastmod>2026-07-13T20:30:00Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/grok-3-vs-gpt-5-6-openai-xai-2026.html</loc>
-    <lastmod>2026-07-13T12:00:00Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ai-profit-hub.com/articles/cursor-ai-review-2026-update.html</loc>
     <lastmod>2026-07-12T19:40:00Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/july-2026-ai-strategy-comparison-us-china-korea-japan.html</loc>
-    <lastmod>2026-07-12T19:30:00Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/ai-model-distillation-war-2026.html</loc>
-    <lastmod>2026-07-12T19:00:00Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/global-ai-race-us-china-korea-japan-2026.html</loc>
-    <lastmod>2026-07-12T19:00:00Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -235,103 +151,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ai-profit-hub.com/articles/delaware-proposes-artificial-intelligence-company-law-autonomous-ai-2026.html</loc>
-    <lastmod>2026-06-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/duckduckgo-vs-google-ai-search.html</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/elevenlabs-launches-genfm-elevenreader-ultra-student-deal-2026.html</loc>
-    <lastmod>2026-06-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/eu-postpones-high-risk-ai-act-deadlines-strict-watermarking-2026.html</loc>
-    <lastmod>2026-06-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/factset-partners-google-cloud-agentic-gemini-ai-financial-2026.html</loc>
-    <lastmod>2026-06-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/figma-config-2026-design-agent-mcp-code-layers-motion-2026.html</loc>
-    <lastmod>2026-06-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ai-profit-hub.com/articles/free-alternatives-midjourney.html</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/gemini-omni-video-revolution.html</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/global-ai-hardware-race-china.html</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/globant-anthropic-alliance-claude-ai-pods-enterprise-2026.html</loc>
-    <lastmod>2026-06-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/google-agentic-search-gemini-flash.html</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/google-ai-seo-patent-brand-optimization-2026.html</loc>
-    <lastmod>2026-06-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/google-deepmind-a24-75m-partnership-cinematic-ai-film-2026.html</loc>
-    <lastmod>2026-06-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/google-gemini-2-5-pro-deep-think-2026.html</loc>
-    <lastmod>2026-06-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/google-gemini-3-5-live-translate-20260615.html</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/google-gemini-compute-limits-meta-2026.html</loc>
-    <lastmod>2026-06-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/google-gemini-3-veo-3.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -343,116 +163,8 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ai-profit-hub.com/articles/google-launches-gemini-2-5-pro-deep-think-computer-use-2026.html</loc>
-    <lastmod>2026-06-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ai-profit-hub.com/articles/google-notebooklm-ultimate-guide-2026.html</loc>
     <lastmod>2026-06-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/googlebook-gemini-android-update.html</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/gpt-5-vs-claude-4.html</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/gpt-55-chatgpt-june-2026.html</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/grok-2-3-xai-llm-guide-2026.html</loc>
-    <lastmod>2026-06-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/huawei-ascend-950dt-china-ai-chip-nvidia-alternative-2026.html</loc>
-    <lastmod>2026-06-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/intel-lunar-lake-core-ultra-200v-efficiency-2026.html</loc>
-    <lastmod>2026-06-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/jeff-bezos8217s-prometheus-raises-12b-to-build-an-8216a-20260612.html</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/kling-3-turbo-ltx-2-video-ai-2026.html</loc>
-    <lastmod>2026-06-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/kpmg-claude-276000-employees.html</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/lux-leads-30m-series-a-1001-sovereign-ai-operating-systems-gcc-2026.html</loc>
-    <lastmod>2026-06-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/make-money-ai-art.html</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/meituan-releases-longcat-2-trillion-parameter-moe-chinese-asic-2026.html</loc>
-    <lastmod>2026-07-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/meta-layoffs-fund-ai-arms-race.html</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/meta-llama-4-muse-spark.html</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/meta-releases-brain2qwerty-v2-decoding-text-brain-waves-2026.html</loc>
-    <lastmod>2026-06-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/meta-tribe-v2-digital-twin.html</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/microsoft-build-2026.html</loc>
-    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -465,144 +177,6 @@
   <url>
     <loc>https://ai-profit-hub.com/articles/notion-ai-organization.html</loc>
     <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/nvidia-record-revenue-ai-dominance.html</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/nvidia-rtx-spark-computex-2026.html</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/openai-deployco-enterprise-consulting.html</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/openai-enterprise-ads-2026.html</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/openai-faces-investigation-from-state-attorneys-general-20260613.html</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/openai-gpt56-release-sol-terra-luna-2026.html</loc>
-    <lastmod>2026-06-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/openai-previews-gpt-5-6-sol-terra-luna-o3-retirement-2026.html</loc>
-    <lastmod>2026-06-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/openai-releases-gpt-5-6-sol-tiered-reasoning-models-2026.html</loc>
-    <lastmod>2026-06-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/openai-unveils-jalapeno-custom-inference-chip-2026.html</loc>
-    <lastmod>2026-06-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/qwen-robot-tencent-hunyuan-agents-2026.html</loc>
-    <lastmod>2026-06-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/samsung-hbm4e-ai-memory-chips.html</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/south-korea-unveils-trillion-dollar-physical-ai-semiconductor-plan-2026.html</loc>
-    <lastmod>2026-06-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/spacex-acquires-cursor-ai-coding-60-billion-deal-2026.html</loc>
-    <lastmod>2026-06-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/spacex-ipo-live-updates-on-everything-you-need-to-know-20260613.html</loc>
-    <lastmod>2026-06-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/suno-v4-vs-udio-ai-music-2026.html</loc>
-    <lastmod>2026-06-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/suno-vs-udio-2026-ultimate-ai-music-production-showdown-2026.html</loc>
-    <lastmod>2026-06-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/theker-just-raised-85m-to-build-the-factory-robot-that-20260612.html</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/trust3-ai-integrates-nvidia-nemo-security-layer-agentic-ai-2026.html</loc>
-    <lastmod>2026-06-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/ultimate-2026-cpu-comparison-apple-m5-lunar-lake-snapdragon-ryzen.html</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/us-cloud-security-act-close-gpu-loophole-china-compute-2026.html</loc>
-    <lastmod>2026-06-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/verdent-freebuff-dyad-mirofish-coding-agents-2026.html</loc>
-    <lastmod>2026-06-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/xcode-27-dual-engine-ai-coding-agents-2026.html</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/zhipu-ai-glm-5-2-open-source-2026.html</loc>
-    <lastmod>2026-06-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -727,24 +301,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ai-profit-hub.com/compare/chatgpt-vs-claude.html</loc>
-    <lastmod>2026-06-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/compare/chatgpt-vs-gemini.html</loc>
-    <lastmod>2026-06-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/compare/claude-vs-gemini.html</loc>
-    <lastmod>2026-06-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ai-profit-hub.com/compare/deepseek-r1-vs-meituan-longcat-2.html</loc>
     <lastmod>2026-07-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -757,34 +313,10 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ai-profit-hub.com/compare/gemini-2-5-pro-vs-gpt-5-5.html</loc>
-    <lastmod>2026-06-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ai-profit-hub.com/compare/</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/compare/midjourney-v6-vs-flux-1.html</loc>
-    <lastmod>2026-06-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/compare/midjourney-vs-dalle.html</loc>
-    <lastmod>2026-06-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/compare/perplexity-vs-chatgpt.html</loc>
-    <lastmod>2026-06-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ai-profit-hub.com/compare/suno-v4-vs-udio.html</loc>
@@ -817,24 +349,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://ai-profit-hub.com/reviews/chatgpt-review.html</loc>
-    <lastmod>2026-06-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/reviews/claude-ai-review.html</loc>
-    <lastmod>2026-06-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/reviews/perplexity-review.html</loc>
-    <lastmod>2026-06-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ai-profit-hub.com/students/</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -847,60 +361,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://ai-profit-hub.com/compare/gemini-3-5-flash-vs-claude-fable-5.html</loc>
-    <lastmod>2026-06-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/deepseek-s-latest-ai-is-this-china-s-most-powerful-open-source-model-ever-20260701.html</loc>
-    <lastmod>2026-07-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/huawei-s-ascend-ai-powering-china-s-next-gen-ai-hardware-revolution-20260702.html</loc>
-    <lastmod>2026-07-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/huawei-s-ascend-chips-the-secret-weapon-fueling-china-s-ai-autonomy-20260702.html</loc>
-    <lastmod>2026-07-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/huawei-ascend-unleashed-china-s-ai-chip-breakthrough-defies-sanctions-20260702.html</loc>
-    <lastmod>2026-07-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/huawei-ascend-chips-powering-china-s-ai-sovereignty-push-20260702.html</loc>
-    <lastmod>2026-07-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/huawei-s-pangu-ai-unleashing-china-s-full-stack-ai-dominance-20260702.html</loc>
-    <lastmod>2026-07-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/deepseek-v2-s-open-source-moe-china-s-ai-breakthrough-redefining-cost-performance-20260702.html</loc>
-    <lastmod>2026-07-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/deepseek-v2-s-revolutionary-architecture-unleashes-unprecedented-open-source-llm-power-20260702.html</loc>
-    <lastmod>2026-07-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ai-profit-hub.com/articles/openai-proposes-5-percent-government-stake-trump-20260703.html</loc>
     <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -908,12 +368,6 @@
   </url>
   <url>
     <loc>https://ai-profit-hub.com/articles/south-korea-518-billion-chipmaking-hub-samsung-sk-20260703.html</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/deepseek-v4-huawei-ascend-75-percent-price-cut-20260703.html</loc>
     <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -947,89 +401,5 @@
     <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/deepseek-v2-the-open-source-llm-challenging-ai-giants-20260703.html</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/huawei-pangu-ai-s-ascent-how-sanctions-fuel-china-s-breakthrough-llms-20260703.html</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/huawei-ascend-breakthrough-new-ai-chip-challenges-global-dominance-20260703.html</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/deepseek-s-open-source-ai-the-chinese-model-disrupting-global-code-development-20260703.html</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/baidu-ernie-s-multimodal-leap-igniting-china-s-next-generative-ai-wave-20260703.html</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/deepseek-v2-s-moe-breakthrough-the-cost-effective-ai-model-changing-everything-20260704.html</loc>
-    <lastmod>2026-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/the-ai-startup-20260704-160237.html</loc>
-    <lastmod>2026-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/the-ai-gold-20260704-180004.html</loc>
-    <lastmod>2026-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/the-ai-20260704-200004.html</loc>
-    <lastmod>2026-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/china-s-ai-leap-deepseek-s-7-4b-funding-and-huawei-s-ascend-950-series.html</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/anthropic-surpasses-openai-in-revenue-as-google-prepares-agentic-gemini-3-5-pro.html</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/japan-s-sovereign-physical-ai-softbank-leads-6-16b-noetra-consortium.html</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/south-korea-s-500b-ai-supercycle-samsung-hbm4-and-sk-hynix-factory-expansion.html</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ai-profit-hub.com/articles/smaller-reasoning-ai-models-2026.html</loc>
-    <lastmod>2026-07-06T08:00:00Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
 </urlset>

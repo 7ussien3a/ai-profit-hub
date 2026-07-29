@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <!-- Google tag (gtag.js) -->
@@ -159,7 +159,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="./" class="logo">
-          <div class="logo-icon">?</div>
+          <div class="logo-icon">&#9889;</div>
           <span>AI Profit Hub</span>
         </a>
         <p>Your ultimate guide for AI tutorials, ChatGPT prompts, productivity hacks, and the latest tech news.</p>
@@ -192,7 +192,7 @@
           <li><a href="prompt-optimizer.html">Prompt Optimizer</a></li>
           <li><a href="resources.html">Free AI Resources</a></li>
           <li><a href="ai-glossary.html">AI Glossary</a></li>
-          <li><a href="dashboard.html">My Dashboard</a></li>
+          <li>My Dashboard</li>
         </ul>
       </div>
       <div>
@@ -265,10 +265,10 @@ function render(){
   var noRes=document.getElementById('noResults');
   var stats=document.getElementById('searchStats');
   var q=query.toLowerCase().trim();
-  
+
   var filtered=ARTICLES.filter(function(a){
     var matchCat=currentCat==='all'||a.cat===currentCat;
-    
+
     // Content Type Filter
     var matchType = true;
     var selectType = document.getElementById('contentTypeFilter').value;
@@ -277,21 +277,21 @@ function render(){
     } else if (selectType === 'articles') {
       matchType = a.url.indexOf('reviews/') === -1;
     }
-    
+
     // Company Filter
     var matchCompany = true;
     var selectCompany = document.getElementById('companyFilter').value;
     if (selectCompany !== 'all') {
       var compName = selectCompany.toLowerCase();
-      matchCompany = a.title.toLowerCase().indexOf(compName) > -1 || 
+      matchCompany = a.title.toLowerCase().indexOf(compName) > -1 ||
                      a.desc.toLowerCase().indexOf(compName) > -1 ||
                      a.url.toLowerCase().indexOf(compName) > -1;
     }
-    
+
     var matchQ=!q||a.title.toLowerCase().indexOf(q)>-1||a.desc.toLowerCase().indexOf(q)>-1;
     return matchCat&&matchType&&matchCompany&&matchQ;
   });
-  
+
   if(filtered.length===0){
     grid.innerHTML='';
     noRes.style.display='block';

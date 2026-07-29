@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <!-- Google tag (gtag.js) -->
@@ -16,7 +16,7 @@
   <meta name="description" content="Access our ultimate library of free ChatGPT, Claude, and Gemini prompts. One-click copy prompts for productivity, coding, writing, and marketing.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://ai-profit-hub.com/prompts-library.html">
-  
+
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ai-profit-hub.com/prompts-library.html">
@@ -284,8 +284,8 @@
   <!-- Hero -->
   <section class="prompts-hero">
     <h1>⚡ AI Prompts Library</h1>
-    <p>Copy and paste battle-tested prompts to unlock the full potential of <a href="reviews/chatgpt-review.html">ChatGPT</a>, Claude, and Gemini for productivity, programming, and content creation.</p>
-    
+    <p>Copy and paste battle-tested prompts to unlock the full potential of <a href="/articles/gpt-5-6-sol-review-2026.html">ChatGPT</a>, Claude, and Gemini for productivity, programming, and content creation.</p>
+
     <!-- Category Pills -->
     <div class="filter-pills">
       <div class="filter-pill active" data-filter="all">All Prompts</div>
@@ -299,7 +299,7 @@
   <!-- Prompts Grid -->
   <main id="main-content" class="prompts-container">
     <div class="prompts-grid">
-      
+
       <!-- Prompt 1 -->
       <div class="prompt-card" data-category="productivity">
         <div class="prompt-card-header">
@@ -443,7 +443,7 @@
           <li><a href="prompt-optimizer.html">Prompt Optimizer</a></li>
           <li><a href="resources.html">Free AI Resources</a></li>
           <li><a href="ai-glossary.html">AI Glossary</a></li>
-          <li><a href="dashboard.html">My Dashboard</a></li>
+          <li>My Dashboard</li>
         </ul>
       </div>
       <div>
@@ -468,13 +468,13 @@
     function copyPrompt(button) {
       const card = button.closest('.prompt-card');
       const text = card.querySelector('.prompt-text').textContent;
-      
+
       navigator.clipboard.writeText(text).then(() => {
         const originalText = button.innerHTML;
         button.innerHTML = '<span>✅ Copied!</span>';
         button.style.background = 'var(--accent)';
         button.style.color = '#04120f';
-        
+
         setTimeout(() => {
           button.innerHTML = originalText;
           button.style.background = '';
@@ -491,7 +491,7 @@
         // Toggle Active
         document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
         pill.classList.add('active');
-        
+
         const filter = pill.getAttribute('data-filter');
         document.querySelectorAll('.prompt-card').forEach(card => {
           const category = card.getAttribute('data-category');
