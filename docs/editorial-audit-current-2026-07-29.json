@@ -1,0 +1,14 @@
+{
+  "pages_reviewed": 340,
+  "indexed_pages": 67,
+  "translated_pages_reviewed": 47,
+  "recommended_actions": {
+    "Noindex": 10,
+    "Improve": 67,
+    "Archive": 171,
+    "Redirect": 92
+  },
+  "findings_by_severity": {},
+  "findings_by_category": {},
+  "total_findings": 0
+}

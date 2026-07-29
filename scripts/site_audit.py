@@ -53,6 +53,32 @@ SECRET_FILE_PATTERNS = {
 ARABIC_RE = re.compile(
     "[\u0600-\u06ff\u0750-\u077f\u08a0-\u08ff\ufb50-\ufdff\ufe70-\ufefc]"
 )
+
+
+def editorial_noindex_paths() -> set[str]:
+    path = ROOT / "data" / "editorial-decisions.json"
+    if not path.exists():
+        return set()
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return set()
+    keep = {
+        str(value)
+        for value in data.get("keep_articles", [])
+        if isinstance(value, str)
+    }
+    archived_articles = {
+        relative(article)
+        for article in (ROOT / "articles").glob("*.html")
+        if relative(article) not in keep
+    }
+    additional = {
+        str(value)
+        for value in data.get("noindex_pages", [])
+        if isinstance(value, str)
+    }
+    return archived_articles | additional
 MOJIBAKE_RE = re.compile(
     r"\ufffd|\u00c3.|\u00c2.|\u00e2[\u20ac-\u2122]|\u00f0\u0178|\u00ef\u00bf\u00bd"
 )
@@ -518,7 +544,8 @@ def check_html(files: list[Path], issues: list[Issue]) -> None:
                 )
             else:
                 check_canonical(parser.canonicals[0], path, issues)
-            if parser.noindex and rel not in ALLOWED_NOINDEX:
+            allowed_noindex = ALLOWED_NOINDEX | editorial_noindex_paths()
+            if parser.noindex and rel not in allowed_noindex:
                 issues.append(
                     Issue(
                         "warning",

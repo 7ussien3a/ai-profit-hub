@@ -1,0 +1,18 @@
+{
+  "starting_commit": "dbbcf6fc6dd97a1ca3b9e6aa44eb4e5c58182afd",
+  "review_date": "2026-07-29",
+  "article_files_checked": 273,
+  "pages_flagged": 190,
+  "total_advisory_findings": 622,
+  "findings_by_category": {
+    "title": 183,
+    "description": 164,
+    "headings": 115,
+    "sources": 145,
+    "internal_links": 2,
+    "thin_content": 1,
+    "author": 11,
+    "image_alt": 1
+  },
+  "note": "This baseline preserves the legacy advisory-audit result before editorial remediation. It is not a count of technical errors."
+}
