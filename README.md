@@ -15,6 +15,8 @@ python scripts/content_pipeline.py build
 python scripts/content_pipeline.py route-check
 python scripts/site_audit.py
 python scripts/content_pipeline.py preview --port 4173
+python scripts/content_pipeline.py preview-draft "drafts/demo-ai-tool-review-draft.md" --port 4173
+python tools/obsidian/mcp_server.py --self-test
 .\scripts\publish-content.ps1
 ```
 

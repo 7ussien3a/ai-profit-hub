@@ -18,14 +18,14 @@ from html.parser import HTMLParser
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 from pathlib import Path
 from typing import Any
-from urllib.parse import urlparse
+from urllib.parse import unquote, urlparse
 
 
 ROOT = Path(__file__).resolve().parents[1]
 CONTENT = ROOT / "content"
 DATA = ROOT / "data"
 BASE_URL = "https://ai-profit-hub.com"
-ALLOWED_STATUS = {"draft", "review", "scheduled", "published", "archived"}
+ALLOWED_STATUS = {"draft", "review", "scheduled", "published", "archived", "noindex"}
 ALLOWED_TYPES = {
     "article",
     "news",
@@ -37,6 +37,7 @@ ALLOWED_TYPES = {
     "model",
     "prompt",
 }
+EDITORIAL_ONLY_FOLDERS = {"dashboards", "reports", "research", "sources"}
 RSS_TYPES = {"article", "news", "review", "comparison", "guide"}
 TYPE_DIR = {
     "article": "articles",
@@ -62,7 +63,13 @@ REQUIRED = {
     "imageAlt",
     "language",
 }
-PUBLISHED_REQUIRED = REQUIRED | {"publishedAt"}
+PUBLISHED_REQUIRED = REQUIRED | {"publishedAt", "canonical"}
+ARABIC_SCRIPT_RE = re.compile(r"[\u0600-\u06ff]")
+UNSAFE_HTML_RE = re.compile(
+    r"<\s*(?:script|iframe|object|embed|form)\b|"
+    r"\bon[a-z]+\s*=|javascript\s*:",
+    re.I,
+)
 
 
 @dataclass
@@ -198,13 +205,22 @@ def load_content() -> list[ContentItem]:
     if not CONTENT.exists():
         return items
     for path in sorted(CONTENT.rglob("*.md")):
-        if "\\.obsidian\\" in str(path):
+        relative = path.relative_to(CONTENT)
+        if ".obsidian" in relative.parts:
             continue
-        if "templates" in path.relative_to(CONTENT).parts:
+        if "templates" in relative.parts:
+            continue
+        if EDITORIAL_ONLY_FOLDERS.intersection(relative.parts):
             continue
         if path.name.lower() in {"readme.md", "dashboard.md"}:
             continue
-        text = path.read_text(encoding="utf-8")
+        try:
+            text = path.read_text(encoding="utf-8")
+        except UnicodeDecodeError:
+            item = ContentItem(path=path, meta={}, body="")
+            item.errors.append(f"{path}: file is not valid UTF-8")
+            items.append(item)
+            continue
         try:
             meta, body = parse_frontmatter(text, path)
         except ValueError as exc:
@@ -263,36 +279,81 @@ def validate(items: list[ContentItem]) -> int:
             item.errors.append(f"invalid status: {item.status}")
         if item.content_type not in ALLOWED_TYPES:
             item.errors.append(f"unsupported contentType: {item.content_type}")
+        if item.title and len(item.title) < 8:
+            item.errors.append("title must contain at least 8 characters")
+        description = str(item.meta.get("description") or "").strip()
+        if description and len(description) < 60:
+            item.errors.append("description must contain at least 60 characters")
         if item.meta.get("language") != "en":
             item.errors.append("language must be en")
+        searchable_text = json.dumps(item.meta, ensure_ascii=False) + "\n" + item.body
+        if ARABIC_SCRIPT_RE.search(searchable_text):
+            item.errors.append("Arabic script is not allowed in tracked content")
+        if UNSAFE_HTML_RE.search(item.body):
+            add_issue(
+                item,
+                "errors" if item.status == "published" else "warnings",
+                "unsafe HTML is not allowed",
+            )
         if item.slug and not re.match(r"^[a-z0-9]+(?:-[a-z0-9]+)*$", item.slug):
             item.errors.append("slug must be lowercase kebab-case")
+        if item.status == "published" and bool(item.meta.get("draft", False)):
+            item.errors.append("published content cannot set draft to true")
         for key in ("publishedAt", "updatedAt", "lastReviewed"):
             value = str(item.meta.get(key) or "").strip()
             if value and not parse_date(value):
                 item.errors.append(f"invalid date in {key}: {value}")
+        canonical = str(item.meta.get("canonical") or "").strip()
+        if canonical:
+            parsed = urlparse(canonical)
+            if (
+                parsed.scheme != "https"
+                or parsed.netloc != "ai-profit-hub.com"
+                or parsed.query
+                or parsed.fragment
+            ):
+                item.errors.append("canonical must be a clean HTTPS URL on ai-profit-hub.com")
+            elif item.public_url and canonical.rstrip("/") != item.public_url.rstrip("/"):
+                item.errors.append(f"canonical must match generated URL: {item.public_url}")
         if item.is_published:
             if len(item.body.strip()) < 500:
                 item.errors.append("published content body is too short")
             if not item.meta.get("sources") and item.content_type in {"news", "review", "comparison", "guide", "article", "model", "company"}:
-                item.warnings.append("published content has no sources")
+                item.errors.append("published source-backed content requires sources")
+        validate_sources(item)
         image = str(item.meta.get("featuredImage") or "")
         if image and not image_exists(image):
             item.errors.append(f"missing featured image: {image}")
+        if image.startswith(("http://", "https://")):
+            add_issue(
+                item,
+                "errors" if item.is_published else "warnings",
+                "featured image must use a local project path",
+            )
         if image and not str(item.meta.get("imageAlt") or "").strip():
             item.errors.append("featured image requires imageAlt")
+        if image and 0 < len(str(item.meta.get("imageAlt") or "").strip()) < 10:
+            item.errors.append("featured image alt text must contain at least 10 characters")
         broken_images = find_markdown_images(item.body)
         for alt, src in broken_images:
             if not alt.strip():
                 item.errors.append(f"inline image missing alt text: {src}")
             if not image_exists(src):
                 item.errors.append(f"missing inline image: {src}")
+            if src.startswith(("http://", "https://")):
+                add_issue(
+                    item,
+                    "errors" if item.is_published else "warnings",
+                    f"inline image must use a local project path: {src}",
+                )
         for target in find_wikilinks(item.body):
             matches = lookup.get(normalize_key(target), [])
             if not matches:
                 item.errors.append(f"unresolved Wiki Link: {target}")
             elif len(matches) > 1:
                 item.errors.append(f"ambiguous Wiki Link: {target}")
+            elif item.is_published and not matches[0].is_published:
+                item.errors.append(f"published Wiki Link target is not published: {target}")
         title_map.setdefault(normalize_key(item.title), []).append(item)
         slug_map.setdefault(item.slug, []).append(item)
         for issue in item.errors:
@@ -306,10 +367,9 @@ def validate(items: list[ContentItem]) -> int:
             print(f"ERROR: duplicate title '{matches[0].title}': {names}")
             errors += 1
     for slug, matches in slug_map.items():
-        published = [m for m in matches if m.status == "published"]
-        if slug and len(published) > 1:
-            names = ", ".join(str(m.path.relative_to(ROOT)) for m in published)
-            print(f"ERROR: duplicate published slug '{slug}': {names}")
+        if slug and len(matches) > 1:
+            names = ", ".join(str(m.path.relative_to(ROOT)) for m in matches)
+            print(f"ERROR: duplicate slug '{slug}': {names}")
             errors += 1
     if errors:
         fail(f"Content validation failed with {errors} error(s).")
@@ -320,6 +380,38 @@ def validate(items: list[ContentItem]) -> int:
 
 def add_issue(item: ContentItem, attr: str, message: str) -> None:
     getattr(item, attr).append(message)
+
+
+def validate_sources(item: ContentItem) -> None:
+    sources = item.meta.get("sources") or []
+    if not isinstance(sources, list):
+        item.errors.append("sources must be a list")
+        return
+    for index, source in enumerate(sources, start=1):
+        if isinstance(source, str):
+            title = source
+            url = source
+        elif isinstance(source, dict):
+            title = str(source.get("title") or "").strip()
+            url = str(source.get("url") or "").strip()
+        else:
+            item.errors.append(f"source {index} must be a URL or title/url object")
+            continue
+        parsed = urlparse(url)
+        if not title:
+            item.errors.append(f"source {index} requires a title")
+        if parsed.scheme != "https" or not parsed.netloc:
+            add_issue(
+                item,
+                "errors" if item.is_published else "warnings",
+                f"source {index} must use a valid HTTPS URL",
+            )
+        if parsed.netloc.casefold() == "example.com":
+            add_issue(
+                item,
+                "errors" if item.is_published else "warnings",
+                f"source {index} still uses a placeholder URL",
+            )
 
 
 def parse_date(value: str) -> dt.datetime | None:
@@ -365,7 +457,16 @@ def build_lookup(items: list[ContentItem]) -> dict[str, list[ContentItem]]:
                 lookup.setdefault(normalize_key(key), []).append(item)
     legacy_titles = collect_legacy_titles()
     for title, url in legacy_titles.items():
-        pseudo = ContentItem(path=ROOT / url, meta={"title": title, "slug": Path(url).stem}, body="")
+        pseudo = ContentItem(
+            path=ROOT / url,
+            meta={
+                "title": title,
+                "slug": Path(url).stem,
+                "contentType": "article",
+                "status": "published",
+            },
+            body="",
+        )
         pseudo.public_path = url
         pseudo.public_url = f"{BASE_URL}/{url}"
         lookup.setdefault(normalize_key(title), []).append(pseudo)
@@ -560,7 +661,7 @@ def resolve_wikilinks(markdown: str, lookup: dict[str, list[ContentItem]]) -> st
         target = match.group(1).strip()
         label = match.group(2).strip() if match.group(2) else target
         matches = lookup.get(normalize_key(target), [])
-        if len(matches) == 1 and matches[0].public_path:
+        if len(matches) == 1 and matches[0].public_path and matches[0].is_published:
             return f"[{label}](/{matches[0].public_path})"
         return label
     return re.sub(r"\[\[([^\]|]+)(?:\|([^\]]+))?\]\]", replace, markdown)
@@ -1221,6 +1322,77 @@ def route_check() -> int:
     return 0
 
 
+def render_preview_html(item: ContentItem, items: list[ContentItem]) -> str:
+    lookup = build_lookup(items)
+    item.html_body = render_markdown(item.body, lookup)
+    item.body_text = strip_tags(item.html_body)
+    page = render_page(item)
+    return re.sub(
+        r'<meta\s+name="robots"\s+content="[^"]*">',
+        '<meta name="robots" content="noindex, nofollow">',
+        page,
+        count=1,
+        flags=re.I,
+    )
+
+
+def select_preview_item(items: list[ContentItem], selector: str) -> ContentItem | None:
+    normalized = selector.replace("\\", "/").strip().strip("/")
+    matches = []
+    for item in items:
+        relative = item.path.relative_to(CONTENT).as_posix()
+        if normalized in {relative, item.path.name, item.slug, item.title}:
+            matches.append(item)
+    if len(matches) > 1:
+        names = ", ".join(item.path.relative_to(ROOT).as_posix() for item in matches)
+        fail(f"Preview selector is ambiguous: {names}")
+        return None
+    if not matches:
+        fail(f"Preview content was not found: {selector}")
+        return None
+    return matches[0]
+
+
+def preview_draft(selector: str, port: int) -> int:
+    items = load_content()
+    if validate(items) != 0:
+        return 1
+    item = select_preview_item(items, selector)
+    if item is None:
+        return 1
+    preview_html = render_preview_html(item, items).encode("utf-8")
+    preview_path = f"/__obsidian_preview__/{item.slug}.html"
+
+    class DraftPreviewHandler(SimpleHTTPRequestHandler):
+        def __init__(self, *args: Any, **kwargs: Any) -> None:
+            super().__init__(*args, directory=str(ROOT), **kwargs)
+
+        def do_GET(self) -> None:
+            if unquote(urlparse(self.path).path) == preview_path:
+                self.send_response(200)
+                self.send_header("Content-Type", "text/html; charset=utf-8")
+                self.send_header("Content-Length", str(len(preview_html)))
+                self.end_headers()
+                self.wfile.write(preview_html)
+                return
+            super().do_GET()
+
+        def end_headers(self) -> None:
+            self.send_header("X-Robots-Tag", "noindex, nofollow")
+            super().end_headers()
+
+    server = ThreadingHTTPServer(("127.0.0.1", port), DraftPreviewHandler)
+    print(f"Draft preview: http://127.0.0.1:{port}{preview_path}")
+    print("Press Ctrl+C to stop.")
+    try:
+        server.serve_forever()
+    except KeyboardInterrupt:
+        print("Preview stopped.")
+    finally:
+        server.server_close()
+    return 0
+
+
 def preview(port: int) -> int:
     if build() != 0:
         return 1
@@ -1279,6 +1451,9 @@ def main() -> int:
     sub.add_parser("publish-check")
     preview_parser = sub.add_parser("preview")
     preview_parser.add_argument("--port", type=int, default=8787)
+    draft_preview_parser = sub.add_parser("preview-draft")
+    draft_preview_parser.add_argument("selector")
+    draft_preview_parser.add_argument("--port", type=int, default=8787)
     args = parser.parse_args()
     if args.command == "audit":
         return audit()
@@ -1294,6 +1469,8 @@ def main() -> int:
         return publish_check()
     if args.command == "preview":
         return preview(args.port)
+    if args.command == "preview-draft":
+        return preview_draft(args.selector, args.port)
     return 1
 
 

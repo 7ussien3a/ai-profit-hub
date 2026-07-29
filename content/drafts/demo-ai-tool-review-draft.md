@@ -18,9 +18,7 @@ language: "en"
 featured: false
 draft: true
 difficulty: "Beginner"
-sources:
-  - title: "Placeholder source to be replaced before publication"
-    url: "https://example.com/"
+sources: []
 related: ["obsidian-content-workflow-demo"]
 schemaType: "Review"
 factChecked: false
@@ -35,7 +33,7 @@ This is a draft-only sample. It demonstrates how a future review can be structur
 
 ## Summary
 
-Use this draft to test editing, metadata, images, sources, and internal links before changing `status` to `published`.
+Use this draft to test editing, metadata, images, sources, and internal links before changing `status` to `review`.
 
 ## Review Notes
 
@@ -50,7 +48,7 @@ Drafts are allowed to be incomplete, but published reviews must be specific, tes
 
 ## Sources
 
-- [Placeholder source](https://example.com/)
+No sources are attached to this incomplete draft. Add verified primary sources before editorial review.
 
 ## FAQ
 

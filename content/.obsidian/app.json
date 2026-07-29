@@ -2,6 +2,7 @@
   "attachmentFolderPath": "assets",
   "alwaysUpdateLinks": true,
   "promptDelete": false,
-  "newFileLocation": "current",
-  "showLineNumber": false
+  "newFileLocation": "folder",
+  "newFileFolderPath": "drafts",
+  "showLineNumber": true
 }

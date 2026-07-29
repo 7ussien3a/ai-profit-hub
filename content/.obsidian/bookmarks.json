@@ -11,6 +11,24 @@
       "ctime": 1785200000001,
       "path": "templates",
       "title": "Templates"
+    },
+    {
+      "type": "file",
+      "ctime": 1785200000002,
+      "path": "research/Research Backlog.md",
+      "title": "Research Backlog"
+    },
+    {
+      "type": "file",
+      "ctime": 1785200000003,
+      "path": "sources/Source Index.md",
+      "title": "Source Index"
+    },
+    {
+      "type": "file",
+      "ctime": 1785200000004,
+      "path": "reports/GO Cycle Reports.md",
+      "title": "GO Cycle Reports"
     }
   ]
 }

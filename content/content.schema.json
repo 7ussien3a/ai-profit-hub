@@ -29,7 +29,7 @@
     "editor": { "type": "string" },
     "status": {
       "type": "string",
-      "enum": ["draft", "review", "scheduled", "published", "archived"]
+      "enum": ["draft", "review", "scheduled", "published", "archived", "noindex"]
     },
     "publishedAt": { "type": "string" },
     "updatedAt": { "type": "string" },
@@ -41,11 +41,27 @@
     "featured": { "type": "boolean" },
     "draft": { "type": "boolean" },
     "difficulty": { "type": "string" },
-    "sources": { "type": "array" },
+    "sources": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          { "type": "string", "format": "uri" },
+          {
+            "type": "object",
+            "required": ["title", "url"],
+            "properties": {
+              "title": { "type": "string", "minLength": 2 },
+              "url": { "type": "string", "format": "uri" }
+            }
+          }
+        ]
+      }
+    },
     "related": { "type": "array", "items": { "type": "string" } },
     "schemaType": { "type": "string" },
     "factChecked": { "type": "boolean" },
     "lastReviewed": { "type": "string" },
+    "reviewMethod": { "type": "string" },
     "testedBy": { "type": "string" },
     "disclosure": { "type": "string" }
   }

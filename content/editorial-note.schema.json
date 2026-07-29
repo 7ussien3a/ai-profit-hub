@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI Profit Hub Editorial Workspace Note",
+  "type": "object",
+  "required": ["title", "noteType", "status", "updatedAt", "language"],
+  "properties": {
+    "title": { "type": "string", "minLength": 4 },
+    "noteType": {
+      "type": "string",
+      "enum": ["source", "research", "go-cycle-report", "editorial-update"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "review", "verified", "completed", "archived"]
+    },
+    "country": {
+      "type": "string",
+      "enum": ["United States", "China", "Japan", "South Korea", "Global"]
+    },
+    "publisher": { "type": "string" },
+    "sourceUrl": { "type": "string", "format": "uri" },
+    "publicationDate": { "type": "string" },
+    "accessDate": { "type": "string" },
+    "sourceType": { "type": "string" },
+    "verificationStatus": {
+      "type": "string",
+      "enum": ["unverified", "primary-source-verified", "cross-checked", "rejected"]
+    },
+    "related": { "type": "array", "items": { "type": "string" } },
+    "updatedAt": { "type": "string" },
+    "language": { "type": "string", "enum": ["en"] }
+  }
+}

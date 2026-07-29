@@ -24,6 +24,53 @@ class ContentPipelineTests(unittest.TestCase):
         rendered = pipeline.resolve_wikilinks("[[Demo Title]]", lookup)
         self.assertEqual(rendered, "[Demo Title](/articles/demo-title.html)")
 
+    def test_wikilink_to_draft_is_not_rendered_as_public(self):
+        item = pipeline.ContentItem(
+            path=pipeline.ROOT / "content/drafts/demo.md",
+            meta={
+                "title": "Draft Demo",
+                "slug": "draft-demo",
+                "contentType": "article",
+                "status": "draft",
+            },
+            body="",
+        )
+        pipeline.assign_public_url(item)
+        rendered = pipeline.resolve_wikilinks(
+            "[[Draft Demo]]",
+            pipeline.build_lookup([item]),
+        )
+        self.assertEqual(rendered, "Draft Demo")
+
+    def test_draft_preview_uses_site_template_and_noindex(self):
+        item = pipeline.ContentItem(
+            path=pipeline.ROOT / "content/drafts/preview.md",
+            meta={
+                "title": "Draft Preview Article",
+                "slug": "draft-preview-article",
+                "description": "A complete description for testing a private draft preview with the production design.",
+                "contentType": "article",
+                "category": "Testing",
+                "author": "Hussein Harby",
+                "status": "draft",
+                "updatedAt": "2026-07-30T00:00:00+03:00",
+                "featuredImage": "/images/future-technology-abstract.jpg",
+                "imageAlt": "Abstract technology preview image.",
+                "canonical": "",
+                "language": "en",
+                "draft": True,
+            },
+            body="# Draft Preview Article\n\nThis is private preview content.",
+        )
+        pipeline.assign_public_url(item)
+        rendered = pipeline.render_preview_html(item, [item])
+        self.assertIn('<meta name="robots" content="noindex, nofollow">', rendered)
+        self.assertIn("Draft Preview Article", rendered)
+        self.assertIn("/css/", rendered)
+
+    def test_noindex_status_is_supported(self):
+        self.assertIn("noindex", pipeline.ALLOWED_STATUS)
+
     def test_frontmatter_parse(self):
         raw = "---\ntitle: \"Demo\"\ntags: [\"AI\", \"SEO\"]\nstatus: \"draft\"\n---\nBody"
         meta, body = pipeline.parse_frontmatter(raw, pipeline.ROOT / "demo.md")
