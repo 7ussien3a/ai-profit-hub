@@ -316,9 +316,9 @@
     var el = bodyEls[k];
     var c = el.className || '';
     var txt = el.textContent || '';
-    if (c.indexOf('author-bio') > -1 || 
-        txt.indexOf('Hussein — AI Profit Hub') > -1 || 
-        txt.indexOf('Hussein – AI Profit Hub') > -1 || 
+    if (c.indexOf('author-bio') > -1 ||
+        txt.indexOf('Hussein — AI Profit Hub') > -1 ||
+        txt.indexOf('Hussein – AI Profit Hub') > -1 ||
         txt.indexOf('Hussein - AI Profit Hub') > -1 ||
         txt.indexOf('Hussein is the founder of AI Profit Hub') > -1) {
       bodyEls.splice(k, 1);
@@ -329,10 +329,10 @@
   var bioBox = document.createElement('div');
   bioBox.className = 'author-bio';
   bioBox.style.cssText = 'display:flex;gap:20px;align-items:center;margin:40px 0 0;padding:24px;background:var(--bg-elevated,#1a1f2e);border:1px solid var(--border,#2a2f3e);border-radius:12px;';
-  bioBox.innerHTML = '<img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face" alt="Hussein" style="width:72px;height:72px;border-radius:50%;object-fit:cover;flex-shrink:0;">' +
+  bioBox.innerHTML = '<img src="/images/tech_abstract_design.webp" alt="AI Profit Hub editorial mark" style="width:72px;height:72px;border-radius:8px;object-fit:cover;flex-shrink:0;">' +
                      '<div>' +
                      '<p style="margin:0 0 4px;font-weight:700;font-size:.95rem">Hussein — AI Profit Hub</p>' +
-                     '<p style="margin:0;font-size:.85rem;line-height:1.6;color:var(--text-secondary)">Daily AI news, tool reviews, and practical guides. Follow AI Profit Hub for everything happening in artificial intelligence.</p>' +
+                     '<p style="margin:0;font-size:.85rem;line-height:1.6;color:var(--text-secondary)">Hussein Harby is the founder and named editor responsible for source review, corrections, and publication decisions at AI Profit Hub.</p>' +
                      '</div>';
   bodyEls.push(bioBox);
 
@@ -350,7 +350,7 @@
     nlBox.className = 'aph-newsletter-box';
     var iframeId = 'ml_iframe_' + Math.round(Math.random() * 100000);
     nlBox.innerHTML = '<div class="aph-newsletter-title">📥 Join Our Free AI Newsletter</div>' +
-                      '<div class="aph-newsletter-desc">Get the latest AI tool reviews, ChatGPT prompts, and productivity hacks sent straight to your inbox weekly. Join 10,000+ professionals working smarter.</div>' +
+                      '<div class="aph-newsletter-desc">Receive source-backed AI guides, model updates, and editorial corrections by email.</div>' +
                       '<iframe name="' + iframeId + '" style="display:none;"></iframe>' +
                       '<form class="aph-newsletter-form" action="https://assets.mailerlite.com/jsonp/2455913/forms/190642525337290158/subscribe" method="POST" target="' + iframeId + '">' +
                       '<input type="email" name="fields[email]" class="aph-newsletter-input" placeholder="Enter your email address..." required>' +
@@ -497,23 +497,23 @@
   hardcodedForms.forEach(function (form) {
     if (form.getAttribute('data-ml-intercepted')) return;
     form.setAttribute('data-ml-intercepted', 'true');
-    
+
     var iframeId = 'ml_iframe_' + Math.round(Math.random() * 100000);
     var iframe = document.createElement('iframe');
     iframe.name = iframeId;
     iframe.style.display = 'none';
     document.body.appendChild(iframe);
-    
+
     form.action = 'https://assets.mailerlite.com/jsonp/2455913/forms/190642525337290158/subscribe';
     form.method = 'POST';
     form.target = iframeId;
     form.removeAttribute('onsubmit');
-    
+
     var emailInput = form.querySelector('input[type="email"]');
     if (emailInput) {
       emailInput.name = 'fields[email]';
     }
-    
+
     if (!form.querySelector('input[name="ml-submit"]')) {
       var hiddenSubmit = document.createElement('input');
       hiddenSubmit.type = 'hidden';
@@ -528,13 +528,13 @@
       hiddenCsrf.value = 'true';
       form.appendChild(hiddenCsrf);
     }
-    
+
     var successDiv = document.createElement('div');
     successDiv.className = 'lead-magnet-success';
     successDiv.style.cssText = 'display:none; color:#00D4AA; font-weight:600; font-size:0.9rem; text-align:center; padding:10px 0; margin-top: 10px;';
     successDiv.innerHTML = '🎉 Thank you for subscribing! Your cheat sheet is on its way.';
     form.parentNode.appendChild(successDiv);
-    
+
     form.addEventListener('submit', function() {
       form.style.display = 'none';
       successDiv.style.display = 'block';
