@@ -55,8 +55,523 @@
   ],
   "redirects": [
     {
+      "source": "/ai-tools/",
+      "destination": "/ai-tools-directory.html",
+      "permanent": true
+    },
+    {
+      "source": "/ai/",
+      "destination": "/ai-glossary.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/6g-samsung-lg-ai-native-networks.html",
+      "destination": "/articles/6g-networks-and-ai-samsung-lg-vision.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/adobe-partnerships-agentic-ai-creative-workflows-2026.html",
+      "destination": "/articles/adobe-agentic-ai-creative-workflows.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/agentic-coding-future.html",
+      "destination": "/articles/what-is-agentic-coding-future.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/ai-20260704-190004.html",
+      "destination": "/articles/article84.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/ai-20260705-000003.html",
+      "destination": "/articles/the-complete-guide-to-artificial-intelligence-in-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/ai-adoption-headcount-growth-ramp-study-job-loss-2026.html",
+      "destination": "/articles/ai-adoption-headcount-growth-ramp-study-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/ai-automation-guide.html",
+      "destination": "/articles/ai-work-automation-guide-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/ai-avatar-creation.html",
+      "destination": "/articles/create-ai-avatar-free.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/ai-chrome-extensions.html",
+      "destination": "/articles/best-ai-chrome-extensions-for-productivity.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/ai-coding-assistants.html",
+      "destination": "/articles/best-ai-coding-assistants-productivity.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/ai-cost-per-task-economy.html",
+      "destination": "/articles/ai-cost-per-task-economy-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/ai-digital-marketing-trends.html",
+      "destination": "/articles/ai-digital-marketing-trends-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/ai-ethics-guide.html",
+      "destination": "/articles/ai-ethics-challenges-guide.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/ai-resume-builders.html",
+      "destination": "/articles/best-ai-resume-builders.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/ai-s-next-20260704-230004.html",
+      "destination": "/articles/what-is-next-for-ai-multimodal-embodied-agentic-systems.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/ai-seo-optimization-guide.html",
+      "destination": "/articles/ai-seo-optimization-guide-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/ai-skin-patch-wearable-doctor.html",
+      "destination": "/articles/ai-medical-skin-patch-wearable-doctor.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/ai-smartphones-future.html",
+      "destination": "/articles/ai-in-everyday-life-algorithms.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/ai-stealing-jobs-truth.html",
+      "destination": "/articles/ai-impact-on-jobs-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/ai-stock-market-analysis.html",
+      "destination": "/articles/ai-stock-market-analysis-beginners-guide.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/ai-tech-news-2026.html",
+      "destination": "/articles/ai-updates-timeline-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/ai-tools-directory.html",
+      "destination": "/ai-tools-directory.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/ai-tools-faceless-youtube.html",
+      "destination": "/articles/ai-tools-faceless-youtube-channel.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/ai-unle-20260704-170004.html",
+      "destination": "/articles/article95.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/ai-unleashed-the-future-of-generative-models.html",
+      "destination": "/articles/next-generation-generative-ai-models.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/ai-updates-hub.html",
+      "destination": "/articles/ai-updates-timeline-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/ai-video-editors.html",
+      "destination": "/articles/best-ai-video-editing-software-premiere-alternatives.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/ai-voice-generators.html",
+      "destination": "/articles/best-ai-voice-generators.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/alphabet-closes-historic-84-billion-raise-ai-infrastructure-2026.html",
+      "destination": "/articles/alphabet-historic-84-billion-ai-infrastructure-investment.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/andrew-yang-thinks-the-next-big-startup-opportunity-is-20260613.html",
+      "destination": "/articles/andrew-yang-ai-startups-lower-cost-of-living.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/anthropic-65-billion-fable-5-model-2026.html",
+      "destination": "/articles/anthropic-65-billion-investment-fable-5-valuation.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/anthropic-accuses-alibaba-qwen-model-harvesting-2026.html",
+      "destination": "/articles/article49.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/anthropic-claude-fable-5-shutdown-2026.html",
+      "destination": "/articles/article50.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/anthropic-claude-surpasses-openai.html",
+      "destination": "/articles/article51.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/anthropic-economic-index-claude-code-agentic-shift-2026.html",
+      "destination": "/articles/article52.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/anthropic-guide.html",
+      "destination": "/companies/anthropic.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/anthropic-launches-claude-science-ai-drug-discovery-clinical-trials-2026.html",
+      "destination": "/articles/article53.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/anthropic-redeploys-fable-5-globally-jailbreak-framework-20260703.html",
+      "destination": "/articles/article59.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/anthropic-releases-claude-fable-5-mythos-5-mythos-class-2026.html",
+      "destination": "/articles/article60.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/anthropic8217s-safety-warnings-may-have-just-backfired-20260613.html",
+      "destination": "/articles/article62.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/apple-intelligence-2-siri-ai-generative-upgrades-wwdc-2026.html",
+      "destination": "/articles/article63.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/apple-intelligence-siri-ai-wwdc-2026.html",
+      "destination": "/articles/apple-intelligence-siri-update-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/apple-intelligence-siri-wwdc-2026.html",
+      "destination": "/articles/article64.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/apple-intelligence-siri.html",
+      "destination": "/articles/apple-intelligence-vs-chatgpt.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/art-therapy-and-ai-a-new-tool-for-mental-health-professionals.html",
+      "destination": "/articles/ai-in-art-therapy.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/article1.html",
+      "destination": "/articles/south-korea-s-500b-ai-supercycle-samsung-hbm4-and-sk-hynix-factory-expansion.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/article30.html",
+      "destination": "/articles/ai-stock-market-analysis-beginners-guide.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/article61.html",
+      "destination": "/articles/anthropic-surpasses-openai-in-revenue-as-google-prepares-agentic-gemini-3-5-pro.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/article75.html",
+      "destination": "/articles/china-s-ai-leap-deepseek-s-7-4b-funding-and-huawei-s-ascend-950-series.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/article79.html",
+      "destination": "/articles/6g-networks-and-ai-samsung-lg-vision.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/article80.html",
+      "destination": "/articles/6g-networks-and-ai-samsung-lg-vision.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/article81.html",
+      "destination": "/articles/adobe-agentic-ai-creative-workflows.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/article82.html",
+      "destination": "/articles/adobe-agentic-ai-creative-workflows.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/article83.html",
+      "destination": "/articles/what-is-agentic-coding-future.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/article85.html",
+      "destination": "/articles/ai-adoption-headcount-growth-ramp-study-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/article86.html",
+      "destination": "/articles/ai-cost-per-task-economy-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/article87.html",
+      "destination": "/articles/ai-digital-marketing-trends-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/article88.html",
+      "destination": "/articles/ai-ethics-challenges-guide.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/article89.html",
+      "destination": "/articles/ai-impact-on-jobs-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/article90.html",
+      "destination": "/articles/ai-in-art-therapy.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/article91.html",
+      "destination": "/articles/ai-in-everyday-life-algorithms.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/article92.html",
+      "destination": "/articles/ai-medical-skin-patch-wearable-doctor.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/article93.html",
+      "destination": "/articles/ai-seo-optimization-guide-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/article97.html",
+      "destination": "/articles/ai-work-automation-guide-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/automate-tasks-ai.html",
+      "destination": "/articles/article65.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/autonomous-agents-microsoft-research.html",
+      "destination": "/articles/article66.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/aws-announces-2-billion-initiative-onsite-ai-engineering-intelligence-cloud-2026.html",
+      "destination": "/articles/article67.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/aws-commits-2-billion-to-global-ai-intelligence-initiative-2026.html",
+      "destination": "/articles/aws-ai-investment-initiative.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/baidu-ernie-4-0-china-s-ai-giant-accelerates-towards-agi-20260701.html",
+      "destination": "/articles/article68.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/bank-of-international-settlements-ai-bubble-warning-2026.html",
+      "destination": "/articles/bis-ai-bubble-warning.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/best-ai-agents-for-business.html",
+      "destination": "/articles/best-ai-agents-business-automation.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/best-ai-business-tools.html",
+      "destination": "/articles/best-ai-agents-business-automation.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/best-ai-chatbot-developers-guide.html",
+      "destination": "/articles/build-ai-chatbot-2026-guide.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/best-ai-courses-for-beginners-2026.html",
+      "destination": "/articles/best-free-ai-courses-beginners.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/best-ai-cryptocurrencies-2026-guide.html",
+      "destination": "/articles/best-ai-cryptocurrencies-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/best-ai-customer-service-tools.html",
+      "destination": "/articles/automate-customer-service-ai.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/best-ai-seo-tools.html",
+      "destination": "/articles/ai-seo-optimization-guide-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/best-ai-writing-assistants.html",
+      "destination": "/articles/article69.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/best-free-ai-tools-students.html",
+      "destination": "/articles/article70.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/bis-warns-trillion-dollar-ai-bubble-global-financial-crisis-2026.html",
+      "destination": "/articles/article71.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/chatgpt-prompts-productivity.html",
+      "destination": "/articles/article72.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/chatgpt-vs-claude-3.html",
+      "destination": "/compare/chatgpt-vs-claude.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/cheaper-faster-and-culturally-aware-avataar8217s-video-20260612.html",
+      "destination": "/articles/article73.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/china-ai-qwen3-deepseek-v4-price-war-2026.html",
+      "destination": "/articles/article74.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/chinas-z-ai-matches-anthropic-mythos-cybersecurity-20260703.html",
+      "destination": "/articles/article76.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/cloudflare-ai-layoffs-2026.html",
+      "destination": "/articles/article54.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/colorado-ai-law-regulation.html",
+      "destination": "/articles/article77.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/custom-gpt-business.html",
+      "destination": "/articles/article56.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/deepseek-7b-funding-agi-2026.html",
+      "destination": "/articles/article57.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/deepseek-ai-s-new-model-crushes-benchmarks-a-chinese-open-source-triumph-20260703.html",
+      "destination": "/articles/article58.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/deepseek-qwen-claude-comparison.html",
+      "destination": "/articles/article78.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/gemini-vs-claude-fable-1782528977487.html",
+      "destination": "/compare/gemini-3-5-flash-vs-claude-fable-5.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/index.html",
+      "destination": "/news/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/llm-latest-updates.html",
+      "destination": "/articles/ai-updates-timeline-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/openai-developments.html",
+      "destination": "/companies/openai.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/openai-guide.html",
+      "destination": "/companies/openai.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/openai.html",
+      "destination": "/companies/openai.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/south-korea-s-500b-ai-supercycle-samsung-hbm4-and-sk-hynix-factory-boom.html",
+      "destination": "/articles/south-korea-s-500b-ai-supercycle-samsung-hbm4-and-sk-hynix-factory-expansion.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/the-ai-20260704-220003.html",
+      "destination": "/articles/what-is-artificial-intelligence-complete-guide.html",
+      "permanent": true
+    },
+    {
+      "source": "/categories/design",
+      "destination": "/categories/ai-video.html",
+      "permanent": true
+    },
+    {
       "source": "/index.html",
       "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/terms",
+      "destination": "/terms-of-service.html",
       "permanent": true
     }
   ]
