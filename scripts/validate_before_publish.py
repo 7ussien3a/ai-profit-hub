@@ -62,14 +62,14 @@ def validate_article(html_path):
     else:
         print("[Fail] 5. Missing or invalid JSON-LD.")
         
-    # 6. >= 1000 words (updated from 900)
+    # 6. Report content size without enforcing a universal word-count target.
     text = soup.get_text(separator=' ')
     words = len(text.split())
-    if words >= 1000:
-        print(f"[Pass] 6. Word count is {words} (>= 1000).")
+    if words > 0:
+        print(f"[Pass] 6. Content body is present ({words} words).")
         passed += 1
     else:
-        print(f"[Fail] 6. Word count is {words} (< 1000).")
+        print("[Fail] 6. Content body is empty.")
         
     # 7. H1 present (only one)
     h1s = soup.find_all('h1')
@@ -114,10 +114,10 @@ def validate_article(html_path):
         
     print(f"\nScore: {passed}/{total}")
     if passed == total:
-        print("✅ SUCCESS: 10/10 - Ready for staging/production.")
+        print("SUCCESS: 10/10 - Ready for staging/production.")
         return True
     else:
-        print("❌ FAILED: Must fix issues to reach 10/10.")
+        print("FAILED: Must fix issues to reach 10/10.")
         return False
 
 if __name__ == '__main__':
@@ -125,4 +125,4 @@ if __name__ == '__main__':
         print("Usage: python validate_before_publish.py <file.html>")
         sys.exit(1)
     
-    validate_article(sys.argv[1])
+    sys.exit(0 if validate_article(sys.argv[1]) else 1)

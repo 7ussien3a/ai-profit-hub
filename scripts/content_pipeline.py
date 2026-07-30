@@ -648,7 +648,11 @@ def render_table(rows: list[str]) -> str:
     body_rows = [split_table_row(row) for row in rows[2:]]
     head = "".join(f"<th>{render_inline(cell)}</th>" for cell in header)
     body = "".join("<tr>" + "".join(f"<td>{render_inline(cell)}</td>" for cell in row) + "</tr>" for row in body_rows)
-    return f"<table><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table>"
+    return (
+        '<div class="aph-table-wrapper">'
+        f'<table class="aph-table"><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table>'
+        "</div>"
+    )
 
 
 def split_table_row(row: str) -> list[str]:
@@ -706,6 +710,13 @@ def write_page(item: ContentItem) -> None:
 
 def render_page(item: ContentItem) -> str:
     meta = item.meta
+    body_html = re.sub(
+        r"^\s*<h1[^>]*>.*?</h1>\s*",
+        "",
+        item.html_body,
+        count=1,
+        flags=re.I | re.S,
+    )
     title = str(meta["title"])
     desc = str(meta["description"])
     canonical = str(meta.get("canonical") or item.public_url)
@@ -726,21 +737,25 @@ def render_page(item: ContentItem) -> str:
         "dateModified": updated,
         "mainEntityOfPage": {"@type": "WebPage", "@id": canonical},
     }
-    faq_schema = extract_faq_schema(item.html_body)
+    faq_schema = extract_faq_schema(body_html)
     schema_blocks = [json.dumps(json_ld, ensure_ascii=False, indent=2)]
     if faq_schema:
         schema_blocks.append(json.dumps(faq_schema, ensure_ascii=False, indent=2))
+    schema_html = "\n  ".join(
+        f'<script type="application/ld+json">\n{block}\n  </script>'
+        for block in schema_blocks
+    )
     related = render_related(item)
     sources = render_sources(meta.get("sources") or [])
     disclosure = html.escape(str(meta.get("disclosure") or ""))
-    return f"""<!DOCTYPE html>
+    page = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{html.escape(title)} | AI Profit Hub</title>
   <meta name="description" content="{html.escape(desc)}">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="{html.escape(canonical)}">
   <meta property="article:published_time" content="{html.escape(published)}">
   <meta property="article:modified_time" content="{html.escape(updated)}">
@@ -767,7 +782,7 @@ def render_page(item: ContentItem) -> str:
     gtag('config', 'G-8CSEDW0FVR');
   </script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4602905173099480" crossorigin="anonymous"></script>
-  {"".join(f'<script type="application/ld+json">\\n{block}\\n  </script>\\n  ' for block in schema_blocks)}
+  {schema_html}
 </head>
 <body>
   <header class="header">
@@ -799,7 +814,7 @@ def render_page(item: ContentItem) -> str:
       </div>
       {f'<p class="disclosure-note">{disclosure}</p>' if disclosure else ''}
       <div class="article-body">
-{item.html_body}
+{body_html}
       </div>
       {sources}
       {related}
@@ -822,6 +837,7 @@ def render_page(item: ContentItem) -> str:
 </body>
 </html>
 """
+    return re.sub(r"[ \t]+$", "", page, flags=re.M)
 
 
 def schema_for(content_type: str) -> str:
@@ -887,10 +903,15 @@ def render_related(item: ContentItem) -> str:
 
 
 def extract_faq_schema(body_html: str) -> dict[str, Any] | None:
-    if "<h2" not in body_html or "FAQ" not in body_html:
+    faq_section = re.search(
+        r"<h2[^>]*>\s*FAQ\s*</h2>(.*?)(?=<h2[^>]*>|$)",
+        body_html,
+        flags=re.I | re.S,
+    )
+    if not faq_section:
         return None
     pairs = []
-    blocks = re.split(r"<h3[^>]*>", body_html)
+    blocks = re.split(r"<h3[^>]*>", faq_section.group(1))
     for block in blocks[1:]:
         question, _, rest = block.partition("</h3>")
         if "?" not in strip_tags(question):

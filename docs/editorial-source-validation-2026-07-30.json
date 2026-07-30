@@ -1,0 +1,598 @@
+{
+  "review_date": "2026-07-30",
+  "official_urls_checked": 62,
+  "counts": {
+    "reachable": 54,
+    "access-controlled": 6,
+    "web-verified": 2,
+    "failed": 0
+  },
+  "results": [
+    {
+      "url": "https://adssettings.google.com/",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://www.google.com/ads/preferences/html/blocked-cookies.html",
+      "used_by": [
+        "privacy-policy.html"
+      ]
+    },
+    {
+      "url": "https://ai.google.dev/gemini-api/docs/models",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://ai.google.dev/gemini-api/docs/models",
+      "used_by": [
+        "companies/google.html"
+      ]
+    },
+    {
+      "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash",
+      "used_by": [
+        "compare/claude-sonnet-5-vs-gemini-3-5-flash.html"
+      ]
+    },
+    {
+      "url": "https://ai.google.dev/gemini-api/docs/whats-new-gemini-3.5",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://ai.google.dev/gemini-api/docs/whats-new-gemini-3.5",
+      "used_by": [
+        "compare/claude-sonnet-5-vs-gemini-3-5-flash.html"
+      ]
+    },
+    {
+      "url": "https://ai.google.dev/gemma",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://deepmind.google/models/gemma/",
+      "used_by": [
+        "companies/google.html"
+      ]
+    },
+    {
+      "url": "https://api-docs.deepseek.com/",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://api-docs.deepseek.com/",
+      "used_by": [
+        "guides/how-to-use-deepseek-v4-for-coding-2026.html"
+      ]
+    },
+    {
+      "url": "https://api-docs.deepseek.com/api/list-models",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://api-docs.deepseek.com/api/list-models/",
+      "used_by": [
+        "guides/how-to-use-deepseek-v4-for-coding-2026.html"
+      ]
+    },
+    {
+      "url": "https://api-docs.deepseek.com/news/news260424/",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://api-docs.deepseek.com/news/news260424/",
+      "used_by": [
+        "articles/deepseek-v4-china-ai-model-2026.html",
+        "compare/deepseek-v4-vs-gpt-5-6-sol.html",
+        "guides/how-to-use-deepseek-v4-for-coding-2026.html"
+      ]
+    },
+    {
+      "url": "https://api-docs.deepseek.com/quick_start/pricing",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://api-docs.deepseek.com/quick_start/pricing/",
+      "used_by": [
+        "articles/deepseek-v4-china-ai-model-2026.html",
+        "companies/deepseek.html",
+        "compare/deepseek-v4-vs-gpt-5-6-sol.html",
+        "guides/how-to-use-deepseek-v4-for-coding-2026.html"
+      ]
+    },
+    {
+      "url": "https://api-docs.deepseek.com/updates/",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://api-docs.deepseek.com/updates/",
+      "used_by": [
+        "articles/deepseek-v4-china-ai-model-2026.html",
+        "companies/deepseek.html"
+      ]
+    },
+    {
+      "url": "https://blackforestlabs.ai/",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://bfl.ai/",
+      "used_by": [
+        "articles/free-alternatives-midjourney.html"
+      ]
+    },
+    {
+      "url": "https://blogs.microsoft.com/",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://blogs.microsoft.com/",
+      "used_by": [
+        "articles/microsoft-mai-7-models-copilot-2026.html"
+      ]
+    },
+    {
+      "url": "https://blogs.microsoft.com/blog/2026/06/02/microsoft-build-2026-be-yourself-at-work/",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://blogs.microsoft.com/blog/2026/06/02/microsoft-build-2026-be-yourself-at-work/",
+      "used_by": [
+        "companies/microsoft.html"
+      ]
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/open-secure-ai-alliance/",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://blogs.nvidia.com/blog/open-secure-ai-alliance/",
+      "used_by": [
+        "articles/open-secure-ai-alliance-explained-2026.html"
+      ]
+    },
+    {
+      "url": "https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf",
+      "used_by": [
+        "articles/build-agentic-workflow-2026.html"
+      ]
+    },
+    {
+      "url": "https://chat.deepseek.com",
+      "status": 403,
+      "classification": "access-controlled",
+      "final_url": "https://chat.deepseek.com",
+      "used_by": [
+        "ai-tools-directory.html"
+      ]
+    },
+    {
+      "url": "https://chat.openai.com",
+      "status": 403,
+      "classification": "access-controlled",
+      "final_url": "https://chatgpt.com/",
+      "used_by": [
+        "ai-tools-directory.html",
+        "best-ai-tools/best-ai-tools-marketers.html",
+        "best-ai-tools/best-ai-tools-students.html",
+        "best-ai-tools/best-ai-tools-writers.html",
+        "start-here.html"
+      ]
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/guides/latest-model",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://developers.openai.com/api/docs/guides/latest-model",
+      "used_by": [
+        "articles/gpt-5-6-sol-review-2026.html"
+      ]
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/models",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://developers.openai.com/api/docs/models",
+      "used_by": [
+        "companies/openai.html"
+      ]
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/models/compare",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://developers.openai.com/api/docs/models/compare",
+      "used_by": [
+        "articles/gpt-5-6-sol-review-2026.html",
+        "companies/openai.html",
+        "compare/deepseek-v4-vs-gpt-5-6-sol.html"
+      ]
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.6-sol",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://developers.openai.com/api/docs/models/gpt-5.6-sol",
+      "used_by": [
+        "articles/cursor-vs-windsurf-gpt-5-6-sol-2026.html",
+        "articles/gpt-5-6-sol-review-2026.html",
+        "compare/deepseek-v4-vs-gpt-5-6-sol.html"
+      ]
+    },
+    {
+      "url": "https://docs.anthropic.com/en/docs/about-claude/models/overview",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://platform.claude.com/docs/en/about-claude/models/overview",
+      "used_by": [
+        "companies/anthropic.html"
+      ]
+    },
+    {
+      "url": "https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/overview",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview",
+      "used_by": [
+        "articles/build-agentic-workflow-2026.html"
+      ]
+    },
+    {
+      "url": "https://docs.cursor.com/",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://cursor.com/docs",
+      "used_by": [
+        "articles/cursor-vs-windsurf-gpt-5-6-sol-2026.html"
+      ]
+    },
+    {
+      "url": "https://docs.cursor.com/account/pricing",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://cursor.com/docs",
+      "used_by": [
+        "articles/cursor-ai-review-2026-update.html"
+      ]
+    },
+    {
+      "url": "https://docs.cursor.com/models",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://cursor.com/docs",
+      "used_by": [
+        "articles/cursor-ai-review-2026-update.html"
+      ]
+    },
+    {
+      "url": "https://docs.midjourney.com/",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://docs.midjourney.com/hc/en-us",
+      "used_by": [
+        "articles/free-alternatives-midjourney.html"
+      ]
+    },
+    {
+      "url": "https://docs.windsurf.com/",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://docs.devin.ai/desktop/getting-started",
+      "used_by": [
+        "articles/cursor-vs-windsurf-gpt-5-6-sol-2026.html"
+      ]
+    },
+    {
+      "url": "https://firefly.adobe.com",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://firefly.adobe.com",
+      "used_by": [
+        "ai-tools-directory.html"
+      ]
+    },
+    {
+      "url": "https://gemini.google.com",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://gemini.google.com",
+      "used_by": [
+        "ai-tools-directory.html"
+      ]
+    },
+    {
+      "url": "https://github.com/NVIDIA-NeMo/labs-OO-Agents",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://github.com/NVIDIA-NeMo/labs-OO-Agents",
+      "used_by": [
+        "articles/open-secure-ai-alliance-explained-2026.html"
+      ]
+    },
+    {
+      "url": "https://github.com/features/copilot",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://github.com/features/copilot",
+      "used_by": [
+        "ai-tools-directory.html",
+        "best-ai-tools/best-ai-tools-developers.html"
+      ]
+    },
+    {
+      "url": "https://github.com/meituan-longcat",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://github.com/meituan-longcat",
+      "used_by": [
+        "compare/deepseek-r1-vs-meituan-longcat-2.html"
+      ]
+    },
+    {
+      "url": "https://help.suno.com/en",
+      "status": null,
+      "classification": "web-verified",
+      "note": "Official page opened in the web validator on 2026-07-29.",
+      "direct_check_error": "URLError",
+      "used_by": [
+        "compare/suno-v4-vs-udio.html"
+      ]
+    },
+    {
+      "url": "https://help.udio.com/",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://help.udio.com/en/",
+      "used_by": [
+        "compare/suno-v4-vs-udio.html"
+      ]
+    },
+    {
+      "url": "https://helpx.adobe.com/ie/firefly/web/get-started/learn-the-basics/adobe-firefly-overview.html",
+      "status": null,
+      "classification": "web-verified",
+      "note": "Official page opened in the web validator on 2026-07-29.",
+      "direct_check_error": "TimeoutError",
+      "used_by": [
+        "articles/free-alternatives-midjourney.html"
+      ]
+    },
+    {
+      "url": "https://learn.microsoft.com/azure/ai-foundry/",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://learn.microsoft.com/en-us/azure/foundry/",
+      "used_by": [
+        "companies/microsoft.html"
+      ]
+    },
+    {
+      "url": "https://notebooklm.google.com",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://accounts.google.com/v3/signin/identifier",
+      "used_by": [
+        "articles/google-notebooklm-ultimate-guide-2026.html",
+        "best-ai-tools/best-ai-tools-students.html"
+      ]
+    },
+    {
+      "url": "https://notion.so",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://www.notion.com/",
+      "used_by": [
+        "best-ai-tools/best-ai-tools-students.html"
+      ]
+    },
+    {
+      "url": "https://nvidianews.nvidia.com/news/south-korea-ai-infrastructure",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://nvidianews.nvidia.com/news/south-korea-ai-infrastructure",
+      "used_by": [
+        "articles/south-korea-518-billion-chipmaking-hub-samsung-sk-20260703.html"
+      ]
+    },
+    {
+      "url": "https://ollama.com",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://ollama.com",
+      "used_by": [
+        "articles/google-gemma-4-local-ai-laptop-2026.html"
+      ]
+    },
+    {
+      "url": "https://openai.com/dall-e-3",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://openai.com/index/dall-e-3/",
+      "used_by": [
+        "ai-tools-directory.html"
+      ]
+    },
+    {
+      "url": "https://openai.com/news",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://openai.com/news/",
+      "used_by": [
+        "articles/openai-proposes-5-percent-government-stake-trump-20260703.html"
+      ]
+    },
+    {
+      "url": "https://openai.com/news/",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://openai.com/news/",
+      "used_by": [
+        "companies/openai.html"
+      ]
+    },
+    {
+      "url": "https://openai.com/research/whisper",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://openai.com/index/whisper/",
+      "used_by": [
+        "ai-tools-directory.html"
+      ]
+    },
+    {
+      "url": "https://perplexity.ai",
+      "status": 403,
+      "classification": "access-controlled",
+      "final_url": "https://www.perplexity.ai/",
+      "used_by": [
+        "best-ai-tools/best-ai-tools-students.html",
+        "best-ai-tools/best-ai-tools-writers.html",
+        "best-ai-tools/index.html"
+      ]
+    },
+    {
+      "url": "https://qwenlm.github.io/",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://qwenlm.github.io/",
+      "used_by": [
+        "articles/deepseek-r1-vs-qwen.html",
+        "compare/deepseek-r1-vs-qwen-max.html"
+      ]
+    },
+    {
+      "url": "https://tools.google.com/dlpage/gaoptout",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://tools.google.com/dlpage/gaoptout",
+      "used_by": [
+        "privacy-policy.html"
+      ]
+    },
+    {
+      "url": "https://www-cdn.anthropic.com/73ad94ca3c0502e75e46637cc62c8bd9532a7f2c/Claude%20Sonnet%205%20System%20Card.pdf",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://www-cdn.anthropic.com/73ad94ca3c0502e75e46637cc62c8bd9532a7f2c/Claude%20Sonnet%205%20System%20Card.pdf",
+      "used_by": [
+        "compare/claude-sonnet-5-vs-gemini-3-5-flash.html",
+        "reviews/claude-sonnet-5-review.html"
+      ]
+    },
+    {
+      "url": "https://www.anthropic.com/",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://www.anthropic.com/",
+      "used_by": [
+        "companies/anthropic.html"
+      ]
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-sonnet-5",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://www.anthropic.com/news/claude-sonnet-5",
+      "used_by": [
+        "compare/claude-sonnet-5-vs-gemini-3-5-flash.html",
+        "reviews/claude-sonnet-5-review.html"
+      ]
+    },
+    {
+      "url": "https://www.anthropic.com/pricing",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://claude.com/pricing",
+      "used_by": [
+        "companies/anthropic.html",
+        "reviews/claude-sonnet-5-review.html"
+      ]
+    },
+    {
+      "url": "https://www.deepseek.com/en/transparency/",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://www.deepseek.com/en/transparency/",
+      "used_by": [
+        "articles/deepseek-r1-vs-qwen.html",
+        "articles/deepseek-v4-china-ai-model-2026.html",
+        "companies/deepseek.html",
+        "compare/deepseek-r1-vs-meituan-longcat-2.html",
+        "compare/deepseek-r1-vs-qwen-max.html"
+      ]
+    },
+    {
+      "url": "https://www.linuxfoundation.org/press/linux-foundation-and-industry-leaders-launch-akrites-to-defend-critical-open-source-software-against-ai-enabled-cyber-threats",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://www.linuxfoundation.org/press/linux-foundation-and-industry-leaders-launch-akrites-to-defend-critical-open-source-software-against-ai-enabled-cyber-threats",
+      "used_by": [
+        "articles/open-secure-ai-alliance-explained-2026.html"
+      ]
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/ai",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://www.microsoft.com/en-us/ai",
+      "used_by": [
+        "companies/microsoft.html"
+      ]
+    },
+    {
+      "url": "https://www.notion.com/help/guides/category/ai",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://www.notion.com/help/guides/category/ai",
+      "used_by": [
+        "articles/notion-ai-organization.html"
+      ]
+    },
+    {
+      "url": "https://www.notion.com/product/ai",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://www.notion.com/product/ai",
+      "used_by": [
+        "articles/notion-ai-organization.html"
+      ]
+    },
+    {
+      "url": "https://www.notion.so",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://www.notion.com/",
+      "used_by": [
+        "ai-tools-directory.html"
+      ]
+    },
+    {
+      "url": "https://www.notion.so/product/ai",
+      "status": 200,
+      "classification": "reachable",
+      "final_url": "https://www.notion.com/product/ai",
+      "used_by": [
+        "ai-tools-directory.html"
+      ]
+    },
+    {
+      "url": "https://www.perplexity.ai",
+      "status": 403,
+      "classification": "access-controlled",
+      "final_url": "https://www.perplexity.ai",
+      "used_by": [
+        "ai-tools-directory.html"
+      ]
+    },
+    {
+      "url": "https://www.perplexity.ai/",
+      "status": 403,
+      "classification": "access-controlled",
+      "final_url": "https://www.perplexity.ai/",
+      "used_by": [
+        "companies/perplexity.html"
+      ]
+    },
+    {
+      "url": "https://www.perplexity.ai/help-center",
+      "status": 403,
+      "classification": "access-controlled",
+      "final_url": "https://www.perplexity.ai/help-center",
+      "used_by": [
+        "companies/perplexity.html"
+      ]
+    }
+  ]
+}

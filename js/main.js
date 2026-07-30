@@ -124,10 +124,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   // === Dynamic Table of Contents ===
   if (articleContent) {
-    const headings = articleContent.querySelectorAll('h2');
+    const articleBody = articleContent.querySelector('.article-body');
+    const headings = articleBody ? articleBody.querySelectorAll('h2') : [];
     if (headings.length > 0) {
       const toc = document.createElement('div');
-      toc.className = 'article-toc animate-in';
+      toc.className = 'article-toc';
       toc.innerHTML = '<h3>Table of Contents</h3><ul></ul>';
       const ul = toc.querySelector('ul');
       
@@ -141,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ul.appendChild(li);
       });
       
-      articleContent.insertBefore(toc, articleContent.firstChild);
+      articleBody.insertBefore(toc, articleBody.firstChild);
     }
   }
 

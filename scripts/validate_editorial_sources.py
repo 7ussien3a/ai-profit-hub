@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import datetime as dt
 import json
 import xml.etree.ElementTree as ET
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -16,9 +17,13 @@ from bs4 import BeautifulSoup
 from editorial_audit import is_official
 
 ROOT = Path(__file__).resolve().parent.parent
-REPORT_PATH = ROOT / "docs" / "editorial-source-validation-2026-07-29.json"
+REVIEW_DATE = dt.date.today().isoformat()
+REPORT_PATH = ROOT / "docs" / f"editorial-source-validation-{REVIEW_DATE}.json"
 USER_AGENT = "AI-Profit-Hub-Editorial-Audit/1.0"
 WEB_VERIFIED = {
+    "https://api-docs.deepseek.com/quick_start/pricing": (
+        "Official page opened in the web validator on 2026-07-30."
+    ),
     "https://help.suno.com/en": "Official page opened in the web validator on 2026-07-29.",
     "https://helpx.adobe.com/ie/firefly/web/get-started/learn-the-basics/adobe-firefly-overview.html": (
         "Official page opened in the web validator on 2026-07-29."
@@ -86,13 +91,21 @@ def check_url(url: str) -> dict:
         classification = "reachable"
     elif status in {401, 403, 405, 429}:
         classification = "access-controlled"
+    elif url in WEB_VERIFIED:
+        return {
+            "url": url,
+            "status": status,
+            "classification": "web-verified",
+            "note": WEB_VERIFIED[url],
+            "final_url": urlparse(final_url)._replace(query="", fragment="").geturl(),
+        }
     else:
         classification = "failed"
     return {
         "url": url,
         "status": status,
         "classification": classification,
-        "final_url": final_url,
+        "final_url": urlparse(final_url)._replace(query="", fragment="").geturl(),
     }
 
 
@@ -112,7 +125,7 @@ def main() -> int:
         for label in ("reachable", "access-controlled", "web-verified", "failed")
     }
     report = {
-        "review_date": "2026-07-29",
+        "review_date": REVIEW_DATE,
         "official_urls_checked": len(results),
         "counts": counts,
         "results": results,

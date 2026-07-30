@@ -1,14 +1,16 @@
-import os
 import datetime
 from googleapiclient.discovery import build
-from oauth2client.service_account import ServiceAccountCredentials
+from google.oauth2 import service_account
 
 SCOPES = ['https://www.googleapis.com/auth/webmasters.readonly']
 KEY_FILE_LOCATION = 'scripts/service-account.json'
 
 def main():
     # Authenticate
-    credentials = ServiceAccountCredentials.from_json_keyfile_name(KEY_FILE_LOCATION, SCOPES)
+    credentials = service_account.Credentials.from_service_account_file(
+        KEY_FILE_LOCATION,
+        scopes=SCOPES,
+    )
     service = build('searchconsole', 'v1', credentials=credentials)
     
     # Try different site URL formats just in case
