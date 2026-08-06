@@ -25,5 +25,9 @@
   "workspaces": false,
   "file-recovery": true,
   "publish": false,
-  "sync": false
+  "sync": false,
+  "footnotes": false,
+  "properties": true,
+  "bases": true,
+  "webviewer": false
 }
